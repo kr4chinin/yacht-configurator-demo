@@ -31,6 +31,23 @@ const Navbar: FC<NavbarProps> = ({ model }) => {
 			<div className={styles['bottom-section']}>
 				<div className={styles.option}>
 					<OptionsDropdown
+						isShown={isExterirorOpened}
+						setIsShown={setIsExteriorOpened}
+						options={[
+							{ title: 'Overview', onClick: () => {} },
+							{ title: 'Frame', onClick: () => {} },
+							{ title: 'Finishing', onClick: () => {} },
+							{ title: 'Floor', onClick: () => {} },
+							{ title: 'Lights', onClick: () => {} },
+							{ title: 'Windows', onClick: () => {} }
+						]}
+					>
+						Exterior
+					</OptionsDropdown>
+				</div>
+				<TwoLines />
+				<div className={styles.option}>
+					<OptionsDropdown
 						isShown={isInteriorOpened}
 						setIsShown={setIsInteriorOpened}
 						options={[
@@ -57,23 +74,6 @@ const Navbar: FC<NavbarProps> = ({ model }) => {
 				<TwoLines />
 				<div className={styles.option}>
 					<OptionsDropdown
-						isShown={isExterirorOpened}
-						setIsShown={setIsExteriorOpened}
-						options={[
-							{ title: 'Overview', onClick: () => {} },
-							{ title: 'Frame', onClick: () => {} },
-							{ title: 'Finishing', onClick: () => {} },
-							{ title: 'Floor', onClick: () => {} },
-							{ title: 'Lights', onClick: () => {} },
-							{ title: 'Windows', onClick: () => {} }
-						]}
-					>
-						Exterior
-					</OptionsDropdown>
-				</div>
-				<TwoLines />
-				<div className={styles.option}>
-					<OptionsDropdown
 						isShown={isSurroundingsOpened}
 						setIsShown={setIsSurroundingsOpened}
 						options={[
@@ -85,9 +85,13 @@ const Navbar: FC<NavbarProps> = ({ model }) => {
 							{ title: 'Windows', onClick: () => {} }
 						]}
 					>
-						Surroundings
+						Engine
 					</OptionsDropdown>
 				</div>
+                <TwoLines />
+                <div className={styles.option}>
+                    Optional accessories
+                </div>
 			</div>
 		</nav>
 	)

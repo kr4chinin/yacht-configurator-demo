@@ -21,7 +21,8 @@ const App = () => {
 						inclination={0}
 						azimuth={0.25}
 					/>
-					<ambientLight intensity={0.65} />
+                    
+					{/* <ambientLight intensity={0.65} /> */}
 					<Suspense fallback="Loading...">
 						<YachtModel model={yachtModel} />
 					</Suspense>
