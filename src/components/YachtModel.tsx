@@ -1,4 +1,3 @@
-import { materials } from '../utils/materials'
 import { useFrame } from '@react-three/fiber'
 import { Group, Material, Mesh } from 'three'
 import { FC } from 'react'
@@ -8,7 +7,7 @@ interface YachtModelProps {
 }
 
 const YachtModel: FC<YachtModelProps> = ({ model }) => {
-	// ; в начале строки - это просто приведение к типу void
+	// ; в начале строки - это просто приведение к типу void, тут оно необхоимо, чтобы не было ошибки
 
 	// Железная огранка по периметру
 	;(model.children[0] as Mesh).material = materials.steel

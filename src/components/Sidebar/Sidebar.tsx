@@ -14,8 +14,8 @@ interface SidebarProps {
 const Sidebar: FC<SidebarProps> = ({ isShown, setIsShown, children }) => {
 	const [isContentShown, setIsContentShown] = useState(true)
 
-	const triggerRef = useRef(null)
-	const dropdownRef = useRef(null)
+	const triggerRef = useRef<HTMLDivElement | null>(null)
+	const dropdownRef = useRef<HTMLDivElement | null>(null)
 
 	useClickOutside(dropdownRef, triggerRef, () => setIsShown(false))
 
