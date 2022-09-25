@@ -1,0 +1,57 @@
+.container {
+	position: absolute;
+	top: 160px;
+	left: 0;
+
+	height: calc(100vh - 210px);
+	width: 30%;
+
+	transform: translateX(-100%);
+	z-index: 2;
+	transition: 500ms;
+
+	display: flex;
+
+	.content {
+		height: 100%;
+		width: 80%;
+		background-color: rgba(0, 0, 0, 0.5);
+		display: flex;
+		padding: 1rem;
+	}
+
+	.control {
+		button {
+			width: 54px;
+			height: 54px;
+			border-radius: 50%;
+
+			background-color: rgba(0, 0, 0, 0.5);
+			border: 2px solid rgba(0, 0, 0, 0.2);
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			margin-left: 13px;
+			margin-top: 13px;
+
+			svg {
+				rotate: 90deg;
+				width: 32px;
+				height: 32px;
+			}
+
+			transition: 500ms;
+
+			&:hover {
+				cursor: pointer;
+				transform: scale(1.05);
+			}
+		}
+	}
+}
+
+.container.active {
+	transform: translateX(0%);
+}
