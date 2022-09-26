@@ -1,8 +1,8 @@
 import styles from './OptionsDropdown.module.scss'
-import { useClickOutside } from '../../hooks/useClickOutside'
+import { useClickOutside } from '../../../../../hooks/useClickOutside'
 import cn from 'classnames'
 import React, { FC, useRef } from 'react'
-import { ReactComponent as Dots } from '../../assets/icons/dots.svg'
+import { ReactComponent as Dots } from '../../../../../assets/icons/dots.svg'
 
 type DropdownOption = {
 	title: string

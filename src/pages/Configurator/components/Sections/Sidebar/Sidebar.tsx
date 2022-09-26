@@ -1,9 +1,9 @@
 import styles from './Sidebar.module.scss'
 import { useState, useRef, FC } from 'react'
 import cn from 'classnames'
-import { ReactComponent as UnfoldMore } from '../../assets/icons/unfold-more.svg'
-import { ReactComponent as UnfoldLess } from '../../assets/icons/unfold-less.svg'
-import { useClickOutside } from '../../hooks/useClickOutside'
+import { ReactComponent as UnfoldMore } from '../../../../../assets/icons/unfold-more.svg'
+import { ReactComponent as UnfoldLess } from '../../../../../assets/icons/unfold-less.svg'
+import { useClickOutside } from '../../../../../hooks/useClickOutside'
 
 interface SidebarProps {
 	isShown: boolean
