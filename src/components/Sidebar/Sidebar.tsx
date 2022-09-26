@@ -1,4 +1,4 @@
-import styles from './index.module.scss'
+import styles from './Sidebar.module.scss'
 import { useState, useRef, FC } from 'react'
 import cn from 'classnames'
 import { ReactComponent as UnfoldMore } from '../../assets/icons/unfold-more.svg'

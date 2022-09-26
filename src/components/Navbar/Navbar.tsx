@@ -1,4 +1,4 @@
-import styles from './index.module.scss'
+import styles from './Navbar.module.scss'
 import { ReactComponent as TwoLines } from '../../assets/icons/two-lines.svg'
 import { ReactComponent as Menu } from '../../assets/icons/menu.svg'
 import OptionsDropdown from '../OptionsDropdown/OptionsDropdown'

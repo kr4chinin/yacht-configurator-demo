@@ -1,4 +1,4 @@
-import styles from './index.module.scss'
+import styles from './OptionsDropdown.module.scss'
 import { useClickOutside } from '../../hooks/useClickOutside'
 import cn from 'classnames'
 import React, { FC, useRef } from 'react'

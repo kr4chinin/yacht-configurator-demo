@@ -3,8 +3,8 @@ import { useFBX, OrbitControls, Sky } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import { Suspense } from 'react'
 import YachtModel from './components/YachtModel'
-import Navbar from './components/Navbar/Navbar'
-import Footer from './components/Footer/Footer'
+import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 
 const App = () => {
 	const yachtModel = useFBX('../models/yacht.fbx')
