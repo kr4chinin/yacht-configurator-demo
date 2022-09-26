@@ -5,6 +5,7 @@ import OptionsDropdown from '../../UI/OptionsDropdown'
 import { FC, useState } from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import { Group } from 'three'
+import AccessoriesPopup from '../AccessoriesPopup'
 
 interface NavbarProps {
 	model: Group
@@ -17,6 +18,20 @@ const Navbar: FC<NavbarProps> = ({ model }) => {
 
 	const [isInteriorOverviewSidebarOpened, setIsInteriorOverviewSidebarOpened] =
 		useState(false)
+
+	const [isAccessoriesOpened, setIsAccessoriesOpened] = useState(false)
+
+	const mockOptions = [
+		{
+			title: 'Overview',
+			onClick: () => setIsInteriorOverviewSidebarOpened(prev => !prev)
+		},
+		{ title: 'Frame', onClick: () => {} },
+		{ title: 'Finishing', onClick: () => {} },
+		{ title: 'Floor', onClick: () => {} },
+		{ title: 'Lights', onClick: () => {} },
+		{ title: 'Windows', onClick: () => {} }
+	]
 
 	return (
 		<nav className={styles.container}>
@@ -33,14 +48,7 @@ const Navbar: FC<NavbarProps> = ({ model }) => {
 					<OptionsDropdown
 						isShown={isExterirorOpened}
 						setIsShown={setIsExteriorOpened}
-						options={[
-							{ title: 'Overview', onClick: () => {} },
-							{ title: 'Frame', onClick: () => {} },
-							{ title: 'Finishing', onClick: () => {} },
-							{ title: 'Floor', onClick: () => {} },
-							{ title: 'Lights', onClick: () => {} },
-							{ title: 'Windows', onClick: () => {} }
-						]}
+						options={mockOptions}
 					>
 						Exterior
 					</OptionsDropdown>
@@ -50,17 +58,7 @@ const Navbar: FC<NavbarProps> = ({ model }) => {
 					<OptionsDropdown
 						isShown={isInteriorOpened}
 						setIsShown={setIsInteriorOpened}
-						options={[
-							{
-								title: 'Overview',
-								onClick: () => setIsInteriorOverviewSidebarOpened(prev => !prev)
-							},
-							{ title: 'Frame', onClick: () => {} },
-							{ title: 'Finishing', onClick: () => {} },
-							{ title: 'Floor', onClick: () => {} },
-							{ title: 'Lights', onClick: () => {} },
-							{ title: 'Windows', onClick: () => {} }
-						]}
+						options={mockOptions}
 					>
 						Interior
 					</OptionsDropdown>
@@ -76,23 +74,23 @@ const Navbar: FC<NavbarProps> = ({ model }) => {
 					<OptionsDropdown
 						isShown={isSurroundingsOpened}
 						setIsShown={setIsSurroundingsOpened}
-						options={[
-							{ title: 'Overview', onClick: () => {} },
-							{ title: 'Frame', onClick: () => {} },
-							{ title: 'Finishing', onClick: () => {} },
-							{ title: 'Floor', onClick: () => {} },
-							{ title: 'Lights', onClick: () => {} },
-							{ title: 'Windows', onClick: () => {} }
-						]}
+						options={mockOptions}
 					>
 						Engine
 					</OptionsDropdown>
 				</div>
-                <TwoLines />
-                <div className={styles.option}>
-                    Optional accessories
-                </div>
+				<TwoLines />
+				<div
+					className={styles.option}
+					onClick={() => setIsAccessoriesOpened(prev => !prev)}
+				>
+					Optional accessories
+				</div>
 			</div>
+			<AccessoriesPopup
+				isOpened={isAccessoriesOpened}
+				onClose={() => setIsAccessoriesOpened(false)}
+			/>
 		</nav>
 	)
 }

@@ -1,0 +1,30 @@
+.container {
+	inset: 0 0 0 0;
+	position: fixed;
+
+	padding: 36px;
+	box-sizing: border-box;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    cursor: pointer;
+
+    .content {
+        font-family: 'Montserrat', sans-serif;
+
+        width: 86vw;
+        margin-top: 125px;
+        height: calc(100vh - 225px);
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        cursor: default;
+        color: white;
+        font-size: 1.3rem;
+        font-weight: lighter;
+
+        padding: 1rem;
+    }
+}
