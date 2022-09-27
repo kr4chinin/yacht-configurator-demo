@@ -1,3 +1,5 @@
+@import '../../../../../assets/fonts/SnellRoundhad';
+
 .container {
 	inset: 0 0 0 0;
 	position: fixed;
@@ -9,22 +11,92 @@
 	justify-content: center;
 	align-items: center;
 
-    cursor: pointer;
+	cursor: pointer;
 
-    .content {
-        font-family: 'Montserrat', sans-serif;
+	.content {
+		font-family: 'Montserrat', sans-serif;
 
-        width: 86vw;
-        margin-top: 125px;
-        height: calc(100vh - 225px);
+		width: 86vw;
+		margin-top: 60px;
+		height: calc(100vh - 275px);
 
-        background-color: rgba(0, 0, 0, 0.5);
+		cursor: default;
+		color: white;
 
-        cursor: default;
-        color: white;
-        font-size: 1.3rem;
-        font-weight: lighter;
+		.title {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
 
-        padding: 1rem;
-    }
+			font-size: 1.6rem;
+
+			margin-top: 8px;
+			margin-bottom: 15px;
+
+			h3 {
+				font-weight: lighter;
+			}
+		}
+
+		.body {
+			background-color: rgba(0, 0, 0, 0.5);
+			height: 100%;
+
+			font-size: 1.3rem;
+			font-weight: lighter;
+
+			padding: 1rem;
+
+			.header {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+                align-items: center;
+
+                margin-bottom: 20px;
+
+                .logo {
+                    font-family: 'Snell Roundhad', sans-serif;
+                    font-size: 2rem;
+
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+
+                    p {
+                        margin-bottom: 2px;
+                    }
+
+                    svg {
+                        width: 46px;
+                        height: 46px;
+    
+                        path {
+                            fill: white;
+                        }
+                    }
+                }
+
+				.close-btn {
+					width: 46px;
+					height: 46px;
+
+					path {
+						fill: white;
+                        transition: 500ms;
+					}
+                    
+                    transition: 500ms;
+
+                    &:hover {
+                        cursor: pointer;
+                        transform: scale(1.05);
+
+                        filter: brightness(0.75);
+                    }
+				}
+			}
+		}
+	}
 }

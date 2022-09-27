@@ -1,6 +1,8 @@
 import { FC } from "react"
 import Portal from "../../../../../components/Portal"
 import styles from './AccessoriesPopup.module.scss'
+import {ReactComponent as CloseCircle} from '../../../../../assets/icons/close-circle.svg'
+import {ReactComponent as Yacht} from '../../../../../assets/icons/yacht.svg'
 
 interface AccessoriesPopupProps {
     isOpened: boolean
@@ -21,7 +23,21 @@ const AccessoriesPopup: FC<AccessoriesPopupProps> = ({isOpened, onClose}) => {
         <Portal onClose={onClose}>
             <div className={styles.container} onClick={onClose} role='button' tabIndex={0}>
                 <div className={styles.content} onClick={handleStopPropagation}>
-                    There will be some accessories...
+                    <div className={styles.title}>
+                        <h3>Optional accessories</h3>
+                    </div>
+                    <div className={styles.body}>
+                        <div className={styles.header}>
+                            <div className={styles.logo}>
+                                <Yacht />
+                                <p>Kingdom Marine</p>
+                            </div>
+                            <CloseCircle onClick={onClose} className={styles['close-btn']}/>
+                        </div>
+                        <div>
+                            Accessories will be here
+                        </div>
+                    </div>
                 </div>
             </div>
         </Portal>
