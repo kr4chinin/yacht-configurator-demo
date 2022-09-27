@@ -19,10 +19,10 @@ const Configurator = () => {
 						sunPosition={[1, 1, 0]}
 						inclination={0}
 						azimuth={0.25}
+                        rayleigh={0.1}
+                        turbidity={0.1}
+                        mieCoefficient={0.02}
 					/>
-
-					{/* <ambientLight intensity={0.65} /> */}
-
 					<YachtModel model={yachtModel} />
 				</Canvas>
 			</div>
