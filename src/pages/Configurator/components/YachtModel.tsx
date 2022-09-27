@@ -44,10 +44,6 @@ const YachtModel: FC<YachtModelProps> = ({ model }) => {
 	// Окна
 	;(model.children[7] as Mesh).material = initialMaterial7
 
-	// Делаем окна прозрачными
-	;((model.children[7] as Mesh).material as Material).transparent = true
-	;((model.children[7] as Mesh).material as Material).opacity = 0.75
-
 	// Каемка вокруг яхты снизу
 	;(model.children[8] as Mesh).material = initialMaterial8
 
