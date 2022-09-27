@@ -11,93 +11,76 @@
 	justify-content: center;
 	align-items: center;
 
+    z-index: 1;
+
 	cursor: pointer;
 
 	.content {
 		font-family: 'Montserrat', sans-serif;
 
 		width: 86vw;
-		margin-top: 60px;
-		height: calc(100vh - 275px);
+		margin-top: 125px;
+		height: calc(100vh - 225px);
 
 		cursor: default;
 		color: white;
 
-		.title {
+		background-color: rgba(0, 0, 0, 0.5);
+		overflow: scroll;
+
+		font-size: 1.3rem;
+		font-weight: lighter;
+
+		padding: 1rem;
+
+		.header {
 			display: flex;
+			width: 100%;
+			justify-content: space-between;
 			align-items: center;
-			justify-content: center;
-			flex-direction: column;
 
-			font-size: 1.6rem;
+			margin-bottom: 20px;
 
-			margin-top: 8px;
-			margin-bottom: 15px;
+			.logo {
+				font-family: 'Snell Roundhad', sans-serif;
+				font-size: 2rem;
 
-			h3 {
-				font-weight: lighter;
-			}
-		}
-
-		.body {
-			background-color: rgba(0, 0, 0, 0.5);
-			height: 100%;
-            overflow: scroll;
-
-			font-size: 1.3rem;
-			font-weight: lighter;
-
-			padding: 1rem;
-
-			.header {
 				display: flex;
-				width: 100%;
-				justify-content: space-between;
-                align-items: center;
+				align-items: center;
+				gap: 10px;
 
-                margin-bottom: 20px;
+				margin: auto;
 
-                .logo {
-                    font-family: 'Snell Roundhad', sans-serif;
-                    font-size: 2rem;
+				p {
+					margin-bottom: 2px;
+				}
 
-                    display: flex;
-                    align-items: center;
-                    gap: 10px;
-
-                    margin: auto;
-
-                    p {
-                        margin-bottom: 2px;
-                    }
-
-                    svg {
-                        width: 46px;
-                        height: 46px;
-    
-                        path {
-                            fill: white;
-                        }
-                    }
-                }
-
-				.close-btn {
+				svg {
 					width: 46px;
 					height: 46px;
 
 					path {
 						fill: white;
-                        transition: 500ms;
 					}
-                    
-                    transition: 500ms;
+				}
+			}
 
-                    &:hover {
-                        cursor: pointer;
-                        transform: scale(1.05);
+			.close-btn {
+				width: 46px;
+				height: 46px;
 
-                        filter: brightness(0.75);
-                    }
+				path {
+					fill: white;
+					transition: 500ms;
+				}
+
+				transition: 500ms;
+
+				&:hover {
+					cursor: pointer;
+					transform: scale(1.05);
+
+					filter: brightness(0.75);
 				}
 			}
 		}
