@@ -5,6 +5,10 @@
 }
 
 #nprogress .bar {
-	background: rgb(5, 5, 117) !important;
+	background: rgba(0, 0, 0, 0.7) !important;
     height: 3px !important;
+}
+
+#nprogress .peg {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.7) !important;
 }
