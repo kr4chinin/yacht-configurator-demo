@@ -12,6 +12,7 @@
 	"dependencies": {
 		"@react-three/drei": "^9.32.1",
 		"classnames": "^2.3.2",
+		"nprogress": "^0.2.0",
 		"react": "^18.2.0",
 		"react-dom": "^18.2.0",
 		"react-loader-spinner": "^5.3.4",
@@ -21,6 +22,7 @@
 		"vite-plugin-svgr": "^2.2.1"
 	},
 	"devDependencies": {
+		"@types/nprogress": "^0.2.0",
 		"@types/react": "^18.0.17",
 		"@types/react-dom": "^18.0.6",
 		"@types/three": "^0.144.0",

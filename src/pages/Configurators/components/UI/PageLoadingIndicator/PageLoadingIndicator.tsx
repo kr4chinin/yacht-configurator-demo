@@ -1,12 +1,12 @@
 import styles from './PageLoadingIndicator.module.scss'
-import {Radio} from 'react-loader-spinner'
+import { ThreeDots } from 'react-loader-spinner'
 
 const PageLoadingIndicator = () => {
-    return (
-        <div className={styles.container}>
-            <Radio />
-        </div>
-    )
+	return (
+		<div className={styles.container}>
+			<ThreeDots color="rgb(57, 60, 93)" />
+		</div>
+	)
 }
 
 export default PageLoadingIndicator
