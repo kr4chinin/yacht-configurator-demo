@@ -1,4 +1,4 @@
-import { lazy, Suspense, useEffect } from 'react'
+import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ProgressLoadingIndicator from './pages/Configurators/components/UI/ProgressLoadingIndicator'
 import Main from './pages/Main'
