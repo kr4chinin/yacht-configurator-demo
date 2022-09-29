@@ -1,10 +1,8 @@
 import { lazy, Suspense, useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
+import ProgressLoadingIndicator from './pages/Configurators/components/UI/ProgressLoadingIndicator'
 import Main from './pages/Main'
-import PageLoadingIndicator from './pages/Configurators/components/UI/PageLoadingIndicator'
 import { AppRoutes } from './utils/routes'
-import NProgress from 'nprogress'
-import 'nprogress/nprogress.css'
 
 const LazyFlybridgeConfigurator = lazy(
 	() => import('./pages/Configurators/FlybridgeConfigurator')
@@ -13,23 +11,6 @@ const LazySkydeckConfigurator = lazy(
 	() => import('./pages/Configurators/SkydeckConfigurator')
 )
 
-const LazyLoad = () => {
-	useEffect(() => {
-        NProgress.configure({ showSpinner: false})
-
-        const intervalId = setInterval(() => {
-            NProgress.inc(0.008)
-        }, 150)
-
-        return () => {
-            NProgress.done()
-            clearInterval(intervalId)
-        }
-	})
-
-	return <PageLoadingIndicator />
-}
-
 const AppRouter = () => {
 	return (
 		<Routes>
@@ -37,7 +18,7 @@ const AppRouter = () => {
 			<Route
 				path={AppRoutes.FLYBRIDGE_CONFIGURATOR}
 				element={
-					<Suspense fallback={<LazyLoad />}>
+					<Suspense fallback={<ProgressLoadingIndicator />}>
 						<LazyFlybridgeConfigurator />
 					</Suspense>
 				}
@@ -45,7 +26,7 @@ const AppRouter = () => {
 			<Route
 				path={AppRoutes.SKYDECK_CONFIGURATOR}
 				element={
-					<Suspense fallback={<LazyLoad />}>
+					<Suspense fallback={<ProgressLoadingIndicator />}>
 						<LazySkydeckConfigurator />
 					</Suspense>
 				}
