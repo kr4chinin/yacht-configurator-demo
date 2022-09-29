@@ -32,7 +32,7 @@ const SkydeckNavbar: FC<SkydeckNavbarProps> = ({ model }) => {
 		<>
 			<Navbar
 				model={model}
-				yachtName="Flybridge"
+				yachtName="Skydeck"
 				interiorOptions={mockOptions}
 				exteriorOptions={mockOptions}
 				engineOptions={mockOptions}

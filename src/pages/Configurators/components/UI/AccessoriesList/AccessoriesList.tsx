@@ -11,7 +11,7 @@ export type Accessory = {
 }
 
 const AccessoriesList = () => {
-	const [accessories, setAccessories] = useState<Accessory[]>(mockAccessories)
+	const [accessories] = useState<Accessory[]>(mockAccessories)
 
 	return (
 		<div className={styles.container}>
