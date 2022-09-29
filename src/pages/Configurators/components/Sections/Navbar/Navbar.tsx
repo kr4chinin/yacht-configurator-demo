@@ -8,16 +8,25 @@ import { Group } from 'three'
 import AccessoriesPopup from '../AccessoriesPopup'
 import { useNavigate } from 'react-router-dom'
 import { AppRoutes } from '../../../../../utils/routes'
+import cn from 'classnames'
 
 interface NavbarProps {
 	model: Group
-    yachtName: string
-    exteriorOptions: {title: string, onClick: () => void}[]
-    interiorOptions: {title: string, onClick: () => void}[]
-    engineOptions: {title: string, onClick: () => void}[]
+	yachtName: string
+	isHidden: boolean
+	exteriorOptions: { title: string; onClick: () => void }[]
+	interiorOptions: { title: string; onClick: () => void }[]
+	engineOptions: { title: string; onClick: () => void }[]
 }
 
-const Navbar: FC<NavbarProps> = ({ model, yachtName, exteriorOptions, interiorOptions, engineOptions }) => {
+const Navbar: FC<NavbarProps> = ({
+	model,
+	yachtName,
+	exteriorOptions,
+	interiorOptions,
+	engineOptions,
+	isHidden
+}) => {
 	const navigate = useNavigate()
 
 	const [isInteriorOpened, setIsInteriorOpened] = useState(false)
@@ -34,7 +43,7 @@ const Navbar: FC<NavbarProps> = ({ model, yachtName, exteriorOptions, interiorOp
 	}
 
 	return (
-		<nav className={styles.container}>
+		<nav className={cn(styles.container, {[styles.hidden]: isHidden})}>
 			<div className={styles['top-section']}>
 				<div className={styles.menu}>
 					<Menu />

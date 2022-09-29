@@ -2,9 +2,8 @@ import styles from './SkydeckConfigurator.module.scss'
 import { useFBX, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import SkydeckModel from '../components/SkydeckModel'
-import Footer from '../components/Sections/Footer'
 import SkyElement from '../components/UI/SkyElement'
-import SkydeckNavbar from '../components/Sections/SkydeckNavbar'
+import SkydeckNavbar from '../components/Sections/SkydeckControls'
 
 const SkydeckConfigurator = () => {
 	const yachtModel = useFBX('../models/skydeck.fbx')
@@ -20,7 +19,6 @@ const SkydeckConfigurator = () => {
 					<SkydeckModel model={yachtModel} />
 				</Canvas>
 			</div>
-			<Footer />
 		</>
 	)
 }

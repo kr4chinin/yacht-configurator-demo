@@ -4,14 +4,14 @@ import { Canvas } from '@react-three/fiber'
 import FlybridgeModel from '../components/FlybridgeModel'
 import Footer from '../components/Sections/Footer'
 import SkyElement from '../components/UI/SkyElement'
-import FlybridgeNavbar from '../components/Sections/FlybridgeNavbar'
+import FlybridgeControls from '../components/Sections/FlybridgeControls'
 
 const FlybridgeConfigurator = () => {
 	const yachtModel = useFBX('../models/flybridge.fbx')
 
 	return (
 		<>
-			<FlybridgeNavbar model={yachtModel}/>
+			<FlybridgeControls model={yachtModel} />
 
 			<div className={styles['canvas-container']}>
 				<Canvas>
@@ -20,7 +20,6 @@ const FlybridgeConfigurator = () => {
 					<FlybridgeModel model={yachtModel} />
 				</Canvas>
 			</div>
-			<Footer />
 		</>
 	)
 }

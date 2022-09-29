@@ -67,7 +67,7 @@
 
 			margin-left: 55px;
 
-            mask-image: linear-gradient(
+			mask-image: linear-gradient(
 				-75deg,
 				rgba(0, 0, 0, 0.6) 30%,
 				#000 50%,
@@ -80,20 +80,20 @@
 				rgba(0, 0, 0, 0.6) 70%
 			);
 
-            mask-size: 200%;
+			mask-size: 200%;
 			-webkit-mask-size: 200%;
 
-            animation: wave 4.5s infinite;
+			animation: wave 4.5s infinite;
 		}
 
 		@keyframes wave {
 			from {
-                mask-position: 150%;
-                -webkit-mask-position: 100%;
+				mask-position: 150%;
+				-webkit-mask-position: 100%;
 			}
 			to {
-                mask-position: -50%;
-                -webkit-mask-position: -100%;
+				mask-position: -50%;
+				-webkit-mask-position: -100%;
 			}
 		}
 
@@ -137,4 +137,10 @@
 			}
 		}
 	}
+
+    transition: 500ms;
+}
+
+.container.hidden {
+	transform: translateY(-100%);
 }

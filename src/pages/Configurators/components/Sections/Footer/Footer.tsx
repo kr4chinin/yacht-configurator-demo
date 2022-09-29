@@ -1,8 +1,14 @@
+import { FC } from 'react'
 import styles from './Footer.module.scss'
+import cn from 'classnames'
 
-const Footer = () => {
+interface FooterProps {
+    isHidden: boolean
+}
+
+const Footer: FC<FooterProps> = ({isHidden}) => {
 	return (
-		<footer className={styles.container}>
+		<footer className={cn(styles.container, {[styles.hidden]: isHidden})}>
 			<div className={styles.info}>
 				<p>Kingdom Marine ™️</p>
 				<p>Russia, Moscow</p>

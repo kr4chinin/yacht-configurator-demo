@@ -1,0 +1,29 @@
+.show-fullscreen-btn {
+	position: absolute;
+	bottom: 70px;
+	right: 20px;
+	z-index: 1;
+	padding: 0.5rem;
+
+	width: 54px;
+	height: 54px;
+
+	background-color: rgba(0, 0, 0, 0.5);
+    border: 2px solid rgba(0, 0, 0, 0.2);
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    svg {
+        fill: white;
+        stroke: white;
+        height: 36px;
+        width: 36px;
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+}

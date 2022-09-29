@@ -16,6 +16,8 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: lighter;
 
+    z-index: 1;
+
 	.info {
 		display: flex;
 		gap: 1em;
@@ -29,4 +31,10 @@
 			color: white;
 		}
 	}
+
+    transition: 500ms;
+}
+
+.container.hidden {
+    transform: translateY(100%);
 }
