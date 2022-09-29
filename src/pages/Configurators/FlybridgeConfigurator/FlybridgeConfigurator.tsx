@@ -2,7 +2,6 @@ import styles from './FlybridgeConfigurator.module.scss'
 import { useFBX, OrbitControls } from '@react-three/drei'
 import { Canvas } from '@react-three/fiber'
 import FlybridgeModel from '../components/FlybridgeModel'
-import Footer from '../components/Sections/Footer'
 import SkyElement from '../components/UI/SkyElement'
 import FlybridgeControls from '../components/Sections/FlybridgeControls'
 

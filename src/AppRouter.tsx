@@ -16,10 +16,14 @@ const LazySkydeckConfigurator = lazy(
 const LazyLoad = () => {
 	useEffect(() => {
         NProgress.configure({ showSpinner: false})
-		NProgress.set(0.35)
+
+        const intervalId = setInterval(() => {
+            NProgress.inc(0.008)
+        }, 150)
 
         return () => {
             NProgress.done()
+            clearInterval(intervalId)
         }
 	})
 
