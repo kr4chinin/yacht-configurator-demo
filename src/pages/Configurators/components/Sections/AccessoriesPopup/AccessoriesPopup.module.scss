@@ -25,7 +25,6 @@
 		cursor: default;
 		color: white;
 
-		background-color: rgba(0, 0, 0, 0.5);
 		overflow: scroll;
 
 		font-size: 1.3rem;
@@ -43,7 +42,7 @@
 
 			.logo {
 				font-family: 'Snell Roundhad', sans-serif;
-				font-size: 2rem;
+				font-size: 2.2rem;
 
 				display: flex;
 				align-items: center;
@@ -53,14 +52,15 @@
 
 				p {
 					margin-bottom: 2px;
+                    color: black;
 				}
 
 				svg {
-					width: 46px;
-					height: 46px;
+					width: 50px;
+					height: 50px;
 
 					path {
-						fill: white;
+						fill: black;
 					}
 				}
 			}
@@ -70,7 +70,7 @@
 				height: 46px;
 
 				path {
-					fill: white;
+					fill: black;
 					transition: 500ms;
 				}
 
@@ -79,8 +79,6 @@
 				&:hover {
 					cursor: pointer;
 					transform: scale(1.05);
-
-					filter: brightness(0.75);
 				}
 			}
 		}

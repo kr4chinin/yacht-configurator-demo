@@ -1,13 +1,23 @@
 .container {
 	width: 100%;
 	height: 300px;
-	background-color: rgba(0, 0, 0, 0.5);
+    background-color: rgba(0, 0, 0, 0.35);
+
+    border-radius: 10px;
 
 	display: flex;
 	align-items: center;
 	flex-direction: column;
 
-	border-radius: 5px;
+	background: radial-gradient(
+		100.21% 271.27% 2.81% 7.08%,
+		rgba(255, 252, 252, 0.3) 0%,
+		rgba(250, 250, 250, 0.07) 100%
+	);
+
+	backdrop-filter: blur(5px);
+
+    box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.25);
 
 	h5 {
 		font-size: 1.4rem;
@@ -32,7 +42,7 @@
 			position: absolute;
 			inset: 0 0 0 0;
 			padding: 0.5em 0.8em;
-            font-size: 1.2rem;
+			font-size: 1.2rem;
 
 			overflow: scroll;
 
@@ -43,7 +53,7 @@
 		}
 
 		&:hover {
-            cursor: pointer;
+			cursor: pointer;
 
 			.description {
 				transform: translateX(0);
@@ -51,44 +61,44 @@
 		}
 	}
 
-    .controls {
-        width: 100%;
+	.controls {
+		width: 100%;
 
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
 
-        margin-top: 20px;
+		margin-top: 20px;
 
-        padding: 0 0.8em;
+		padding: 0 0.8em;
 
-        .price {
-            display: flex;
-            align-items: center;
-            gap: 5px;
+		.price {
+			display: flex;
+			align-items: center;
+			gap: 5px;
 
-            svg {
-                fill: white;
-            }
-        }
+			svg {
+				fill: white;
+			}
+		}
 
-        .add-btn {
-            min-width: 66px;
-            height: 46px;
-    
-            background-color: transparent;
-            border-radius: 20px;
-            border: 1px solid white;
-            color: white;
-    
-            transition: 500ms;
-    
-            &:hover {
-                cursor: pointer;
-    
-                background-color: white;
-                color: black;
-            }
-        }
-    }
+		.add-btn {
+			min-width: 66px;
+			height: 46px;
+
+			background-color: transparent;
+			border-radius: 20px;
+			border: 1px solid white;
+			color: white;
+
+			transition: 500ms;
+
+			&:hover {
+				cursor: pointer;
+
+				background-color: white;
+				color: black;
+			}
+		}
+	}
 }
