@@ -11,7 +11,7 @@
 	justify-content: center;
 	align-items: center;
 
-    z-index: 1;
+	z-index: 1;
 
 	cursor: pointer;
 
@@ -52,7 +52,7 @@
 
 				p {
 					margin-bottom: 2px;
-                    color: white;
+					color: white;
 				}
 
 				svg {
@@ -84,12 +84,12 @@
 		}
 	}
 
-    .content::-webkit-scrollbar {
-        display: none;
-    }
+	.content::-webkit-scrollbar {
+		display: none;
+	}
 
-    .content {
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
-    }
+	.content {
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+	}
 }

@@ -43,7 +43,7 @@ const Navbar: FC<NavbarProps> = ({
 	}
 
 	return (
-		<nav className={cn(styles.container, {[styles.hidden]: isHidden})}>
+		<nav className={cn(styles.container, { [styles.hidden]: isHidden })}>
 			<div className={styles['top-section']}>
 				<div className={styles.menu}>
 					<Menu />

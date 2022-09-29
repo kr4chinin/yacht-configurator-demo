@@ -39,7 +39,7 @@ const FlybridgeModel: FC<FlybridgeModelProps> = ({ model }) => {
 	;(model.children[5] as Mesh).material = initialMaterial5
 
 	// Козырек
-	;(model.children[6] as Mesh).material = initialMaterial6 
+	;(model.children[6] as Mesh).material = initialMaterial6
 
 	// Окна
 	;(model.children[7] as Mesh).material = initialMaterial7

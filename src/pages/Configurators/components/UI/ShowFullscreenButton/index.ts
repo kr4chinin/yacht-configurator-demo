@@ -1,1 +1,1 @@
-export {default} from './ShowFullscreenButton'
+export { default } from './ShowFullscreenButton'

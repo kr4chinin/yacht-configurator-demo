@@ -19,7 +19,7 @@
 	font-family: 'Montserrat', sans-serif;
 	font-weight: lighter;
 
-    z-index: 1;
+	z-index: 1;
 
 	.info {
 		display: flex;
@@ -35,21 +35,21 @@
 		}
 	}
 
-    @include optimizedBackdropFilter(blur(5px));
+	@include optimizedBackdropFilter(blur(5px));
 
-    transition: 500ms;
+	transition: 500ms;
 }
 
 .container:after {
-    content:"";
-    position:absolute;
-    width: 100%;
-    top: 2px;
-    left: 0;
-    z-index:-1;
-    @include primary-box-shadow;
+	content: '';
+	position: absolute;
+	width: 100%;
+	top: 2px;
+	left: 0;
+	z-index: -1;
+	@include primary-box-shadow;
 }
 
 .container.hidden {
-    transform: translateY(100%);
+	transform: translateY(100%);
 }

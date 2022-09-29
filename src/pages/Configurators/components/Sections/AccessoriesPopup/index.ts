@@ -1,1 +1,1 @@
-export {default} from './AccessoriesPopup'
+export { default } from './AccessoriesPopup'

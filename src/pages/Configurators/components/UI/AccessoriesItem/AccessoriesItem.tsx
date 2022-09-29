@@ -2,7 +2,7 @@ import styles from './AccessoriesItem.module.scss'
 import { Accessory } from '../AccessoriesList/AccessoriesList'
 import { FC } from 'react'
 import { ReactComponent as EuroSymbol } from '../../../../../assets/icons/euro-symbol.svg'
-import {convertPrice} from '../../../../../helpers/convertPrice'
+import { convertPrice } from '../../../../../helpers/convertPrice'
 
 interface AccessoriesItemProps {
 	accessory: Accessory

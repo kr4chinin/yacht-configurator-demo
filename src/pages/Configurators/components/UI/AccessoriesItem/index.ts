@@ -1,1 +1,1 @@
-export {default} from './AccessoriesItem'
+export { default } from './AccessoriesItem'

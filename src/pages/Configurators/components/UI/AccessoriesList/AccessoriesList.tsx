@@ -31,7 +31,8 @@ const mockAccessories = [
 		price: 2000,
 		image:
 			'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 2,
@@ -39,7 +40,8 @@ const mockAccessories = [
 		price: 5000,
 		image:
 			'https://images.unsplash.com/photo-1520670255513-79161a36e39c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 3,
@@ -47,7 +49,8 @@ const mockAccessories = [
 		price: 2000,
 		image:
 			'https://images.unsplash.com/photo-1616207133639-cd5e4db9859f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 4,
@@ -55,7 +58,8 @@ const mockAccessories = [
 		price: 1000,
 		image:
 			'https://images.unsplash.com/photo-1628336704853-9e8c932ac8f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 5,
@@ -63,7 +67,8 @@ const mockAccessories = [
 		price: 2050,
 		image:
 			'https://images.unsplash.com/photo-1610306673750-b6dbfee4d301?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 6,
@@ -71,7 +76,8 @@ const mockAccessories = [
 		price: 1000,
 		image:
 			'https://images.unsplash.com/photo-1570422774250-c951ec3ef74c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 7,
@@ -79,7 +85,8 @@ const mockAccessories = [
 		price: 2000,
 		image:
 			'https://images.unsplash.com/photo-1569282066844-679ec34e3416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 8,
@@ -87,7 +94,8 @@ const mockAccessories = [
 		price: 2000,
 		image:
 			'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	},
 	{
 		id: 9,
@@ -95,6 +103,7 @@ const mockAccessories = [
 		price: 2000,
 		image:
 			'https://images.unsplash.com/photo-1599582297450-33ad41d26df8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
+		description:
+			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
 	}
 ]

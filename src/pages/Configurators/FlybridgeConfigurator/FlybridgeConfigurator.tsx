@@ -23,9 +23,9 @@ const FlybridgeConfigurator = () => {
 					onMouseUp={() => {
 						document.body.style.cursor = 'grab'
 					}}
-                    onMouseLeave={() => {
-                        document.body.style.cursor = 'default'
-                    }}
+					onMouseLeave={() => {
+						document.body.style.cursor = 'default'
+					}}
 				>
 					<OrbitControls />
 					<SkyElement />

@@ -5,6 +5,6 @@ export enum Children5 {
 	variant4 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297706/children%5B5%5D/4.variant_lpx1vd.jpg',
 	variant5 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664299511/children%5B5%5D/5.variant_vbhkmo.jpg',
 	variant6 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297706/children%5B5%5D/6.variant_ejpitn.jpg',
-    variant7 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297706/children%5B5%5D/7.variant_jeyssf.jpg',
-    variant8 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297706/children%5B5%5D/8.variant_rllo5a.jpg'
+	variant7 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297706/children%5B5%5D/7.variant_jeyssf.jpg',
+	variant8 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297706/children%5B5%5D/8.variant_rllo5a.jpg'
 }

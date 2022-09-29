@@ -1,7 +1,7 @@
 @mixin optimizedBackdropFilter($filter) {
-    backdrop-filter: $filter;
-    -webkit-backdrop-filter: $filter;
-    -o-backdrop-filter: $filter;
-    -moz-backdrop-filter: $filter;
-    -ms-backdrop-filter: $filter;
+	backdrop-filter: $filter;
+	-webkit-backdrop-filter: $filter;
+	-o-backdrop-filter: $filter;
+	-moz-backdrop-filter: $filter;
+	-ms-backdrop-filter: $filter;
 }

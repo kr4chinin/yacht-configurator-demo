@@ -1,1 +1,1 @@
-export {default} from './SkydeckConfigurator'
+export { default } from './SkydeckConfigurator'

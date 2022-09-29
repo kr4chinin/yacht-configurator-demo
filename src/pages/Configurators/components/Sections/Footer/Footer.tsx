@@ -3,12 +3,12 @@ import styles from './Footer.module.scss'
 import cn from 'classnames'
 
 interface FooterProps {
-    isHidden: boolean
+	isHidden: boolean
 }
 
-const Footer: FC<FooterProps> = ({isHidden}) => {
+const Footer: FC<FooterProps> = ({ isHidden }) => {
 	return (
-		<footer className={cn(styles.container, {[styles.hidden]: isHidden})}>
+		<footer className={cn(styles.container, { [styles.hidden]: isHidden })}>
 			<div className={styles.info}>
 				<p>Kingdom Marine ™️</p>
 				<p>Russia, Moscow</p>

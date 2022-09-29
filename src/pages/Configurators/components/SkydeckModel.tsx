@@ -18,63 +18,65 @@ interface SkydeckModelProps {
 const SkydeckModel: FC<SkydeckModelProps> = ({ model }) => {
 	// ; в начале строки - это просто приведение к типу void, тут оно необхоимо, чтобы не было ошибки
 
-    /* Корпус и окна */
+	/* Корпус и окна */
 
-    // Главные окна и виндшилд сверху
-    ; (model.children[0].children[0] as Mesh).material = initialMaterial7
-    // Корпус
-    ; (model.children[0].children[1] as Mesh).material = initialMaterial8
-    // Низ мостика сзади
-    ; (model.children[0].children[2] as Mesh).material = initialMaterial6
-    // Небольшие детали корпуса внутри яхты по бокам ()
-    ; (model.children[0].children[3] as Mesh).material = initialMaterial1
+	// Главные окна и виндшилд сверху
+	;(model.children[0].children[0] as Mesh).material = initialMaterial7
+	// Корпус
+	;(model.children[0].children[1] as Mesh).material = initialMaterial8
+	// Низ мостика сзади
+	;(model.children[0].children[2] as Mesh).material = initialMaterial6
+	// Небольшие детали корпуса внутри яхты по бокам ()
+	;(model.children[0].children[3] as Mesh).material = initialMaterial1
 
-    /* Лестница и верхняя часть корпуса */
+	/* Лестница и верхняя часть корпуса */
 
-    // Лестница
-    ; (model.children[1].children[0] as Mesh).material = initialMaterial2
-    // Верхняя часть корпуса
-    ; (model.children[1].children[1] as Mesh).material = initialMaterial3
+	// Лестница
+	;(model.children[1].children[0] as Mesh).material = initialMaterial2
+	// Верхняя часть корпуса
+	;(model.children[1].children[1] as Mesh).material = initialMaterial3
 
-    /* Перила */ 
-    ; (model.children[2].children[0] as Mesh).material = initialMaterial0
+	/* Перила */
+	;(model.children[2].children[0] as Mesh).material = initialMaterial0
 
-    /* Палуба */
-    ; (model.children[3].children[0] as Mesh).material = initialMaterial3
+	/* Палуба */
+	;(model.children[3].children[0] as Mesh).material = initialMaterial3
 
-    /* Задняя часть корпуса */
+	/* Задняя часть корпуса */
 
-    // Большая часть задней части корпуса
-    ; (model.children[4].children[0] as Mesh).material = initialMaterial8
-    // Прямоугольный люк внутрь корпуса
-    ; (model.children[4].children[1] as Mesh).material = initialMaterial4
+	// Большая часть задней части корпуса
+	;(model.children[4].children[0] as Mesh).material = initialMaterial8
+	// Прямоугольный люк внутрь корпуса
+	;(model.children[4].children[1] as Mesh).material = initialMaterial4
 
-    /* Верхняя часть яхты */
+	/* Верхняя часть яхты */
 
-    // Крыша
-    ; (model.children[5].children[0] as Mesh).material = initialMaterial8
-    // Передняя часть верхней части
-    ; (model.children[5].children[1] as Mesh).material = initialMaterial1
-    // Рубка управления
-    ; (model.children[5].children[2] as Mesh).material = initialMaterial4
+	// Крыша
+	;(model.children[5].children[0] as Mesh).material = initialMaterial8
+	// Передняя часть верхней части
+	;(model.children[5].children[1] as Mesh).material = initialMaterial1
+	// Рубка управления
+	;(model.children[5].children[2] as Mesh).material = initialMaterial4
 
-    /* Антенны на крыше */
+	/* Антенны на крыше */
 
-    // Большая
-    ; (model.children[5].children[3].children[0] as Mesh).material = initialMaterial1
-    // Маленькая
-    ; (model.children[5].children[3].children[1] as Mesh).material = initialMaterial5
+	// Большая
+	;(model.children[5].children[3].children[0] as Mesh).material =
+		initialMaterial1
+	// Маленькая
+	;(model.children[5].children[3].children[1] as Mesh).material =
+		initialMaterial5
 
-    /* Интерьер */
+	/* Интерьер */
 
-    // Стол
-    ; (model.children[6].children[0] as Mesh).material = initialMaterial1
-    // Диван снаружи
-    ; (model.children[6].children[1] as Mesh).material = initialMaterial5
-    // Стены внутри
-    ; (model.children[6].children[2] as Mesh).material = initialMaterial5
-    // Рама входа внутрь
-    ; (model.children[6].children[3] as Mesh).material = initialMaterial1
+	// Стол
+	;(model.children[6].children[0] as Mesh).material = initialMaterial1
+	// Диван снаружи
+	;(model.children[6].children[1] as Mesh).material = initialMaterial5
+	// Стены внутри
+	;(model.children[6].children[2] as Mesh).material = initialMaterial5
+	// Рама входа внутрь
+	;(model.children[6].children[3] as Mesh).material = initialMaterial1
 
 	// Позиционируем и анимируем яхту
 	model.scale.set(0.08, 0.08, 0.08)

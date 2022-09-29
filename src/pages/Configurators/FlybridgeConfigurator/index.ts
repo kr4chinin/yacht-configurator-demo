@@ -1,1 +1,1 @@
-export {default} from './FlybridgeConfigurator'
+export { default } from './FlybridgeConfigurator'

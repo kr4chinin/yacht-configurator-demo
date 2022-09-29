@@ -40,7 +40,7 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model }) => {
 				interiorOptions={mockOptions}
 				exteriorOptions={mockOptions}
 				engineOptions={mockOptions}
-                isHidden={isFullscreenShown}
+				isHidden={isFullscreenShown}
 			/>
 
 			<ShowFullscreenButton
@@ -48,7 +48,7 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model }) => {
 				toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
 			/>
 
-			<Footer isHidden={isFullscreenShown}/>
+			<Footer isHidden={isFullscreenShown} />
 
 			<Sidebar
 				isShown={isInteriorOverviewSidebarOpened}
