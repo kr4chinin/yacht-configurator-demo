@@ -13,7 +13,20 @@ const FlybridgeConfigurator = () => {
 			<FlybridgeControls model={yachtModel} />
 
 			<div className={styles['canvas-container']}>
-				<Canvas>
+				<Canvas
+					onMouseEnter={() => {
+						document.body.style.cursor = 'grab'
+					}}
+					onMouseDown={() => {
+						document.body.style.cursor = 'grabbing'
+					}}
+					onMouseUp={() => {
+						document.body.style.cursor = 'grab'
+					}}
+                    onMouseLeave={() => {
+                        document.body.style.cursor = 'default'
+                    }}
+				>
 					<OrbitControls />
 					<SkyElement />
 					<FlybridgeModel model={yachtModel} />
