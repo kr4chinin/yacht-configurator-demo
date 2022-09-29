@@ -1,4 +1,5 @@
 export enum AppRoutes {
     MAIN = '/',
-    CONFIGURATOR = '/configurator'
+    FLYBRIDGE_CONFIGURATOR = '/flybridge-configurator',
+    SKYDECK_CONFIGURATOR = '/skydeck-configurator',
 }

@@ -1,0 +1,88 @@
+@import '../../../../../assets/fonts/SnellRoundhad';
+
+.container {
+	inset: 0 0 0 0;
+	position: fixed;
+
+	padding: 36px;
+	box-sizing: border-box;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+    z-index: 1;
+
+	cursor: pointer;
+
+	.content {
+		font-family: 'Montserrat', sans-serif;
+
+		width: 86vw;
+		margin-top: 125px;
+		height: calc(100vh - 225px);
+
+		cursor: default;
+		color: white;
+
+		background-color: rgba(0, 0, 0, 0.5);
+		overflow: scroll;
+
+		font-size: 1.3rem;
+		font-weight: lighter;
+
+		padding: 1rem;
+
+		.header {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			align-items: center;
+
+			margin-bottom: 20px;
+
+			.logo {
+				font-family: 'Snell Roundhad', sans-serif;
+				font-size: 2rem;
+
+				display: flex;
+				align-items: center;
+				gap: 10px;
+
+				margin: auto;
+
+				p {
+					margin-bottom: 2px;
+				}
+
+				svg {
+					width: 46px;
+					height: 46px;
+
+					path {
+						fill: white;
+					}
+				}
+			}
+
+			.close-btn {
+				width: 46px;
+				height: 46px;
+
+				path {
+					fill: white;
+					transition: 500ms;
+				}
+
+				transition: 500ms;
+
+				&:hover {
+					cursor: pointer;
+					transform: scale(1.05);
+
+					filter: brightness(0.75);
+				}
+			}
+		}
+	}
+}

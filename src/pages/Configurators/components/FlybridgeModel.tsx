@@ -1,0 +1,68 @@
+import { useFrame } from '@react-three/fiber'
+import { Group, Mesh } from 'three'
+import { FC } from 'react'
+import { initialMaterial as initialMaterial0 } from '../../../utils/materials/materials[0]'
+import { initialMaterial as initialMaterial1 } from '../../../utils/materials/materials[1]'
+import { initialMaterial as initialMaterial2 } from '../../../utils/materials/materials[2]'
+import { initialMaterial as initialMaterial3 } from '../../../utils/materials/materials[3]'
+import { initialMaterial as initialMaterial4 } from '../../../utils/materials/materials[4]'
+import { initialMaterial as initialMaterial5 } from '../../../utils/materials/materials[5]'
+import { initialMaterial as initialMaterial6 } from '../../../utils/materials/materials[6]'
+import { initialMaterial as initialMaterial7 } from '../../../utils/materials/materials[7]'
+import { initialMaterial as initialMaterial8 } from '../../../utils/materials/materials[8]'
+import { initialMaterial as initialMaterial9 } from '../../../utils/materials/materials[9]'
+import { initialMaterial as initialMaterial10 } from '../../../utils/materials/materials[10]'
+
+interface FlybridgeModelProps {
+	model: Group
+}
+
+const FlybridgeModel: FC<FlybridgeModelProps> = ({ model }) => {
+	// ; в начале строки - это просто приведение к типу void, тут оно необхоимо, чтобы не было ошибки
+
+	// Железная огранка по периметру
+	;(model.children[0] as Mesh).material = initialMaterial0
+
+	// Стойка руля
+	;(model.children[1] as Mesh).material = initialMaterial1
+
+	// Светильники на палубе
+	;(model.children[2] as Mesh).material = initialMaterial2
+
+	// Пол
+	;(model.children[3] as Mesh).material = initialMaterial3
+
+	// Корпус
+	;(model.children[4] as Mesh).material = initialMaterial4
+
+	// Сиденья на палубе и столы
+	;(model.children[5] as Mesh).material = initialMaterial5
+
+	// Козырек
+	;(model.children[6] as Mesh).material = initialMaterial6 
+
+	// Окна
+	;(model.children[7] as Mesh).material = initialMaterial7
+
+	// Каемка вокруг яхты снизу
+	;(model.children[8] as Mesh).material = initialMaterial8
+
+	// Окна в корпусе
+	;(model.children[9] as Mesh).material = initialMaterial9
+
+	// Стол и некоторый интерьер внутри корпуса
+	;(model.children[10] as Mesh).material = initialMaterial10
+
+	// Позиционируем и анимируем яхту
+	model.scale.set(0.0125, 0.0125, 0.0125)
+	model.position.set(0, 0, 0)
+	model.rotation.set(0, 0, 0)
+
+	useFrame(() => {
+		model.rotation.y += 0.001
+	})
+
+	return <primitive object={model} />
+}
+
+export default FlybridgeModel
