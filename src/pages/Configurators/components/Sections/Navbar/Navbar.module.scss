@@ -1,4 +1,5 @@
 @import '../../../../../assets/fonts/SnellRoundhad';
+@import '../../../../../styles/utils/optimizedBackdropFilter';
 
 .container {
 	position: absolute;
@@ -136,6 +137,8 @@
 			}
 		}
 	}
+
+    @include optimizedBackdropFilter(blur(5px));
 
     transition: 500ms;
 }

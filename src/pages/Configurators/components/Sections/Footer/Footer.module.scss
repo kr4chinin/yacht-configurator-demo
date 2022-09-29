@@ -1,3 +1,5 @@
+@import '../../../../../styles/utils/optimizedBackdropFilter';
+
 .container {
 	position: absolute;
 	bottom: 0;
@@ -31,6 +33,8 @@
 			color: white;
 		}
 	}
+
+    @include optimizedBackdropFilter(blur(5px));
 
     transition: 500ms;
 }
