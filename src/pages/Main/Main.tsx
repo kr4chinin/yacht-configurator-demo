@@ -14,15 +14,10 @@ const Main = () => {
 	}
 
 	return (
-		<div>
-			<div className={styles.container}>
-				<button onClick={handleNavigateToFlybridgeConfigurator}>
-					Flybridge
-				</button>
-			</div>
-			<div className={styles.container}>
-				<button onClick={handleNavigateToSkydeckConfigurator}>Skydeck</button>
-			</div>
+		<div className={styles.container}>
+			<button onClick={handleNavigateToFlybridgeConfigurator}>Flybridge</button>
+
+			<button onClick={handleNavigateToSkydeckConfigurator}>Skydeck</button>
 		</div>
 	)
 }

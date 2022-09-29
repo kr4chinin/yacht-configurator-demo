@@ -12,9 +12,12 @@ import { AppRoutes } from '../../../../../utils/routes'
 interface NavbarProps {
 	model: Group
     yachtName: string
+    exteriorOptions: {title: string, onClick: () => void}[]
+    interiorOptions: {title: string, onClick: () => void}[]
+    engineOptions: {title: string, onClick: () => void}[]
 }
 
-const Navbar: FC<NavbarProps> = ({ model, yachtName }) => {
+const Navbar: FC<NavbarProps> = ({ model, yachtName, exteriorOptions, interiorOptions, engineOptions }) => {
 	const navigate = useNavigate()
 
 	const [isInteriorOpened, setIsInteriorOpened] = useState(false)
@@ -25,18 +28,6 @@ const Navbar: FC<NavbarProps> = ({ model, yachtName }) => {
 		useState(false)
 
 	const [isAccessoriesOpened, setIsAccessoriesOpened] = useState(false)
-
-	const mockOptions = [
-		{
-			title: 'Overview',
-			onClick: () => setIsInteriorOverviewSidebarOpened(prev => !prev)
-		},
-		{ title: 'Frame', onClick: () => {} },
-		{ title: 'Finishing', onClick: () => {} },
-		{ title: 'Floor', onClick: () => {} },
-		{ title: 'Lights', onClick: () => {} },
-		{ title: 'Windows', onClick: () => {} }
-	]
 
 	function handleNavigateToMainPage() {
 		navigate(AppRoutes.MAIN)
@@ -59,7 +50,7 @@ const Navbar: FC<NavbarProps> = ({ model, yachtName }) => {
 					<OptionsDropdown
 						isShown={isExterirorOpened}
 						setIsShown={setIsExteriorOpened}
-						options={mockOptions}
+						options={exteriorOptions}
 					>
 						Exterior
 					</OptionsDropdown>
@@ -69,7 +60,7 @@ const Navbar: FC<NavbarProps> = ({ model, yachtName }) => {
 					<OptionsDropdown
 						isShown={isInteriorOpened}
 						setIsShown={setIsInteriorOpened}
-						options={mockOptions}
+						options={interiorOptions}
 					>
 						Interior
 					</OptionsDropdown>
@@ -85,7 +76,7 @@ const Navbar: FC<NavbarProps> = ({ model, yachtName }) => {
 					<OptionsDropdown
 						isShown={isSurroundingsOpened}
 						setIsShown={setIsSurroundingsOpened}
-						options={mockOptions}
+						options={engineOptions}
 					>
 						Engine
 					</OptionsDropdown>

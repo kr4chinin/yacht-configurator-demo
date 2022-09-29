@@ -1,10 +1,15 @@
 .container {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: lighter;
+    color: white;
+    font-size: 1.3rem;
+
 	position: absolute;
 	top: 160px;
 	left: 0;
 
 	height: calc(100vh - 210px);
-	width: 30%;
+	width: 400px;
 
 	transform: translateX(-100%);
 	z-index: 2;
@@ -17,7 +22,7 @@
 		width: 80%;
 		background-color: rgba(0, 0, 0, 0.5);
 		display: flex;
-		padding: 1rem;
+		padding: 1.5rem;
 	}
 
 	.control {
@@ -37,6 +42,7 @@
 			margin-top: 13px;
 
 			svg {
+                fill: white;
 				rotate: 90deg;
 				width: 32px;
 				height: 32px;
