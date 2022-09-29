@@ -1,8 +1,10 @@
+@import '../../../../../styles/palettes/configuratorPallete';
+
 .container {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: lighter;
-    color: white;
-    font-size: 1.3rem;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: lighter;
+	color: $primary-font-color;
+	font-size: 1.3rem;
 
 	position: absolute;
 	top: 160px;
@@ -20,7 +22,7 @@
 	.content {
 		height: 100%;
 		width: 80%;
-		background-color: rgba(0, 0, 0, 0.5);
+		background-color: $primary-background;
 		display: flex;
 		padding: 1.5rem;
 	}
@@ -31,7 +33,7 @@
 			height: 54px;
 			border-radius: 50%;
 
-			background-color: rgba(0, 0, 0, 0.5);
+			background-color: $primary-background;
 			border: 2px solid rgba(0, 0, 0, 0.2);
 
 			display: flex;
@@ -42,7 +44,7 @@
 			margin-top: 13px;
 
 			svg {
-                fill: white;
+				fill: $primary-icon-color;
 				rotate: 90deg;
 				width: 32px;
 				height: 32px;
