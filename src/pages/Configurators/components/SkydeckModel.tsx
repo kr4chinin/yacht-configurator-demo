@@ -1,5 +1,5 @@
 import { useFrame } from '@react-three/fiber'
-import { Group, Mesh, MeshNormalMaterial } from 'three'
+import { Group, Mesh } from 'three'
 import { FC } from 'react'
 import { initialMaterial as initialMaterial0 } from '../../../utils/materials/flybridge/materials[0]'
 import { initialMaterial as initialMaterial1 } from '../../../utils/materials/flybridge/materials[1]'
