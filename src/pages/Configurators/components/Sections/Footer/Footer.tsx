@@ -1,4 +1,4 @@
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import styles from './Footer.module.scss'
 import cn from 'classnames'
 
@@ -23,4 +23,4 @@ const Footer: FC<FooterProps> = ({ isHidden }) => {
 	)
 }
 
-export default Footer
+export default memo(Footer)

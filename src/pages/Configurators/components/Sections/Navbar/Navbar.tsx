@@ -2,7 +2,7 @@ import styles from './Navbar.module.scss'
 import { ReactComponent as TwoLines } from '../../../../../assets/icons/two-lines.svg'
 import { ReactComponent as Menu } from '../../../../../assets/icons/menu.svg'
 import OptionsDropdown from '../../UI/OptionsDropdown'
-import { FC, useState } from 'react'
+import { FC, memo, useState } from 'react'
 import Sidebar from '../Sidebar/Sidebar'
 import { Group } from 'three'
 import AccessoriesPopup from '../AccessoriesPopup'
@@ -18,6 +18,10 @@ interface NavbarProps {
 	interiorOptions: { title: string; onClick: () => void }[]
 	engineOptions: { title: string; onClick: () => void }[]
 }
+
+// Memoising svg component to prevent unnecessary rerendering
+const MemoTwoLines = memo(TwoLines)
+const MemoMenu = memo(Menu)
 
 const Navbar: FC<NavbarProps> = ({
 	model,
@@ -46,7 +50,7 @@ const Navbar: FC<NavbarProps> = ({
 		<nav className={cn(styles.container, { [styles.hidden]: isHidden })}>
 			<div className={styles['top-section']}>
 				<div className={styles.menu}>
-					<Menu />
+					<MemoMenu />
 					<p>Menu</p>
 				</div>
 				<p className={styles.signature}>{yachtName}</p>
@@ -64,7 +68,7 @@ const Navbar: FC<NavbarProps> = ({
 						Exterior
 					</OptionsDropdown>
 				</div>
-				<TwoLines />
+				<MemoTwoLines />
 				<div className={styles.option}>
 					<OptionsDropdown
 						isShown={isInteriorOpened}
@@ -80,7 +84,7 @@ const Navbar: FC<NavbarProps> = ({
 						Some content goes here
 					</Sidebar>
 				</div>
-				<TwoLines />
+				<MemoTwoLines />
 				<div className={styles.option}>
 					<OptionsDropdown
 						isShown={isSurroundingsOpened}
@@ -90,7 +94,7 @@ const Navbar: FC<NavbarProps> = ({
 						Engine
 					</OptionsDropdown>
 				</div>
-				<TwoLines />
+				<MemoTwoLines />
 				<div
 					className={styles.option}
 					onClick={() => setIsAccessoriesOpened(prev => !prev)}

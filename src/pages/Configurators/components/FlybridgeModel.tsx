@@ -1,6 +1,6 @@
 import { useFrame } from '@react-three/fiber'
 import { Group, Mesh } from 'three'
-import { FC } from 'react'
+import { FC, memo } from 'react'
 import { initialMaterial0 } from '../../../utils/materials/flybridge/materials[0]'
 import { initialMaterial1 } from '../../../utils/materials/flybridge/materials[1]'
 import { initialMaterial2 } from '../../../utils/materials/flybridge/materials[2]'
@@ -66,4 +66,4 @@ const FlybridgeModel: FC<FlybridgeModelProps> = ({ model }) => {
 	return <primitive object={model} />
 }
 
-export default FlybridgeModel
+export default memo(FlybridgeModel)
