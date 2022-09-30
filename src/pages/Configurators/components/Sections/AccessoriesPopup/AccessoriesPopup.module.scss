@@ -1,4 +1,4 @@
-@import '../../../../../assets/fonts/SnellRoundhad';
+@import '../../../../../assets/fonts/MrDafoe';
 
 .container {
 	inset: 0 0 0 0;
@@ -41,8 +41,9 @@
 			margin-bottom: 20px;
 
 			.logo {
-				font-family: 'Snell Roundhad', sans-serif;
-				font-size: 2.2rem;
+				font-family: 'MrDafoe', sans-serif;
+				font-size: 3rem;
+				letter-spacing: 1px;
 
 				display: flex;
 				align-items: center;
@@ -51,17 +52,8 @@
 				margin: auto;
 
 				p {
-					margin-bottom: 2px;
+					margin-left: 46px;
 					color: white;
-				}
-
-				svg {
-					width: 50px;
-					height: 50px;
-
-					path {
-						fill: white;
-					}
 				}
 			}
 
