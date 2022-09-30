@@ -6,7 +6,9 @@ import Footer from './Footer'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import { Children2 } from '../../../../utils/urls/flybridge/children[2]'
-import { initialMaterial as initialMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
+import { initialMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
+import { redCarbonMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
+import { paperWhiteMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
 
 interface FlybridgeControlsProps {
 	model: Group
@@ -36,11 +38,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
 
 	const exteriorOptions = [
 		{
-			title: 'Siderails',
-			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
-		},
-		{
-			title: 'Portlights',
+			title: 'Siderails & Portlights',
 			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
 		},
 		{
@@ -84,12 +82,33 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
 					variants={[
 						{
 							id: 1,
+							title: 'White marble',
+							price: 2600,
+							image: Children2.variant2,
+							onClick: () => {
+								;(model.children[2] as Mesh).material = initialMaterial2
+							},
+                            isDefault: true
+						},
+						{
+							id: 2,
 							title: 'Red carbon',
 							price: 3500,
 							image: Children2.variant1,
 							onClick: () => {
-								;(model.children[2] as Mesh).material = initialMaterial2
-							}
+								;(model.children[2] as Mesh).material = redCarbonMaterial2
+							},
+                            isDefault: false
+						},
+						{
+							id: 3,
+							title: 'Paper white',
+							price: 1500,
+							image: Children2.variant3,
+							onClick: () => {
+								;(model.children[2] as Mesh).material = paperWhiteMaterial2
+							},
+                            isDefault: false
 						}
 					]}
 				/>

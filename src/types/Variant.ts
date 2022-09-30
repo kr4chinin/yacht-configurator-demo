@@ -4,4 +4,5 @@ export type Variant = {
     onClick: () => void;
     price: number;
     image: string;
+    isDefault: boolean;
 }
