@@ -6,12 +6,13 @@ import { ReactComponent as UnfoldLess } from '../../../../../assets/icons/unfold
 import { useClickOutside } from '../../../../../hooks/useClickOutside'
 
 interface SidebarProps {
+    title: string
 	isShown: boolean
 	setIsShown: React.Dispatch<React.SetStateAction<boolean>>
 	children: React.ReactNode
 }
 
-const Sidebar: FC<SidebarProps> = ({ isShown, setIsShown, children }) => {
+const Sidebar: FC<SidebarProps> = ({ title, isShown, setIsShown, children }) => {
 	const [isContentShown, setIsContentShown] = useState(true)
 
 	const triggerRef = useRef<HTMLDivElement | null>(null)
@@ -24,7 +25,15 @@ const Sidebar: FC<SidebarProps> = ({ isShown, setIsShown, children }) => {
 			className={cn(styles.container, { [styles.active]: isShown })}
 			ref={dropdownRef}
 		>
-			{isContentShown && <div className={styles.content}>{children}</div>}
+			{isContentShown && (
+				<div className={styles.content}>
+					<div className={styles.title}>
+                        <h3>{title}</h3>
+                        <hr />
+                    </div>
+					{children}
+				</div>
+			)}
 
 			<div
 				className={styles.control}

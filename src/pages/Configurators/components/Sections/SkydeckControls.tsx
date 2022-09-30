@@ -35,7 +35,6 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model, isFullscreenShown })
 	return (
 		<>
 			<Navbar
-				model={model}
 				yachtName="Skydeck"
 				interiorOptions={mockOptions}
 				exteriorOptions={mockOptions}
@@ -44,6 +43,7 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model, isFullscreenShown })
 			/>
 
 			<Sidebar
+                title="Overview"
 				isShown={isInteriorOverviewSidebarOpened}
 				setIsShown={setIsInteriorOverviewSidebarOpened}
 			>
@@ -51,6 +51,7 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model, isFullscreenShown })
 			</Sidebar>
 
 			<Sidebar
+                title="Frame"
 				isShown={isInteriorFrameSidebarOpened}
 				setIsShown={setIsInteriorFrameSidebarOpened}
 			>

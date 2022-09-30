@@ -4,11 +4,13 @@ import ShowFullscreenButton from '../UI/ShowFullscreenButton'
 import FlybridgeControls from './FlybridgeControls'
 import Footer from './Footer'
 
-interface FlybridgeControlsWrapper {
+interface FlybridgeControlsWrapperProps {
 	model: Group
 }
 
-const FlybridgeControlsWrapper: FC<FlybridgeControlsWrapper> = ({ model }) => {
+const FlybridgeControlsWrapper: FC<FlybridgeControlsWrapperProps> = ({
+	model
+}) => {
 	const [isFullscreenShown, setIsFullscreenShown] = useState(false)
 
 	return (

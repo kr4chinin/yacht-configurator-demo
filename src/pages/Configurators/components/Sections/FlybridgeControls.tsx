@@ -48,10 +48,13 @@ import { dirtyMaterial9 } from '../../../../utils/materials/flybridge/materials[
 
 interface FlybridgeControlsProps {
 	model: Group
-    isFullscreenShown: boolean
+	isFullscreenShown: boolean
 }
 
-const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShown }) => {
+const FlybridgeControls: FC<FlybridgeControlsProps> = ({
+	model,
+	isFullscreenShown
+}) => {
 	const [isSiderailAndPortlightsOpened, setIsSiderailAndPortlightsOpened] =
 		useState(false)
 	const [isFenderOpened, setIsFenderOpened] = useState(false)
@@ -76,30 +79,33 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 		[]
 	)
 
-	const exteriorOptions = useMemo(() => [
-		{
-			title: 'Siderails & Portlights',
-			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
-		},
-		{
-			title: 'Fender',
-			onClick: () => setIsFenderOpened(prev => !prev)
-		},
-		{
-			title: 'Sides',
-			onClick: () => setIsSidesOpened(prev => !prev)
-		},
-		{
-			title: 'Flybridge Visor',
-			onClick: () => setIsVisorOpened(prev => !prev)
-		},
-		{ title: 'Windows', onClick: () => setIsWindowsOpened(prev => !prev) },
-		{ title: 'Counter', onClick: () => setIsCounterOpened(prev => !prev) },
-		{
-			title: 'Illuminators',
-			onClick: () => setIsIlluminatorsOpened(prev => !prev)
-		}
-	], [])
+	const exteriorOptions = useMemo(
+		() => [
+			{
+				title: 'Siderails & Portlights',
+				onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
+			},
+			{
+				title: 'Fender',
+				onClick: () => setIsFenderOpened(prev => !prev)
+			},
+			{
+				title: 'Sides',
+				onClick: () => setIsSidesOpened(prev => !prev)
+			},
+			{
+				title: 'Flybridge Visor',
+				onClick: () => setIsVisorOpened(prev => !prev)
+			},
+			{ title: 'Windows', onClick: () => setIsWindowsOpened(prev => !prev) },
+			{ title: 'Counter', onClick: () => setIsCounterOpened(prev => !prev) },
+			{
+				title: 'Illuminators',
+				onClick: () => setIsIlluminatorsOpened(prev => !prev)
+			}
+		],
+		[]
+	)
 
 	return (
 		<>
@@ -112,6 +118,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 			/>
 
 			<Sidebar
+				title="Siderails & Portlights"
 				isShown={isSiderailAndPortlightsOpened}
 				setIsShown={setIsSiderailAndPortlightsOpened}
 			>
@@ -151,7 +158,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 				/>
 			</Sidebar>
 
-			<Sidebar isShown={isFenderOpened} setIsShown={setIsFenderOpened}>
+			<Sidebar
+				title="Fender"
+				isShown={isFenderOpened}
+				setIsShown={setIsFenderOpened}
+			>
 				<PrimaryVariantsList
 					variants={[
 						{
@@ -188,7 +199,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 				/>
 			</Sidebar>
 
-			<Sidebar isShown={isSidesOpened} setIsShown={setIsSidesOpened}>
+			<Sidebar
+				title="Sides"
+				isShown={isSidesOpened}
+				setIsShown={setIsSidesOpened}
+			>
 				<PrimaryVariantsList
 					variants={[
 						{
@@ -265,7 +280,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 				/>
 			</Sidebar>
 
-			<Sidebar isShown={isVisorOpened} setIsShown={setIsVisorOpened}>
+			<Sidebar
+				title="Flybridge Visor"
+				isShown={isVisorOpened}
+				setIsShown={setIsVisorOpened}
+			>
 				<PrimaryVariantsList
 					variants={[
 						{
@@ -332,7 +351,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 				/>
 			</Sidebar>
 
-			<Sidebar isShown={isWindowsOpened} setIsShown={setIsWindowsOpened}>
+			<Sidebar
+				title="Windows"
+				isShown={isWindowsOpened}
+				setIsShown={setIsWindowsOpened}
+			>
 				<PrimaryVariantsList
 					variants={[
 						{
@@ -369,7 +392,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 				/>
 			</Sidebar>
 
-			<Sidebar isShown={isCounterOpened} setIsShown={setIsCounterOpened}>
+			<Sidebar
+				title="Counter"
+				isShown={isCounterOpened}
+				setIsShown={setIsCounterOpened}
+			>
 				<PrimaryVariantsList
 					variants={[
 						{
@@ -407,6 +434,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 			</Sidebar>
 
 			<Sidebar
+				title="Illuminators"
 				isShown={isIlluminatorsOpened}
 				setIsShown={setIsIlluminatorsOpened}
 			>
