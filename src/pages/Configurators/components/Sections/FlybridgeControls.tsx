@@ -1,35 +1,57 @@
 import { FC, useState } from 'react'
-import { Group } from 'three'
+import { Group, Mesh } from 'three'
+import PrimaryVariantsList from '../UI/PrimaryVariantsList'
 import ShowFullscreenButton from '../UI/ShowFullscreenButton'
 import Footer from './Footer'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
+import { Children2 } from '../../../../utils/urls/flybridge/children[2]'
+import { initialMaterial as initialMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
 
 interface FlybridgeControlsProps {
 	model: Group
 }
 
 const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
-	const [isInteriorOverviewSidebarOpened, setIsInteriorOverviewSidebarOpened] =
+	const [isSiderailAndPortlightsOpened, setIsSiderailAndPortlightsOpened] =
 		useState(false)
-	const [isInteriorFrameSidebarOpened, setIsInteriorFrameSidebarOpened] =
-		useState(false)
+	const [isFenderOpened, setIsFenderOpened] = useState(false)
 
 	const [isFullscreenShown, setIsFullscreenShown] = useState(false)
 
 	const mockOptions = [
 		{
 			title: 'Overview',
-			onClick: () => setIsInteriorOverviewSidebarOpened(prev => !prev)
+			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
 		},
 		{
 			title: 'Frame',
-			onClick: () => setIsInteriorFrameSidebarOpened(prev => !prev)
+			onClick: () => setIsFenderOpened(prev => !prev)
 		},
 		{ title: 'Finishing', onClick: () => {} },
 		{ title: 'Floor', onClick: () => {} },
 		{ title: 'Lights', onClick: () => {} },
 		{ title: 'Windows', onClick: () => {} }
+	]
+
+	const exteriorOptions = [
+		{
+			title: 'Siderails',
+			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
+		},
+		{
+			title: 'Portlights',
+			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
+		},
+		{
+			title: 'Fender',
+			onClick: () => setIsFenderOpened(prev => !prev)
+		},
+		{ title: 'Sides', onClick: () => {} },
+		{ title: 'Flybridge Visor', onClick: () => {} },
+		{ title: 'Windows', onClick: () => {} },
+		{ title: 'Counter', onClick: () => {} },
+		{ title: 'Illuminators', onClick: () => {} }
 	]
 
 	return (
@@ -38,7 +60,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
 				model={model}
 				yachtName="Flybridge"
 				interiorOptions={mockOptions}
-				exteriorOptions={mockOptions}
+				exteriorOptions={exteriorOptions}
 				engineOptions={mockOptions}
 				isHidden={isFullscreenShown}
 			/>
@@ -51,17 +73,26 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
 			<Footer isHidden={isFullscreenShown} />
 
 			<Sidebar
-				isShown={isInteriorOverviewSidebarOpened}
-				setIsShown={setIsInteriorOverviewSidebarOpened}
+				isShown={isSiderailAndPortlightsOpened}
+				setIsShown={setIsSiderailAndPortlightsOpened}
 			>
-				Overview
+				<PrimaryVariantsList variants={[]} />
 			</Sidebar>
 
-			<Sidebar
-				isShown={isInteriorFrameSidebarOpened}
-				setIsShown={setIsInteriorFrameSidebarOpened}
-			>
-				Frame
+			<Sidebar isShown={isFenderOpened} setIsShown={setIsFenderOpened}>
+				<PrimaryVariantsList
+					variants={[
+						{
+							id: 1,
+							title: 'Red carbon',
+							price: 3500,
+							image: Children2.variant1,
+							onClick: () => {
+								;(model.children[2] as Mesh).material = initialMaterial2
+							}
+						}
+					]}
+				/>
 			</Sidebar>
 		</>
 	)

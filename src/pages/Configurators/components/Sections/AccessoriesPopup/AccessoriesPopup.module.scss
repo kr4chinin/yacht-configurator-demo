@@ -1,4 +1,5 @@
 @import '../../../../../assets/fonts/MrDafoe';
+@import '../../../../../styles/palettes/configuratorPallete';
 
 .container {
 	inset: 0 0 0 0;
@@ -23,7 +24,7 @@
 		height: calc(100vh - 225px);
 
 		cursor: default;
-		color: white;
+		color: $primary-font-color;
 
 		overflow: scroll;
 
