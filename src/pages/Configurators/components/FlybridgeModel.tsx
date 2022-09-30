@@ -1,17 +1,17 @@
 import { useFrame } from '@react-three/fiber'
 import { Group, Mesh } from 'three'
 import { FC } from 'react'
-import { initialMaterial as initialMaterial0 } from '../../../utils/materials/flybridge/materials[0]'
-import { initialMaterial as initialMaterial1 } from '../../../utils/materials/flybridge/materials[1]'
+import { initialMaterial0 } from '../../../utils/materials/flybridge/materials[0]'
+import { initialMaterial1 } from '../../../utils/materials/flybridge/materials[1]'
 import { initialMaterial2 } from '../../../utils/materials/flybridge/materials[2]'
-import { initialMaterial as initialMaterial3 } from '../../../utils/materials/flybridge/materials[3]'
-import { initialMaterial as initialMaterial4 } from '../../../utils/materials/flybridge/materials[4]'
-import { initialMaterial as initialMaterial5 } from '../../../utils/materials/flybridge/materials[5]'
-import { initialMaterial as initialMaterial6 } from '../../../utils/materials/flybridge/materials[6]'
-import { initialMaterial as initialMaterial7 } from '../../../utils/materials/flybridge/materials[7]'
-import { initialMaterial as initialMaterial8 } from '../../../utils/materials/flybridge/materials[8]'
-import { initialMaterial as initialMaterial9 } from '../../../utils/materials/flybridge/materials[9]'
-import { initialMaterial as initialMaterial10 } from '../../../utils/materials/flybridge/materials[10]'
+import { initialMaterial3 } from '../../../utils/materials/flybridge/materials[3]'
+import { initialMaterial4 } from '../../../utils/materials/flybridge/materials[4]'
+import { initialMaterial5 } from '../../../utils/materials/flybridge/materials[5]'
+import { initialMaterial6 } from '../../../utils/materials/flybridge/materials[6]'
+import { initialMaterial7 } from '../../../utils/materials/flybridge/materials[7]'
+import { initialMaterial8 } from '../../../utils/materials/flybridge/materials[8]'
+import { initialMaterial9 } from '../../../utils/materials/flybridge/materials[9]'
+import { initialMaterial10 } from '../../../utils/materials/flybridge/materials[10]'
 
 interface FlybridgeModelProps {
 	model: Group
@@ -58,9 +58,9 @@ const FlybridgeModel: FC<FlybridgeModelProps> = ({ model }) => {
 	model.position.set(0, 1.25, 0)
 	model.rotation.set(0, 0, 0)
 
-	useFrame((state) => {
+	useFrame(state => {
 		model.position.y = Math.sin(state.clock.getElapsedTime()) * 0.05 + 1.25
-        model.rotation.y += 0.0005
+		model.rotation.y += 0.0005
 	})
 
 	return <primitive object={model} />
