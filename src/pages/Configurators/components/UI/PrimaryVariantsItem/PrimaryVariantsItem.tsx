@@ -5,13 +5,19 @@ import styles from './PrimaryVariantsItem.module.scss'
 
 interface PrimaryVariantsItemProps {
 	variant: Variant
+	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
+	selectedVariant: Variant
 }
 
-const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ variant }) => {
-
+const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({
+	variant,
+	handleChange: handleFormChange,
+	selectedVariant
+}) => {
 	const id = useId()
 
-	function handleChange() {
+	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
+		handleFormChange(e)
 		variant.onClick()
 	}
 
@@ -21,12 +27,14 @@ const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ variant }) => {
 				type="radio"
 				name="primary-variant"
 				id={id}
+				value={JSON.stringify(variant)}
 				onChange={handleChange}
+				checked={selectedVariant.title === variant.title}
 			/>
 			<label htmlFor={id}>
 				<div className={styles['image-container']}>
-                    <LoadableImage src={variant.image} alt={variant.title} />
-                </div>
+					<LoadableImage src={variant.image} alt={variant.title} />
+				</div>
 				{variant.title}
 			</label>
 		</div>
