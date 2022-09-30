@@ -11,7 +11,7 @@ const PrimaryVariantsList: FC<PrimaryVariantsListProps> = ({ variants }) => {
 	return (
 		<div className={styles.container}>
 			{variants.map(variant => (
-				<PrimaryVariantsItem variant={variant} key={variant.id}/>
+				<PrimaryVariantsItem variant={variant} key={variant.id} />
 			))}
 		</div>
 	)

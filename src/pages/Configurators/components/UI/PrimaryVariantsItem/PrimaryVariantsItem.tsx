@@ -1,4 +1,5 @@
 import { FC, useId } from 'react'
+import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 import { Variant } from '../../../../../types/Variant'
 import styles from './PrimaryVariantsItem.module.scss'
 
@@ -7,6 +8,7 @@ interface PrimaryVariantsItemProps {
 }
 
 const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ variant }) => {
+
 	const id = useId()
 
 	function handleChange() {
@@ -20,11 +22,10 @@ const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ variant }) => {
 				name="primary-variant"
 				id={id}
 				onChange={handleChange}
-				defaultChecked={variant.isDefault}
 			/>
 			<label htmlFor={id}>
 				<div className={styles['image-container']}>
-                    <img src={variant.image} alt={variant.title} />
+                    <LoadableImage src={variant.image} alt={variant.title} />
                 </div>
 				{variant.title}
 			</label>
