@@ -1,8 +1,6 @@
-import { FC, useState } from 'react'
+import { FC, useMemo, useState } from 'react'
 import { Group, Mesh } from 'three'
 import PrimaryVariantsList from '../UI/PrimaryVariantsList'
-import ShowFullscreenButton from '../UI/ShowFullscreenButton'
-import Footer from './Footer'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 
@@ -50,9 +48,10 @@ import { dirtyMaterial9 } from '../../../../utils/materials/flybridge/materials[
 
 interface FlybridgeControlsProps {
 	model: Group
+    isFullscreenShown: boolean
 }
 
-const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
+const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShown }) => {
 	const [isSiderailAndPortlightsOpened, setIsSiderailAndPortlightsOpened] =
 		useState(false)
 	const [isFenderOpened, setIsFenderOpened] = useState(false)
@@ -62,21 +61,22 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
 	const [isCounterOpened, setIsCounterOpened] = useState(false)
 	const [isIlluminatorsOpened, setIsIlluminatorsOpened] = useState(false)
 
-	const [isFullscreenShown, setIsFullscreenShown] = useState(false)
+	const mockOptions = useMemo(
+		() => [
+			{
+				title: 'Overview',
+				onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
+			},
+			{ title: 'Frame', onClick: () => {} },
+			{ title: 'Finishing', onClick: () => {} },
+			{ title: 'Floor', onClick: () => {} },
+			{ title: 'Lights', onClick: () => {} },
+			{ title: 'Windows', onClick: () => {} }
+		],
+		[]
+	)
 
-	const mockOptions = [
-		{
-			title: 'Overview',
-			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
-		},
-		{ title: 'Frame', onClick: () => {} },
-		{ title: 'Finishing', onClick: () => {} },
-		{ title: 'Floor', onClick: () => {} },
-		{ title: 'Lights', onClick: () => {} },
-		{ title: 'Windows', onClick: () => {} }
-	]
-
-	const exteriorOptions = [
+	const exteriorOptions = useMemo(() => [
 		{
 			title: 'Siderails & Portlights',
 			onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
@@ -99,7 +99,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
 			title: 'Illuminators',
 			onClick: () => setIsIlluminatorsOpened(prev => !prev)
 		}
-	]
+	], [])
 
 	return (
 		<>
@@ -111,13 +111,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model }) => {
 				engineOptions={mockOptions}
 				isHidden={isFullscreenShown}
 			/>
-
-			<ShowFullscreenButton
-				isFullscreenShown={isFullscreenShown}
-				toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
-			/>
-
-			<Footer isHidden={isFullscreenShown} />
 
 			<Sidebar
 				isShown={isSiderailAndPortlightsOpened}

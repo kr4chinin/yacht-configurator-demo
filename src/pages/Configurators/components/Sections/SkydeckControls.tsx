@@ -1,36 +1,36 @@
-import { FC, useState } from 'react'
+import { FC, useMemo, useState } from 'react'
 import { Group } from 'three'
-import ShowFullscreenButton from '../UI/ShowFullscreenButton'
-import Footer from './Footer'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 
 interface SkydeckControlsProps {
 	model: Group
+    isFullscreenShown: boolean
 }
 
-const SkydeckControls: FC<SkydeckControlsProps> = ({ model }) => {
+const SkydeckControls: FC<SkydeckControlsProps> = ({ model, isFullscreenShown }) => {
 	const [isInteriorOverviewSidebarOpened, setIsInteriorOverviewSidebarOpened] =
 		useState(false)
 	const [isInteriorFrameSidebarOpened, setIsInteriorFrameSidebarOpened] =
 		useState(false)
 
-	const [isFullscreenShown, setIsFullscreenShown] = useState(false)
-
-	const mockOptions = [
-		{
-			title: 'Overview',
-			onClick: () => setIsInteriorOverviewSidebarOpened(prev => !prev)
-		},
-		{
-			title: 'Frame',
-			onClick: () => setIsInteriorFrameSidebarOpened(prev => !prev)
-		},
-		{ title: 'Finishing', onClick: () => {} },
-		{ title: 'Floor', onClick: () => {} },
-		{ title: 'Lights', onClick: () => {} },
-		{ title: 'Windows', onClick: () => {} }
-	]
+	const mockOptions = useMemo(
+		() => [
+			{
+				title: 'Overview',
+				onClick: () => setIsInteriorOverviewSidebarOpened(prev => !prev)
+			},
+			{
+				title: 'Frame',
+				onClick: () => setIsInteriorFrameSidebarOpened(prev => !prev)
+			},
+			{ title: 'Finishing', onClick: () => {} },
+			{ title: 'Floor', onClick: () => {} },
+			{ title: 'Lights', onClick: () => {} },
+			{ title: 'Windows', onClick: () => {} }
+		],
+		[]
+	)
 
 	return (
 		<>
@@ -42,13 +42,6 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model }) => {
 				engineOptions={mockOptions}
 				isHidden={isFullscreenShown}
 			/>
-
-			<ShowFullscreenButton
-				isFullscreenShown={isFullscreenShown}
-				toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
-			/>
-
-			<Footer isHidden={isFullscreenShown} />
 
 			<Sidebar
 				isShown={isInteriorOverviewSidebarOpened}
