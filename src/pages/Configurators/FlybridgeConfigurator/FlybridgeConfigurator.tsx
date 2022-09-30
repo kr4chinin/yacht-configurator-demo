@@ -4,6 +4,7 @@ import { Canvas } from '@react-three/fiber'
 import FlybridgeModel from '../components/FlybridgeModel'
 import SkyElement from '../components/UI/SkyElement'
 import FlybridgeControls from '../components/Sections/FlybridgeControls'
+import OceanElement from '../components/UI/OceanElement'
 
 const FlybridgeConfigurator = () => {
 	const yachtModel = useFBX('../models/flybridge.fbx')
@@ -14,6 +15,7 @@ const FlybridgeConfigurator = () => {
 
 			<div className={styles['canvas-container']}>
 				<Canvas
+					camera={{ position: [0, 3, 5] }}
 					onMouseEnter={() => {
 						document.body.style.cursor = 'grab'
 					}}
@@ -27,9 +29,11 @@ const FlybridgeConfigurator = () => {
 						document.body.style.cursor = 'default'
 					}}
 				>
-					<OrbitControls />
 					<SkyElement />
+					<OceanElement />
 					<FlybridgeModel model={yachtModel} />
+
+					<OrbitControls maxPolarAngle={Math.PI / 2.5} maxDistance={30} />
 				</Canvas>
 			</div>
 		</>

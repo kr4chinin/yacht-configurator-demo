@@ -55,11 +55,12 @@ const FlybridgeModel: FC<FlybridgeModelProps> = ({ model }) => {
 
 	// Позиционируем и анимируем яхту
 	model.scale.set(0.0125, 0.0125, 0.0125)
-	model.position.set(0, 0, 0)
+	model.position.set(0, 1.25, 0)
 	model.rotation.set(0, 0, 0)
 
-	useFrame(() => {
-		model.rotation.y += 0.001
+	useFrame((state) => {
+		model.position.y = Math.sin(state.clock.getElapsedTime()) * 0.05 + 1.25
+        model.rotation.y += 0.0005
 	})
 
 	return <primitive object={model} />
