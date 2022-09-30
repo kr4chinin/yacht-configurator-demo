@@ -104,7 +104,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({ model, isFullscreenShow
 	return (
 		<>
 			<Navbar
-				model={model}
 				yachtName="Flybridge"
 				interiorOptions={mockOptions}
 				exteriorOptions={exteriorOptions}

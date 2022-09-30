@@ -1,18 +1,17 @@
 import styles from './OptionsDropdown.module.scss'
 import { useClickOutside } from '../../../../../hooks/useClickOutside'
 import cn from 'classnames'
-import React, { FC, useRef } from 'react'
+import React, { FC, memo, useRef } from 'react'
 import { ReactComponent as Dots } from '../../../../../assets/icons/dots.svg'
+import { Option } from '../../../../../types/Option'
 
-type DropdownOption = {
-	title: string
-	onClick: () => void
-}
+// Memoising svg component to prevent unnecessary rerendering
+const MemoDots = memo(Dots)
 
 interface OptionsDropdownProps {
 	isShown: boolean
 	setIsShown: React.Dispatch<React.SetStateAction<boolean>>
-	options: DropdownOption[]
+	options: Option[]
 	children: React.ReactNode
 }
 
@@ -49,7 +48,7 @@ const OptionsDropdown: FC<OptionsDropdownProps> = ({
 							<p onClick={option.onClick} className={styles.item}>
 								{option.title}
 							</p>
-							{index !== options.length - 1 && <Dots />}
+							{index !== options.length - 1 && <MemoDots />}
 						</React.Fragment>
 					))}
 				</div>
