@@ -17,7 +17,7 @@ const Sidebar: FC<SidebarProps> = ({ isShown, setIsShown, children }) => {
 	const triggerRef = useRef<HTMLDivElement | null>(null)
 	const dropdownRef = useRef<HTMLDivElement | null>(null)
 
-	useClickOutside(dropdownRef, triggerRef, () => setIsShown(false))
+	useClickOutside(dropdownRef, triggerRef, () => setIsShown(false), false)
 
 	return (
 		<div

@@ -3,11 +3,16 @@ import { useEffect } from 'react'
 export function useClickOutside(
 	popRef: React.RefObject<HTMLElement>,
 	triggerRef: React.RefObject<HTMLElement>,
-	func: () => void
+	func: () => void,
+	registerCanvasClicks: boolean = true
 ) {
 	useEffect(() => {
 		function handleClickOutside(e: MouseEvent) {
 			if (e.target === triggerRef.current) {
+				return
+			}
+
+			if (!registerCanvasClicks && e.target instanceof HTMLCanvasElement) {
 				return
 			}
 
@@ -28,5 +33,5 @@ export function useClickOutside(
 		return () => {
 			document.removeEventListener('mousedown', handleClickOutside)
 		}
-	}, [popRef, triggerRef, func])
+	}, [popRef, triggerRef, func, registerCanvasClicks])
 }
