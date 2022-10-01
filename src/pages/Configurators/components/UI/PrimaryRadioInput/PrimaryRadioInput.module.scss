@@ -1,0 +1,26 @@
+@import '../../../../../styles/palettes/configuratorPallete';
+
+.primary-radio-input:after {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	position: relative;
+	background-color: $primary-background;
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid rgba(0, 0, 0, 0.4);
+
+	content: '';
+}
+
+.primary-radio-input:checked:after {
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background-color: white;
+	display: inline-block;
+	visibility: visible;
+	border: 2px solid darkslategray;
+
+	content: '';
+}
