@@ -1,6 +1,7 @@
 import { FC, useId } from 'react'
 import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 import { Variant } from '../../../../../types/Variant'
+import PrimaryRadioInput from '../PrimaryRadioInput'
 import styles from './PrimaryVariantsItem.module.scss'
 
 interface PrimaryVariantsItemProps {
@@ -23,9 +24,7 @@ const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({
 
 	return (
 		<div className={styles.container}>
-			<input
-				type="radio"
-				name="primary-variant"
+			<PrimaryRadioInput
 				id={id}
 				value={JSON.stringify(variant)}
 				onChange={handleChange}

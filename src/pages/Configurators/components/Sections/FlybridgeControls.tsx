@@ -1,20 +1,20 @@
 import { FC, useMemo, useState } from 'react'
 import { Group, Mesh } from 'three'
-import PrimaryVariantsList from '../UI/PrimaryVariantsList'
+import VariantsList from '../UI/VariantsList'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 
-import { Children0 } from '../../../../utils/urls/flybridge/children[0]'
+import { Children0 } from '../../../../utils/urls/flybridge/Children[0]'
 import { initialMaterial0 } from '../../../../utils/materials/flybridge/materials[0]'
 import { erasedSteelMaterial0 } from '../../../../utils/materials/flybridge/materials[0]'
 import { darkSteelMaterial0 } from '../../../../utils/materials/flybridge/materials[0]'
 
-import { Children2 } from '../../../../utils/urls/flybridge/children[2]'
+import { Children2 } from '../../../../utils/urls/flybridge/Children[2]'
 import { initialMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
 import { redCarbonMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
 import { paperWhiteMaterial2 } from '../../../../utils/materials/flybridge/materials[2]'
 
-import { Children4 } from '../../../../utils/urls/flybridge/children[4]'
+import { Children4 } from '../../../../utils/urls/flybridge/Children[4]'
 import { initialMaterial4 } from '../../../../utils/materials/flybridge/materials[4]'
 import { wildGreenMaterial4 } from '../../../../utils/materials/flybridge/materials[4]'
 import { sunnyGreenMaterial4 } from '../../../../utils/materials/flybridge/materials[4]'
@@ -23,7 +23,7 @@ import { papyrusGreenMaterial4 } from '../../../../utils/materials/flybridge/mat
 import { darkCloudsMaterial4 } from '../../../../utils/materials/flybridge/materials[4]'
 import { asphaltGrayMaterial4 } from '../../../../utils/materials/flybridge/materials[4]'
 
-import { Children6 } from '../../../../utils/urls/flybridge/children[6]'
+import { Children6 } from '../../../../utils/urls/flybridge/Children[6]'
 import { initialMaterial6 } from '../../../../utils/materials/flybridge/materials[6]'
 import { asphaltGrayMaterial6 } from '../../../../utils/materials/flybridge/materials[6]'
 import { brownRedMaterial6 } from '../../../../utils/materials/flybridge/materials[6]'
@@ -31,20 +31,21 @@ import { grayCarbonMaterial6 } from '../../../../utils/materials/flybridge/mater
 import { redCarbonMaterial6 } from '../../../../utils/materials/flybridge/materials[6]'
 import { sunnyGreenMaterial6 } from '../../../../utils/materials/flybridge/materials[6]'
 
-import { Children7 } from '../../../../utils/urls/flybridge/children[7]'
+import { Children7 } from '../../../../utils/urls/flybridge/Children[7]'
 import { initialMaterial7 } from '../../../../utils/materials/flybridge/materials[7]'
 import { blueMaterial7 } from '../../../../utils/materials/flybridge/materials[7]'
 import { dirtyMaterial7 } from '../../../../utils/materials/flybridge/materials[7]'
 
-import { Children8 } from '../../../../utils/urls/flybridge/children[8]'
+import { Children8 } from '../../../../utils/urls/flybridge/Children[8]'
 import { initialMaterial8 } from '../../../../utils/materials/flybridge/materials[8]'
 import { erasedSteelMaterial8 } from '../../../../utils/materials/flybridge/materials[8]'
 import { asphaltGrayMaterial8 } from '../../../../utils/materials/flybridge/materials[8]'
 
-import { Children9 } from '../../../../utils/urls/flybridge/children[9]'
+import { Children9 } from '../../../../utils/urls/flybridge/Children[9]'
 import { initialMaterial9 } from '../../../../utils/materials/flybridge/materials[9]'
 import { blueMaterial9 } from '../../../../utils/materials/flybridge/materials[9]'
 import { dirtyMaterial9 } from '../../../../utils/materials/flybridge/materials[9]'
+import { Engines } from '../../../../utils/urls/Engines'
 
 interface FlybridgeControlsProps {
 	model: Group
@@ -129,7 +130,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isSiderailAndPortlightsSidebarOpened}
 				setIsShown={setIsSiderailAndPortlightsSidebarOpened}
 			>
-				<PrimaryVariantsList
+				<VariantsList
 					variants={[
 						{
 							id: 1,
@@ -170,7 +171,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isFenderOpened}
 				setIsShown={setIsFenderOpened}
 			>
-				<PrimaryVariantsList
+				<VariantsList
 					variants={[
 						{
 							id: 1,
@@ -211,7 +212,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isSidesOpened}
 				setIsShown={setIsSidesOpened}
 			>
-				<PrimaryVariantsList
+				<VariantsList
 					variants={[
 						{
 							id: 1,
@@ -292,7 +293,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isVisorOpened}
 				setIsShown={setIsVisorOpened}
 			>
-				<PrimaryVariantsList
+				<VariantsList
 					variants={[
 						{
 							id: 1,
@@ -363,7 +364,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isWindowsOpened}
 				setIsShown={setIsWindowsOpened}
 			>
-				<PrimaryVariantsList
+				<VariantsList
 					variants={[
 						{
 							id: 1,
@@ -404,7 +405,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isCounterOpened}
 				setIsShown={setIsCounterOpened}
 			>
-				<PrimaryVariantsList
+				<VariantsList
 					variants={[
 						{
 							id: 1,
@@ -445,7 +446,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isIlluminatorsOpened}
 				setIsShown={setIsIlluminatorsOpened}
 			>
-				<PrimaryVariantsList
+				<VariantsList
 					variants={[
 						{
 							id: 1,
@@ -488,9 +489,43 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			<Sidebar
 				isShown={isEngineSidebarOpened}
 				setIsShown={setIsEngineSidebarOpened}
-				title="engine"
+				title="Engines"
 			>
-				Hello!
+				<VariantsList
+					variants={[
+						{
+							id: 1,
+							title: 'Volvo Penta D3-200',
+							price: 12200,
+							image: Engines.variant1,
+							onClick: () => {},
+							isDefault: true,
+							description:
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc.'
+						},
+						{
+							id: 2,
+							title: 'Volvo Penta D6-300',
+							price: 14500,
+							image: Engines.variant2,
+							onClick: () => {},
+							isDefault: false,
+							description:
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc.'
+						},
+						{
+							id: 3,
+							title: 'Volvo Penta D11-670 ',
+							price: 22300,
+							image: Engines.variant3,
+							onClick: () => {},
+							isDefault: false,
+							description:
+								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc.'
+						}
+					]}
+					isPrimary={false}
+				/>
 			</Sidebar>
 
 			{/* Engine Sidebar END */}

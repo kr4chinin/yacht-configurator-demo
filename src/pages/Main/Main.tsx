@@ -1,6 +1,6 @@
 import styles from './Main.module.scss'
 import { useNavigate } from 'react-router-dom'
-import { AppRoutes } from '../../utils/routes'
+import { AppRoutes } from '../../utils/Routes'
 
 const Main = () => {
 	const navigate = useNavigate()

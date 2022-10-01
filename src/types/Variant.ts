@@ -5,4 +5,5 @@ export type Variant = {
     price: number;
     image: string;
     isDefault: boolean;
+    description?: string;
 }
