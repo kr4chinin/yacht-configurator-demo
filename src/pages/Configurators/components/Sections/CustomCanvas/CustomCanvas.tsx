@@ -2,8 +2,8 @@ import styles from './CustomCanvas.module.scss'
 import { Canvas } from '@react-three/fiber'
 import { FC } from 'react'
 import CustomOrbitControls from '../../UI/CustomOrbitControls'
-import OceanElement from '../../UI/OceanElement'
-import SkyElement from '../../UI/SkyElement'
+import OceanElement from '../../UI/3DElements/OceanElement'
+import SkyElement from '../../UI/3DElements/SkyElement'
 
 interface CustomCanvasProps {
 	children: React.ReactNode
