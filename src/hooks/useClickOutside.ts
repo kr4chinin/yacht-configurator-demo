@@ -16,6 +16,11 @@ export function useClickOutside(
 				return
 			}
 
+            // To handle case with engines sidebar without writing to many ref logic in other components
+            if (e.target === document.getElementById('engine-trigger')) {
+                return
+            }
+
 			if (triggerRef?.current && triggerRef.current.children) {
 				for (let i = 0; i < triggerRef.current.children.length; i++) {
 					if (e.target === triggerRef.current.children[i]) {

@@ -2,7 +2,6 @@ import OptionsDropdown from '../../UI/OptionsDropdown'
 import styles from './Navbar.module.scss'
 import { ReactComponent as TwoLines } from '../../../../../assets/icons/two-lines.svg'
 import { FC, memo, useState } from 'react'
-import Sidebar from '../Sidebar'
 import AccessoriesPopup from '../AccessoriesPopup'
 import { Option } from '../../../../../types/Option'
 
@@ -48,7 +47,7 @@ const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
 					</OptionsDropdown>
 				</div>
 				<MemoTwoLines />
-				<div className={styles.option} onClick={toggleEngineSidebar}>
+				<div className={styles.option} onClick={toggleEngineSidebar} id='engine-trigger'>
 					Engine
 				</div>
 				<MemoTwoLines />
