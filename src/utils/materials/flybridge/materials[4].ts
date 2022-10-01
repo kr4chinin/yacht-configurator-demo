@@ -1,4 +1,4 @@
-import { Children4 } from '../../urls/flybridge/children[4]'
+import { Children4 } from '../../urls/flybridge/Children[4]'
 import { TextureLoader, MeshBasicMaterial } from 'three'
 
 const initialTexture = new TextureLoader().load(Children4.variant7)
