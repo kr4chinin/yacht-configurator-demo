@@ -6,6 +6,8 @@ import { Object3DNode } from '@react-three/fiber'
 
 extend({ Water })
 
+// To make TypeScript understand lowercase <water /> tag as a valid JSX element
+// we are adding its proper type to the JSX.IntrinsicElements interface
 declare global {
 	namespace JSX {
 		interface IntrinsicElements {
@@ -31,7 +33,7 @@ const OceanElement = () => {
 			waterNormals,
 			sunDirection: new THREE.Vector3(),
 			sunColor: 0xeb8934,
-			waterColor: 0x0064b5,
+			waterColor: 0x005091,
 			distortionScale: 40,
 			fog: false,
 			format: gl.outputEncoding
