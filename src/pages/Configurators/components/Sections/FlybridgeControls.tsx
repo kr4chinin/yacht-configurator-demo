@@ -55,8 +55,10 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	model,
 	isFullscreenShown
 }) => {
-	const [isSiderailAndPortlightsOpened, setIsSiderailAndPortlightsOpened] =
-		useState(false)
+	const [
+		isSiderailAndPortlightsSidebarOpened,
+		setIsSiderailAndPortlightsSidebarOpened
+	] = useState(false)
 	const [isFenderOpened, setIsFenderOpened] = useState(false)
 	const [isSidesOpened, setIsSidesOpened] = useState(false)
 	const [isVisorOpened, setIsVisorOpened] = useState(false)
@@ -64,12 +66,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	const [isCounterOpened, setIsCounterOpened] = useState(false)
 	const [isIlluminatorsOpened, setIsIlluminatorsOpened] = useState(false)
 
+	const [isEngineSidebarOpened, setIsEngineSidebarOpened] = useState(false)
+
 	const mockOptions = useMemo(
 		() => [
-			{
-				title: 'Overview',
-				onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
-			},
+			{ title: 'Overview', onClick: () => {} },
 			{ title: 'Frame', onClick: () => {} },
 			{ title: 'Finishing', onClick: () => {} },
 			{ title: 'Floor', onClick: () => {} },
@@ -83,7 +84,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 		() => [
 			{
 				title: 'Siderails & Portlights',
-				onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
+				onClick: () => setIsSiderailAndPortlightsSidebarOpened(prev => !prev)
 			},
 			{
 				title: 'Fender',
@@ -107,20 +108,26 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 		[]
 	)
 
+	const toggleEngineSidebar = () => {
+		setIsEngineSidebarOpened(prev => !prev)
+	}
+
 	return (
 		<>
 			<Navbar
 				yachtName="Flybridge"
 				interiorOptions={mockOptions}
 				exteriorOptions={exteriorOptions}
-				engineOptions={mockOptions}
+				toggleEngineSidebar={toggleEngineSidebar}
 				isHidden={isFullscreenShown}
 			/>
 
+			{/* Siderails and Portlights Sidebars START */}
+
 			<Sidebar
 				title="Siderails & Portlights"
-				isShown={isSiderailAndPortlightsOpened}
-				setIsShown={setIsSiderailAndPortlightsOpened}
+				isShown={isSiderailAndPortlightsSidebarOpened}
+				setIsShown={setIsSiderailAndPortlightsSidebarOpened}
 			>
 				<PrimaryVariantsList
 					variants={[
@@ -473,6 +480,20 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					]}
 				/>
 			</Sidebar>
+
+			{/* Siderails and Portlights Sidebars END */}
+
+			{/* Engine Sidebar START */}
+
+			<Sidebar
+				isShown={isEngineSidebarOpened}
+				setIsShown={setIsEngineSidebarOpened}
+				title="engine"
+			>
+				Hello!
+			</Sidebar>
+
+			{/* Engine Sidebar END */}
 		</>
 	)
 }

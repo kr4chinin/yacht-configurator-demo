@@ -10,18 +10,18 @@ import { Option } from '../../../../../types/Option'
 const MemoTwoLines = memo(TwoLines)
 
 interface NavbarBottomSectionProps {
-    exteriorOptions: Option[]
-    interiorOptions: Option[]
-    engineOptions: Option[]
+	exteriorOptions: Option[]
+	interiorOptions: Option[]
+    toggleEngineSidebar: () => void
 }
 
-const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({exteriorOptions, interiorOptions, engineOptions}) => {
+const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
+	exteriorOptions,
+	interiorOptions,
+    toggleEngineSidebar
+}) => {
 	const [isInteriorOpened, setIsInteriorOpened] = useState(false)
 	const [isExterirorOpened, setIsExteriorOpened] = useState(false)
-	const [isEngineOpened, setIsEngineOpened] = useState(false)
-
-	const [isInteriorOverviewSidebarOpened, setIsInteriorOverviewSidebarOpened] =
-		useState(false)
 
 	const [isAccessoriesOpened, setIsAccessoriesOpened] = useState(false)
 
@@ -46,22 +46,10 @@ const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({exteriorOptions, int
 					>
 						Interior
 					</OptionsDropdown>
-					<Sidebar
-						isShown={isInteriorOverviewSidebarOpened}
-						setIsShown={setIsInteriorOverviewSidebarOpened}
-					>
-						Some content goes here
-					</Sidebar>
 				</div>
 				<MemoTwoLines />
-				<div className={styles.option}>
-					<OptionsDropdown
-						isShown={isEngineOpened}
-						setIsShown={setIsEngineOpened}
-						options={engineOptions}
-					>
-						Engine
-					</OptionsDropdown>
+				<div className={styles.option} onClick={toggleEngineSidebar}>
+					Engine
 				</div>
 				<MemoTwoLines />
 				<div

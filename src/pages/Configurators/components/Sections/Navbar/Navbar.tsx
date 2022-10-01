@@ -10,14 +10,14 @@ interface NavbarProps {
 	isHidden: boolean
 	exteriorOptions: Option[]
 	interiorOptions: Option[]
-	engineOptions: Option[]
+	toggleEngineSidebar: () => void
 }
 
 const Navbar: FC<NavbarProps> = ({
 	yachtName,
 	exteriorOptions,
 	interiorOptions,
-	engineOptions,
+	toggleEngineSidebar,
 	isHidden
 }) => {
 
@@ -27,7 +27,7 @@ const Navbar: FC<NavbarProps> = ({
 			<NavbarBottomSection
 				exteriorOptions={exteriorOptions}
 				interiorOptions={interiorOptions}
-				engineOptions={engineOptions}
+				toggleEngineSidebar={toggleEngineSidebar}
 			/>
 		</nav>
 	)
