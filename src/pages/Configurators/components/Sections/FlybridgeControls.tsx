@@ -490,6 +490,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isEngineSidebarOpened}
 				setIsShown={setIsEngineSidebarOpened}
 				title="Engines"
+                isEngineFlag={true}
 			>
 				<VariantsList
 					variants={[
