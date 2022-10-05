@@ -4,6 +4,7 @@ import cn from 'classnames'
 import { ReactComponent as UnfoldMore } from '../../../../../assets/icons/unfold-more.svg'
 import { ReactComponent as UnfoldLess } from '../../../../../assets/icons/unfold-less.svg'
 import { useClickOutside } from '../../../../../hooks/useClickOutside'
+import PrimaryHr from '../../UI/PrimaryHr'
 
 interface SidebarProps {
 	title: string
@@ -25,7 +26,13 @@ const Sidebar: FC<SidebarProps> = ({
 	const triggerRef = useRef<HTMLDivElement | null>(null)
 	const dropdownRef = useRef<HTMLDivElement | null>(null)
 
-	useClickOutside(dropdownRef, triggerRef, () => setIsShown(false), false, isEngineFlag)
+	useClickOutside(
+		dropdownRef,
+		triggerRef,
+		() => setIsShown(false),
+		false,
+		isEngineFlag
+	)
 
 	return (
 		<div
@@ -36,7 +43,7 @@ const Sidebar: FC<SidebarProps> = ({
 				<div className={styles.content}>
 					<div className={styles.title}>
 						<h3>{title}</h3>
-						<hr />
+						<PrimaryHr />
 					</div>
 					{children}
 				</div>
