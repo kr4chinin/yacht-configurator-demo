@@ -20,6 +20,7 @@
 	display: flex;
 
 	.content {
+        overflow: scroll;
 		.title {
 			width: 100%;
 			height: fit-content;

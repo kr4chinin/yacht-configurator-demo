@@ -1,0 +1,20 @@
+@import '../../../../../../styles/palettes/configuratorPallete';
+
+.admin-btn {
+    color: $primary-font-color;
+    background: $primary-background;
+    padding: 10px;
+
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+
+    transition: 500ms;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.025);
+    }
+}

@@ -5,14 +5,19 @@ import Sidebar from './Sidebar'
 
 interface SkydeckControlsProps {
 	model: Group
-    isFullscreenShown: boolean
+	isFullscreenShown: boolean
 }
 
-const SkydeckControls: FC<SkydeckControlsProps> = ({ model, isFullscreenShown }) => {
+const SkydeckControls: FC<SkydeckControlsProps> = ({
+	model,
+	isFullscreenShown
+}) => {
 	const [isInteriorOverviewSidebarOpened, setIsInteriorOverviewSidebarOpened] =
 		useState(false)
 	const [isInteriorFrameSidebarOpened, setIsInteriorFrameSidebarOpened] =
 		useState(false)
+
+	const [isEngineSidebarOpened, setIsEngineSidebarOpened] = useState(false)
 
 	const mockOptions = useMemo(
 		() => [
@@ -38,12 +43,12 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model, isFullscreenShown })
 				yachtName="Skydeck"
 				interiorOptions={mockOptions}
 				exteriorOptions={mockOptions}
-				engineOptions={mockOptions}
+				toggleEngineSidebar={() => setIsEngineSidebarOpened(prev => !prev)}
 				isHidden={isFullscreenShown}
 			/>
 
 			<Sidebar
-                title="Overview"
+				title="Overview"
 				isShown={isInteriorOverviewSidebarOpened}
 				setIsShown={setIsInteriorOverviewSidebarOpened}
 			>
@@ -51,7 +56,7 @@ const SkydeckControls: FC<SkydeckControlsProps> = ({ model, isFullscreenShown })
 			</Sidebar>
 
 			<Sidebar
-                title="Frame"
+				title="Frame"
 				isShown={isInteriorFrameSidebarOpened}
 				setIsShown={setIsInteriorFrameSidebarOpened}
 			>

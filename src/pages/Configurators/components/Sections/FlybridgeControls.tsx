@@ -3,6 +3,7 @@ import { Group, Mesh } from 'three'
 import VariantsList from '../UI/VariantsList'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
+import AdminPanelSidebar from './AdminPanelSidebar'
 
 import { Children0 } from '../../../../utils/urls/flybridge/Children[0]'
 import { initialMaterial0 } from '../../../../utils/materials/flybridge/materials[0]'
@@ -67,6 +68,8 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	const [isCounterOpened, setIsCounterOpened] = useState(false)
 	const [isIlluminatorsOpened, setIsIlluminatorsOpened] = useState(false)
 
+	const [isAdminOpened, setIsAdminOpened] = useState(false)
+
 	const [isEngineSidebarOpened, setIsEngineSidebarOpened] = useState(false)
 
 	const mockOptions = useMemo(
@@ -83,6 +86,10 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 
 	const exteriorOptions = useMemo(
 		() => [
+			{
+				title: 'Admin',
+				onClick: () => setIsAdminOpened(prev => !prev)
+			},
 			{
 				title: 'Siderails & Portlights',
 				onClick: () => setIsSiderailAndPortlightsSidebarOpened(prev => !prev)
@@ -122,6 +129,16 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				toggleEngineSidebar={toggleEngineSidebar}
 				isHidden={isFullscreenShown}
 			/>
+
+			{/* Admin panel sidebar START*/}
+
+			<AdminPanelSidebar
+				isShown={isAdminOpened}
+				setIsShown={setIsAdminOpened}
+				model={model}
+			/>
+
+			{/* Admin panel sidebar END */}
 
 			{/* Siderails and Portlights Sidebars START */}
 
@@ -490,7 +507,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isEngineSidebarOpened}
 				setIsShown={setIsEngineSidebarOpened}
 				title="Engines"
-                isEngineFlag={true}
+				isEngineFlag={true}
 			>
 				<VariantsList
 					variants={[
