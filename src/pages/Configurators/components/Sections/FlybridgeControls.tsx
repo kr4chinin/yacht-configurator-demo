@@ -3,7 +3,7 @@ import { Group, Mesh } from 'three'
 import VariantsList from '../UI/VariantsList'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
-import AdminPanelSidebar from './AdminPanelSidebar'
+import FlybridgeAdminPanelSidebar from './AdminSections/FlybridgeAdminPanelSidebar'
 
 import { Children0 } from '../../../../utils/urls/flybridge/Children[0]'
 import { initialMaterial0 } from '../../../../utils/materials/flybridge/materials[0]'
@@ -132,7 +132,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 
 			{/* Admin panel sidebar START*/}
 
-			<AdminPanelSidebar
+			<FlybridgeAdminPanelSidebar
 				isShown={isAdminOpened}
 				setIsShown={setIsAdminOpened}
 				model={model}

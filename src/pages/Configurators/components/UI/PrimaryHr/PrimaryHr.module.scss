@@ -1,4 +1,5 @@
 hr {
+    height: 2px;
     background-image: -webkit-linear-gradient(
         left,
         rgba(150, 161, 168, 0.1),
@@ -23,5 +24,5 @@ hr {
         rgba(236, 239, 241, 0.9),
         rgba(118, 134, 144, 0.15)
     );
-    border: 0;
+    border: none;
 }

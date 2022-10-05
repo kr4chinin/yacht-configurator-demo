@@ -12,6 +12,7 @@ interface SidebarProps {
 	setIsShown: React.Dispatch<React.SetStateAction<boolean>>
 	children: React.ReactNode
 	isEngineFlag?: boolean
+	width?: string
 }
 
 const Sidebar: FC<SidebarProps> = ({
@@ -19,7 +20,8 @@ const Sidebar: FC<SidebarProps> = ({
 	isShown,
 	setIsShown,
 	isEngineFlag = false,
-	children
+	children,
+	width = '400px'
 }) => {
 	const [isContentShown, setIsContentShown] = useState(true)
 
@@ -36,6 +38,7 @@ const Sidebar: FC<SidebarProps> = ({
 
 	return (
 		<div
+			style={{ width: width }}
 			className={cn(styles.container, { [styles.active]: isShown })}
 			ref={dropdownRef}
 		>

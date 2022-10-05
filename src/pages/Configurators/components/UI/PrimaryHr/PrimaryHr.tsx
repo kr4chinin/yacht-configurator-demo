@@ -6,18 +6,21 @@ interface PrimaryHrProps {
 	width?: string
 	marginTop?: string
 	marginBottom?: string
+    border?: string
 }
 
 const PrimaryHr: FC<PrimaryHrProps> = ({
 	height = '2px',
 	width = '100%',
 	marginTop = '15px',
-	marginBottom = '30px'
+	marginBottom = '30px',
+    border = 'none'
 }) => {
 	return (
 		<hr
 			className={styles['primary-hr']}
 			style={{
+                border: border,
 				height: height,
 				width: width,
 				marginTop: marginTop,
