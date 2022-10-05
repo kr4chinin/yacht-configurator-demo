@@ -60,6 +60,7 @@ const FlybridgeModel: FC<FlybridgeModelProps> = ({ model }) => {
 
 	useFrame(state => {
 		model.position.y = Math.sin(state.clock.getElapsedTime()) * 0.05 + 1.25
+		model.position.z = Math.cos(state.clock.getElapsedTime()) * 0.05
 		model.rotation.y += 0.0005
 	})
 
