@@ -3,7 +3,6 @@ import styles from './AdminPanelSidebarButton.module.scss'
 import cn from 'classnames'
 
 interface AdminPanelSidebarButtonProps {
-	children: React.ReactNode
 	onClick: () => void
 	primary?: boolean
 	secondary?: boolean
@@ -11,9 +10,8 @@ interface AdminPanelSidebarButtonProps {
 }
 
 const AdminPanelSidebarButton: FC<AdminPanelSidebarButtonProps> = ({
-	children,
 	onClick,
-	primary = true,
+	primary = false,
 	secondary = false,
 	marginBottom = '10px'
 }) => {
@@ -27,7 +25,16 @@ const AdminPanelSidebarButton: FC<AdminPanelSidebarButtonProps> = ({
 			)}
 			style={{ marginBottom: marginBottom }}
 		>
-			{children}
+			{primary && (
+				<p>
+					Apply <b>matcap</b> texture
+				</p>
+			)}
+			{secondary && (
+				<p>
+					Apply <b>basic</b> texture
+				</p>
+			)}
 		</button>
 	)
 }

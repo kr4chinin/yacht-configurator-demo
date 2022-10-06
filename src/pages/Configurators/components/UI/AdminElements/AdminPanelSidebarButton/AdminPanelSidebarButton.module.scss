@@ -9,8 +9,26 @@
 
     border: none;
     border-radius: 5px;
+    border: 1px solid transparent;
 
     font-size: 16px;
 
-    transition: 500ms;
+    backdrop-filter: blur(10px);
+    transition: 350ms;
+
+    &.secondary {
+        background-color: rgba(50, 48, 51, 0.6);
+    }
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.025);
+        border: 1px solid $primary-font-color;
+
+        p {
+            b {
+                text-decoration: underline;
+            }
+        }
+    }
 }

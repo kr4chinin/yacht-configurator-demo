@@ -13,6 +13,7 @@ import Sidebar from '../../Sidebar'
 import * as THREE from 'three'
 import PrimaryListElement from '../../../UI/AdminElements/PrimaryListElement'
 import PrimaryList from '../../../UI/AdminElements/PrimaryList'
+import PrimaryHr from '../../../UI/PrimaryHr'
 
 interface FlybridgeAdminPanelSidebarProps {
 	isShown: boolean
@@ -97,108 +98,127 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 			title="Admin Panel"
 			width="450px"
 		>
-			<PrimaryList title="Exterior">
-				<PrimaryListElement title="Siderail & Portlights">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(0, 'matcap')}>
-						Siderail & Portlight (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(0, 'basic')}>
-						Siderail & Portlight (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+			<div>
+				<PrimaryList title="Exterior">
+					<PrimaryListElement title="Siderail & Portlights">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(0, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(0, 'basic')}
+						/>
+					</PrimaryListElement>
 
-				<PrimaryListElement title="Fender">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(2, 'matcap')}>
-						Fender (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(2, 'basic')}>
-						Fender (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+					<PrimaryListElement title="Fender">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(2, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(2, 'basic')}
+						/>
+					</PrimaryListElement>
 
-				<PrimaryListElement title="Sides">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(4, 'matcap')}>
-						Sides (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(4, 'basic')}>
-						Sides (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+					<PrimaryListElement title="Sides">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(4, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(4, 'basic')}
+						/>
+					</PrimaryListElement>
 
-				<PrimaryListElement title="Flybridge Visor">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(6, 'matcap')}>
-						Flybridge visor (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(6, 'basic')}>
-						Flybrifge visor (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+					<PrimaryListElement title="Flybridge Visor">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(6, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(6, 'basic')}
+						/>
+					</PrimaryListElement>
 
-				<PrimaryListElement title="Windows">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(7, 'matcap')}>
-						Windows (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(7, 'basic')}>
-						Windows (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+					<PrimaryListElement title="Windows">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(7, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(7, 'basic')}
+						/>
+					</PrimaryListElement>
 
-				<PrimaryListElement title="Counter">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(8, 'matcap')}>
-						Counter (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(8, 'basic')}>
-						Counter (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+					<PrimaryListElement title="Counter">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(8, 'matcap')}
+						/>
 
-				<PrimaryListElement title="Illuminators">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(9, 'matcap')}>
-						Illuminators (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(9, 'basic')}>
-						Illuminators (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
-			</PrimaryList>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(8, 'basic')}
+						/>
+					</PrimaryListElement>
 
-			<PrimaryList title="Interior">
-				<PrimaryListElement title="Throttle & Steering Wheel">
-					<AdminSidebarButton onClick={() => handleChangeMaterial(1, 'matcap')}>
-						Throttle & Steering Wheel (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(1, 'basic')}>
-						Throttle & Steering Wheel (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+					<PrimaryListElement title="Illuminators">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(9, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(9, 'basic')}
+						/>
+					</PrimaryListElement>
+				</PrimaryList>
 
-				<PrimaryListElement title="Cockpit floor">
-					<AdminSidebarButton
-						onClick={() => handleChangeMaterial(3, 'basic', true)}
-					>
-						Cockpit floor (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+				<PrimaryHr />
 
-				<PrimaryListElement title="Couch">
-					<AdminSidebarButton
-						onClick={() => handleChangeMaterial(5, 'basic', true)}
-					>
-						Couch (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
+				<PrimaryList title="Interior">
+					<PrimaryListElement title="Throttle & Steering Wheel">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(1, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(1, 'basic')}
+						/>
+					</PrimaryListElement>
 
-				<PrimaryListElement title="Cockpit Steering Wheel">
-					<AdminSidebarButton
-						onClick={() => handleChangeMaterial(10, 'matcap')}
-					>
-						Cockpit Steering Wheel (<b>Matcap</b>)
-					</AdminSidebarButton>
-					<AdminSidebarButton onClick={() => handleChangeMaterial(10, 'basic')}>
-						Cockpit Steering Wheel (<b>Basic</b>)
-					</AdminSidebarButton>
-				</PrimaryListElement>
-			</PrimaryList>
+					<PrimaryListElement title="Cockpit floor">
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(3, 'basic', true)}
+						/>
+					</PrimaryListElement>
+
+					<PrimaryListElement title="Couch">
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(5, 'basic', true)}
+						/>
+					</PrimaryListElement>
+
+					<PrimaryListElement title="Cockpit Steering Wheel">
+						<AdminSidebarButton
+							primary
+							onClick={() => handleChangeMaterial(10, 'matcap')}
+						/>
+						<AdminSidebarButton
+							secondary
+							onClick={() => handleChangeMaterial(10, 'basic')}
+						/>
+					</PrimaryListElement>
+				</PrimaryList>
+			</div>
 		</Sidebar>
 	)
 }
