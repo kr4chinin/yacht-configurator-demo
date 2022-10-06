@@ -1,5 +1,4 @@
-import styles from './FlybridgeAdminPanelSidebar.module.scss'
-import { Dispatch, FC, SetStateAction } from 'react'
+import { Dispatch, FC, ReactComponentElement, SetStateAction } from 'react'
 import {
 	Group,
 	Mesh,
@@ -8,12 +7,13 @@ import {
 	Texture,
 	TextureLoader
 } from 'three'
-import AdminSidebarButton from '../../../UI/AdminElements/AdminPanelSidebarButton'
-import Sidebar from '../../Sidebar'
+import AdminSidebarButton from '../../UI/AdminElements/AdminPanelSidebarButton'
+import Sidebar from '../Sidebar'
 import * as THREE from 'three'
-import PrimaryListElement from '../../../UI/AdminElements/PrimaryListElement'
-import PrimaryList from '../../../UI/AdminElements/PrimaryList'
-import PrimaryHr from '../../../UI/PrimaryHr'
+import PrimaryListElement from '../../UI/AdminElements/PrimaryListElement'
+import PrimaryList from '../../UI/AdminElements/PrimaryList'
+import PrimaryHr from '../../UI/PrimaryHr'
+import PrimarySliderInput from '../../UI/AdminElements/PrimarySliderInput'
 
 interface FlybridgeAdminPanelSidebarProps {
 	isShown: boolean
@@ -26,25 +26,37 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 	setIsShown,
 	model
 }) => {
-	function handleChangeMaterial(
+	async function handleChangeMaterial(
 		childNumber: number,
 		type: 'matcap' | 'basic',
-		isTextureConfig: boolean = false
+		isTextureConfig: boolean = false,
+		repeatCount: number | null = 0.5,
+		opacity: number = 0.7
 	) {
 		let url: string | null = ''
-		let repeat: number | null = null
-
 		let texture: Texture | null = null
 
-		// To allow admin to change repeat of the texture
 		if (isTextureConfig) {
 			url = prompt('Enter basic texture url: ')
-			repeat = Number(prompt('Enter repeat: ', '0.5'))
 
 			if (url) {
+				// Checking whether it is possible to get this texture by URL
+				try {
+					await fetch(url)
+				} catch (e) {
+					alert(
+						'Something went wrong while loading this texture. Seems like image server has forbidden to get pictures by URL or you have entered incorrect one!'
+					)
+				}
 				texture = new TextureLoader().load(url)
-				texture.wrapS = texture.wrapT = THREE.RepeatWrapping
-				texture.repeat.set(repeat, repeat)
+				if (type === 'basic') {
+					texture.wrapS = texture.wrapT = THREE.RepeatWrapping
+					if (repeatCount) {
+						texture.repeat.set(repeatCount, repeatCount)
+					} else {
+						texture.repeat.set(0.5, 0.5)
+					}
+				}
 			}
 		}
 
@@ -54,6 +66,14 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 				`Enter ${type === 'matcap' ? 'matcap' : 'basic'} texture URL:`
 			)
 			if (url) {
+				// Checking whether it is possible to get this texture by URL
+				try {
+					await fetch(url)
+				} catch (e) {
+					alert(
+						'Something went wrong while loading this texture. Seems like image server has forbidden to get pictures by URL or you have entered incorrect one!'
+					)
+				}
 				texture = new TextureLoader().load(url)
 			} else {
 				alert('URL was not provided!')
@@ -80,15 +100,39 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 		// Set opacity to windows and illuminators
 		if (childNumber === 7) {
 			material.transparent = true
-			material.opacity = 0.7
+			material.opacity = opacity
 		}
 
 		if (childNumber === 9) {
 			material.transparent = true
-			material.opacity = 0.7
+			material.opacity = opacity
 		}
 
 		;(model.children[childNumber] as Mesh).material = material
+	}
+
+	function handleChangeFloorTextureRepeat(value: number) {
+		handleChangeMaterial(3, 'basic', true, value)
+	}
+
+	function handleChangeCouchTextureRepeat(value: number) {
+		handleChangeMaterial(5, 'basic', true, value)
+	}
+
+	function handleChangeMatcapWindowsOpacity(value: number) {
+		handleChangeMaterial(7, 'matcap', true, null, value)
+	}
+
+	function handleChangeBasicWindowsOpacity(value: number) {
+		handleChangeMaterial(7, 'basic', true, null, value)
+	}
+
+	function handleChangeMatcapIlluminatorsOpacity(value: number) {
+		handleChangeMaterial(9, 'matcap', true, null, value)
+	}
+
+	function handleChangeBasicIlluminatorsOpacity(value: number) {
+		handleChangeMaterial(9, 'basic', true, null, value)
 	}
 
 	return (
@@ -149,9 +193,27 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 							primary
 							onClick={() => handleChangeMaterial(7, 'matcap')}
 						/>
+						<PrimarySliderInput
+							title="Opacity (matcap)"
+							defaultValue={0.7}
+							onApply={handleChangeMatcapWindowsOpacity}
+							min={0.1}
+							max={1}
+							step={0.1}
+							marginBottom="10px"
+						/>
+
 						<AdminSidebarButton
 							secondary
 							onClick={() => handleChangeMaterial(7, 'basic')}
+						/>
+						<PrimarySliderInput
+							title="Opacity (basic)"
+							defaultValue={0.7}
+							onApply={handleChangeBasicWindowsOpacity}
+							min={0.1}
+							max={1}
+							step={0.1}
 						/>
 					</PrimaryListElement>
 
@@ -172,9 +234,27 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 							primary
 							onClick={() => handleChangeMaterial(9, 'matcap')}
 						/>
+						<PrimarySliderInput
+							title="Opacity (basic)"
+							defaultValue={0.7}
+							onApply={handleChangeMatcapIlluminatorsOpacity}
+							min={0.1}
+							max={1}
+							step={0.1}
+                            marginBottom="10px"
+						/>
+
 						<AdminSidebarButton
 							secondary
 							onClick={() => handleChangeMaterial(9, 'basic')}
+						/>
+						<PrimarySliderInput
+							title="Opacity (basic)"
+							defaultValue={0.7}
+							onApply={handleChangeBasicIlluminatorsOpacity}
+							min={0.1}
+							max={1}
+							step={0.1}
 						/>
 					</PrimaryListElement>
 				</PrimaryList>
@@ -198,12 +278,28 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 							secondary
 							onClick={() => handleChangeMaterial(3, 'basic', true)}
 						/>
+						<PrimarySliderInput
+							title="Repeat"
+							defaultValue={0.5}
+							onApply={handleChangeFloorTextureRepeat}
+							min={0.1}
+							max={1.5}
+							step={0.1}
+						/>
 					</PrimaryListElement>
 
 					<PrimaryListElement title="Couch">
 						<AdminSidebarButton
 							secondary
 							onClick={() => handleChangeMaterial(5, 'basic', true)}
+						/>
+						<PrimarySliderInput
+							title="Repeat"
+							defaultValue={2}
+							onApply={handleChangeCouchTextureRepeat}
+							min={0.1}
+							max={3}
+							step={0.1}
 						/>
 					</PrimaryListElement>
 
