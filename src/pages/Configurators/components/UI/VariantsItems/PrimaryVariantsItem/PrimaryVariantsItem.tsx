@@ -1,7 +1,7 @@
 import { FC, useId } from 'react'
-import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
-import { Variant } from '../../../../../types/Variant'
-import PrimaryRadioInput from '../PrimaryRadioInput'
+import LoadableImage from '../../../../../../components/LoadableImage/LoadableImage'
+import { Variant } from '../../../../../../types/Variant'
+import PrimaryRadioInput from '../../PrimaryRadioInput'
 import styles from './PrimaryVariantsItem.module.scss'
 
 interface PrimaryVariantsItemProps {

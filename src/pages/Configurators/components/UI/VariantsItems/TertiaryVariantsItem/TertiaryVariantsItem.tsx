@@ -1,8 +1,8 @@
 import styles from './TertiaryVariantsItem.module.scss'
 import { FC, useId } from 'react'
-import { Variant } from '../../../../../types/Variant'
-import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
-import PrimaryRadioInput from '../PrimaryRadioInput'
+import { Variant } from '../../../../../../types/Variant'
+import LoadableImage from '../../../../../../components/LoadableImage/LoadableImage'
+import PrimaryRadioInput from '../../PrimaryRadioInput'
 
 interface TertiaryVariantsItemProps {
 	variant: Variant

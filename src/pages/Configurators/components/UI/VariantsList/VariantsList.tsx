@@ -1,8 +1,8 @@
 import React, { FC, useState } from 'react'
 import { Variant } from '../../../../../types/Variant'
-import PrimaryVariantsItem from '../PrimaryVariantsItem'
-import SecondaryVariantsItem from '../SecondaryVariantsItem'
-import TertiaryVariantsItem from '../TertiaryVariantsItem'
+import PrimaryVariantsItem from '../VariantsItems/PrimaryVariantsItem'
+import SecondaryVariantsItem from '../VariantsItems/SecondaryVariantsItem'
+import TertiaryVariantsItem from '../VariantsItems/TertiaryVariantsItem'
 import styles from './VariantsList.module.scss'
 
 interface VariantsListProps {

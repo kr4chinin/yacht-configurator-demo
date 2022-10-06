@@ -1,8 +1,8 @@
 import { FC, useId } from 'react'
-import { Variant } from '../../../../../types/Variant'
-import PrimaryRadioInput from '../PrimaryRadioInput'
+import { Variant } from '../../../../../../types/Variant'
+import PrimaryRadioInput from '../../PrimaryRadioInput'
 import styles from './SecondaryVariantsItem.module.scss'
-import {ReactComponent as Cog} from '../../../../../assets/icons/cog.svg'
+import {ReactComponent as Cog} from '../../../../../../assets/icons/cog.svg'
 
 interface SecondaryVariantsItemProps {
 	variant: Variant
