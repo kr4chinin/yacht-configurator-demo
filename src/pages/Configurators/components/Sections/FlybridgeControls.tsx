@@ -57,6 +57,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	model,
 	isFullscreenShown
 }) => {
+	// Exterior elements
 	const [
 		isSiderailAndPortlightsSidebarOpened,
 		setIsSiderailAndPortlightsSidebarOpened
@@ -67,22 +68,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	const [isWindowsOpened, setIsWindowsOpened] = useState(false)
 	const [isCounterOpened, setIsCounterOpened] = useState(false)
 	const [isIlluminatorsOpened, setIsIlluminatorsOpened] = useState(false)
-
-	const [isAdminOpened, setIsAdminOpened] = useState(false)
-
-	const [isEngineSidebarOpened, setIsEngineSidebarOpened] = useState(false)
-
-	const mockOptions = useMemo(
-		() => [
-			{ title: 'Overview', onClick: () => {} },
-			{ title: 'Frame', onClick: () => {} },
-			{ title: 'Finishing', onClick: () => {} },
-			{ title: 'Floor', onClick: () => {} },
-			{ title: 'Lights', onClick: () => {} },
-			{ title: 'Windows', onClick: () => {} }
-		],
-		[]
-	)
 
 	const exteriorOptions = useMemo(
 		() => [
@@ -116,6 +101,22 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 		[]
 	)
 
+	// Interior elements
+
+	const interiorOptions = useMemo(
+		() => [
+			{ title: 'Throttle & Steering Wheel', onClick: () => {} },
+			{ title: 'Cockpit Floor', onClick: () => {} },
+			{ title: 'Couch', onClick: () => {} },
+			{ title: 'Cockpit Steering Wheel', onClick: () => {} }
+		],
+		[]
+	)
+
+	const [isAdminOpened, setIsAdminOpened] = useState(false)
+
+	const [isEngineSidebarOpened, setIsEngineSidebarOpened] = useState(false)
+
 	const toggleEngineSidebar = () => {
 		setIsEngineSidebarOpened(prev => !prev)
 	}
@@ -124,7 +125,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 		<>
 			<Navbar
 				yachtName="Flybridge"
-				interiorOptions={mockOptions}
+				interiorOptions={interiorOptions}
 				exteriorOptions={exteriorOptions}
 				toggleEngineSidebar={toggleEngineSidebar}
 				isHidden={isFullscreenShown}

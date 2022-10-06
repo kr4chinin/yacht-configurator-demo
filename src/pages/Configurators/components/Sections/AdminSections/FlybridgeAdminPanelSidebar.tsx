@@ -273,7 +273,7 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 						/>
 					</PrimaryListElement>
 
-					<PrimaryListElement title="Cockpit floor">
+					<PrimaryListElement title="Cockpit Floor">
 						<AdminSidebarButton
 							secondary
 							onClick={() => handleChangeMaterial(3, 'basic', true)}
