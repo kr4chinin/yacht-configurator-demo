@@ -47,7 +47,41 @@ import { initialMaterial9 } from '../../../../utils/materials/flybridge/material
 import { blueMaterial9 } from '../../../../utils/materials/flybridge/materials[9]'
 import { dirtyMaterial9 } from '../../../../utils/materials/flybridge/materials[9]'
 import { Engines } from '../../../../utils/urls/Engines'
+
 import { Children1 } from '../../../../utils/urls/flybridge/Children[1]'
+import {
+	initialMaterial1,
+	midnightSkyMaterial1
+} from '../../../../utils/materials/flybridge/materials[1]'
+
+import { Children3 } from '../../../../utils/urls/flybridge/Children[3]'
+import {
+	initialMaterial3,
+	crystalGrayPlanksMaterial3,
+	darkOakPlanksMaterial3,
+	darkWoodPlanksMaterial3,
+	gentleWhitePlanksMaterial3,
+	spruceWoodPlanksMaterial3
+} from '../../../../utils/materials/flybridge/materials[3]'
+
+import { Children5 } from '../../../../utils/urls/flybridge/Children[5]'
+import {
+	initialMaterial5,
+	mildLeatherMaterial5,
+	oistrichLeatherMaterial5,
+	orangeLeatherMaterial5,
+	redBlanketMaterial5,
+	redCarbonMaterial5,
+	sandyLeatherMaterial5,
+	stitchedLeatherMaterial5
+} from '../../../../utils/materials/flybridge/materials[5]'
+
+import { Children10 } from '../../../../utils/urls/flybridge/Children[10]'
+import {
+	initialMaterial10,
+	midnightSkyMaterial10,
+	redCarbonMaterial10
+} from '../../../../utils/materials/flybridge/materials[10]'
 
 interface FlybridgeControlsProps {
 	model: Group
@@ -557,27 +591,255 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				title="Throttle & Steering Wheel"
 				width="450px"
 			>
-				<VariantsList type='tertiary' variants={[
-                    {
-                        id: 1,
-                        title: 'White andesite',
-                        price: 2600,
-                        image: Children1.variant1,
-                        onClick: () => {},
-                        isDefault: true
-                    },
-                    {
-                        id: 2,
-                        title: 'Midnight sky',
-                        price: 3500,
-                        image: Children1.variant2,
-                        onClick: () => {},
-                        isDefault: false
-                    },
-                ]} />
+				<VariantsList
+					type="tertiary"
+					variants={[
+						{
+							id: 1,
+							title: 'White andesite',
+							price: 2600,
+							image: Children1.variant2,
+							onClick: () => {
+								;(model.children[1] as Mesh).material = initialMaterial1
+							},
+							isDefault: true
+						},
+						{
+							id: 2,
+							title: 'Midnight sky',
+							price: 3500,
+							image: Children1.variant1,
+							onClick: () => {
+								;(model.children[1] as Mesh).material = midnightSkyMaterial1
+							},
+							isDefault: false
+						}
+					]}
+				/>
 			</Sidebar>
 
 			{/* Throttle & Steering Wheel Sidebar END */}
+
+			{/* Cockpit Floor Sidebar START */}
+
+			<Sidebar
+				isShown={isCockpitFloorOpened}
+				setIsShown={setIsCockpitFloorOpened}
+				title="Cockpit Floor"
+			>
+				<VariantsList
+					type="tertiary"
+					variants={[
+						{
+							id: 1,
+							title: 'Diamond white planks',
+							price: 2400,
+							image: Children3.variant4,
+							onClick: () => {
+								;(model.children[3] as Mesh).material = initialMaterial3
+							},
+							isDefault: true
+						},
+						{
+							id: 2,
+							title: 'Gentle white planks',
+							price: 3110,
+							image: Children3.variant1,
+							onClick: () => {
+								;(model.children[3] as Mesh).material =
+									gentleWhitePlanksMaterial3
+							},
+							isDefault: false
+						},
+						{
+							id: 3,
+							title: 'Dark wood planks',
+							price: 2300,
+							image: Children3.variant2,
+							onClick: () => {
+								;(model.children[3] as Mesh).material = darkWoodPlanksMaterial3
+							},
+							isDefault: false
+						},
+						{
+							id: 4,
+							title: 'Spruce wood planks',
+							price: 2670,
+							image: Children3.variant3,
+							onClick: () => {
+								;(model.children[3] as Mesh).material =
+									spruceWoodPlanksMaterial3
+							},
+							isDefault: false
+						},
+						{
+							id: 5,
+							title: 'Crystal gray planks',
+							price: 4200,
+							image: Children3.variant5,
+							onClick: () => {
+								;(model.children[3] as Mesh).material =
+									crystalGrayPlanksMaterial3
+							},
+							isDefault: false
+						},
+						{
+							id: 6,
+							title: 'Dark oak planks',
+							price: 3445,
+							image: Children3.variant6,
+							onClick: () => {
+								;(model.children[3] as Mesh).material = darkOakPlanksMaterial3
+							},
+							isDefault: false
+						}
+					]}
+				/>
+			</Sidebar>
+
+			{/* Cockpit Floor Sidebar END */}
+
+			{/* Couch Sidebar START */}
+
+			<Sidebar
+				isShown={isCouchOpened}
+				setIsShown={setIsCouchOpened}
+				title="Couch"
+			>
+				<VariantsList
+					type="tertiary"
+					variants={[
+						{
+							id: 1,
+							title: 'Royal gray leather',
+							price: 2400,
+							image: Children5.variant2,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = initialMaterial5
+							},
+							isDefault: true
+						},
+						{
+							id: 2,
+							title: 'Red carbon',
+							price: 2400,
+							image: Children5.variant1,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = redCarbonMaterial5
+							},
+							isDefault: false
+						},
+						{
+							id: 3,
+							title: 'Oistrich leather',
+							price: 2400,
+							image: Children5.variant3,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = oistrichLeatherMaterial5
+							},
+							isDefault: false
+						},
+						{
+							id: 4,
+							title: 'Red blanket',
+							price: 2400,
+							image: Children5.variant4,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = redBlanketMaterial5
+							},
+							isDefault: false
+						},
+						{
+							id: 5,
+							title: 'Stitched leather',
+							price: 2400,
+							image: Children5.variant5,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = stitchedLeatherMaterial5
+							},
+							isDefault: false
+						},
+						{
+							id: 6,
+							title: 'Orange leather',
+							price: 2400,
+							image: Children5.variant6,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = orangeLeatherMaterial5
+							},
+							isDefault: false
+						},
+						{
+							id: 7,
+							title: 'Sandy leather',
+							price: 2400,
+							image: Children5.variant7,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = sandyLeatherMaterial5
+							},
+							isDefault: false
+						},
+						{
+							id: 8,
+							title: 'Mild leather',
+							price: 2400,
+							image: Children5.variant8,
+							onClick: () => {
+								;(model.children[5] as Mesh).material = mildLeatherMaterial5
+							},
+							isDefault: false
+						}
+					]}
+				/>
+			</Sidebar>
+
+			{/* Couch Sidebar END */}
+
+			{/* Cockpit Steering Wheel START */}
+
+			<Sidebar
+				isShown={isCockpitSteeringWheelOpened}
+				setIsShown={setIsCockpitSteeringWheelOpened}
+				title="Cockpit Steering Wheel"
+			>
+				<VariantsList
+					type="tertiary"
+					variants={[
+						{
+							id: 1,
+							title: 'White andesite',
+							price: 2400,
+							image: Children10.variant3,
+							onClick: () => {
+								;(model.children[10] as Mesh).material = initialMaterial10
+							},
+							isDefault: true
+						},
+						{
+							id: 2,
+							title: 'Red carbon',
+							price: 2400,
+							image: Children10.variant1,
+							onClick: () => {
+								;(model.children[10] as Mesh).material = redCarbonMaterial10
+							},
+							isDefault: false
+						},
+						{
+							id: 3,
+							title: 'Midnight sky',
+							price: 2400,
+							image: Children10.variant2,
+							onClick: () => {
+								;(model.children[10] as Mesh).material = midnightSkyMaterial10
+							},
+							isDefault: false
+						}
+					]}
+				/>
+			</Sidebar>
+
+			{/* Cockpit Steering Wheel END */}
 
 			{/* Engine Sidebar START */}
 
