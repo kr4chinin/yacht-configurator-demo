@@ -1,18 +1,16 @@
-import { FC, useState } from 'react'
+import React, { FC, useState } from 'react'
 import { Variant } from '../../../../../types/Variant'
 import PrimaryVariantsItem from '../PrimaryVariantsItem'
 import SecondaryVariantsItem from '../SecondaryVariantsItem'
+import TertiaryVariantsItem from '../TertiaryVariantsItem'
 import styles from './VariantsList.module.scss'
 
 interface VariantsListProps {
 	variants: Variant[]
-	isPrimary?: boolean
+	type: 'primary' | 'secondary' | 'tertiary'
 }
 
-const VariantsList: FC<VariantsListProps> = ({
-	variants,
-	isPrimary = true
-}) => {
+const VariantsList: FC<VariantsListProps> = ({ variants, type }) => {
 	const [selectedVariant, setSelectedVariant] = useState<Variant>(
 		variants.filter(variant => variant.isDefault)[0]
 	)
@@ -24,20 +22,30 @@ const VariantsList: FC<VariantsListProps> = ({
 	return (
 		<form className={styles.container}>
 			{variants.map(variant => {
-				return isPrimary ? (
-					<PrimaryVariantsItem
-						variant={variant}
-						key={variant.id}
-						handleChange={handleChange}
-						selectedVariant={selectedVariant}
-					/>
-				) : (
-					<SecondaryVariantsItem 
-                        variant={variant}
-                        key={variant.id}
-                        handleChange={handleChange}
-                        selectedVariant={selectedVariant}
-                    />
+				return (
+					<React.Fragment key={variant.id}>
+						{type === 'primary' && (
+							<PrimaryVariantsItem
+								variant={variant}
+								handleChange={handleChange}
+								selectedVariant={selectedVariant}
+							/>
+						)}
+						{type === 'secondary' && (
+							<SecondaryVariantsItem
+								variant={variant}
+								handleChange={handleChange}
+								selectedVariant={selectedVariant}
+							/>
+						)}
+						{type === 'tertiary' && (
+							<TertiaryVariantsItem
+								variant={variant}
+								handleChange={handleChange}
+								selectedVariant={selectedVariant}
+							/>
+						)}
+					</React.Fragment>
 				)
 			})}
 		</form>

@@ -47,6 +47,7 @@ import { initialMaterial9 } from '../../../../utils/materials/flybridge/material
 import { blueMaterial9 } from '../../../../utils/materials/flybridge/materials[9]'
 import { dirtyMaterial9 } from '../../../../utils/materials/flybridge/materials[9]'
 import { Engines } from '../../../../utils/urls/Engines'
+import { Children1 } from '../../../../utils/urls/flybridge/Children[1]'
 
 interface FlybridgeControlsProps {
 	model: Group
@@ -58,10 +59,8 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	isFullscreenShown
 }) => {
 	// Exterior elements
-	const [
-		isSiderailAndPortlightsSidebarOpened,
-		setIsSiderailAndPortlightsSidebarOpened
-	] = useState(false)
+	const [isSiderailAndPortlightsOpened, setIsSiderailAndPortlightsOpened] =
+		useState(false)
 	const [isFenderOpened, setIsFenderOpened] = useState(false)
 	const [isSidesOpened, setIsSidesOpened] = useState(false)
 	const [isVisorOpened, setIsVisorOpened] = useState(false)
@@ -77,7 +76,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			},
 			{
 				title: 'Siderails & Portlights',
-				onClick: () => setIsSiderailAndPortlightsSidebarOpened(prev => !prev)
+				onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
 			},
 			{
 				title: 'Fender',
@@ -102,13 +101,30 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	)
 
 	// Interior elements
+	const [
+		isThrottleAndSteeringWheelOpened,
+		setIsThrottleAndSteeringWheelOpened
+	] = useState(false)
+	const [isCockpitFloorOpened, setIsCockpitFloorOpened] = useState(false)
+	const [isCouchOpened, setIsCouchOpened] = useState(false)
+	const [isCockpitSteeringWheelOpened, setIsCockpitSteeringWheelOpened] =
+		useState(false)
 
 	const interiorOptions = useMemo(
 		() => [
-			{ title: 'Throttle & Steering Wheel', onClick: () => {} },
-			{ title: 'Cockpit Floor', onClick: () => {} },
-			{ title: 'Couch', onClick: () => {} },
-			{ title: 'Cockpit Steering Wheel', onClick: () => {} }
+			{
+				title: 'Throttle & Steering Wheel',
+				onClick: () => setIsThrottleAndSteeringWheelOpened(prev => !prev)
+			},
+			{
+				title: 'Cockpit Floor',
+				onClick: () => setIsCockpitFloorOpened(prev => !prev)
+			},
+			{ title: 'Couch', onClick: () => setIsCouchOpened(prev => !prev) },
+			{
+				title: 'Cockpit Steering Wheel',
+				onClick: () => setIsCockpitSteeringWheelOpened(prev => !prev)
+			}
 		],
 		[]
 	)
@@ -145,10 +161,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 
 			<Sidebar
 				title="Siderails & Portlights"
-				isShown={isSiderailAndPortlightsSidebarOpened}
-				setIsShown={setIsSiderailAndPortlightsSidebarOpened}
+				isShown={isSiderailAndPortlightsOpened}
+				setIsShown={setIsSiderailAndPortlightsOpened}
 			>
 				<VariantsList
+					type="primary"
 					variants={[
 						{
 							id: 1,
@@ -184,12 +201,17 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
+			{/* Siderail & Portlights Sidebar END */}
+
+			{/* Fender Sidebar START */}
+
 			<Sidebar
 				title="Fender"
 				isShown={isFenderOpened}
 				setIsShown={setIsFenderOpened}
 			>
 				<VariantsList
+					type="primary"
 					variants={[
 						{
 							id: 1,
@@ -225,12 +247,17 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
+			{/* Fender Sidebar END */}
+
+			{/* Sides Sidebar START */}
+
 			<Sidebar
 				title="Sides"
 				isShown={isSidesOpened}
 				setIsShown={setIsSidesOpened}
 			>
 				<VariantsList
+					type="primary"
 					variants={[
 						{
 							id: 1,
@@ -306,12 +333,17 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
+			{/* Sides Sidebar END */}
+
+			{/* Flybridge Visor Sidebar START */}
+
 			<Sidebar
 				title="Flybridge Visor"
 				isShown={isVisorOpened}
 				setIsShown={setIsVisorOpened}
 			>
 				<VariantsList
+					type="primary"
 					variants={[
 						{
 							id: 1,
@@ -377,12 +409,17 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
+			{/* Flybridge Visor Sidebar END */}
+
+			{/* Windows Sidebar START */}
+
 			<Sidebar
 				title="Windows"
 				isShown={isWindowsOpened}
 				setIsShown={setIsWindowsOpened}
 			>
 				<VariantsList
+					type="primary"
 					variants={[
 						{
 							id: 1,
@@ -418,12 +455,17 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
+			{/* Windows Sidebar END */}
+
+			{/* Counter Sidebar START */}
+
 			<Sidebar
 				title="Counter"
 				isShown={isCounterOpened}
 				setIsShown={setIsCounterOpened}
 			>
 				<VariantsList
+					type="primary"
 					variants={[
 						{
 							id: 1,
@@ -459,12 +501,17 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
+			{/* Counter Sidebar END */}
+
+			{/* Illuminators Sidebar START */}
+
 			<Sidebar
 				title="Illuminators"
 				isShown={isIlluminatorsOpened}
 				setIsShown={setIsIlluminatorsOpened}
 			>
 				<VariantsList
+					type="primary"
 					variants={[
 						{
 							id: 1,
@@ -500,7 +547,37 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
-			{/* Siderails and Portlights Sidebars END */}
+			{/* Illuminators Sidebar END */}
+
+			{/* Throttle & Steering Wheel Sidebar START */}
+
+			<Sidebar
+				isShown={isThrottleAndSteeringWheelOpened}
+				setIsShown={setIsThrottleAndSteeringWheelOpened}
+				title="Throttle & Steering Wheel"
+				width="450px"
+			>
+				<VariantsList type='tertiary' variants={[
+                    {
+                        id: 1,
+                        title: 'White andesite',
+                        price: 2600,
+                        image: Children1.variant1,
+                        onClick: () => {},
+                        isDefault: true
+                    },
+                    {
+                        id: 2,
+                        title: 'Midnight sky',
+                        price: 3500,
+                        image: Children1.variant2,
+                        onClick: () => {},
+                        isDefault: false
+                    },
+                ]} />
+			</Sidebar>
+
+			{/* Throttle & Steering Wheel Sidebar END */}
 
 			{/* Engine Sidebar START */}
 
@@ -511,6 +588,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isEngineFlag={true}
 			>
 				<VariantsList
+					type="secondary"
 					variants={[
 						{
 							id: 1,
@@ -543,7 +621,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc.'
 						}
 					]}
-					isPrimary={false}
 				/>
 			</Sidebar>
 
