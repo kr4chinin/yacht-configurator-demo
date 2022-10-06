@@ -1,4 +1,4 @@
-import { Dispatch, FC, ReactComponentElement, SetStateAction } from 'react'
+import { Dispatch, FC, SetStateAction } from 'react'
 import {
 	Group,
 	Mesh,
@@ -49,7 +49,7 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 					)
 				}
 				texture = new TextureLoader().load(url)
-				if (type === 'basic') {
+				if (type === 'basic' && childNumber !== 7 && childNumber !== 9) {
 					texture.wrapS = texture.wrapT = THREE.RepeatWrapping
 					if (repeatCount) {
 						texture.repeat.set(repeatCount, repeatCount)
