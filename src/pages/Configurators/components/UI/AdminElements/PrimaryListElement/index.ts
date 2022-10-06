@@ -1,1 +1,1 @@
-export {default} from './PrimaryListElement';
+export { default } from './PrimaryListElement'

@@ -241,7 +241,7 @@ const FlybridgeAdminPanelSidebar: FC<FlybridgeAdminPanelSidebarProps> = ({
 							min={0.1}
 							max={1}
 							step={0.1}
-                            marginBottom="10px"
+							marginBottom="10px"
 						/>
 
 						<AdminSidebarButton

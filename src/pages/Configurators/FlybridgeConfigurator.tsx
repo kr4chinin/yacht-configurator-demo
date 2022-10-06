@@ -4,7 +4,9 @@ import CustomCanvas from './components/Sections/CustomCanvas/CustomCanvas'
 import FlybridgeControlsWrapper from './components/Sections/FlybridgeControlsWrapper'
 import ModelLoadingIndicator from './components/UI/Loaders/ModelLoadingIndicator'
 
-const LazyFlybridgeModel = lazy(() => import('./components/UI/Models/FlybridgeModel'))
+const LazyFlybridgeModel = lazy(
+	() => import('./components/UI/Models/FlybridgeModel')
+)
 
 const FlybridgeConfigurator = () => {
 	const yachtModel = useFBX('../models/flybridge.fbx')
@@ -14,11 +16,7 @@ const FlybridgeConfigurator = () => {
 			<FlybridgeControlsWrapper model={yachtModel} />
 
 			<CustomCanvas>
-				<Suspense
-					fallback={
-                        <ModelLoadingIndicator />
-					}
-				>
+				<Suspense fallback={<ModelLoadingIndicator />}>
 					<LazyFlybridgeModel model={yachtModel} />
 				</Suspense>
 			</CustomCanvas>

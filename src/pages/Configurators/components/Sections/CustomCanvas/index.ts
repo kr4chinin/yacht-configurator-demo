@@ -1,1 +1,1 @@
-export {default} from './CustomCanvas';
+export { default } from './CustomCanvas'

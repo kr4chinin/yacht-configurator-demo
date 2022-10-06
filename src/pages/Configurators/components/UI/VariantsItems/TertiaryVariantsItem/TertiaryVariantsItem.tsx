@@ -33,9 +33,7 @@ const TertiaryVariantsItem: FC<TertiaryVariantsItemProps> = ({
 			<label htmlFor={id}>
 				<div className={styles['image-container']}>
 					<LoadableImage src={variant.image} alt={variant.title} />
-                    <div className={styles.title}>
-                        {variant.title}
-                    </div>
+					<div className={styles.title}>{variant.title}</div>
 				</div>
 			</label>
 		</div>

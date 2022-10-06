@@ -1,1 +1,1 @@
-export {default} from './VariantsList';
+export { default } from './VariantsList'

@@ -1,1 +1,1 @@
-export {default} from './PrimaryList';
+export { default } from './PrimaryList'

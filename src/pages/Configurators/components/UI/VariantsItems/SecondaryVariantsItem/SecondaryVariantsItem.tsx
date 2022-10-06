@@ -2,7 +2,7 @@ import { FC, useId } from 'react'
 import { Variant } from '../../../../../../types/Variant'
 import PrimaryRadioInput from '../../PrimaryRadioInput'
 import styles from './SecondaryVariantsItem.module.scss'
-import {ReactComponent as Cog} from '../../../../../../assets/icons/cog.svg'
+import { ReactComponent as Cog } from '../../../../../../assets/icons/cog.svg'
 
 interface SecondaryVariantsItemProps {
 	variant: Variant
@@ -38,11 +38,11 @@ const SecondaryVariantsItem: FC<SecondaryVariantsItemProps> = ({
 				</label>
 			</div>
 			<div className={styles['bottom-section']}>
-                <div className={styles.title}>
-                    <Cog />
-                    <h3>{variant.title}</h3>
-                </div>
-				
+				<div className={styles.title}>
+					<Cog />
+					<h3>{variant.title}</h3>
+				</div>
+
 				<p>{variant?.description}</p>
 			</div>
 		</div>

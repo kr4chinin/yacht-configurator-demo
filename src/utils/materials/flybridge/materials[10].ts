@@ -5,7 +5,11 @@ const initialTexture = new TextureLoader().load(Children10.variant3)
 export const initialMaterial10 = new MeshBasicMaterial({ map: initialTexture })
 
 const redCarbonTexture = new TextureLoader().load(Children10.variant1)
-export const redCarbonMaterial10 = new MeshBasicMaterial({ map: redCarbonTexture })
+export const redCarbonMaterial10 = new MeshBasicMaterial({
+	map: redCarbonTexture
+})
 
 const midnightSkyTexture = new TextureLoader().load(Children10.variant2)
-export const midnightSkyMaterial10 = new MeshBasicMaterial({ map: midnightSkyTexture })
+export const midnightSkyMaterial10 = new MeshBasicMaterial({
+	map: midnightSkyTexture
+})

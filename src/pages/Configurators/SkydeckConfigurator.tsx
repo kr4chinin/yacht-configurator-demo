@@ -4,7 +4,9 @@ import CustomCanvas from './components/Sections/CustomCanvas/CustomCanvas'
 import SkydeckControlsWrapper from './components/Sections/SkydeckControlsWrapper'
 import ModelLoadingIndicator from './components/UI/Loaders/ModelLoadingIndicator'
 
-const LazySkydeckModel = lazy(() => import('./components/UI/Models/SkydeckModel'))
+const LazySkydeckModel = lazy(
+	() => import('./components/UI/Models/SkydeckModel')
+)
 
 const SkydeckConfigurator = () => {
 	const yachtModel = useFBX('../models/skydeck.fbx')

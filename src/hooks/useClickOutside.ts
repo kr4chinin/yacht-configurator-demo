@@ -5,7 +5,7 @@ export function useClickOutside(
 	triggerRef: React.RefObject<HTMLElement>,
 	func: () => void,
 	registerCanvasClicks: boolean = true,
-    isEngineFlag = false
+	isEngineFlag = false
 ) {
 	useEffect(() => {
 		function handleClickOutside(e: MouseEvent) {
@@ -17,10 +17,13 @@ export function useClickOutside(
 				return
 			}
 
-            // To handle case with engines sidebar without writing to many ref logic in other components
-            if (e.target === document.getElementById('engine-trigger') && isEngineFlag) {
-                return
-            }
+			// To handle case with engines sidebar without writing to many ref logic in other components
+			if (
+				e.target === document.getElementById('engine-trigger') &&
+				isEngineFlag
+			) {
+				return
+			}
 
 			if (triggerRef?.current && triggerRef.current.children) {
 				for (let i = 0; i < triggerRef.current.children.length; i++) {

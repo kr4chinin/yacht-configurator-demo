@@ -1,1 +1,1 @@
-export {default} from './PrimarySliderInput';
+export { default } from './PrimarySliderInput'

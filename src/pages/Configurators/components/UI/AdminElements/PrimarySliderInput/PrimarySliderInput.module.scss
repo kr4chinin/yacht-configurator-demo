@@ -1,18 +1,18 @@
 @import '../../../../../../styles/palettes/configuratorPallete';
 
 .title {
-    font-size: 1.2rem;
-    color: $primary-font-color;
+	font-size: 1.2rem;
+	color: $primary-font-color;
 
-    margin-top: 2px;
-    margin-bottom: 2px;
-    font-weight: lighter;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	font-weight: lighter;
 }
 
 .container {
 	width: 300px;
-    display: flex;
-    align-items: center;
+	display: flex;
+	align-items: center;
 
 	.range-slider {
 		-webkit-appearance: none;
@@ -32,7 +32,7 @@
 			border-radius: 50%;
 			background: #2c3e50;
 			cursor: pointer;
-            transition: 250ms;
+			transition: 250ms;
 
 			&:hover {
 				filter: brightness(1.2);
@@ -73,7 +73,7 @@
 		padding: 5px 10px;
 		margin-left: 10px;
 
-        font-size: 1.15rem;
+		font-size: 1.15rem;
 
 		&:after {
 			position: absolute;
@@ -88,27 +88,27 @@
 		}
 	}
 
-    .apply-btn {
-        height: 30px;
-        width: 30px;
-        background-color: $primary-background;
-        color: $primary-font-color;
+	.apply-btn {
+		height: 30px;
+		width: 30px;
+		background-color: $primary-background;
+		color: $primary-font-color;
 
-        backdrop-filter: blur(10px);
-        font-size: 1.15rem;
+		backdrop-filter: blur(10px);
+		font-size: 1.15rem;
 
-        border: none;
-        border-radius: 5px;
+		border: none;
+		border-radius: 5px;
 
-        margin-left: 5px;
-        transition: 500ms;
+		margin-left: 5px;
+		transition: 500ms;
 
-        &:hover {
-            cursor: pointer;
-            transform: scale(1.05);
-            color: rgba(120, 120, 120, 0.8);
-        }
-    }
+		&:hover {
+			cursor: pointer;
+			transform: scale(1.05);
+			color: rgba(120, 120, 120, 0.8);
+		}
+	}
 }
 
 ::-moz-range-track {

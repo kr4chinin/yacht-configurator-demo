@@ -20,7 +20,6 @@ const Navbar: FC<NavbarProps> = ({
 	toggleEngineSidebar,
 	isHidden
 }) => {
-
 	return (
 		<nav className={cn(styles.container, { [styles.hidden]: isHidden })}>
 			<NavbarTopSection yachtName={yachtName} />

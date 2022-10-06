@@ -1,1 +1,1 @@
-export {default} from './TertiaryVariantsItem';
+export { default } from './TertiaryVariantsItem'

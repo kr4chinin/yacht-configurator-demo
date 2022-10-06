@@ -5,16 +5,15 @@ import styles from './Navbar.module.scss'
 import { FC, memo } from 'react'
 
 interface NavbarTopSectionProps {
-    yachtName: string
+	yachtName: string
 }
 
-const NavbarTopSection: FC<NavbarTopSectionProps> = ({yachtName}) => {
+const NavbarTopSection: FC<NavbarTopSectionProps> = ({ yachtName }) => {
+	const navigate = useNavigate()
 
-    const navigate = useNavigate()
-
-    function handleNavigateToMainPage() {
-        navigate(AppRoutes.MAIN)
-    }
+	function handleNavigateToMainPage() {
+		navigate(AppRoutes.MAIN)
+	}
 
 	return (
 		<div className={styles['top-section']}>

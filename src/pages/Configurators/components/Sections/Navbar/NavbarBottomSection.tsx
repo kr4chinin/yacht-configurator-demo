@@ -11,13 +11,13 @@ const MemoTwoLines = memo(TwoLines)
 interface NavbarBottomSectionProps {
 	exteriorOptions: Option[]
 	interiorOptions: Option[]
-    toggleEngineSidebar: () => void
+	toggleEngineSidebar: () => void
 }
 
 const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
 	exteriorOptions,
 	interiorOptions,
-    toggleEngineSidebar
+	toggleEngineSidebar
 }) => {
 	const [isInteriorOpened, setIsInteriorOpened] = useState(false)
 	const [isExterirorOpened, setIsExteriorOpened] = useState(false)
@@ -47,7 +47,11 @@ const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
 					</OptionsDropdown>
 				</div>
 				<MemoTwoLines />
-				<div className={styles.option} onClick={toggleEngineSidebar} id='engine-trigger'>
+				<div
+					className={styles.option}
+					onClick={toggleEngineSidebar}
+					id="engine-trigger"
+				>
 					Engine
 				</div>
 				<MemoTwoLines />

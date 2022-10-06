@@ -1,34 +1,34 @@
 @import '../../../../../../styles/palettes/configuratorPallete';
 
 .admin-btn {
-    width: 280px;
+	width: 280px;
 
-    color: $primary-font-color;
-    background-color: $primary-background;
-    padding: 10px;
+	color: $primary-font-color;
+	background-color: $primary-background;
+	padding: 10px;
 
-    border: none;
-    border-radius: 5px;
-    border: 1px solid transparent;
+	border: none;
+	border-radius: 5px;
+	border: 1px solid transparent;
 
-    font-size: 16px;
+	font-size: 16px;
 
-    backdrop-filter: blur(10px);
-    transition: 350ms;
+	backdrop-filter: blur(10px);
+	transition: 350ms;
 
-    &.secondary {
-        background-color: rgba(50, 48, 51, 0.6);
-    }
+	&.secondary {
+		background-color: rgba(50, 48, 51, 0.6);
+	}
 
-    &:hover {
-        cursor: pointer;
-        transform: scale(1.025);
-        border: 1px solid $primary-font-color;
+	&:hover {
+		cursor: pointer;
+		transform: scale(1.025);
+		border: 1px solid $primary-font-color;
 
-        p {
-            b {
-                text-decoration: underline;
-            }
-        }
-    }
+		p {
+			b {
+				text-decoration: underline;
+			}
+		}
+	}
 }

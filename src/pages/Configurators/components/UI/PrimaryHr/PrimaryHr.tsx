@@ -6,7 +6,7 @@ interface PrimaryHrProps {
 	width?: string
 	marginTop?: string
 	marginBottom?: string
-    border?: string
+	border?: string
 }
 
 const PrimaryHr: FC<PrimaryHrProps> = ({
@@ -14,13 +14,13 @@ const PrimaryHr: FC<PrimaryHrProps> = ({
 	width = '100%',
 	marginTop = '15px',
 	marginBottom = '30px',
-    border = 'none'
+	border = 'none'
 }) => {
 	return (
 		<hr
 			className={styles['primary-hr']}
 			style={{
-                border: border,
+				border: border,
 				height: height,
 				width: width,
 				marginTop: marginTop,

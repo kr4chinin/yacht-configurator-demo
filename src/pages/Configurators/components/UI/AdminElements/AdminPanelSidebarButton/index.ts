@@ -1,1 +1,1 @@
-export {default} from './AdminPanelSidebarButton'
+export { default } from './AdminPanelSidebarButton'

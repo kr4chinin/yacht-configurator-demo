@@ -1,1 +1,1 @@
-export {default} from './PrimaryHr';
+export { default } from './PrimaryHr'

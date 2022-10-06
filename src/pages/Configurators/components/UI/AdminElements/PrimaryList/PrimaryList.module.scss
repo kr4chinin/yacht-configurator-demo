@@ -1,21 +1,21 @@
 @import '../../../../../../styles/palettes/configuratorPallete';
 
 .list-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 5px;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 5px;
 
-    svg {
-        width: 32px;
-        height: 32px;
-    }
+	svg {
+		width: 32px;
+		height: 32px;
+	}
 
 	.list-title {
 		font-weight: lighter;
 	}
 
-    margin-bottom: 15px;
+	margin-bottom: 15px;
 }
 
 ul {
