@@ -3,7 +3,7 @@ import { Group, Mesh } from 'three'
 import VariantsList from '../UI/VariantsList'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
-import FlybridgeAdminPanelSidebar from './AdminSections/FlybridgeAdminPanelSidebar'
+// import FlybridgeAdminPanelSidebar from './AdminSections/FlybridgeAdminPanelSidebar'
 
 import { Children0 } from '../../../../utils/urls/flybridge/Children[0]'
 import {
@@ -119,10 +119,10 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 
 	const exteriorOptions = useMemo(
 		() => [
-			{
-				title: 'Admin',
-				onClick: () => setIsAdminOpened(prev => !prev)
-			},
+			// {
+			// 	title: 'Admin',
+			// 	onClick: () => setIsAdminOpened(prev => !prev)
+			// },
 			{
 				title: 'Siderails & Portlights',
 				onClick: () => setIsSiderailAndPortlightsOpened(prev => !prev)
@@ -178,7 +178,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 		[]
 	)
 
-	const [isAdminOpened, setIsAdminOpened] = useState(false)
+	// const [isAdminOpened, setIsAdminOpened] = useState(false)
 
 	const [isEngineSidebarOpened, setIsEngineSidebarOpened] = useState(false)
 
@@ -198,11 +198,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 
 			{/* Admin panel sidebar START*/}
 
-			<FlybridgeAdminPanelSidebar
+			{/* <FlybridgeAdminPanelSidebar
 				isShown={isAdminOpened}
 				setIsShown={setIsAdminOpened}
 				model={model}
-			/>
+			/> */}
 
 			{/* Admin panel sidebar END */}
 

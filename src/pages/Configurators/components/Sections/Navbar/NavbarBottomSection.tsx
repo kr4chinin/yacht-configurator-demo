@@ -36,7 +36,9 @@ const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
 						Exterior
 					</OptionsDropdown>
 				</div>
+                
 				<MemoTwoLines />
+
 				<div className={styles.option}>
 					<OptionsDropdown
 						isShown={isInteriorOpened}
@@ -46,7 +48,9 @@ const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
 						Interior
 					</OptionsDropdown>
 				</div>
+
 				<MemoTwoLines />
+
 				<div
 					className={styles.option}
 					onClick={toggleEngineSidebar}
@@ -54,13 +58,21 @@ const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
 				>
 					Engine
 				</div>
+
 				<MemoTwoLines />
+
 				<div
 					className={styles.option}
 					onClick={() => setIsAccessoriesOpened(prev => !prev)}
 				>
 					Optional accessories
 				</div>
+
+                <MemoTwoLines />
+
+                <div className={styles.option}>
+                    Summary
+                </div>
 			</div>
 			<AccessoriesPopup
 				isOpened={isAccessoriesOpened}
