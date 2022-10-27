@@ -1,5 +1,10 @@
 export enum Children0 {
-	variant1 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664548033/children%5B0%5D/1.variant_hkqirl.jpg',
-	variant2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664296856/children%5B0%5D/2.variant_itkfb2.jpg',
-	variant3 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664296863/children%5B0%5D/3.variant_xnh9xl.jpg'
+	basic1 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891049/flybridge/children%5B0%5D/basic/1.variant_wgsi1f.jpg',
+	matcap2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891064/flybridge/children%5B0%5D/matcap/2.variant_slehef.png',
+	matcap3 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891064/flybridge/children%5B0%5D/matcap/3.variant_mklslj.png'
+}
+
+export enum ChildrenPreview0 {
+	matcap2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891070/flybridge/children%5B0%5D/preview/2.variant_oqi4fj.jpg',
+	matcap3 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891069/flybridge/children%5B0%5D/preview/3.variant_y5n0na.jpg'
 }

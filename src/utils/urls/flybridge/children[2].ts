@@ -1,5 +1,8 @@
 export enum Children2 {
-	variant1 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297158/children%5B2%5D/1.variant_tmduki.jpg',
-	variant2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297158/children%5B2%5D/2.variant_nqfzs9.jpg',
-	variant3 = 'https://res.cloudinary.com/diagina4w/image/upload/v1664297159/children%5B2%5D/3.variant_fv2g0u.jpg'
+	basic1 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891111/flybridge/children%5B2%5D/basic/1.variant_jnnjts.jpg',
+	matcap2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891110/flybridge/children%5B2%5D/matcap/2.variant_pmzfxx.png'
+}
+
+export enum ChildrenPreview2 {
+	matcap2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891112/flybridge/children%5B2%5D/preview/2.variant_x2z3it.jpg'
 }
