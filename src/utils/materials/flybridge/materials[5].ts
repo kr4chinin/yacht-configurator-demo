@@ -2,48 +2,43 @@ import { Children5 } from '../../urls/flybridge/Children[5]'
 import { TextureLoader, MeshBasicMaterial } from 'three'
 import { setWrapAndRepeat } from '../../../helpers/setWrapAndRepeat'
 
-const initialTexture = new TextureLoader().load(Children5.variant2)
-setWrapAndRepeat(initialTexture, 0.1)
-export const initialMaterial5 = new MeshBasicMaterial({ map: initialTexture })
+// Couch
 
-const redCarbonTexture = new TextureLoader().load(Children5.variant1)
-setWrapAndRepeat(redCarbonTexture, 0.1)
-export const redCarbonMaterial5 = new MeshBasicMaterial({
-	map: redCarbonTexture
+// initial texture
+const bourbonLeatherTexture = new TextureLoader().load(Children5.basic1)
+setWrapAndRepeat(bourbonLeatherTexture, 0.1)
+export const bourbonLeatherMaterial5 = new MeshBasicMaterial({
+  map: bourbonLeatherTexture
 })
 
-const oistrichLeatherTexture = new TextureLoader().load(Children5.variant3)
-setWrapAndRepeat(oistrichLeatherTexture, 0.1)
-export const oistrichLeatherMaterial5 = new MeshBasicMaterial({
-	map: oistrichLeatherTexture
+const darkCashemereTexture = new TextureLoader().load(Children5.basic2)
+setWrapAndRepeat(darkCashemereTexture, 0.1)
+export const darkCashemereMaterial5 = new MeshBasicMaterial({
+  map: darkCashemereTexture
 })
 
-const redBlanketTexture = new TextureLoader().load(Children5.variant4)
-setWrapAndRepeat(redBlanketTexture, 0.1)
-export const redBlanketMaterial5 = new MeshBasicMaterial({
-	map: redBlanketTexture
+const brownLeatherTexture = new TextureLoader().load(Children5.basic3)
+setWrapAndRepeat(brownLeatherTexture, 0.1)
+export const brownLeatherMaterial5 = new MeshBasicMaterial({
+  map: brownLeatherTexture
 })
 
-const stitchedLeatherTexture = new TextureLoader().load(Children5.variant5)
-setWrapAndRepeat(stitchedLeatherTexture, 0.1)
-export const stitchedLeatherMaterial5 = new MeshBasicMaterial({
-	map: stitchedLeatherTexture
+const tannedLeatherTexture = new TextureLoader().load(Children5.basic4)
+setWrapAndRepeat(tannedLeatherTexture, 0.1)
+export const tannedLeatherMaterial5 = new MeshBasicMaterial({
+  map: tannedLeatherTexture
 })
 
-const orangeLeatherTexture = new TextureLoader().load(Children5.variant6)
-setWrapAndRepeat(orangeLeatherTexture, 0.1)
-export const orangeLeatherMaterial5 = new MeshBasicMaterial({
-	map: orangeLeatherTexture
+const blueMarlineTexture = new TextureLoader().load(Children5.basic5)
+setWrapAndRepeat(blueMarlineTexture, 0.1)
+export const blueMarlineMaterial5 = new MeshBasicMaterial({
+  map: blueMarlineTexture
 })
 
-const sandyLeatherTexture = new TextureLoader().load(Children5.variant7)
-setWrapAndRepeat(sandyLeatherTexture, 0.1)
-export const sandyLeatherMaterial5 = new MeshBasicMaterial({
-	map: sandyLeatherTexture
+const beigeLeatherTexture = new TextureLoader().load(Children5.basic6)
+setWrapAndRepeat(beigeLeatherTexture, 0.1)
+export const beigeLeatherMaterial5 = new MeshBasicMaterial({
+  map: beigeLeatherTexture
 })
 
-const mildLeatherTexture = new TextureLoader().load(Children5.variant8)
-setWrapAndRepeat(mildLeatherTexture, 0.1)
-export const mildLeatherMaterial5 = new MeshBasicMaterial({
-	map: mildLeatherTexture
-})
+

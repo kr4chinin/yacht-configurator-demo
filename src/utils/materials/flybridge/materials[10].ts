@@ -1,15 +1,25 @@
 import { Children10 } from '../../urls/flybridge/Children[10]'
-import { TextureLoader, MeshBasicMaterial } from 'three'
+import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
-const initialTexture = new TextureLoader().load(Children10.variant3)
-export const initialMaterial10 = new MeshBasicMaterial({ map: initialTexture })
+// Cockpit steering wheel
 
-const redCarbonTexture = new TextureLoader().load(Children10.variant1)
-export const redCarbonMaterial10 = new MeshBasicMaterial({
-	map: redCarbonTexture
+// initial texture
+const blackSapphireTexture = new TextureLoader().load(Children10.matcap1)
+export const blackSapphireMaterial10 = new MeshMatcapMaterial({
+	matcap: blackSapphireTexture
 })
 
-const midnightSkyTexture = new TextureLoader().load(Children10.variant2)
-export const midnightSkyMaterial10 = new MeshBasicMaterial({
-	map: midnightSkyTexture
+const acquanettaTexture = new TextureLoader().load(Children10.matcap2)
+export const acquanettaMaterial10 = new MeshMatcapMaterial({
+	matcap: acquanettaTexture
+})
+
+const andesiteTexture = new TextureLoader().load(Children10.matcap3)
+export const andesiteMaterial10 = new MeshMatcapMaterial({
+	matcap: andesiteTexture
+})
+
+const redCarbonTexture = new TextureLoader().load(Children10.basic4)
+export const redCarbonMaterial10 = new MeshBasicMaterial({
+	map: redCarbonTexture
 })

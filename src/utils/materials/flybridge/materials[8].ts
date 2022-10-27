@@ -1,13 +1,20 @@
 import { Children8 } from '../../urls/flybridge/Children[8]'
-import { TextureLoader, MeshBasicMaterial } from 'three'
+import { TextureLoader, MeshMatcapMaterial } from 'three'
 
-const initialTexture = new TextureLoader().load(Children8.variant2)
-export const initialMaterial8 = new MeshBasicMaterial({ map: initialTexture })
+// Counter
 
-const erasedSteel = new TextureLoader().load(Children8.variant1)
-export const erasedSteelMaterial8 = new MeshBasicMaterial({ map: erasedSteel })
+// initial texture
+const stainlessSteelTexture = new TextureLoader().load(Children8.matcap1)
+export const stainlessSteelMaterial8 = new MeshMatcapMaterial({
+  matcap: stainlessSteelTexture
+})
 
-const asphaltGrayTexture = new TextureLoader().load(Children8.variant3)
-export const asphaltGrayMaterial8 = new MeshBasicMaterial({
-	map: asphaltGrayTexture
+const blackSteelTexture = new TextureLoader().load(Children8.matcap2)
+export const blackSteelMaterial8 = new MeshMatcapMaterial({
+  matcap: blackSteelTexture
+})
+
+const goldenHorizonTexture = new TextureLoader().load(Children8.matcap3)
+export const goldenHorizonMaterial8 = new MeshMatcapMaterial({
+  matcap: goldenHorizonTexture
 })

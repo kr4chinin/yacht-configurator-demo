@@ -1,19 +1,20 @@
 import { Children0 } from '../../urls/flybridge/Children[0]'
-import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
+import { TextureLoader, MeshMatcapMaterial } from 'three'
 
-const initialTexture = new TextureLoader().load(
-	'https://raw.githubusercontent.com/nidorx/matcaps/master/1024/3B3C3F_DAD9D5_929290_ABACA8.png'
-)
-export const initialMaterial0 = new MeshMatcapMaterial({
-	matcap: initialTexture
+// Siderails & Portlights
+
+// initial texture
+const stainlessSteelTexture = new TextureLoader().load(Children0.matcap1)
+export const stainlessSteelMaterial0 = new MeshMatcapMaterial({
+	matcap: stainlessSteelTexture
 })
 
-const erasedSteelTexture = new TextureLoader().load(Children0.variant2)
-export const erasedSteelMaterial0 = new MeshBasicMaterial({
-	map: erasedSteelTexture
+const blackSteelTexture = new TextureLoader().load(Children0.matcap2)
+export const blackSteelMaterial0 = new MeshMatcapMaterial({
+	matcap: blackSteelTexture
 })
 
-const darkSteelTexture = new TextureLoader().load(Children0.variant3)
-export const darkSteelMaterial0 = new MeshBasicMaterial({
-	map: darkSteelTexture
+const goldenHorizonTexture = new TextureLoader().load(Children0.matcap3)
+export const goldenHorizonMaterial0 = new MeshMatcapMaterial({
+	matcap: goldenHorizonTexture
 })

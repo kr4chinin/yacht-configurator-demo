@@ -1,28 +1,30 @@
 import { Children6 } from '../../urls/flybridge/Children[6]'
-import { TextureLoader, MeshBasicMaterial } from 'three'
+import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
-const initialTexture = new TextureLoader().load(Children6.variant5)
-export const initialMaterial6 = new MeshBasicMaterial({ map: initialTexture })
+// Flybridge visor
 
-const redCarbonTexture = new TextureLoader().load(Children6.variant1)
+// initial texture
+const andesiteTexture = new TextureLoader().load(Children6.matcap3)
+export const andesiteMaterial6 = new MeshMatcapMaterial({
+  matcap: andesiteTexture
+})
+
+const neonBlueTexture = new TextureLoader().load(Children6.matcap1)
+export const neonBlueMaterial6 = new MeshMatcapMaterial({
+  matcap: neonBlueTexture
+})
+
+const bloodyRedTexture = new TextureLoader().load(Children6.matcap2)
+export const bloodyRedMaterial6 = new MeshMatcapMaterial({
+  matcap: bloodyRedTexture
+})
+
+const stainlessSteel = new TextureLoader().load(Children6.matcap4)
+export const stainlessSteelMaterial6 = new MeshMatcapMaterial({
+  matcap: stainlessSteel
+})
+
+const redCarbonTexture = new TextureLoader().load(Children6.basic5)
 export const redCarbonMaterial6 = new MeshBasicMaterial({
-	map: redCarbonTexture
-})
-
-const sunnyGreenTexture = new TextureLoader().load(Children6.variant2)
-export const sunnyGreenMaterial6 = new MeshBasicMaterial({
-	map: sunnyGreenTexture
-})
-
-const brownRedTexture = new TextureLoader().load(Children6.variant3)
-export const brownRedMaterial6 = new MeshBasicMaterial({ map: brownRedTexture })
-
-const asphaltGrayTexture = new TextureLoader().load(Children6.variant4)
-export const asphaltGrayMaterial6 = new MeshBasicMaterial({
-	map: asphaltGrayTexture
-})
-
-const grayCarbonTexture = new TextureLoader().load(Children6.variant6)
-export const grayCarbonMaterial6 = new MeshBasicMaterial({
-	map: grayCarbonTexture
+  map: redCarbonTexture
 })

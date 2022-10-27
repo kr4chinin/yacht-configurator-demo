@@ -1,23 +1,19 @@
 import { Children7 } from '../../urls/flybridge/Children[7]'
-import { TextureLoader, MeshBasicMaterial } from 'three'
+import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
-const initialTexture = new TextureLoader().load(Children7.variant1)
-export const initialMaterial7 = new MeshBasicMaterial({
-	map: initialTexture,
-	transparent: true,
-	opacity: 0.7
+// Windows
+
+// initial texture
+const clearGlassTexture = new TextureLoader().load(Children7.matcap1)
+export const clearGlassMaterial7 = new MeshMatcapMaterial({
+	matcap: clearGlassTexture,
+	opacity: 0.65,
+  transparent: true
 })
 
-const blueTexture = new TextureLoader().load(Children7.variant2)
-export const blueMaterial7 = new MeshBasicMaterial({
-	map: blueTexture,
-	transparent: true,
-	opacity: 0.7
-})
-
-const dirtyTexture = new TextureLoader().load(Children7.variant3)
-export const dirtyMaterial7 = new MeshBasicMaterial({
-	map: dirtyTexture,
-	transparent: true,
-	opacity: 0.7
+const tonedGlassTexture = new TextureLoader().load(Children7.basic2)
+export const tonedGlassMaterial7 = new MeshBasicMaterial({
+  map: tonedGlassTexture,
+  opacity: 0.65,
+  transparent: true
 })

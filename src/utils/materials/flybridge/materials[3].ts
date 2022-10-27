@@ -2,36 +2,30 @@ import { Children3 } from '../../urls/flybridge/Children[3]'
 import { TextureLoader, MeshBasicMaterial } from 'three'
 import { setWrapAndRepeat } from '../../../helpers/setWrapAndRepeat'
 
-const initialTexture = new TextureLoader().load(Children3.variant4)
-setWrapAndRepeat(initialTexture, 3)
-export const initialMaterial3 = new MeshBasicMaterial({ map: initialTexture })
+// Cockpit floor
 
-const gentleWhitePlanks = new TextureLoader().load(Children3.variant1)
-setWrapAndRepeat(gentleWhitePlanks, 3)
-export const gentleWhitePlanksMaterial3 = new MeshBasicMaterial({
-	map: gentleWhitePlanks
+// initial texture
+const oakPlanksTexture = new TextureLoader().load(Children3.basic1)
+export const oakPlanksMaterial3 = new MeshBasicMaterial({
+  map: oakPlanksTexture
 })
 
-const darkWoodPlanks = new TextureLoader().load(Children3.variant2)
-setWrapAndRepeat(darkWoodPlanks, 3)
-export const darkWoodPlanksMaterial3 = new MeshBasicMaterial({
-	map: darkWoodPlanks
+const demiSeasonTeakTexture = new TextureLoader().load(Children3.basic2)
+export const demiSeasonTeakMaterial3 = new MeshBasicMaterial({
+  map: demiSeasonTeakTexture
 })
 
-const spruceWoodPlanks = new TextureLoader().load(Children3.variant3)
-setWrapAndRepeat(spruceWoodPlanks, 3)
-export const spruceWoodPlanksMaterial3 = new MeshBasicMaterial({
-	map: spruceWoodPlanks
+const burnedTeak = new TextureLoader().load(Children3.basic3)
+export const burnedTeakMaterial3 = new MeshBasicMaterial({
+  map: burnedTeak
 })
 
-const crystalGrayPlanks = new TextureLoader().load(Children3.variant5)
-setWrapAndRepeat(crystalGrayPlanks, 3)
-export const crystalGrayPlanksMaterial3 = new MeshBasicMaterial({
-	map: crystalGrayPlanks
+const redWoodTexture = new TextureLoader().load(Children3.basic4)
+export const redWoodMaterial3 = new MeshBasicMaterial({
+  map: redWoodTexture
 })
 
-const darkOakTexture = new TextureLoader().load(Children3.variant6)
-setWrapAndRepeat(darkOakTexture, 3)
-export const darkOakPlanksMaterial3 = new MeshBasicMaterial({
-	map: darkOakTexture
+const darkOakTexture = new TextureLoader().load(Children3.basic5)
+export const darkOakMaterial3 = new MeshBasicMaterial({
+  map: darkOakTexture
 })
