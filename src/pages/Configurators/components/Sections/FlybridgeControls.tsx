@@ -5,94 +5,104 @@ import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 // import FlybridgeAdminPanelSidebar from './AdminSections/FlybridgeAdminPanelSidebar'
 
-import { Children0 } from '../../../../utils/urls/flybridge/Children[0]'
+import { ChildrenPreview0 } from '../../../../utils/urls/flybridge/Children[0]'
 import {
-	initialMaterial0,
-	darkSteelMaterial0,
-	erasedSteelMaterial0
+	stainlessSteelMaterial0,
+	blackSteelMaterial0,
+	goldenHorizonMaterial0
 } from '../../../../utils/materials/flybridge/materials[0]'
 
-import { Children1 } from '../../../../utils/urls/flybridge/Children[1]'
 import {
-	initialMaterial1,
-	midnightSkyMaterial1
+	Children1,
+	ChildrenPreview1
+} from '../../../../utils/urls/flybridge/Children[1]'
+import {
+	acquanettaMaterial1,
+	andesiteMaterial1,
+	blackSapphireMaterial1,
+	redCarbonMaterial1
 } from '../../../../utils/materials/flybridge/materials[1]'
 
-import { Children2 } from '../../../../utils/urls/flybridge/Children[2]'
 import {
-	initialMaterial2,
-	paperWhiteMaterial2,
-	redCarbonMaterial2
+	Children2,
+	ChildrenPreview2
+} from '../../../../utils/urls/flybridge/Children[2]'
+import {
+	andesiteMaterial2,
+	blueMarlineMaterial2
 } from '../../../../utils/materials/flybridge/materials[2]'
 
 import { Children3 } from '../../../../utils/urls/flybridge/Children[3]'
 import {
-	initialMaterial3,
-	crystalGrayPlanksMaterial3,
-	darkOakPlanksMaterial3,
-	darkWoodPlanksMaterial3,
-	gentleWhitePlanksMaterial3,
-	spruceWoodPlanksMaterial3
+	oakPlanksMaterial3,
+	demiSeasonTeakMaterial3,
+	burnedTeakMaterial3,
+	redWoodMaterial3,
+	darkOakMaterial3
 } from '../../../../utils/materials/flybridge/materials[3]'
 
-import { Children4 } from '../../../../utils/urls/flybridge/Children[4]'
 import {
-	initialMaterial4,
-	asphaltGrayMaterial4,
-	darkCloudsMaterial4,
-	papyrusGreenMaterial4,
-	skyBlackMaterial4,
-	sunnyGreenMaterial4,
-	wildGreenMaterial4
+	Children4,
+	ChildrenPreview4
+} from '../../../../utils/urls/flybridge/Children[4]'
+import {
+	neonBlueMaterial4,
+	acquanettaMaterial4,
+	bloodyRedMaterial4,
+	sunriseMaterial4,
+	pacificOceanMaterial4
 } from '../../../../utils/materials/flybridge/materials[4]'
 
 import { Children5 } from '../../../../utils/urls/flybridge/Children[5]'
 import {
-	initialMaterial5,
-	mildLeatherMaterial5,
-	oistrichLeatherMaterial5,
-	orangeLeatherMaterial5,
-	redBlanketMaterial5,
-	redCarbonMaterial5,
-	sandyLeatherMaterial5,
-	stitchedLeatherMaterial5
+	beigeLeatherMaterial5,
+	bourbonLeatherMaterial5,
+	brownLeatherMaterial5,
+	darkCashemereMaterial5,
+	tannedLeatherMaterial5
 } from '../../../../utils/materials/flybridge/materials[5]'
 
-import { Children6 } from '../../../../utils/urls/flybridge/Children[6]'
 import {
-	initialMaterial6,
-	asphaltGrayMaterial6,
-	brownRedMaterial6,
-	grayCarbonMaterial6,
+	Children6,
+	ChildrenPreview6
+} from '../../../../utils/urls/flybridge/Children[6]'
+import {
 	redCarbonMaterial6,
-	sunnyGreenMaterial6
+	andesiteMaterial6,
+	neonBlueMaterial6,
+	stainlessSteelMaterial6
 } from '../../../../utils/materials/flybridge/materials[6]'
 
-import { Children7 } from '../../../../utils/urls/flybridge/Children[7]'
+import { ChildrenPreview7 } from '../../../../utils/urls/flybridge/Children[7]'
 import {
-	initialMaterial7,
-	blueMaterial7,
-	dirtyMaterial7
+	clearGlassMaterial7,
+	tonedGlassMaterial7
 } from '../../../../utils/materials/flybridge/materials[7]'
 
-import { Children8 } from '../../../../utils/urls/flybridge/Children[8]'
+import { ChildrenPreview8 } from '../../../../utils/urls/flybridge/Children[8]'
 import {
-	initialMaterial8,
-	asphaltGrayMaterial8,
-	erasedSteelMaterial8
+	stainlessSteelMaterial8,
+	blackSteelMaterial8,
+	goldenHorizonMaterial8
 } from '../../../../utils/materials/flybridge/materials[8]'
 
-import { Children9 } from '../../../../utils/urls/flybridge/Children[9]'
 import {
-	initialMaterial9,
-	blueMaterial9,
-	dirtyMaterial9
+	Children9,
+	ChildrenPreview9
+} from '../../../../utils/urls/flybridge/Children[9]'
+import {
+	clearGlassMaterial9,
+	tonedGlassMaterial9
 } from '../../../../utils/materials/flybridge/materials[9]'
 
-import { Children10 } from '../../../../utils/urls/flybridge/Children[10]'
 import {
-	initialMaterial10,
-	midnightSkyMaterial10,
+	Children10,
+	ChildrenPreview10
+} from '../../../../utils/urls/flybridge/Children[10]'
+import {
+	acquanettaMaterial10,
+	andesiteMaterial10,
+	blackSapphireMaterial10,
 	redCarbonMaterial10
 } from '../../../../utils/materials/flybridge/materials[10]'
 
@@ -220,29 +230,29 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 							id: 1,
 							title: 'Stainless steel',
 							price: 4100,
-							image: Children0.variant1,
+							image: ChildrenPreview0.matcap1,
 							onClick: () => {
-								;(model.children[0] as Mesh).material = initialMaterial0
+								;(model.children[0] as Mesh).material = stainlessSteelMaterial0
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Erased steel',
+							title: 'Black steel',
 							price: 3200,
-							image: Children0.variant2,
+							image: ChildrenPreview0.matcap2,
 							onClick: () => {
-								;(model.children[0] as Mesh).material = erasedSteelMaterial0
+								;(model.children[0] as Mesh).material = blackSteelMaterial0
 							},
 							isDefault: false
 						},
 						{
 							id: 3,
-							title: 'Dark steel',
+							title: 'Golden horizon',
 							price: 5100,
-							image: Children0.variant3,
+							image: ChildrenPreview0.matcap3,
 							onClick: () => {
-								;(model.children[0] as Mesh).material = darkSteelMaterial0
+								;(model.children[0] as Mesh).material = goldenHorizonMaterial0
 							},
 							isDefault: false
 						}
@@ -264,31 +274,21 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'White marble',
+							title: 'Andesite',
 							price: 2600,
-							image: Children2.variant2,
+							image: Children2.basic1,
 							onClick: () => {
-								;(model.children[2] as Mesh).material = initialMaterial2
+								;(model.children[2] as Mesh).material = andesiteMaterial2
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Red carbon',
+							title: 'Blue marline',
 							price: 3500,
-							image: Children2.variant1,
+							image: ChildrenPreview2.matcap2,
 							onClick: () => {
-								;(model.children[2] as Mesh).material = redCarbonMaterial2
-							},
-							isDefault: false
-						},
-						{
-							id: 3,
-							title: 'Paper white',
-							price: 1500,
-							image: Children2.variant3,
-							onClick: () => {
-								;(model.children[2] as Mesh).material = paperWhiteMaterial2
+								;(model.children[2] as Mesh).material = blueMarlineMaterial2
 							},
 							isDefault: false
 						}
@@ -310,71 +310,61 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'Pacific ocean',
+							title: 'Andesite',
 							price: 2600,
-							image: Children4.variant7,
+							image: ChildrenPreview4.matcap4,
 							onClick: () => {
-								;(model.children[4] as Mesh).material = initialMaterial4
+								;(model.children[4] as Mesh).material = andesiteMaterial2
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Wild green',
+							title: 'Neon blue',
 							price: 3500,
-							image: Children4.variant1,
+							image: ChildrenPreview4.matcap1,
 							onClick: () => {
-								;(model.children[4] as Mesh).material = wildGreenMaterial4
+								;(model.children[4] as Mesh).material = neonBlueMaterial4
 							},
 							isDefault: false
 						},
 						{
 							id: 3,
-							title: 'Sunny green',
+							title: 'Acquanetta',
 							price: 1500,
-							image: Children4.variant2,
+							image: ChildrenPreview4.matcap2,
 							onClick: () => {
-								;(model.children[4] as Mesh).material = sunnyGreenMaterial4
+								;(model.children[4] as Mesh).material = acquanettaMaterial4
 							},
 							isDefault: false
 						},
 						{
 							id: 4,
-							title: 'Night sky black',
+							title: 'Bloody red',
 							price: 1500,
-							image: Children4.variant3,
+							image: ChildrenPreview4.matcap3,
 							onClick: () => {
-								;(model.children[4] as Mesh).material = skyBlackMaterial4
+								;(model.children[4] as Mesh).material = bloodyRedMaterial4
 							},
 							isDefault: false
 						},
 						{
 							id: 5,
-							title: 'Papyrus green',
+							title: 'Sunrise',
 							price: 1500,
-							image: Children4.variant4,
+							image: ChildrenPreview4.matcap5,
 							onClick: () => {
-								;(model.children[4] as Mesh).material = papyrusGreenMaterial4
+								;(model.children[4] as Mesh).material = sunriseMaterial4
 							},
 							isDefault: false
 						},
 						{
 							id: 6,
-							title: 'Dark clouds',
+							title: 'Pacific ocean',
 							price: 1500,
-							image: Children4.variant5,
+							image: Children4.basic6,
 							onClick: () => {
-								;(model.children[4] as Mesh).material = darkCloudsMaterial4
-							},
-							isDefault: false
-						},
-						{
-							id: 7,
-							title: 'Asphalt gray',
-							price: 1500,
-							image: Children4.variant6,
-							onClick: () => {
-								;(model.children[4] as Mesh).material = asphaltGrayMaterial4
+								;(model.children[4] as Mesh).material = pacificOceanMaterial4
 							},
 							isDefault: false
 						}
@@ -398,57 +388,47 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 							id: 1,
 							title: 'Andesite',
 							price: 2600,
-							image: Children6.variant5,
+							image: ChildrenPreview6.matcap3,
 							onClick: () => {
-								;(model.children[6] as Mesh).material = initialMaterial6
+								;(model.children[6] as Mesh).material = andesiteMaterial6
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Sunny green',
+							title: 'Neon blue',
 							price: 3500,
-							image: Children6.variant2,
+							image: ChildrenPreview6.matcap1,
 							onClick: () => {
-								;(model.children[6] as Mesh).material = sunnyGreenMaterial6
+								;(model.children[6] as Mesh).material = neonBlueMaterial6
 							},
 							isDefault: false
 						},
 						{
 							id: 3,
-							title: 'Brown red',
+							title: 'Bloody red',
 							price: 1500,
-							image: Children6.variant3,
+							image: ChildrenPreview6.matcap2,
 							onClick: () => {
-								;(model.children[6] as Mesh).material = brownRedMaterial6
+								;(model.children[6] as Mesh).material = bloodyRedMaterial4
 							},
 							isDefault: false
 						},
 						{
 							id: 4,
-							title: 'Asphalt gray',
+							title: 'Stainless steel',
 							price: 1500,
-							image: Children6.variant6,
+							image: ChildrenPreview6.matcap4,
 							onClick: () => {
-								;(model.children[6] as Mesh).material = asphaltGrayMaterial6
+								;(model.children[6] as Mesh).material = stainlessSteelMaterial6
 							},
 							isDefault: false
 						},
 						{
 							id: 5,
-							title: 'Gray carbon',
-							price: 1500,
-							image: Children6.variant4,
-							onClick: () => {
-								;(model.children[6] as Mesh).material = grayCarbonMaterial6
-							},
-							isDefault: false
-						},
-						{
-							id: 6,
 							title: 'Red carbon',
 							price: 1500,
-							image: Children6.variant1,
+							image: Children6.basic5,
 							onClick: () => {
 								;(model.children[6] as Mesh).material = redCarbonMaterial6
 							},
@@ -472,31 +452,21 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'Shiny glass',
+							title: 'Clear glass',
 							price: 2600,
-							image: Children7.variant1,
+							image: ChildrenPreview7.matcap1,
 							onClick: () => {
-								;(model.children[7] as Mesh).material = initialMaterial7
+								;(model.children[7] as Mesh).material = clearGlassMaterial7
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Blue glass',
+							title: 'Toned glass',
 							price: 3500,
-							image: Children7.variant2,
+							image: ChildrenPreview7.basic2,
 							onClick: () => {
-								;(model.children[7] as Mesh).material = blueMaterial7
-							},
-							isDefault: false
-						},
-						{
-							id: 3,
-							title: 'Dirty glass',
-							price: 1500,
-							image: Children7.variant3,
-							onClick: () => {
-								;(model.children[7] as Mesh).material = dirtyMaterial7
+								;(model.children[7] as Mesh).material = tonedGlassMaterial7
 							},
 							isDefault: false
 						}
@@ -518,31 +488,31 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'Erased steel',
+							title: 'Stainless steel',
 							price: 2600,
-							image: Children8.variant2,
+							image: ChildrenPreview8.matcap1,
 							onClick: () => {
-								;(model.children[8] as Mesh).material = initialMaterial8
+								;(model.children[8] as Mesh).material = stainlessSteelMaterial8
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Stainless steel',
+							title: 'Black steel',
 							price: 3500,
-							image: Children8.variant1,
+							image: ChildrenPreview8.matcap2,
 							onClick: () => {
-								;(model.children[8] as Mesh).material = erasedSteelMaterial8
+								;(model.children[8] as Mesh).material = blackSteelMaterial8
 							},
 							isDefault: false
 						},
 						{
 							id: 3,
-							title: 'Asphalt gray',
+							title: 'Golden horizon',
 							price: 1500,
-							image: Children8.variant3,
+							image: ChildrenPreview8.matcap3,
 							onClick: () => {
-								;(model.children[8] as Mesh).material = asphaltGrayMaterial8
+								;(model.children[8] as Mesh).material = goldenHorizonMaterial8
 							},
 							isDefault: false
 						}
@@ -564,31 +534,21 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'Shiny glass',
+							title: 'Clear glass',
 							price: 2600,
-							image: Children9.variant1,
+							image: ChildrenPreview9.matcap1,
 							onClick: () => {
-								;(model.children[9] as Mesh).material = initialMaterial9
+								;(model.children[9] as Mesh).material = clearGlassMaterial9
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Blue glass',
+							title: 'Toned glass',
 							price: 3500,
-							image: Children9.variant2,
+							image: Children9.basic2,
 							onClick: () => {
-								;(model.children[9] as Mesh).material = blueMaterial9
-							},
-							isDefault: false
-						},
-						{
-							id: 3,
-							title: 'Dirty glass',
-							price: 1500,
-							image: Children9.variant3,
-							onClick: () => {
-								;(model.children[9] as Mesh).material = dirtyMaterial9
+								;(model.children[9] as Mesh).material = tonedGlassMaterial9
 							},
 							isDefault: false
 						}
@@ -611,21 +571,41 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'White andesite',
+							title: 'Andesite',
 							price: 2600,
-							image: Children1.variant2,
+							image: ChildrenPreview1.matcap3,
 							onClick: () => {
-								;(model.children[1] as Mesh).material = initialMaterial1
+								;(model.children[1] as Mesh).material = andesiteMaterial1
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Midnight sky',
+							title: 'Black sapphire',
 							price: 3500,
-							image: Children1.variant1,
+							image: ChildrenPreview1.matcap1,
 							onClick: () => {
-								;(model.children[1] as Mesh).material = midnightSkyMaterial1
+								;(model.children[1] as Mesh).material = blackSapphireMaterial1
+							},
+							isDefault: false
+						},
+						{
+							id: 3,
+							title: 'Acquanetta',
+							price: 3500,
+							image: ChildrenPreview1.matcap2,
+							onClick: () => {
+								;(model.children[1] as Mesh).material = acquanettaMaterial1
+							},
+							isDefault: false
+						},
+						{
+							id: 4,
+							title: 'Red carbon',
+							price: 3500,
+							image: Children1.basic4,
+							onClick: () => {
+								;(model.children[1] as Mesh).material = redCarbonMaterial1
 							},
 							isDefault: false
 						}
@@ -647,64 +627,51 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'Diamond white planks',
+							title: 'Oak planks',
 							price: 2400,
-							image: Children3.variant4,
+							image: Children3.basic1,
 							onClick: () => {
-								;(model.children[3] as Mesh).material = initialMaterial3
+								;(model.children[3] as Mesh).material = oakPlanksMaterial3
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Gentle white planks',
+							title: 'Demi season teak',
 							price: 3110,
-							image: Children3.variant1,
+							image: Children3.basic2,
 							onClick: () => {
-								;(model.children[3] as Mesh).material =
-									gentleWhitePlanksMaterial3
+								;(model.children[3] as Mesh).material = demiSeasonTeakMaterial3
 							},
 							isDefault: false
 						},
 						{
 							id: 3,
-							title: 'Dark wood planks',
+							title: 'Burned teak',
 							price: 2300,
-							image: Children3.variant2,
+							image: Children3.basic3,
 							onClick: () => {
-								;(model.children[3] as Mesh).material = darkWoodPlanksMaterial3
+								;(model.children[3] as Mesh).material = burnedTeakMaterial3
 							},
 							isDefault: false
 						},
 						{
 							id: 4,
-							title: 'Spruce wood planks',
+							title: 'Red wood',
 							price: 2670,
-							image: Children3.variant3,
+							image: Children3.basic4,
 							onClick: () => {
-								;(model.children[3] as Mesh).material =
-									spruceWoodPlanksMaterial3
+								;(model.children[3] as Mesh).material = redWoodMaterial3
 							},
 							isDefault: false
 						},
 						{
 							id: 5,
-							title: 'Crystal gray planks',
+							title: 'Dark oak',
 							price: 4200,
-							image: Children3.variant5,
+							image: Children3.basic5,
 							onClick: () => {
-								;(model.children[3] as Mesh).material =
-									crystalGrayPlanksMaterial3
-							},
-							isDefault: false
-						},
-						{
-							id: 6,
-							title: 'Dark oak planks',
-							price: 3445,
-							image: Children3.variant6,
-							onClick: () => {
-								;(model.children[3] as Mesh).material = darkOakPlanksMaterial3
+								;(model.children[3] as Mesh).material = darkOakMaterial3
 							},
 							isDefault: false
 						}
@@ -726,81 +693,61 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'Royal gray leather',
+							title: 'Bourbon leather',
 							price: 2400,
-							image: Children5.variant2,
+							image: Children5.basic1,
 							onClick: () => {
-								;(model.children[5] as Mesh).material = initialMaterial5
+								;(model.children[5] as Mesh).material = bourbonLeatherMaterial5
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Red carbon',
+							title: 'Dark cashmere',
 							price: 2400,
-							image: Children5.variant1,
+							image: Children5.basic2,
 							onClick: () => {
-								;(model.children[5] as Mesh).material = redCarbonMaterial5
+								;(model.children[5] as Mesh).material = darkCashemereMaterial5
 							},
 							isDefault: false
 						},
 						{
 							id: 3,
-							title: 'Oistrich leather',
+							title: 'Brown leather',
 							price: 2400,
-							image: Children5.variant3,
+							image: Children5.basic3,
 							onClick: () => {
-								;(model.children[5] as Mesh).material = oistrichLeatherMaterial5
+								;(model.children[5] as Mesh).material = brownLeatherMaterial5
 							},
 							isDefault: false
 						},
 						{
 							id: 4,
-							title: 'Red blanket',
+							title: 'Tanned leather',
 							price: 2400,
-							image: Children5.variant4,
+							image: Children5.basic4,
 							onClick: () => {
-								;(model.children[5] as Mesh).material = redBlanketMaterial5
+								;(model.children[5] as Mesh).material = tannedLeatherMaterial5
 							},
 							isDefault: false
 						},
 						{
 							id: 5,
-							title: 'Stitched leather',
+							title: 'Blue marline',
 							price: 2400,
-							image: Children5.variant5,
+							image: Children5.basic5,
 							onClick: () => {
-								;(model.children[5] as Mesh).material = stitchedLeatherMaterial5
+								;(model.children[5] as Mesh).material = blueMarlineMaterial2
 							},
 							isDefault: false
 						},
 						{
 							id: 6,
-							title: 'Orange leather',
+							title: 'Beige leather',
 							price: 2400,
-							image: Children5.variant6,
+							image: Children5.basic6,
 							onClick: () => {
-								;(model.children[5] as Mesh).material = orangeLeatherMaterial5
-							},
-							isDefault: false
-						},
-						{
-							id: 7,
-							title: 'Sandy leather',
-							price: 2400,
-							image: Children5.variant7,
-							onClick: () => {
-								;(model.children[5] as Mesh).material = sandyLeatherMaterial5
-							},
-							isDefault: false
-						},
-						{
-							id: 8,
-							title: 'Mild leather',
-							price: 2400,
-							image: Children5.variant8,
-							onClick: () => {
-								;(model.children[5] as Mesh).material = mildLeatherMaterial5
+								;(model.children[5] as Mesh).material = beigeLeatherMaterial5
 							},
 							isDefault: false
 						}
@@ -822,31 +769,41 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					variants={[
 						{
 							id: 1,
-							title: 'White andesite',
+							title: 'Black saphire',
 							price: 2400,
-							image: Children10.variant3,
+							image: ChildrenPreview10.matcap1,
 							onClick: () => {
-								;(model.children[10] as Mesh).material = initialMaterial10
+								;(model.children[10] as Mesh).material = blackSapphireMaterial10
 							},
 							isDefault: true
 						},
 						{
 							id: 2,
-							title: 'Red carbon',
+							title: 'Acquanetta',
 							price: 2400,
-							image: Children10.variant1,
+							image: ChildrenPreview10.matcap2,
 							onClick: () => {
-								;(model.children[10] as Mesh).material = redCarbonMaterial10
+								;(model.children[10] as Mesh).material = acquanettaMaterial10
 							},
 							isDefault: false
 						},
 						{
 							id: 3,
-							title: 'Midnight sky',
+							title: 'Andesite',
 							price: 2400,
-							image: Children10.variant2,
+							image: ChildrenPreview10.matcap3,
 							onClick: () => {
-								;(model.children[10] as Mesh).material = midnightSkyMaterial10
+								;(model.children[10] as Mesh).material = andesiteMaterial10
+							},
+							isDefault: false
+						},
+						{
+							id: 4,
+							title: 'Red carbon',
+							price: 2400,
+							image: Children10.basic4,
+							onClick: () => {
+								;(model.children[10] as Mesh).material = redCarbonMaterial10
 							},
 							isDefault: false
 						}

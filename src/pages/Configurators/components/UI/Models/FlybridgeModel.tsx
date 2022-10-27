@@ -1,17 +1,17 @@
 import { useFrame } from '@react-three/fiber'
 import { Group, Mesh } from 'three'
 import { FC, memo } from 'react'
-import { initialMaterial0 } from '../../../../../utils/materials/flybridge/materials[0]'
-import { initialMaterial1 } from '../../../../../utils/materials/flybridge/materials[1]'
-import { initialMaterial2 } from '../../../../../utils/materials/flybridge/materials[2]'
-import { initialMaterial3 } from '../../../../../utils/materials/flybridge/materials[3]'
-import { initialMaterial4 } from '../../../../../utils/materials/flybridge/materials[4]'
-import { initialMaterial5 } from '../../../../../utils/materials/flybridge/materials[5]'
-import { initialMaterial6 } from '../../../../../utils/materials/flybridge/materials[6]'
-import { initialMaterial7 } from '../../../../../utils/materials/flybridge/materials[7]'
-import { initialMaterial8 } from '../../../../../utils/materials/flybridge/materials[8]'
-import { initialMaterial9 } from '../../../../../utils/materials/flybridge/materials[9]'
-import { initialMaterial10 } from '../../../../../utils/materials/flybridge/materials[10]'
+import { stainlessSteelMaterial0 } from '../../../../../utils/materials/flybridge/materials[0]'
+import { andesiteMaterial1 } from '../../../../../utils/materials/flybridge/materials[1]'
+import { andesiteMaterial2 } from '../../../../../utils/materials/flybridge/materials[2]'
+import { oakPlanksMaterial3 } from '../../../../../utils/materials/flybridge/materials[3]'
+import { andesiteMaterial4 } from '../../../../../utils/materials/flybridge/materials[4]'
+import { bourbonLeatherMaterial5 } from '../../../../../utils/materials/flybridge/materials[5]'
+import { andesiteMaterial6 } from '../../../../../utils/materials/flybridge/materials[6]'
+import { clearGlassMaterial7 } from '../../../../../utils/materials/flybridge/materials[7]'
+import { stainlessSteelMaterial8 } from '../../../../../utils/materials/flybridge/materials[8]'
+import { clearGlassMaterial9 } from '../../../../../utils/materials/flybridge/materials[9]'
+import { blackSapphireMaterial10 } from '../../../../../utils/materials/flybridge/materials[10]'
 
 interface FlybridgeModelProps {
 	model: Group
@@ -20,38 +20,38 @@ interface FlybridgeModelProps {
 const FlybridgeModel: FC<FlybridgeModelProps> = ({ model }) => {
 	// ; в начале строки - это просто приведение к типу void, тут оно необхоимо, чтобы не было ошибки
 
-	// Железная огранка по периметру
-	;(model.children[0] as Mesh).material = initialMaterial0
+	// Железная огранка по периметру (Siderails & Portlights)
+	;(model.children[0] as Mesh).material = stainlessSteelMaterial0
 
-	// Стойка руля
-	;(model.children[1] as Mesh).material = initialMaterial1
+	// Стойка руля (Throttle & steering wheel)
+	;(model.children[1] as Mesh).material = andesiteMaterial1
 
-	// Светильники на палубе
-	;(model.children[2] as Mesh).material = initialMaterial2
+	// Фендеры (Fender)
+	;(model.children[2] as Mesh).material = andesiteMaterial2
 
-	// Пол
-	;(model.children[3] as Mesh).material = initialMaterial3
+	// Пол (Cockpit floor)
+	;(model.children[3] as Mesh).material = oakPlanksMaterial3
 
-	// Корпус
-	;(model.children[4] as Mesh).material = initialMaterial4
+	// Корпус (Sides)
+	;(model.children[4] as Mesh).material = andesiteMaterial4
 
-	// Сиденья на палубе и столы
-	;(model.children[5] as Mesh).material = initialMaterial5
+	// Сиденья на палубе и столы (Couch)
+	;(model.children[5] as Mesh).material = bourbonLeatherMaterial5
 
-	// Козырек
-	;(model.children[6] as Mesh).material = initialMaterial6
+	// Козырек (Flybridge Visor)
+	;(model.children[6] as Mesh).material = andesiteMaterial6
 
-	// Окна
-	;(model.children[7] as Mesh).material = initialMaterial7
+	// Окна (Windows)
+	;(model.children[7] as Mesh).material = clearGlassMaterial7
 
-	// Каемка вокруг яхты снизу
-	;(model.children[8] as Mesh).material = initialMaterial8
+	// Каемка вокруг яхты снизу (Counter)
+	;(model.children[8] as Mesh).material = stainlessSteelMaterial8
 
-	// Окна в корпусе
-	;(model.children[9] as Mesh).material = initialMaterial9
+	// Иллюминаторы (Illuminators)
+	;(model.children[9] as Mesh).material = clearGlassMaterial9
 
-	// Стол и некоторый интерьер внутри корпуса
-	;(model.children[10] as Mesh).material = initialMaterial10
+	// Стол и некоторый интерьер внутри корпуса (Cockpit steering wheel)
+	;(model.children[10] as Mesh).material = blackSapphireMaterial10
 
 	// Позиционируем и анимируем яхту
 	model.scale.set(0.0125, 0.0125, 0.0125)
