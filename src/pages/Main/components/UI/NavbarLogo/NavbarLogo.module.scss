@@ -1,0 +1,23 @@
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../assets/fonts/Inter';
+@import '../../../../../styles/palettes/configuratorPallete';
+
+.container {
+	position: relative;
+
+	.date {
+		position: absolute;
+    top: -1em;
+    right: 15%;
+
+		font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    color: $primary-font-color;
+	}
+
+	.title {
+		font-family: 'Montserrat Bold', sans-serif;
+		font-size: 2.25rem;
+    color: $primary-font-color;
+	}
+}

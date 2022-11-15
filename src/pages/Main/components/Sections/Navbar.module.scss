@@ -1,0 +1,19 @@
+.container {
+	width: 100%;
+	height: 150px;
+
+  display: grid;
+  align-items: center;
+  grid-template-columns: 25% 40% 25%;
+  gap: 5%;
+
+  .logo {
+    margin-left: auto;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}

@@ -1,34 +1,6 @@
 .container {
-	width: 100vw;
-	height: 100vh;
+  height: 100vh;
+  width: 100vw;
 
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	gap: 20px;
-
-	button {
-		width: 200px;
-		height: 50px;
-
-		background-color: transparent;
-		border: 2px solid rgba(0, 0, 139, 0.507);
-		border-radius: 30px;
-
-		font-size: 20px;
-		padding: 0 0.5em;
-		color: rgba(0, 0, 139, 0.507);
-		box-shadow: 2px 2px 2px rgba(0, 0, 139, 0.507);
-
-		transition: 500ms;
-
-		&:hover {
-			background-color: rgba(0, 0, 139, 0.507);
-			color: white;
-			cursor: pointer;
-
-			transform: translateY(3px);
-		}
-	}
+  background-color: black;
 }
