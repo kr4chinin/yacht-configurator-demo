@@ -1,4 +1,3 @@
-import styles from './ImageCarousel.module.scss'
 import { Carousel } from 'react-responsive-carousel'
 import 'react-responsive-carousel/lib/styles/carousel.min.css'
 
@@ -24,8 +23,8 @@ const images = [
 const ImageCarousel = () => {
 	return (
 		<Carousel
-			infiniteLoop
-			interval={4000}
+			infiniteLoop={true}
+			interval={3000}
 			transitionTime={500}
 			autoPlay
 			width={'100vw'}

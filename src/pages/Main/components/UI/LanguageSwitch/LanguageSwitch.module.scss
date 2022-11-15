@@ -4,33 +4,33 @@
 .container {
 	display: flex;
 	align-items: center;
+	justify-content: flex-start;
 
+	margin-left: auto;
 	.option {
 		font-family: 'Inter ExtraBold', sans-serif;
-		border: 1px solid #bd0909;
-		color: #bd0909;
-
 		padding: 8px 6px;
-    margin-right: 14px;
+
+		border: 1px solid transparent;
+		color: $primary-font-color;
 
 		&.active {
-			border: 1px solid transparent;
-			color: $primary-font-color;
-      margin-right: 7px;
+			border: 1px solid #bd0909;
+			color: #bd0909;
 		}
 
-    margin-left: auto;
+		margin-right: 14px;
 	}
 
 	.current {
-    display: flex;
-    gap: 6px;
-    align-items: center;
+		display: flex;
+		gap: 6px;
+		align-items: center;
 
 		font-family: 'Inter ExtraBold', sans-serif;
 		color: $primary-font-color;
 
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 8px 6px;
+		border: 1px solid rgba(255, 255, 255, 0.5);
+		padding: 8px 6px;
 	}
 }

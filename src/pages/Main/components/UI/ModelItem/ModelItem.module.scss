@@ -1,0 +1,64 @@
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../styles/palettes/configuratorPallete';
+
+.container {
+	width: 385px;
+	height: 515px;
+	padding: 41px 43px;
+
+	display: flex;
+	flex-direction: column;
+
+	background: linear-gradient(134.91deg, #273647 19.35%, #071117 50%);
+	box-shadow: inset 20px 20px 20px rgba(0, 0, 0, 0.6),
+		0 0 2px 2px rgba(0, 0, 0, 0.25);
+
+	border-radius: 20px;
+
+	.image {
+		width: 100%;
+		height: 200px;
+	}
+
+	article {
+		.title {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.5rem;
+			color: $primary-font-color;
+			margin-top: 15px;
+		}
+
+		.description {
+			font-family: 'Montserrat Light', sans-serif;
+			font-size: 0.9rem;
+			color: $primary-font-color;
+
+			margin-top: 15px;
+		}
+	}
+
+	.link-block {
+		.configurator-link {
+			width: 42px;
+			height: 42px;
+
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			border-radius: 50%;
+			background-color: #314c68;
+
+			margin-top: 15px;
+		}
+
+		.link-label {
+			font-family: 'Montserrat Light', sans-serif;
+			font-size: 0.9rem;
+			color: rgba(255, 255, 255, 0.8);
+      margin-top: 15px;
+		}
+
+    margin-top: auto;
+	}
+}
