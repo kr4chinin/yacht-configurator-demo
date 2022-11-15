@@ -6,9 +6,7 @@ import LanguageSwitch from '../UI/LanguageSwitch'
 const Navbar = () => {
 	return (
 		<div className={styles.container}>
-			<div className={styles.logo}>
-				<NavbarLogo />
-			</div>
+			<NavbarLogo />
 
 			<div className={styles.links}>
 				<NavbarLink to="/" title="About us" />

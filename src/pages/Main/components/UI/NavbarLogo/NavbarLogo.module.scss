@@ -3,21 +3,22 @@
 @import '../../../../../styles/palettes/configuratorPallete';
 
 .container {
-	position: relative;
-
-	.date {
-		position: absolute;
-    top: -1em;
-    right: 15%;
-
-		font-family: 'Inter', sans-serif;
-    font-size: 1.25rem;
-    color: $primary-font-color;
-	}
-
 	.title {
+		position: relative;
+    width: fit-content;
+
 		font-family: 'Montserrat Bold', sans-serif;
 		font-size: 2.25rem;
-    color: $primary-font-color;
+		color: $primary-font-color;
+
+		.date {
+			position: absolute;
+			top: -1em;
+			right: 15%;
+
+			font-family: 'Inter', sans-serif;
+			font-size: 1.25rem;
+			color: $primary-font-color;
+		}
 	}
 }

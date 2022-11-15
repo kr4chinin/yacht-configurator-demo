@@ -3,13 +3,10 @@
 	height: 150px;
 
   display: grid;
+  padding: 0 5%;
   align-items: center;
-  grid-template-columns: 25% 40% 25%;
+  grid-template-columns: 25% 50% 15%;
   gap: 5%;
-
-  .logo {
-    margin-left: auto;
-  }
 
   .links {
     display: flex;
