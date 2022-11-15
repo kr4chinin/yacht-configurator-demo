@@ -1,7 +1,9 @@
 import styles from './Main.module.scss'
 import { useNavigate } from 'react-router-dom'
-import { AppRoutes } from '../../utils/Routes'
 import Navbar from './components/Sections/Navbar'
+import ImageCarousel from './components/UI/ImageCarousel'
+import Models from './components/Sections/Models'
+import Information from './components/Sections/Information'
 
 const Main = () => {
 	const navigate = useNavigate()
@@ -9,6 +11,9 @@ const Main = () => {
 	return (
 		<div className={styles.container}>
 			<Navbar />
+			<ImageCarousel />
+			<Models />
+			<Information />
 		</div>
 	)
 }
