@@ -1,11 +1,19 @@
 .container {
+	position: relative;
+
 	width: 100vw;
 	height: 100vh;
-  min-height: 720px;
+	min-height: 720px;
 
 	background: url('../../../../../../images/MainPage/background-2.png');
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
-  background-size: auto;
+	background-size: auto;
+
+	.initials-icon-wrapper {
+		position: absolute;
+		left: calc(50% - 87px / 2);
+		bottom: 30px;
+	}
 }
