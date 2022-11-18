@@ -21,7 +21,7 @@ const ImageCarousel = () => {
 			setCurrentImageIndex(currentImageIndex)
 			currentImageIndex =
 				currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
-		}, 2000)
+		}, 3000)
 
 		setIntervalId(intervalId)
 

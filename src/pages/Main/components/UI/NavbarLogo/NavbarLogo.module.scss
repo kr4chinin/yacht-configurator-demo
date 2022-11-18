@@ -36,3 +36,18 @@
     }
   }
 }
+
+@media (max-width: 385px) {
+  .container {
+
+    margin-top: 8px;
+
+    .title {
+      font-size: 22px;
+    }
+
+    .date {
+      font-size: 12px;
+    }
+  }
+}
