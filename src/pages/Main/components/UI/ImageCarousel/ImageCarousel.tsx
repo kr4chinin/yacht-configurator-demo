@@ -47,6 +47,9 @@ const ImageCarousel = () => {
 					/>
 				))}
 			</div>
+      <span className={styles.signature}>
+        Kingdom Marine
+      </span>
 		</div>
 	)
 }

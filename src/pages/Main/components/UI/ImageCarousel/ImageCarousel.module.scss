@@ -1,8 +1,30 @@
+@import '../../../../../assets/fonts/MrDafoe';
+
 .container {
 	height: 100vh;
+  min-height: 720px;
 	width: 100vw;
 
 	position: relative;
+
+	.signature {
+		position: absolute;
+		top: 40%;
+		left: calc(50% - (585px + 40px) / 2);
+
+		padding: 0 20px;
+
+		font-family: 'MrDafoe';
+		font-size: 100px;
+		letter-spacing: 0.045em;
+
+		-webkit-background-clip: text;
+		background-clip: text;
+		-webkit-text-fill-color: transparent;
+		background-image: linear-gradient(180deg, #b79f71 0%, #837252 100%);
+
+		transform: rotate(-1.81deg);
+	}
 
 	.controls {
 		position: absolute;
@@ -31,4 +53,21 @@
 			}
 		}
 	}
+}
+
+@media (max-width: 800px) {
+	.container {
+		.signature {
+			font-size: 80px;
+      left: calc(54% - (562px + 40px) / 2);
+		}
+	}
+}
+
+@media (max-width: 600px) {
+  .container {
+    .signature {
+      left: 10%;
+    }
+  }
 }
