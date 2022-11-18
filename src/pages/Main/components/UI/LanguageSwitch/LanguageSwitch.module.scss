@@ -34,3 +34,13 @@
 		padding: 8px 6px;
 	}
 }
+
+@media (max-width: 635px) {
+  .container {
+    .option {
+      display: none;
+    }
+
+    scale: 0.8;
+  }
+}

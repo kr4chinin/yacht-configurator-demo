@@ -30,3 +30,55 @@
     margin-top: 100px;
   }
 }
+
+
+@media (max-width: 1050px) {
+  .container {
+    .models {
+      scale: 0.9;
+      gap: 40px;
+    }
+  }
+}
+
+@media (max-width: 820px) {
+  .container {
+    .models {
+      scale: 0.8;
+      gap: 30px;
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  .container {
+    .models {
+      scale: 0.7;
+      gap: 25px;
+    }
+  }
+}
+
+@media (max-width: 615px) {
+  .container {
+    .models {
+      scale: 0.6;
+    }
+  }
+}
+
+@media (max-width: 630px) {
+  .container {
+
+    .title {
+      margin-top: 40px;
+      font-size: 2rem;
+    }
+
+    .models {
+      flex-direction: column;
+      gap: 30px;
+      margin-top: -160px;
+    }
+  }
+}

@@ -8,8 +8,10 @@
     width: fit-content;
 
 		font-family: 'Montserrat Bold', sans-serif;
-		font-size: 2.25rem;
+		font-size: 36px;
 		color: $primary-font-color;
+
+    white-space: nowrap;
 
 		.date {
 			position: absolute;
@@ -17,8 +19,20 @@
 			right: 15%;
 
 			font-family: 'Inter', sans-serif;
-			font-size: 1.25rem;
+			font-size: 20px;
 			color: $primary-font-color;
 		}
 	}
+}
+
+@media (max-width: 490px) {
+  .container {
+    .title {
+      font-size: 28px;
+    }
+
+    .date {
+      font-size: 16px;
+    }
+  }
 }
