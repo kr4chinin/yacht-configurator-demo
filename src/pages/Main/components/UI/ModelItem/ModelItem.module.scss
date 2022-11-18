@@ -37,27 +37,70 @@
 	}
 
 	.link-block {
-		.configurator-link {
-			width: 42px;
-			height: 42px;
+		display: flex;
+		justify-content: space-between;
 
-			display: flex;
-			align-items: center;
-			justify-content: center;
+		.link-wrapper {
+			.configurator-link {
+				width: 42px;
+				height: 42px;
 
-			border-radius: 50%;
-			background-color: #314c68;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 
-			margin-top: 15px;
+				border-radius: 50%;
+				background-color: #314c68;
+
+				margin-top: 15px;
+
+				transition: 500ms ease-in-out;
+
+				&:hover {
+					transform: rotate(180deg);
+					scale: 1.05;
+				}
+			}
+
+			.read-more-link {
+				width: 42px;
+				height: 42px;
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				border-radius: 50%;
+
+				margin-top: 15px;
+
+				transition: 500ms ease-in-out;
+
+				&:hover {
+					transform: rotate(180deg);
+					scale: 1.05;
+          background-color: #314c6829;
+				}
+			}
+
+			.link-label {
+				display: block;
+
+				font-family: 'Montserrat Light', sans-serif;
+				font-size: 0.9rem;
+				color: rgba(255, 255, 255, 0.8);
+				margin-top: 15px;
+				text-decoration: none;
+
+				transition: 300ms;
+
+				&:hover {
+					cursor: pointer;
+					color: rgba(183, 183, 183, 0.8);
+				}
+			}
 		}
 
-		.link-label {
-			font-family: 'Montserrat Light', sans-serif;
-			font-size: 0.9rem;
-			color: rgba(255, 255, 255, 0.8);
-      margin-top: 15px;
-		}
-
-    margin-top: auto;
+		margin-top: auto;
 	}
 }

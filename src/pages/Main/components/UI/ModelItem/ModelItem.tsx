@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 import styles from './ModelItem.module.scss'
 import { ReactComponent as PlusIcon } from '../../../../../assets/icons/plus.svg'
+import { ReactComponent as ReadMoreIcon } from '../../../../../assets/icons/read-more.svg'
 
 interface ModelItemProps {
 	title: string
@@ -31,10 +32,23 @@ const ModelItem: FC<ModelItemProps> = ({
 			</article>
 
 			<div className={styles['link-block']}>
-				<Link to={linkToConfigurator} className={styles['configurator-link']}>
-					<PlusIcon />
-				</Link>
-				<div className={styles['link-label']}>Configurator</div>
+				<div className={styles['link-wrapper']}>
+					<Link to={linkToConfigurator} className={styles['configurator-link']}>
+						<PlusIcon />
+					</Link>
+					<Link className={styles['link-label']} to={linkToConfigurator}>
+						Configurator
+					</Link>
+				</div>
+
+				<div className={styles['link-wrapper']}>
+					<Link to="/" className={styles['read-more-link']}>
+						<ReadMoreIcon />
+					</Link>
+					<Link className={styles['link-label']} to="/">
+						Read more
+					</Link>
+				</div>
 			</div>
 		</div>
 	)
