@@ -1,5 +1,6 @@
-import { Carousel } from 'react-responsive-carousel'
-import 'react-responsive-carousel/lib/styles/carousel.min.css'
+import { useEffect, useState } from 'react'
+import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
+import styles from './ImageCarousel.module.scss'
 
 const images = [
 	{
@@ -21,25 +22,24 @@ const images = [
 ]
 
 const ImageCarousel = () => {
+	const [currentImage, setCurrentImage] = useState<string>(images[0].src)
+
+	useEffect(() => {
+		let currentImageIndex = 0
+
+		const intervalId = setInterval(() => {
+			setCurrentImage(images[currentImageIndex].src)
+			currentImageIndex =
+				currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
+		}, 1000)
+
+		return () => clearInterval(intervalId)
+	}, [])
+
 	return (
-		<Carousel
-			infiniteLoop={true}
-			interval={3000}
-			transitionTime={500}
-			autoPlay
-			width={'100vw'}
-			dynamicHeight
-			useKeyboardArrows
-			showStatus={false}
-			showThumbs={false}
-			showArrows={false}
-		>
-			{images.map(image => (
-				<div key={image.id}>
-					<img src={image.src} alt="carousel" />
-				</div>
-			))}
-		</Carousel>
+		<div className={styles.container}>
+			<LoadableImage src={currentImage} />
+		</div>
 	)
 }
 
