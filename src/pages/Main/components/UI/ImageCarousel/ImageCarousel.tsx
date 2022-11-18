@@ -1,44 +1,52 @@
 import { useEffect, useState } from 'react'
 import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 import styles from './ImageCarousel.module.scss'
+import cn from 'classnames'
 
 const images = [
-	{
-		id: 1,
-		src: '../../../../../../images/MainPage/carousel-1.png'
-	},
-	{
-		id: 2,
-		src: '../../../../../../images/MainPage/carousel-2.png'
-	},
-	{
-		id: 3,
-		src: '../../../../../../images/MainPage/carousel-3.png'
-	},
-	{
-		id: 4,
-		src: '../../../../../../images/MainPage/carousel-4.png'
-	}
+	'../../../../../../images/MainPage/carousel-1.png',
+	'../../../../../../images/MainPage/carousel-2.png',
+	'../../../../../../images/MainPage/carousel-3.png',
+	'../../../../../../images/MainPage/carousel-4.png'
 ]
 
 const ImageCarousel = () => {
-	const [currentImage, setCurrentImage] = useState<string>(images[0].src)
+	const [currentImageIndex, setCurrentImageIndex] = useState<number>(0)
+	const [intervalId, setIntervalId] = useState<ReturnType<typeof setTimeout>>()
 
 	useEffect(() => {
 		let currentImageIndex = 0
 
 		const intervalId = setInterval(() => {
-			setCurrentImage(images[currentImageIndex].src)
+			setCurrentImageIndex(currentImageIndex)
 			currentImageIndex =
 				currentImageIndex === images.length - 1 ? 0 : currentImageIndex + 1
-		}, 1000)
+		}, 2000)
+
+		setIntervalId(intervalId)
 
 		return () => clearInterval(intervalId)
 	}, [])
 
+	function handleChooseImage(index: number) {
+		clearInterval(intervalId)
+		setCurrentImageIndex(index)
+	}
+
 	return (
 		<div className={styles.container}>
-			<LoadableImage src={currentImage} />
+			<LoadableImage src={images[currentImageIndex]} />
+			<div className={styles.controls}>
+				{images.map((_, index) => (
+					<div
+						key={index}
+						className={cn(styles.control, {
+							[styles.active]: index === currentImageIndex
+						})}
+						onClick={() => handleChooseImage(index)}
+					/>
+				))}
+			</div>
 		</div>
 	)
 }
