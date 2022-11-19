@@ -1,0 +1,25 @@
+@import '../../../../../assets/fonts/AnticDidone.scss';
+@import '../../../.././../styles/palettes/configuratorPallete.scss';
+
+.container {
+	display: flex;
+  gap: 40px;
+
+	font-family: 'Antic Didone', serif;
+	color: $primary-font-color;
+
+  width: 50%;
+
+	.date {
+    width: fit-content;
+    white-space: nowrap;
+    
+    line-height: 200%;
+	}
+
+	.content {
+		.text {
+      line-height: 200%;
+		}
+	}
+}
