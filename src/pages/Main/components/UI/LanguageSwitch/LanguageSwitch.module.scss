@@ -7,6 +7,7 @@
 	justify-content: flex-start;
 
 	margin-left: auto;
+
 	.option {
 		font-family: 'Inter ExtraBold', sans-serif;
 		padding: 8px 6px;
@@ -14,33 +15,27 @@
 		border: 1px solid transparent;
 		color: $primary-font-color;
 
+    cursor: pointer;
+    
 		&.active {
-			border: 1px solid #bd0909;
-			color: #bd0909;
+			border: 1px solid #b79f71;
+
+			background: linear-gradient(180deg, #b79f71 0%, #837252 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
 		}
+    
+    &.disabled {
+      cursor: not-allowed;
+    }
 
 		margin-right: 14px;
-	}
-
-	.current {
-		display: flex;
-		gap: 6px;
-		align-items: center;
-
-		font-family: 'Inter ExtraBold', sans-serif;
-		color: $primary-font-color;
-
-		border: 1px solid rgba(255, 255, 255, 0.5);
-		padding: 8px 6px;
 	}
 }
 
 @media (max-width: 635px) {
-  .container {
-    .option {
-      display: none;
-    }
-
-    scale: 0.8;
-  }
+	.container {
+		scale: 0.8;
+	}
 }
