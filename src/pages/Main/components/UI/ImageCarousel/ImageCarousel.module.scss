@@ -3,8 +3,9 @@
 .container {
 	height: 100vh;
   min-height: 720px;
-	width: 100vw;
+	width: 100%;
 
+  overflow: hidden;
 	position: relative;
 
 	.signature {

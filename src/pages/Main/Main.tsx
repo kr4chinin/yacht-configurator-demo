@@ -4,6 +4,7 @@ import Navbar from './components/Sections/Navbar'
 import ImageCarousel from './components/UI/ImageCarousel'
 import Models from './components/Sections/Models'
 import Information from './components/Sections/Information'
+import Questions from './components/Sections/Questions'
 
 const Main = () => {
 	const navigate = useNavigate()
@@ -14,6 +15,7 @@ const Main = () => {
 			<ImageCarousel />
 			<Models />
 			<Information />
+      <Questions />
 		</div>
 	)
 }

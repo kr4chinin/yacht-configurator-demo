@@ -1,0 +1,91 @@
+@import '../../../../../assets/fonts/Annonce';
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../styles/palettes/configuratorPallete';
+
+.container {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+
+	width: 100%;
+	height: 100%;
+
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	flex-direction: column;
+	gap: 10px;
+
+	padding-bottom: 40px;
+
+	clip-path: polygon(0 81%, 100% 72%, 100% 100%, 0% 100%);
+	background: #070b0e;
+
+	.title {
+		font-family: 'Annonce', sans-serif;
+		font-size: 1.2em;
+		color: #fff;
+	}
+
+	.annotation {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 0.8em;
+		color: #fff;
+
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.policy {
+		color: $primary-font-color;
+		font-family: 'Montserrat', sans-serif;
+		font-size: 0.5rem;
+
+		span {
+			background-color: #cfcfcf;
+			color: #000;
+
+			padding: 0.2em 0.5em;
+
+      &:hover {
+        cursor: pointer;
+      }
+		}
+
+    a {
+      color: $primary-font-color;
+    }
+	}
+
+	.icons {
+		display: flex;
+		align-items: center;
+		gap: 12px;
+
+		svg {
+			path {
+				transition: 300ms;
+			}
+		}
+
+		.icon-wrapper {
+			&:hover {
+				cursor: pointer;
+
+				svg {
+					path {
+						fill: rgb(205, 188, 188);
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		padding-bottom: 25px;
+	}
+}
