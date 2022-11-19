@@ -9,6 +9,7 @@
 	color: $primary-font-color;
 
 	width: 50%;
+	min-width: 300px;
 
 	.date {
 		width: 60px;
@@ -23,7 +24,6 @@
 	.content {
 		.text {
 			line-height: 200%;
-			width: 400px;
 		}
 
 		.controls {
@@ -94,6 +94,28 @@
 					&:hover {
 						cursor: default;
 					}
+				}
+			}
+		}
+	}
+}
+
+@media (max-width: 610px) {
+	.container {
+		.content {
+			.text {
+				font-size: 0.8rem;
+			}
+
+			.controls {
+        .next-btn-wrapper {
+          .next-btn {
+            font-size: 0.8rem;
+          }
+        }
+
+				.prev-btn {
+					font-size: 0.8rem;
 				}
 			}
 		}
