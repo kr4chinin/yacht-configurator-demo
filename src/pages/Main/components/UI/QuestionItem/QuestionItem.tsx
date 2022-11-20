@@ -21,7 +21,7 @@ const QuestionItem: FC<QuestionItemProps> = ({ question }) => {
 		<div className={styles.container}>
 			<div className={styles.header}>
 				<div className={styles['fold-icon-wrapper']} onClick={toggleFold}>
-					{isFolded ? <UnfoldIcon /> : <FoldIcon />}
+					{isFolded ? <FoldIcon /> : <UnfoldIcon /> }
 				</div>
 				<div className={styles.title} onClick={toggleFold}>
 					{title}
