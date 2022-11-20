@@ -37,14 +37,47 @@
 
   .questions-block {
     display: flex;
-    flex: 0;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+
+    overflow-x: hidden;
+    overflow-y: scroll;
+    max-height: 400px;
+
+    // custom scrollbar
+    &::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: linear-gradient(180deg, #b79f718a 0%, #8372528d 100%);
+      opacity: 0.5;
+    }
   }
 }
 
 ::placeholder {
   color: #707070;
   opacity: 0.7;
+}
+
+@media (max-width: 470px) {
+  .container {
+    .search-block {
+      .search {
+        height: 40px;
+        padding-left: 42px;
+        font-size: 0.95rem;
+      }
+
+      .search-icon-wrapper {
+        top: 11px;
+      }
+    }
+  }
 }
 

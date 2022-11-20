@@ -25,8 +25,16 @@ const QuestionList = () => {
 					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab, iusto! Sunt quis eligendi sit beatae."
 				/>
 				<QuestionItem
+					title="What should I do after building a request?"
+					text="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem magni dolore dolor nobis modi, molestias veniam, exercitationem est voluptatibus quam quis, voluptatum voluptates odio eligendi?"
+				/>
+				<QuestionItem
 					title="How long does one project take to build?"
-					text="Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima sapiente porro laudantium consequuntur eligendi laborum, dolores quam tenetur nesciunt dignissimos!"
+					text="Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti labore eaque cupiditate ducimus, quae quo unde impedit tempore sequi nam quaerat! Hic eius magni laboriosam perspiciatis. A odio repudiandae assumenda, pariatur explicabo minus sed dolores ducimus quos non ipsam porro."
+				/>
+				<QuestionItem
+					title="I am not in Moscow, what about delivery?"
+					text="Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illum vel dolor deleniti repellat temporibus quaerat. Accusantium, nesciunt, fuga dolor eos similique eaque quisquam nulla reiciendis voluptas et commodi animi odit."
 				/>
 			</div>
 		</div>

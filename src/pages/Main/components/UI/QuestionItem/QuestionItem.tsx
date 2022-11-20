@@ -9,7 +9,7 @@ interface QuestionItemProps {
 }
 
 const QuestionItem: FC<QuestionItemProps> = ({ text, title }) => {
-	const [isFolded, setIsFolded] = useState(true)
+	const [isFolded, setIsFolded] = useState(false)
 
 	function toggleFold() {
 		setIsFolded(prev => !prev)
@@ -23,11 +23,10 @@ const QuestionItem: FC<QuestionItemProps> = ({ text, title }) => {
 				</div>
 				<div className={styles.title} onClick={toggleFold}>
 					{title}
+					{isFolded && <div className={styles.content}>{text}</div>}
 				</div>
 			</div>
-      <div className={styles.content}>
-        {text}
-      </div>
+			<hr />
 		</div>
 	)
 }
