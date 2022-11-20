@@ -1,0 +1,46 @@
+@import '../../../../../assets/fonts/Montserrat.scss';
+@import '../../../../../styles/palettes/configuratorPallete.scss';
+
+.container {
+	.header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+		.fold-icon-wrapper {
+			width: 44px;
+			height: 44px;
+
+			display: flex;
+			justify-content: center;
+			align-items: center;
+
+			border: 2px solid #b79f71;
+			border-radius: 50%;
+
+			&:hover {
+				cursor: pointer;
+			}
+		}
+
+		.title {
+			font-family: 'Montserrat Bold', sans-serif;
+      font-size: 1.1rem;
+      color: $primary-font-color;
+
+      &:hover {
+        cursor: pointer;
+      }
+		}
+	}
+
+  .content {
+    margin-top: 20px;
+
+    font-family: 'Montserrat', sans-serif;
+    color: $primary-font-color;
+
+    max-width: 50%;
+    min-width: 350px;
+  }
+}
