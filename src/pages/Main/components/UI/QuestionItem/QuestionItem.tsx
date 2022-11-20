@@ -2,13 +2,15 @@ import { FC, useState } from 'react'
 import styles from './QuestionItem.module.scss'
 import { ReactComponent as FoldIcon } from '../../../../../assets/icons/fold.svg'
 import { ReactComponent as UnfoldIcon } from '../../../../../assets/icons/unfold.svg'
+import { Question } from '../../Sections/QuestionList/QuestionList'
 
 interface QuestionItemProps {
-	title: string
-	text: string
+  question: Question
 }
 
-const QuestionItem: FC<QuestionItemProps> = ({ text, title }) => {
+const QuestionItem: FC<QuestionItemProps> = ({ question }) => {
+  const { title, text } = question
+
 	const [isFolded, setIsFolded] = useState(false)
 
 	function toggleFold() {
