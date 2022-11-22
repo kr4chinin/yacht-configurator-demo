@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 import styles from './ImageCarousel.module.scss'
 import cn from 'classnames'
+import ArrowDown from '../ArrowDown'
 
 const images = [
 	'../../../../../../images/MainPage/carousel-1.png',
@@ -50,6 +51,7 @@ const ImageCarousel = () => {
       <span className={styles.signature}>
         Kingdom Marine
       </span>
+      <ArrowDown />
 		</div>
 	)
 }
