@@ -6,12 +6,10 @@ import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 // initial texture
 const andesiteTexture = new TextureLoader().load(Children2.basic1)
 export const andesiteMaterial2 = new MeshBasicMaterial({
-  map: andesiteTexture
+	map: andesiteTexture
 })
 
 const blueMarlineTexture = new TextureLoader().load(Children2.matcap2)
 export const blueMarlineMaterial2 = new MeshMatcapMaterial({
-  matcap: blueMarlineTexture
+	matcap: blueMarlineTexture
 })
-
-

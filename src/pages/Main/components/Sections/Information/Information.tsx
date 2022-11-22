@@ -5,7 +5,7 @@ import InfoWidgetList from '../InfoWidgetList'
 const Information = () => {
 	return (
 		<div className={styles.container}>
-      <InfoWidgetList />
+			<InfoWidgetList />
 			<div className={styles['initials-icon-wrapper']}>
 				<InitialsIcon />
 			</div>

@@ -52,8 +52,8 @@ const InfoWidgetList = () => {
 				text={activeItem.text}
 				onNext={handleNext}
 				onPrev={handlePrev}
-        canClickNext={activeItem.id !== infoWidgetList.length}
-        canClickPrev={activeItem.id !== 1}
+				canClickNext={activeItem.id !== infoWidgetList.length}
+				canClickPrev={activeItem.id !== 1}
 			/>
 		</div>
 	)

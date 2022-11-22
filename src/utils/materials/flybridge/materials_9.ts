@@ -6,11 +6,10 @@ import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 // initial texture
 const clearGlassTexture = new TextureLoader().load(Children9.matcap1)
 export const clearGlassMaterial9 = new MeshMatcapMaterial({
-  matcap: clearGlassTexture,
+	matcap: clearGlassTexture
 })
 
 const tonedGlassTexture = new TextureLoader().load(Children9.basic2)
 export const tonedGlassMaterial9 = new MeshBasicMaterial({
-  map: tonedGlassTexture,
+	map: tonedGlassTexture
 })
-

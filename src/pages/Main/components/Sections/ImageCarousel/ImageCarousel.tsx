@@ -38,7 +38,7 @@ const ImageCarousel = () => {
 	return (
 		<div className={styles.container}>
 			<Navbar />
-      
+
 			<LoadableImage src={images[currentImageIndex]} />
 			<div className={styles.controls}>
 				{images.map((_, index) => (

@@ -15,8 +15,8 @@
 		border: 1px solid transparent;
 		color: $primary-font-color;
 
-    cursor: pointer;
-    
+		cursor: pointer;
+
 		&.active {
 			border: 1px solid #b79f71;
 
@@ -25,10 +25,10 @@
 			-webkit-text-fill-color: transparent;
 			background-clip: text;
 		}
-    
-    &.disabled {
-      cursor: not-allowed;
-    }
+
+		&.disabled {
+			cursor: not-allowed;
+		}
 
 		margin-right: 14px;
 	}
@@ -36,10 +36,10 @@
 
 @media (max-width: 635px) {
 	.container {
-    font-size: 14px;
+		font-size: 14px;
 
-    .option {
-      margin-right: 7px;
-    }
+		.option {
+			margin-right: 7px;
+		}
 	}
 }

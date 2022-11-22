@@ -3,7 +3,7 @@
 .container {
 	width: 100vw;
 	height: 100vh;
-  min-height: 720px;
+	min-height: 720px;
 
 	display: flex;
 	flex-direction: column;
@@ -15,7 +15,7 @@
 	background-size: cover;
 	background-size: auto;
 
-  scroll-snap-align: start;
+	scroll-snap-align: start;
 
 	.title {
 		font-family: 'Montserrat Bold', sans-serif;
@@ -36,31 +36,30 @@
 
 @media (max-width: 900px) {
 	.container {
-
-    .title {
-      font-size: 1.85rem;
-      margin-top: 40px;
-    }
+		.title {
+			font-size: 1.85rem;
+			margin-top: 40px;
+		}
 
 		.models {
-      margin-top: 50px;
-      // remove last child 
-      & > *:last-child {
-        display: none;
-      }
+			margin-top: 50px;
+			// remove last child
+			& > *:last-child {
+				display: none;
+			}
 		}
 	}
 }
 
 @media (max-width: 484px) {
-  .container {
-    .title {
-      font-size: 1.5rem;
-    }
+	.container {
+		.title {
+			font-size: 1.5rem;
+		}
 
-    .models {
-      scale: 0.8;
-      margin-top: -10px;
-    }
-  }
+		.models {
+			scale: 0.8;
+			margin-top: -10px;
+		}
+	}
 }

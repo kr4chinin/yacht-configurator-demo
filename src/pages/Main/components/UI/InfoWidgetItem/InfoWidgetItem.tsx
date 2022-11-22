@@ -20,7 +20,6 @@ const InfoWidgetItem: FC<InfoWidgetItemProps> = ({
 	canClickNext,
 	canClickPrev
 }) => {
-
 	return (
 		<div className={styles.container}>
 			<div className={styles.date}>{date}</div>

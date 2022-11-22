@@ -103,34 +103,34 @@
 }
 
 @media (max-width: 470px) {
-  .container {
-    hr {
-      width: 340px;
-    }
+	.container {
+		hr {
+			width: 340px;
+		}
 
-    .header {
-      gap: 15px;
+		.header {
+			gap: 15px;
 
-      .fold-icon-wrapper {
-        min-width: 30px;
-        height: 30px;
+			.fold-icon-wrapper {
+				min-width: 30px;
+				height: 30px;
 
-        border: 1px solid #b79f71;
+				border: 1px solid #b79f71;
 
-        svg {
-          width: 11px;
-          height: 11px;
-        }
-      }
+				svg {
+					width: 11px;
+					height: 11px;
+				}
+			}
 
-      .title {
-        width: 285px;
-        margin-top: 8px;
+			.title {
+				width: 285px;
+				margin-top: 8px;
 
-        .content {
-          width: 275px;
-        }
-      }
-    }
-  }
+				.content {
+					width: 275px;
+				}
+			}
+		}
+	}
 }

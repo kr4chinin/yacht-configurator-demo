@@ -6,25 +6,25 @@ import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 // initial texture
 const andesiteTexture = new TextureLoader().load(Children6.matcap3)
 export const andesiteMaterial6 = new MeshMatcapMaterial({
-  matcap: andesiteTexture
+	matcap: andesiteTexture
 })
 
 const neonBlueTexture = new TextureLoader().load(Children6.matcap1)
 export const neonBlueMaterial6 = new MeshMatcapMaterial({
-  matcap: neonBlueTexture
+	matcap: neonBlueTexture
 })
 
 const bloodyRedTexture = new TextureLoader().load(Children6.matcap2)
 export const bloodyRedMaterial6 = new MeshMatcapMaterial({
-  matcap: bloodyRedTexture
+	matcap: bloodyRedTexture
 })
 
 const stainlessSteel = new TextureLoader().load(Children6.matcap4)
 export const stainlessSteelMaterial6 = new MeshMatcapMaterial({
-  matcap: stainlessSteel
+	matcap: stainlessSteel
 })
 
 const redCarbonTexture = new TextureLoader().load(Children6.basic5)
 export const redCarbonMaterial6 = new MeshBasicMaterial({
-  map: redCarbonTexture
+	map: redCarbonTexture
 })

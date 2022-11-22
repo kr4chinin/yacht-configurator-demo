@@ -5,11 +5,11 @@ import { ReactComponent as UnfoldIcon } from '../../../../../assets/icons/unfold
 import { Question } from '../../Sections/QuestionList/QuestionList'
 
 interface QuestionItemProps {
-  question: Question
+	question: Question
 }
 
 const QuestionItem: FC<QuestionItemProps> = ({ question }) => {
-  const { title, text } = question
+	const { title, text } = question
 
 	const [isFolded, setIsFolded] = useState(false)
 
@@ -21,7 +21,7 @@ const QuestionItem: FC<QuestionItemProps> = ({ question }) => {
 		<div className={styles.container}>
 			<div className={styles.header}>
 				<div className={styles['fold-icon-wrapper']} onClick={toggleFold}>
-					{isFolded ? <FoldIcon /> : <UnfoldIcon /> }
+					{isFolded ? <FoldIcon /> : <UnfoldIcon />}
 				</div>
 				<div className={styles.title} onClick={toggleFold}>
 					{title}

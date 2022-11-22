@@ -1,1 +1,1 @@
-export {default} from './ModelItem'
+export { default } from './ModelItem'

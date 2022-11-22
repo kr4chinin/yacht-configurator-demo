@@ -5,13 +5,13 @@
 .container {
 	.title {
 		position: relative;
-    width: fit-content;
+		width: fit-content;
 
 		font-family: 'Montserrat Bold', sans-serif;
 		font-size: 36px;
 		color: $primary-font-color;
 
-    white-space: nowrap;
+		white-space: nowrap;
 
 		.date {
 			position: absolute;
@@ -26,28 +26,27 @@
 }
 
 @media (max-width: 490px) {
-  .container {
-    .title {
-      font-size: 28px;
-    }
+	.container {
+		.title {
+			font-size: 28px;
+		}
 
-    .date {
-      font-size: 16px;
-    }
-  }
+		.date {
+			font-size: 16px;
+		}
+	}
 }
 
 @media (max-width: 385px) {
-  .container {
+	.container {
+		margin-top: 8px;
 
-    margin-top: 8px;
+		.title {
+			font-size: 22px;
+		}
 
-    .title {
-      font-size: 22px;
-    }
-
-    .date {
-      font-size: 12px;
-    }
-  }
+		.date {
+			font-size: 12px;
+		}
+	}
 }

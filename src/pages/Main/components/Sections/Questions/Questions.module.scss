@@ -8,27 +8,27 @@
 	height: 100vh;
 	min-height: 720px;
 
-  scroll-snap-align: end;
+	scroll-snap-align: end;
 
 	background: linear-gradient(135.31deg, #131d28 1.38%, #050c11 100.55%);
 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	.title {
 		font-family: 'Montserrat Bold', sans-serif;
 		color: $primary-font-color;
-    font-size: 1.5rem;
+		font-size: 1.5rem;
 
-    margin-top: 25px;
+		margin-top: 25px;
 	}
 
-  .annotation {
-    font-family: 'Montserrat', sans-serif;
-    color: $primary-font-color;
-    font-size: 1rem;
+	.annotation {
+		font-family: 'Montserrat', sans-serif;
+		color: $primary-font-color;
+		font-size: 1rem;
 
-    margin-top: 20px;
-  }
+		margin-top: 20px;
+	}
 }

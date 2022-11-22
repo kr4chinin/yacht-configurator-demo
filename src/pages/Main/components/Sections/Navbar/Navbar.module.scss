@@ -19,19 +19,19 @@
 		align-items: center;
 	}
 
-  transform: translateY(0);
-  transition: 300ms;
+	transform: translateY(0);
+	transition: 300ms;
 
-  &.hidden {
-    transform: translateY(-100%);
-  }
+	&.hidden {
+		transform: translateY(-100%);
+	}
 }
 
 @media (max-width: 1400px) {
 	.container {
 		padding: 40px 5% 0 5%;
 		grid-template-columns: 65% 30%;
-    gap: 5%;
+		gap: 5%;
 
 		.links {
 			display: none;
@@ -40,13 +40,13 @@
 }
 
 @media (max-width: 490px) {
-  .container {
-    padding: 20px 5% 0 5%;
-    grid-template-columns: 75% 20%;
-    gap: 5%;
+	.container {
+		padding: 20px 5% 0 5%;
+		grid-template-columns: 75% 20%;
+		gap: 5%;
 
-    .links {
-      display: none;
-    }
-  }
+		.links {
+			display: none;
+		}
+	}
 }

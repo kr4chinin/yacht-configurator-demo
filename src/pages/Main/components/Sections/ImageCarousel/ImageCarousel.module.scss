@@ -2,13 +2,13 @@
 
 .container {
 	height: 100vh;
-  min-height: 720px;
+	min-height: 720px;
 	width: 100%;
 
-  overflow: hidden;
+	overflow: hidden;
 	position: relative;
 
-  scroll-snap-align: start;
+	scroll-snap-align: start;
 
 	.signature {
 		position: absolute;
@@ -22,18 +22,17 @@
 		letter-spacing: 0.045em;
 
 		-webkit-background-clip: text;
-    -moz-background-clip: text;
-
+		-moz-background-clip: text;
 
 		background-clip: text;
 
 		-webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
+		-moz-text-fill-color: transparent;
 
 		background-image: linear-gradient(180deg, #b79f71 0%, #837252 100%);
 
 		transform: rotate(-1.81deg);
-    user-select: none;
+		user-select: none;
 	}
 
 	.controls {
@@ -69,15 +68,15 @@
 	.container {
 		.signature {
 			font-size: 80px;
-      left: calc(54% - (562px + 40px) / 2);
+			left: calc(54% - (562px + 40px) / 2);
 		}
 	}
 }
 
 @media (max-width: 600px) {
-  .container {
-    .signature {
-      left: 10%;
-    }
-  }
+	.container {
+		.signature {
+			left: 10%;
+		}
+	}
 }

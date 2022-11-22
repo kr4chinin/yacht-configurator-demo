@@ -14,7 +14,7 @@ const Main = () => {
 			<ImageCarousel />
 			<Models />
 			<Information />
-      <Questions />
+			<Questions />
 		</div>
 	)
 }

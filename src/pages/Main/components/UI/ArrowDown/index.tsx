@@ -1,1 +1,1 @@
-export {default} from './ArrowDown'
+export { default } from './ArrowDown'

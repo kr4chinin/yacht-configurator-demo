@@ -4,10 +4,11 @@
 	box-sizing: border-box;
 }
 
-html, body {
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
+html,
+body {
+	overflow-y: auto;
+	scroll-snap-type: y mandatory;
+	scroll-behavior: smooth;
 }
 
 #nprogress .bar {
