@@ -8,6 +8,8 @@
 	height: 100vh;
 	min-height: 720px;
 
+  scroll-snap-align: end;
+
 	background: linear-gradient(135.31deg, #131d28 1.38%, #050c11 100.55%);
 
   display: flex;

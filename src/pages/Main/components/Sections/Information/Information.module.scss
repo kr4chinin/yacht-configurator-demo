@@ -11,6 +11,8 @@
 	background-size: cover;
 	background-size: auto;
 
+  scroll-snap-align: start;
+
 	.initials-icon-wrapper {
 		position: absolute;
 		left: calc(50% - 87px / 2);

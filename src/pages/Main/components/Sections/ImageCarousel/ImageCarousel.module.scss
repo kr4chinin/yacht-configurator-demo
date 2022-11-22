@@ -8,6 +8,8 @@
   overflow: hidden;
 	position: relative;
 
+  scroll-snap-align: start;
+
 	.signature {
 		position: absolute;
 		top: 40%;

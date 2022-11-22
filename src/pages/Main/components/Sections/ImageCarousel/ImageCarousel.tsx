@@ -2,7 +2,8 @@ import { useEffect, useState } from 'react'
 import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 import styles from './ImageCarousel.module.scss'
 import cn from 'classnames'
-import ArrowDown from '../ArrowDown'
+import ArrowDown from '../../UI/ArrowDown'
+import Navbar from '../Navbar'
 
 const images = [
 	'../../../../../../images/MainPage/carousel-1.png',
@@ -36,6 +37,8 @@ const ImageCarousel = () => {
 
 	return (
 		<div className={styles.container}>
+			<Navbar />
+      
 			<LoadableImage src={images[currentImageIndex]} />
 			<div className={styles.controls}>
 				{images.map((_, index) => (
@@ -48,10 +51,8 @@ const ImageCarousel = () => {
 					/>
 				))}
 			</div>
-      <span className={styles.signature}>
-        Kingdom Marine
-      </span>
-      <ArrowDown />
+			<span className={styles.signature}>Kingdom Marine</span>
+			<ArrowDown />
 		</div>
 	)
 }

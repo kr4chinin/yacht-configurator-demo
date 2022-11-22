@@ -1,7 +1,7 @@
 import styles from './Main.module.scss'
 import { useNavigate } from 'react-router-dom'
 import Navbar from './components/Sections/Navbar'
-import ImageCarousel from './components/UI/ImageCarousel'
+import ImageCarousel from './components/Sections/ImageCarousel'
 import Models from './components/Sections/Models'
 import Information from './components/Sections/Information'
 import Questions from './components/Sections/Questions'
@@ -11,7 +11,6 @@ const Main = () => {
 
 	return (
 		<div className={styles.container}>
-			<Navbar />
 			<ImageCarousel />
 			<Models />
 			<Information />

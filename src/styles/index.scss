@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+html, body {
+  overflow-y: auto;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
 #nprogress .bar {
 	background: rgba(0, 0, 0, 0.7) !important;
 	height: 3px !important;
