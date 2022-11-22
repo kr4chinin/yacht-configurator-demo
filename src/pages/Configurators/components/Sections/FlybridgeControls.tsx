@@ -832,7 +832,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 							onClick: () => {},
 							isDefault: true,
 							description:
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc.'
+								'Modern, high-tech motor with high torque and increased power on both shafts, providing fast boat acceleration and subsequent high maneuverability of any vessel.'
 						},
 						{
 							id: 2,
@@ -842,7 +842,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 							onClick: () => {},
 							isDefault: false,
 							description:
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc.'
+								'5.5-liter diesel engine for recreational and commercial watercraft with direct fuel injection via the Common-Rail system. The technology is double camshaft and turbocharged, which ensures high reliability in various modes.'
 						},
 						{
 							id: 3,
@@ -852,7 +852,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 							onClick: () => {},
 							isDefault: false,
 							description:
-								'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc. Euismod, nunc vel tincidunt lacinia, nisl nisl aliquam nisl, aliquam nisl nisl eu nunc.'
+								'Built with the latest systems and electronic controls. The engine design uses a large amount of high-precision equipment to remove maximum power at the lowest possible weight.'
 						}
 					]}
 				/>
