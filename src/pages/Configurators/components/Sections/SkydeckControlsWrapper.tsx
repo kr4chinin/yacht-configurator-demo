@@ -1,7 +1,6 @@
 import { FC, useState } from 'react'
 import { Group } from 'three'
 import ShowFullscreenButton from '../UI/ShowFullscreenButton'
-import Footer from './Footer'
 import SkydeckControls from './SkydeckControls'
 
 interface SkydeckControlsWrapperProps {
@@ -19,8 +18,6 @@ const SkydeckControlsWrapper: FC<SkydeckControlsWrapperProps> = ({ model }) => {
 				isFullscreenShown={isFullscreenShown}
 				toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
 			/>
-
-			<Footer isHidden={isFullscreenShown} />
 		</>
 	)
 }

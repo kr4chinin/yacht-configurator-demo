@@ -157,3 +157,22 @@
 .container.hidden {
 	transform: translateY(-110%);
 }
+
+
+@media (max-width: 900px) {
+  .container {
+    .top-section {
+      .signature {
+        margin: 0 auto;
+      }
+
+      .menu {
+        display: none;
+      }
+
+      .more {
+        display: none;
+      }
+    }
+  }
+}
