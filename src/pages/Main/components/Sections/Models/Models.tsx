@@ -1,4 +1,4 @@
-import { AppRoutes } from '../../../../../utils/Routes'
+import { AppRoutes } from '../../../../../utils/AppRoutes'
 import ModelItem from '../../UI/ModelItem'
 import styles from './Models.module.scss'
 

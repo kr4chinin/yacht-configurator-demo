@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom'
-import { AppRoutes } from '../../../../../utils/Routes'
+import { AppRoutes } from '../../../../../utils/AppRoutes'
 import { ReactComponent as Menu } from '../../../../../assets/icons/menu.svg'
 import styles from './Navbar.module.scss'
 import { FC, memo } from 'react'

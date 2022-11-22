@@ -2,7 +2,7 @@ import { lazy, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import ProgressLoadingIndicator from './pages/Configurators/components/UI/Loaders/ProgressLoadingIndicator'
 import Main from './pages/Main'
-import { AppRoutes } from './utils/Routes'
+import { AppRoutes } from './utils/AppRoutes'
 
 const LazyFlybridgeConfigurator = lazy(
 	() => import('./pages/Configurators/FlybridgeConfigurator')
