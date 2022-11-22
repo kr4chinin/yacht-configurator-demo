@@ -1,4 +1,4 @@
-import { Children2 } from '../../urls/flybridge/Children[2]'
+import { Children2 } from '../../urls/flybridge/Children_2'
 import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
 // Fender

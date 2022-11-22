@@ -1,4 +1,4 @@
-import { Children8 } from '../../urls/flybridge/Children[8]'
+import { Children8 } from '../../urls/flybridge/Children_8'
 import { TextureLoader, MeshMatcapMaterial } from 'three'
 
 // Counter

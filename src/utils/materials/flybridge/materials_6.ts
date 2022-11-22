@@ -1,4 +1,4 @@
-import { Children6 } from '../../urls/flybridge/Children[6]'
+import { Children6 } from '../../urls/flybridge/Children_6'
 import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
 // Flybridge visor

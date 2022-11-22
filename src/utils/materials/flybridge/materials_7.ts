@@ -1,4 +1,4 @@
-import { Children7 } from '../../urls/flybridge/Children[7]'
+import { Children7 } from '../../urls/flybridge/Children_7'
 import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
 // Windows

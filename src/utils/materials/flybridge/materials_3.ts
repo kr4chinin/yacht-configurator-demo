@@ -1,4 +1,4 @@
-import { Children3 } from '../../urls/flybridge/Children[3]'
+import { Children3 } from '../../urls/flybridge/Children_3'
 import { TextureLoader, MeshBasicMaterial } from 'three'
 import { setWrapAndRepeat } from '../../../helpers/setWrapAndRepeat'
 

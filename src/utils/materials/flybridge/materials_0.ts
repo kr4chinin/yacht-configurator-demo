@@ -1,4 +1,4 @@
-import { Children0 } from '../../urls/flybridge/Children[0]'
+import { Children0 } from '../../urls/flybridge/Children_0'
 import { TextureLoader, MeshMatcapMaterial } from 'three'
 
 // Siderails & Portlights

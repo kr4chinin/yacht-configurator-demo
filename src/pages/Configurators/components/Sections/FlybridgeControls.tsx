@@ -5,106 +5,106 @@ import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 // import FlybridgeAdminPanelSidebar from './AdminSections/FlybridgeAdminPanelSidebar'
 
-import { ChildrenPreview0 } from '../../../../utils/urls/flybridge/Children[0]'
+import { ChildrenPreview0 } from '../../../../utils/urls/flybridge/Children_0'
 import {
 	stainlessSteelMaterial0,
 	blackSteelMaterial0,
 	goldenHorizonMaterial0
-} from '../../../../utils/materials/flybridge/materials[0]'
+} from '../../../../utils/materials/flybridge/materials_0'
 
 import {
 	Children1,
 	ChildrenPreview1
-} from '../../../../utils/urls/flybridge/Children[1]'
+} from '../../../../utils/urls/flybridge/Children_1'
 import {
 	acquanettaMaterial1,
 	andesiteMaterial1,
 	blackSapphireMaterial1,
 	redCarbonMaterial1
-} from '../../../../utils/materials/flybridge/materials[1]'
+} from '../../../../utils/materials/flybridge/materials_1'
 
 import {
 	Children2,
 	ChildrenPreview2
-} from '../../../../utils/urls/flybridge/Children[2]'
+} from '../../../../utils/urls/flybridge/Children_2'
 import {
 	andesiteMaterial2,
 	blueMarlineMaterial2
-} from '../../../../utils/materials/flybridge/materials[2]'
+} from '../../../../utils/materials/flybridge/materials_2'
 
-import { Children3 } from '../../../../utils/urls/flybridge/Children[3]'
+import { Children3 } from '../../../../utils/urls/flybridge/Children_3'
 import {
 	oakPlanksMaterial3,
 	demiSeasonTeakMaterial3,
 	burnedTeakMaterial3,
 	redWoodMaterial3,
 	darkOakMaterial3
-} from '../../../../utils/materials/flybridge/materials[3]'
+} from '../../../../utils/materials/flybridge/materials_3'
 
 import {
 	Children4,
 	ChildrenPreview4
-} from '../../../../utils/urls/flybridge/Children[4]'
+} from '../../../../utils/urls/flybridge/Children_4'
 import {
 	neonBlueMaterial4,
 	acquanettaMaterial4,
 	bloodyRedMaterial4,
 	sunriseMaterial4,
 	pacificOceanMaterial4
-} from '../../../../utils/materials/flybridge/materials[4]'
+} from '../../../../utils/materials/flybridge/materials_4'
 
-import { Children5 } from '../../../../utils/urls/flybridge/Children[5]'
+import { Children5 } from '../../../../utils/urls/flybridge/Children_5'
 import {
 	beigeLeatherMaterial5,
 	bourbonLeatherMaterial5,
 	brownLeatherMaterial5,
 	darkCashemereMaterial5,
 	tannedLeatherMaterial5
-} from '../../../../utils/materials/flybridge/materials[5]'
+} from '../../../../utils/materials/flybridge/materials_5'
 
 import {
 	Children6,
 	ChildrenPreview6
-} from '../../../../utils/urls/flybridge/Children[6]'
+} from '../../../../utils/urls/flybridge/Children_6'
 import {
 	redCarbonMaterial6,
 	andesiteMaterial6,
 	neonBlueMaterial6,
 	stainlessSteelMaterial6
-} from '../../../../utils/materials/flybridge/materials[6]'
+} from '../../../../utils/materials/flybridge/materials_6'
 
-import { ChildrenPreview7 } from '../../../../utils/urls/flybridge/Children[7]'
+import { ChildrenPreview7 } from '../../../../utils/urls/flybridge/Children_7'
 import {
 	clearGlassMaterial7,
 	tonedGlassMaterial7
-} from '../../../../utils/materials/flybridge/materials[7]'
+} from '../../../../utils/materials/flybridge/materials_7'
 
-import { ChildrenPreview8 } from '../../../../utils/urls/flybridge/Children[8]'
+import { ChildrenPreview8 } from '../../../../utils/urls/flybridge/Children_8'
 import {
 	stainlessSteelMaterial8,
 	blackSteelMaterial8,
 	goldenHorizonMaterial8
-} from '../../../../utils/materials/flybridge/materials[8]'
+} from '../../../../utils/materials/flybridge/materials_8'
 
 import {
 	Children9,
 	ChildrenPreview9
-} from '../../../../utils/urls/flybridge/Children[9]'
+} from '../../../../utils/urls/flybridge/Children_9'
 import {
 	clearGlassMaterial9,
 	tonedGlassMaterial9
-} from '../../../../utils/materials/flybridge/materials[9]'
+} from '../../../../utils/materials/flybridge/materials_9'
 
 import {
 	Children10,
 	ChildrenPreview10
-} from '../../../../utils/urls/flybridge/Children[10]'
+} from '../../../../utils/urls/flybridge/Children_10'
 import {
 	acquanettaMaterial10,
 	andesiteMaterial10,
 	blackSapphireMaterial10,
 	redCarbonMaterial10
-} from '../../../../utils/materials/flybridge/materials[10]'
+} from '../../../../utils/materials/flybridge/materials_10'
 
 import { Engines } from '../../../../utils/urls/Engines'
 

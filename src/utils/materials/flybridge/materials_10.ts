@@ -1,4 +1,4 @@
-import { Children10 } from '../../urls/flybridge/Children[10]'
+import { Children10 } from '../../urls/flybridge/Children_10'
 import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
 // Cockpit steering wheel

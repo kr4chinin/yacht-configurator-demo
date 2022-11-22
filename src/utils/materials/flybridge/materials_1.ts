@@ -1,4 +1,4 @@
-import { Children1 } from '../../urls/flybridge/Children[1]'
+import { Children1 } from '../../urls/flybridge/Children_1'
 import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
 // Throttle & steering wheel

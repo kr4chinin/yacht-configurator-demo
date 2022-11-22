@@ -1,4 +1,4 @@
-import { Children9 } from '../../urls/flybridge/Children[9]'
+import { Children9 } from '../../urls/flybridge/Children_9'
 import { TextureLoader, MeshBasicMaterial, MeshMatcapMaterial } from 'three'
 
 // Illuminators
