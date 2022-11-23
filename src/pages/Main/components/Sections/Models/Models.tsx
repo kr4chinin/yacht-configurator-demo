@@ -7,7 +7,7 @@ import { useEffect, useState } from 'react'
 export type ShownModel = 'both' | 'flybridge' | 'skydeck'
 
 const Models = () => {
-	const [shownModel, setShownModel] = useState<ShownModel>('skydeck')
+	const [shownModel, setShownModel] = useState<ShownModel>('both')
 
 	function handleShowNext() {
 		if (shownModel === 'both') {
