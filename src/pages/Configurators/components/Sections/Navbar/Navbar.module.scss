@@ -28,27 +28,6 @@
 		align-items: center;
 		height: 50%;
 
-		.menu {
-			display: flex;
-			align-items: center;
-			gap: 5px;
-
-			svg {
-				width: 24px;
-				height: 24px;
-				fill: $primary-icon-color;
-			}
-
-			transition: 500ms;
-
-			&:hover {
-				cursor: pointer;
-				transform: translateY(3px);
-
-				filter: brightness(0.75);
-			}
-		}
-
 		.signature {
 			font-family: 'Snell Roundhad';
 			font-size: 3.5rem;
@@ -84,6 +63,13 @@
 			mask-size: 200%;
 			-webkit-mask-size: 200%;
 
+			user-select: none;
+			-webkit-touch-callout: none;
+			-webkit-user-select: none;
+			-khtml-user-select: none;
+			-moz-user-select: none;
+			-ms-user-select: none;
+
 			animation: wave 4.5s infinite;
 		}
 
@@ -98,7 +84,10 @@
 			}
 		}
 
-		.more {
+		.more,
+		.summary {
+			text-decoration: none;
+			color: $primary-font-color;
 			transition: 500ms;
 
 			&:hover {
@@ -132,6 +121,7 @@
 
 		.option {
 			transition: 500ms;
+      white-space: nowrap;
 
 			&:hover {
 				cursor: pointer;
@@ -158,21 +148,17 @@
 	transform: translateY(-110%);
 }
 
-
 @media (max-width: 900px) {
-  .container {
-    .top-section {
-      .signature {
-        margin: 0 auto;
-      }
+	.container {
+		.top-section {
+			.signature {
+				margin: 0 auto;
+			}
 
-      .menu {
-        display: none;
-      }
-
-      .more {
-        display: none;
-      }
-    }
-  }
+			.more,
+			.summary {
+				display: none;
+			}
+		}
+	}
 }

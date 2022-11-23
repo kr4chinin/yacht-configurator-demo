@@ -67,10 +67,6 @@ const NavbarBottomSection: FC<NavbarBottomSectionProps> = ({
 				>
 					Optional accessories
 				</div>
-
-				<MemoTwoLines />
-
-				<div className={styles.option}>Summary</div>
 			</div>
 			<AccessoriesPopup
 				isOpened={isAccessoriesOpened}

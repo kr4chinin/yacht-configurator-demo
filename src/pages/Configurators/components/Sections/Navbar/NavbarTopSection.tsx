@@ -3,28 +3,22 @@ import { AppRoutes } from '../../../../../utils/AppRoutes'
 import { ReactComponent as Menu } from '../../../../../assets/icons/menu.svg'
 import styles from './Navbar.module.scss'
 import { FC, memo } from 'react'
+import { Link } from 'react-router-dom'
 
 interface NavbarTopSectionProps {
 	yachtName: string
 }
 
 const NavbarTopSection: FC<NavbarTopSectionProps> = ({ yachtName }) => {
-	const navigate = useNavigate()
-
-	function handleNavigateToMainPage() {
-		navigate(AppRoutes.MAIN)
-	}
-
 	return (
 		<div className={styles['top-section']}>
-			<div className={styles.menu}>
-				<Menu />
-				<p>Menu</p>
-			</div>
-			<p className={styles.signature}>{yachtName}</p>
-			<p className={styles.more} onClick={handleNavigateToMainPage}>
+			<Link className={styles.more} to={AppRoutes.MAIN}>
 				Explore more
-			</p>
+			</Link>
+			<p className={styles.signature}>{yachtName}</p>
+			<Link className={styles.summary} to={AppRoutes.MAIN}>
+				Summary
+			</Link>
 		</div>
 	)
 }
