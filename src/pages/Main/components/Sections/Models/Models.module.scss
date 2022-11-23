@@ -1,4 +1,6 @@
 @import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../assets/fonts/AnticDidone';
+@import '../../../../../styles/palettes/configuratorPallete';
 
 .container {
 	width: 100vw;
@@ -26,11 +28,23 @@
 		margin-top: 80px;
 	}
 
-	.models {
+	.models-wrapper {
 		display: flex;
-		gap: 10%;
-
+		flex-direction: column;
 		margin-top: 100px;
+
+		.models {
+			display: flex;
+			gap: 10%;
+		}
+
+		.show-next-btn-wrapper {
+			display: none;
+
+			.show-next-btn {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -43,10 +57,12 @@
 
 		.models {
 			margin-top: 50px;
+
 			// remove last child
-			& > *:last-child {
-				display: none;
-			}
+      
+			// & > *:last-child {
+			// 	display: none;
+			// }
 		}
 	}
 }
@@ -57,9 +73,51 @@
 			font-size: 1.5rem;
 		}
 
-		.models {
-			scale: 0.8;
-			margin-top: -10px;
+		.models-wrapper {
+			margin-top: 0px;
+
+			.models {
+				scale: 0.8;
+				margin-top: -10px;
+			}
+
+			.show-next-btn-wrapper {
+				display: block;
+				border-radius: 20px;
+
+				background: transparent;
+				box-shadow: inset 0 0 2px 0 rgba(255, 255, 255, 0.7);
+				padding: 5px;
+
+				width: 160px;
+				margin: auto;
+
+				.show-next-btn {
+					font-family: 'Antic Didone', serif;
+					color: $primary-font-color;
+
+					display: flex;
+					align-items: center;
+					gap: 5px;
+
+					width: 100%;
+					border-radius: inherit;
+
+					border: none;
+					background: linear-gradient(
+						-130.18deg,
+						#273647 22.44%,
+						#071117 50.46%
+					);
+
+					font-size: 1rem;
+					padding: 0.5em 1em;
+
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
 		}
 	}
 }

@@ -1,7 +1,6 @@
-import styles from './InfoWidgetItem.module.scss'
-import { ReactComponent as ArrowIcon } from '../../../../../assets/icons/long-horizontal-arrow.svg'
 import { FC } from 'react'
-import { InfoWidget } from '../../Sections/InfoWidgetList/InfoWidgetList'
+import { ReactComponent as ArrowIcon } from '../../../../../assets/icons/long-horizontal-arrow.svg'
+import styles from './InfoWidgetItem.module.scss'
 
 interface InfoWidgetItemProps {
 	date: string
