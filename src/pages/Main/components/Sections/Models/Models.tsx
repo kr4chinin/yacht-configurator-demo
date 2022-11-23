@@ -20,6 +20,11 @@ const Models = () => {
 	}
 
   useEffect(() => {
+
+    if (window.innerWidth < 900) {
+      setShownModel('flybridge')
+    }
+
     const onResize = () => {
       if (window.innerWidth < 900) {
         setShownModel('flybridge')
@@ -29,6 +34,12 @@ const Models = () => {
     window.addEventListener('resize', () => {
       onResize()
     })
+
+    return () => {
+      window.removeEventListener('resize', () => {
+        onResize()
+      })
+    } 
   }, [])
 
 	return (
