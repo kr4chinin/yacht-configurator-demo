@@ -1,25 +1,21 @@
+import { observer } from 'mobx-react-lite'
 import { FC, useId } from 'react'
-import { Variant } from '../../../../../../types/Variant'
+import { ReactComponent as Cog } from '../../../../../../assets/icons/cog.svg'
+import { ConfigEngineOption } from '../../../../../../types/ConfigOption'
 import PrimaryRadioInput from '../../PrimaryRadioInput'
 import styles from './SecondaryVariantsItem.module.scss'
-import { ReactComponent as Cog } from '../../../../../../assets/icons/cog.svg'
 
 interface SecondaryVariantsItemProps {
-	variant: Variant
-	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-	selectedVariant: Variant
+	option: ConfigEngineOption
 }
 
 const SecondaryVariantsItem: FC<SecondaryVariantsItemProps> = ({
-	variant,
-	handleChange: handleFormChange,
-	selectedVariant
+	option,
 }) => {
 	const id = useId()
 
-	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-		handleFormChange(e)
-		variant.onClick()
+	function handleChange() {
+    option.onSelect(option.id)
 	}
 
 	return (
@@ -27,26 +23,26 @@ const SecondaryVariantsItem: FC<SecondaryVariantsItemProps> = ({
 			<div className={styles['top-section']}>
 				<PrimaryRadioInput
 					id={id}
-					value={JSON.stringify(variant)}
+					value={option.id}
 					onChange={handleChange}
-					checked={selectedVariant.title === variant.title}
+					checked={option.selected}
 				/>
 				<label htmlFor={id}>
 					<div className={styles['image-container']}>
-						<img src={variant.image} alt={variant.title} />
+						<img src={option.image} alt={option.title} />
 					</div>
 				</label>
 			</div>
 			<div className={styles['bottom-section']}>
 				<div className={styles.title}>
 					<Cog />
-					<h3>{variant.title}</h3>
+					<h3>{option.title}</h3>
 				</div>
 
-				<p>{variant?.description}</p>
+				<p>{option.description}</p>
 			</div>
 		</div>
 	)
 }
 
-export default SecondaryVariantsItem
+export default observer(SecondaryVariantsItem)

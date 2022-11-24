@@ -1,60 +1,65 @@
 import { FC, useEffect, useMemo, useState } from 'react'
 import { Group, Mesh } from 'three'
+import { v4 } from 'uuid'
 import VariantsList from '../UI/VariantsList'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
-import { v4 } from 'uuid'
+import { observer } from 'mobx-react-lite'
+import { flybridgeExteriorConfigStore } from '../../../../stores/YachtExteriorConfigStore'
+import { flybridgeInteriorConfigStore } from '../../../../stores/YachtInteriorConfigStore'
+import { flybridgeEngineConfigStore } from '../../../../stores/YachtEngineConfigStore'
+import { ConfigOptionGroupType } from '../../../../types/ConfigOptionGroup'
+import { Option } from '../../../../types/Option'
 // import FlybridgeAdminPanelSidebar from './AdminSections/FlybridgeAdminPanelSidebar'
 
-import { ChildrenPreview0 } from '../../../../utils/urls/flybridge/Children_0'
 import {
-	stainlessSteelMaterial0,
 	blackSteelMaterial0,
-	goldenHorizonMaterial0
+	goldenHorizonMaterial0,
+	stainlessSteelMaterial0
 } from '../../../../utils/materials/flybridge/materials_0'
+import { ChildrenPreview0 } from '../../../../utils/urls/flybridge/Children_0'
 
-import {
-	Children1,
-	ChildrenPreview1
-} from '../../../../utils/urls/flybridge/Children_1'
 import {
 	acquanettaMaterial1,
 	andesiteMaterial1,
 	blackSapphireMaterial1,
 	redCarbonMaterial1
 } from '../../../../utils/materials/flybridge/materials_1'
-
 import {
-	Children2,
-	ChildrenPreview2
-} from '../../../../utils/urls/flybridge/Children_2'
+	Children1,
+	ChildrenPreview1
+} from '../../../../utils/urls/flybridge/Children_1'
+
 import {
 	andesiteMaterial2,
 	blueMarlineMaterial2
 } from '../../../../utils/materials/flybridge/materials_2'
-
-import { Children3 } from '../../../../utils/urls/flybridge/Children_3'
 import {
-	oakPlanksMaterial3,
-	demiSeasonTeakMaterial3,
-	burnedTeakMaterial3,
-	redWoodMaterial3,
-	darkOakMaterial3
-} from '../../../../utils/materials/flybridge/materials_3'
+	Children2,
+	ChildrenPreview2
+} from '../../../../utils/urls/flybridge/Children_2'
 
+import {
+	burnedTeakMaterial3,
+	darkOakMaterial3,
+	demiSeasonTeakMaterial3,
+	oakPlanksMaterial3,
+	redWoodMaterial3
+} from '../../../../utils/materials/flybridge/materials_3'
+import { Children3 } from '../../../../utils/urls/flybridge/Children_3'
+
+import {
+	acquanettaMaterial4,
+	bloodyRedMaterial4,
+	neonBlueMaterial4,
+	pacificOceanMaterial4,
+	sunriseMaterial4
+} from '../../../../utils/materials/flybridge/materials_4'
 import {
 	Children4,
 	ChildrenPreview4
 } from '../../../../utils/urls/flybridge/Children_4'
-import {
-	neonBlueMaterial4,
-	acquanettaMaterial4,
-	bloodyRedMaterial4,
-	sunriseMaterial4,
-	pacificOceanMaterial4
-} from '../../../../utils/materials/flybridge/materials_4'
 
-import { Children5 } from '../../../../utils/urls/flybridge/Children_5'
 import {
 	beigeLeatherMaterial5,
 	bourbonLeatherMaterial5,
@@ -62,57 +67,49 @@ import {
 	darkCashemereMaterial5,
 	tannedLeatherMaterial5
 } from '../../../../utils/materials/flybridge/materials_5'
+import { Children5 } from '../../../../utils/urls/flybridge/Children_5'
 
+import {
+	andesiteMaterial6,
+	neonBlueMaterial6,
+	redCarbonMaterial6,
+	stainlessSteelMaterial6
+} from '../../../../utils/materials/flybridge/materials_6'
 import {
 	Children6,
 	ChildrenPreview6
 } from '../../../../utils/urls/flybridge/Children_6'
-import {
-	redCarbonMaterial6,
-	andesiteMaterial6,
-	neonBlueMaterial6,
-	stainlessSteelMaterial6
-} from '../../../../utils/materials/flybridge/materials_6'
 
-import { ChildrenPreview7 } from '../../../../utils/urls/flybridge/Children_7'
 import {
 	clearGlassMaterial7,
 	tonedGlassMaterial7
 } from '../../../../utils/materials/flybridge/materials_7'
+import { ChildrenPreview7 } from '../../../../utils/urls/flybridge/Children_7'
 
-import { ChildrenPreview8 } from '../../../../utils/urls/flybridge/Children_8'
 import {
-	stainlessSteelMaterial8,
 	blackSteelMaterial8,
-	goldenHorizonMaterial8
+	goldenHorizonMaterial8,
+	stainlessSteelMaterial8
 } from '../../../../utils/materials/flybridge/materials_8'
+import { ChildrenPreview8 } from '../../../../utils/urls/flybridge/Children_8'
 
-import {
-	Children9,
-	ChildrenPreview9
-} from '../../../../utils/urls/flybridge/Children_9'
 import {
 	clearGlassMaterial9,
 	tonedGlassMaterial9
 } from '../../../../utils/materials/flybridge/materials_9'
+import { ChildrenPreview9 } from '../../../../utils/urls/flybridge/Children_9'
 
-import {
-	Children10,
-	ChildrenPreview10
-} from '../../../../utils/urls/flybridge/Children_10'
 import {
 	acquanettaMaterial10,
 	andesiteMaterial10,
 	blackSapphireMaterial10,
 	redCarbonMaterial10
 } from '../../../../utils/materials/flybridge/materials_10'
-
+import {
+	Children10,
+	ChildrenPreview10
+} from '../../../../utils/urls/flybridge/Children_10'
 import { Engines } from '../../../../utils/urls/Engines'
-import { flybridgeExteriorConfigStore } from '../../../../stores/YachtExteriorConfigStore'
-import { ConfigOptionGroupType } from '../../../../types/ConfigOptionGroup'
-import { observer } from 'mobx-react-lite'
-import { flybridgeInteriorConfigStore } from '../../../../stores/YachtInteriorConfigStore'
-import { Option } from '../../../../types/Option'
 
 interface FlybridgeControlsProps {
 	model: Group
@@ -764,7 +761,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview10.matcap1,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[10] as Mesh).material = blackSapphireMaterial10
-            handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: true,
 					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
@@ -776,10 +773,10 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview10.matcap2,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[10] as Mesh).material = acquanettaMaterial10
-            handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
-          configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
+					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
 				},
 				{
 					id: v4(),
@@ -788,10 +785,10 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview10.matcap3,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[10] as Mesh).material = andesiteMaterial10
-            handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
-          configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
+					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
 				},
 				{
 					id: v4(),
@@ -800,12 +797,51 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: Children10.basic4,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[10] as Mesh).material = redCarbonMaterial10
-            handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
-          configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
+					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
 				}
 			]
+		})
+
+		flybridgeEngineConfigStore.addConfigOption({
+			id: v4(),
+			title: 'Volvo Penta D3-200',
+			price: 12200,
+			image: Engines.variant1,
+			onSelect: optionId => {
+				flybridgeEngineConfigStore.selectOptionById(optionId)
+			},
+			selected: true,
+			description:
+				'Modern, high-tech motor with high torque and increased power on both shafts, providing fast boat acceleration and subsequent high maneuverability of any vessel.'
+		})
+
+		flybridgeEngineConfigStore.addConfigOption({
+			id: v4(),
+			title: 'Volvo Penta D6-300',
+			price: 14500,
+			image: Engines.variant2,
+			onSelect: optionId => {
+				flybridgeEngineConfigStore.selectOptionById(optionId)
+			},
+			selected: false,
+			description:
+				'5.5-liter diesel engine for recreational and commercial watercraft with direct fuel injection via the Common-Rail system. The technology is double camshaft and turbocharged, which ensures high reliability in various modes.'
+		})
+
+		flybridgeEngineConfigStore.addConfigOption({
+			id: v4(),
+			title: 'Volvo Penta D11-670 ',
+			price: 22300,
+			image: Engines.variant3,
+			onSelect: optionId => {
+				flybridgeEngineConfigStore.selectOptionById(optionId)
+			},
+			selected: false,
+			description:
+				'Built with the latest systems and electronic controls. The engine design uses a large amount of high-precision equipment to remove maximum power at the lowest possible weight.'
 		})
 	}, [])
 
@@ -833,7 +869,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsSiderailAndPortlightsOpened}
 			>
 				<VariantsList
-					type="primary"
+					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
@@ -848,7 +884,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsFenderOpened}
 			>
 				<VariantsList
-					type="primary"
+					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.FENDER
@@ -863,7 +899,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsSidesOpened}
 			>
 				<VariantsList
-					type="primary"
+					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.SIDES
@@ -878,7 +914,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsVisorOpened}
 			>
 				<VariantsList
-					type="primary"
+					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.FLYBRIDGE_VISOR
@@ -893,7 +929,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsWindowsOpened}
 			>
 				<VariantsList
-					type="primary"
+					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.WINDOWS
@@ -908,7 +944,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsCounterOpened}
 			>
 				<VariantsList
-					type="primary"
+					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.COUNTER
@@ -923,7 +959,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsIlluminatorsOpened}
 			>
 				<VariantsList
-					type="primary"
+					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.ILLUMINATORS
@@ -943,7 +979,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				width="450px"
 			>
 				<VariantsList
-					type="tertiary"
+					type="interior"
 					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
@@ -958,7 +994,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				title="Cockpit Floor"
 			>
 				<VariantsList
-					type="tertiary"
+					type="interior"
 					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.COCKPIT_FLOOR
@@ -973,7 +1009,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				title="Couch"
 			>
 				<VariantsList
-					type="tertiary"
+					type="interior"
 					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.COUCH
@@ -987,61 +1023,33 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsCockpitSteeringWheelOpened}
 				title="Cockpit Steering Wheel"
 			>
-				<VariantsList type="tertiary" options={
-          flybridgeInteriorConfigStore.getConfigOptionGroupByType(
-            ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
-          )?.options || []
-        } />
+				<VariantsList
+					type="interior"
+					options={
+						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
+						)?.options || []
+					}
+				/>
 			</Sidebar>
 
 			{/* INTERIOR END */}
 
-			{/* Engine Sidebar START */}
+			{/* ENGINE START */}
 
-			{/* <Sidebar
+			<Sidebar
 				isShown={isEngineSidebarOpened}
 				setIsShown={setIsEngineSidebarOpened}
 				title="Engines"
 				isEngineFlag={true}
 			>
 				<VariantsList
-					type="secondary"
-					options={[
-						{
-							id: 1,
-							title: 'Volvo Penta D3-200',
-							price: 12200,
-							image: Engines.variant1,
-							onSelect: () => {},
-							selected: true,
-							description:
-								'Modern, high-tech motor with high torque and increased power on both shafts, providing fast boat acceleration and subsequent high maneuverability of any vessel.'
-						},
-						{
-							id: 2,
-							title: 'Volvo Penta D6-300',
-							price: 14500,
-							image: Engines.variant2,
-							onSelect: () => {},
-							selected: false,
-							description:
-								'5.5-liter diesel engine for recreational and commercial watercraft with direct fuel injection via the Common-Rail system. The technology is double camshaft and turbocharged, which ensures high reliability in various modes.'
-						},
-						{
-							id: 3,
-							title: 'Volvo Penta D11-670 ',
-							price: 22300,
-							image: Engines.variant3,
-							onSelect: () => {},
-							selected: false,
-							description:
-								'Built with the latest systems and electronic controls. The engine design uses a large amount of high-precision equipment to remove maximum power at the lowest possible weight.'
-						}
-					]}
+					type="engine"
+					options={flybridgeEngineConfigStore.engines}
 				/>
-			</Sidebar> */}
+			</Sidebar>
 
-			{/* Engine Sidebar END */}
+			{/* ENGINE END */}
 		</>
 	)
 }

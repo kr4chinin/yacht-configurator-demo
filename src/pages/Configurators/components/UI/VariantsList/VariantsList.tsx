@@ -1,14 +1,17 @@
 import { observer } from 'mobx-react-lite'
 import React, { FC } from 'react'
-import { ConfigOption } from '../../../../../types/ConfigOption'
-import { ConfigOptionGroup } from '../../../../../types/ConfigOptionGroup'
+import {
+	ConfigEngineOption,
+	ConfigOption
+} from '../../../../../types/ConfigOption'
 import PrimaryVariantsItem from '../VariantsItems/PrimaryVariantsItem'
+import SecondaryVariantsItem from '../VariantsItems/SecondaryVariantsItem'
 import TertiaryVariantsItem from '../VariantsItems/TertiaryVariantsItem'
 import styles from './VariantsList.module.scss'
 
 interface VariantsListProps {
-	options: ConfigOption[] 
-	type: 'primary' | 'secondary' | 'tertiary'
+	options: ConfigOption[] | ConfigEngineOption[]
+	type: 'exterior' | 'engine' | 'interior'
 }
 
 const VariantsList: FC<VariantsListProps> = ({ options, type }) => {
@@ -17,15 +20,20 @@ const VariantsList: FC<VariantsListProps> = ({ options, type }) => {
 			{options.map(option => {
 				return (
 					<React.Fragment key={option.id}>
-						{type === 'primary' && <PrimaryVariantsItem option={option} />}
-						{/* {type === 'secondary' && (
+						{type === 'exterior' && (
+							<PrimaryVariantsItem option={option as unknown as ConfigOption} />
+						)}
+						{type === 'engine' && (
 							<SecondaryVariantsItem
-								variant={variant}
-								selectedVariant={selectedVariant}
+								option={option as unknown as ConfigEngineOption}
 							/>
-						)} */}
+						)}
 
-						{type === 'tertiary' && <TertiaryVariantsItem option={option} />}
+						{type === 'interior' && (
+							<TertiaryVariantsItem
+								option={option as unknown as ConfigOption}
+							/>
+						)}
 					</React.Fragment>
 				)
 			})}
