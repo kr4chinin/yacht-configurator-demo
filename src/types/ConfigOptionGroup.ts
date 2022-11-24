@@ -6,6 +6,8 @@ export const enum ConfigOptionGroupType {
   SIDES = 'sides',
   FLYBRIDGE_VISOR = 'flybridge_visor',
   WINDOWS = 'windows',
+  COUNTER = 'counter',
+  ILLUMINATORS = 'illuminators',
 }
 
 export interface ConfigOptionGroup {

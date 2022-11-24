@@ -26,27 +26,40 @@ const FlybridgeSummary = () => {
     ConfigOptionGroupType.WINDOWS
   ).title
 
+  const counter = flybridgeExteriorConfigStore.getSelectedGroupOption(
+    ConfigOptionGroupType.COUNTER
+  ).title
+
+  const illuminators = flybridgeExteriorConfigStore.getSelectedGroupOption(
+    ConfigOptionGroupType.ILLUMINATORS
+  ).title
+
 	return (
 		<ul style={{ color: 'lightgray' }}>
+      <h1>Exterior</h1>
 			<li>
 				<span>Siderails and Portlights - {siderailsAndPortlights}</span>
 			</li>
-
       <li>
         <span>Fender - {fender}</span>
       </li>
-
       <li>
         <span>Sides - {sides}</span>
       </li>
-
       <li>
         <span>Flybridge Visor - {flybridgeVisor}</span>
       </li>
-
       <li>
         <span>Windows - {windows}</span>
       </li>
+      <li>
+        <span>Counter - {counter}</span>
+      </li>
+      <li>
+        <span>Illuminators - {illuminators}</span>
+      </li>
+
+      <h1>Interior</h1>
 		</ul>
 	)
 }

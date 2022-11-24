@@ -461,6 +461,80 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				}
 			]
 		})
+
+		flybridgeExteriorConfigStore.addConfigOptionGroup({
+			id: v4(),
+			type: ConfigOptionGroupType.COUNTER,
+			options: [
+				{
+					id: v4(),
+					title: 'Stainless steel',
+					price: 2600,
+					image: ChildrenPreview8.matcap1,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[8] as Mesh).material = stainlessSteelMaterial8
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: true,
+					configOptionGroupType: ConfigOptionGroupType.COUNTER
+				},
+				{
+					id: v4(),
+					title: 'Black steel',
+					price: 3500,
+					image: ChildrenPreview8.matcap2,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[8] as Mesh).material = blackSteelMaterial8
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.COUNTER
+				},
+				{
+					id: v4(),
+					title: 'Golden horizon',
+					price: 1500,
+					image: ChildrenPreview8.matcap3,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[8] as Mesh).material = goldenHorizonMaterial8
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.COUNTER
+				}
+			]
+		})
+
+		flybridgeExteriorConfigStore.addConfigOptionGroup({
+			id: v4(),
+			type: ConfigOptionGroupType.ILLUMINATORS,
+			options: [
+				{
+					id: v4(),
+					title: 'Clear glass',
+					price: 2600,
+					image: ChildrenPreview9.matcap1,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[9] as Mesh).material = clearGlassMaterial9
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: true,
+					configOptionGroupType: ConfigOptionGroupType.ILLUMINATORS
+				},
+				{
+					id: v4(),
+					title: 'Toned glass',
+					price: 3500,
+					image: ChildrenPreview9.basic2,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[9] as Mesh).material = tonedGlassMaterial9
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.ILLUMINATORS
+				}
+			]
+		})
 	}, [])
 
 	return (
@@ -473,17 +547,13 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isHidden={isFullscreenShown}
 			/>
 
-			{/* Admin panel sidebar START*/}
-
 			{/* <FlybridgeAdminPanelSidebar
 				isShown={isAdminOpened}
 				setIsShown={setIsAdminOpened}
 				model={model}
 			/> */}
 
-			{/* Admin panel sidebar END */}
-
-			{/* Siderails and Portlights Sidebars START */}
+			{/* INTERIOR START */}
 
 			<Sidebar
 				title="Siderails & Portlights"
@@ -500,10 +570,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
-			{/* Siderail & Portlights Sidebar END */}
-
-			{/* Fender Sidebar START */}
-
 			<Sidebar
 				title="Fender"
 				isShown={isFenderOpened}
@@ -518,10 +584,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					}
 				/>
 			</Sidebar>
-
-			{/* Fender Sidebar END */}
-
-			{/* Sides Sidebar START */}
 
 			<Sidebar
 				title="Sides"
@@ -538,10 +600,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
-			{/* Sides Sidebar END */}
-
-			{/* Flybridge Visor Sidebar START */}
-
 			<Sidebar
 				title="Flybridge Visor"
 				isShown={isVisorOpened}
@@ -556,10 +614,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					}
 				/>
 			</Sidebar>
-
-			{/* Flybridge Visor Sidebar END */}
-
-			{/* Windows Sidebar START */}
 
 			<Sidebar
 				title="Windows"
@@ -576,10 +630,6 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				/>
 			</Sidebar>
 
-			{/* Windows Sidebar END */}
-
-			{/* Counter Sidebar START */}
-
 			<Sidebar
 				title="Counter"
 				isShown={isCounterOpened}
@@ -587,44 +637,13 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={[
-						{
-							id: 1,
-							title: 'Stainless steel',
-							price: 2600,
-							image: ChildrenPreview8.matcap1,
-							onClick: () => {
-								;(model.children[8] as Mesh).material = stainlessSteelMaterial8
-							},
-							isDefault: true
-						},
-						{
-							id: 2,
-							title: 'Black steel',
-							price: 3500,
-							image: ChildrenPreview8.matcap2,
-							onClick: () => {
-								;(model.children[8] as Mesh).material = blackSteelMaterial8
-							},
-							isDefault: false
-						},
-						{
-							id: 3,
-							title: 'Golden horizon',
-							price: 1500,
-							image: ChildrenPreview8.matcap3,
-							onClick: () => {
-								;(model.children[8] as Mesh).material = goldenHorizonMaterial8
-							},
-							isDefault: false
-						}
-					]}
+					variants={
+						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.COUNTER
+						)?.options || []
+					}
 				/>
 			</Sidebar>
-
-			{/* Counter Sidebar END */}
-
-			{/* Illuminators Sidebar START */}
 
 			<Sidebar
 				title="Illuminators"
@@ -633,32 +652,15 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={[
-						{
-							id: 1,
-							title: 'Clear glass',
-							price: 2600,
-							image: ChildrenPreview9.matcap1,
-							onClick: () => {
-								;(model.children[9] as Mesh).material = clearGlassMaterial9
-							},
-							isDefault: true
-						},
-						{
-							id: 2,
-							title: 'Toned glass',
-							price: 3500,
-							image: Children9.basic2,
-							onClick: () => {
-								;(model.children[9] as Mesh).material = tonedGlassMaterial9
-							},
-							isDefault: false
-						}
-					]}
+					variants={
+						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.ILLUMINATORS
+						)?.options || []
+					}
 				/>
 			</Sidebar>
 
-			{/* Illuminators Sidebar END */}
+			{/* EXTERIOR END */}
 
 			{/* Throttle & Steering Wheel Sidebar START */}
 
