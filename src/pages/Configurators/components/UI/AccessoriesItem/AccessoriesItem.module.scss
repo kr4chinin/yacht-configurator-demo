@@ -36,6 +36,8 @@
 		position: relative;
 		overflow: hidden;
 
+    filter: brightness(0.85);
+
 		img {
 			width: 100%;
 			height: 100%;
@@ -82,7 +84,7 @@
 		align-items: center;
 		justify-content: space-between;
 
-		margin-top: 20px;
+		margin: auto 0;
 
 		padding: 0 0.8em;
 
@@ -98,20 +100,24 @@
 
 		.add-btn {
 			min-width: 66px;
-			height: 46px;
+			height: 40px;
+      padding: 0 1em;
 
-			background-color: transparent;
+			background: linear-gradient(135.31deg, #131d2883 1.38%, #050c1189 100.55%);
 			border-radius: 20px;
-			border: 1px solid white;
+      border: none;
 			color: white;
 
-			transition: 500ms;
+			transition: 300ms;
 
 			&:hover {
 				cursor: pointer;
+        transform: translateY(2px);
+        scale: 1.025;
+			}
 
-				background-color: white;
-				color: black;
+			&.active {
+        background: linear-gradient(135.31deg, #131d28 1.38%, #050c11 100.55%);
 			}
 		}
 	}

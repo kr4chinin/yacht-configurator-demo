@@ -5,5 +5,5 @@ export enum Children7 {
 
 export enum ChildrenPreview7 {
 	matcap1 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891186/flybridge/children%5B7%5D/preview/1.variant_vy0zhf.jpg',
-	basic2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891186/flybridge/children%5B7%5D/preview/1.variant_vy0zhf.jpg'
+	basic2 = 'https://res.cloudinary.com/diagina4w/image/upload/v1666891186/flybridge/children%5B7%5D/preview/2.variant_srfj4p.jpg'
 }
