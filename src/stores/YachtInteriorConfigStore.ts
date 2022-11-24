@@ -5,7 +5,7 @@ import {
 	ConfigOptionGroupType
 } from '../types/ConfigOptionGroup'
 
-class FlybridgeExteriorConfigStore {
+class YachtInteriorConfigStore {
 	constructor() {
 		makeAutoObservable(this)
 	}
@@ -45,4 +45,5 @@ class FlybridgeExteriorConfigStore {
 	}
 }
 
-export const flybridgeExteriorConfigStore = new FlybridgeExteriorConfigStore()
+export const flybridgeInteriorConfigStore = new YachtInteriorConfigStore()
+export const skydeckInteriorConfigStore = new YachtInteriorConfigStore()

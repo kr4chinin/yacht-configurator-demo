@@ -1,5 +1,5 @@
 import { observer } from 'mobx-react-lite'
-import { flybridgeExteriorConfigStore } from '../../stores/FlybridgeExteriorConfigStore'
+import { flybridgeExteriorConfigStore } from '../../stores/YachtExteriorConfigStore'
 import { ConfigOptionGroupType } from '../../types/ConfigOptionGroup'
 import FlybridgeConfigurator from '../Configurators/FlybridgeConfigurator'
 import styles from './FlybridgeSummary.module.scss'

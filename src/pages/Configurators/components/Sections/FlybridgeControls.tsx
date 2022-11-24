@@ -108,7 +108,7 @@ import {
 } from '../../../../utils/materials/flybridge/materials_10'
 
 import { Engines } from '../../../../utils/urls/Engines'
-import { flybridgeExteriorConfigStore } from '../../../../stores/FlybridgeExteriorConfigStore'
+import { flybridgeExteriorConfigStore } from '../../../../stores/YachtExteriorConfigStore'
 import { ConfigOptionGroupType } from '../../../../types/ConfigOptionGroup'
 import { observer } from 'mobx-react-lite'
 
