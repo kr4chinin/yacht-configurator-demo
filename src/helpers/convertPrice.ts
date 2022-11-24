@@ -7,7 +7,7 @@ export function convertPrice(price: string) {
 		case 4:
 			return price.slice(0, 1) + ',' + price.slice(1, 4)
 		case 5:
-			return price.slice(0, 2) + ',' + price.slice(1, 5)
+			return price.slice(0, 2) + ',' + price.slice(1, 4)
 		case 6:
 			return price.slice(0, 3) + ',' + price.slice(2, 6)
 		case 7:

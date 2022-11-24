@@ -1,5 +1,6 @@
 // import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
+import { flybridgeAccessoriesStore } from '../../stores/YachtAccessoriesStore'
 import { flybridgeEngineConfigStore } from '../../stores/YachtEngineConfigStore'
 import { flybridgeExteriorConfigStore } from '../../stores/YachtExteriorConfigStore'
 import { flybridgeInteriorConfigStore } from '../../stores/YachtInteriorConfigStore'
@@ -56,7 +57,12 @@ const FlybridgeSummary = () => {
 			ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
 		).title
 
-  const engine = flybridgeEngineConfigStore.getSelectedOption().title
+	const engine = flybridgeEngineConfigStore.getSelectedOption().title
+
+	const accessories = flybridgeAccessoriesStore
+		.getSelectedAccessoryOptions()
+		.map(accessory => accessory.title)
+		.join(', ')
 
 	return (
 		<ul style={{ color: 'lightgray' }}>
@@ -97,9 +103,14 @@ const FlybridgeSummary = () => {
 				<span>Cockpit Steering Wheel - {cockpitSteeringWheel}</span>
 			</li>
 
-      <h1>Engine</h1>
+			<h1>Engine</h1>
+			<li>
+				<span>Engine - {engine}</span>
+			</li>
+
+      <h1>Accessories</h1>
       <li>
-        <span>Engine - {engine}</span>
+        <span>Accessories - {accessories}</span>
       </li>
 		</ul>
 	)

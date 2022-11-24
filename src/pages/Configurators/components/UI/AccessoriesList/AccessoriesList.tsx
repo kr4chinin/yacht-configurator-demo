@@ -1,6 +1,9 @@
-import { useState } from 'react'
+import { useEffect } from 'react'
+import { v4 } from 'uuid'
+import { flybridgeAccessoriesStore } from '../../../../../stores/YachtAccessoriesStore'
 import AccessoriesItem from '../AccessoriesItem'
 import styles from './AccessoriesList.module.scss'
+import { observer } from 'mobx-react-lite'
 
 export type Accessory = {
 	id: number
@@ -11,99 +14,90 @@ export type Accessory = {
 }
 
 const AccessoriesList = () => {
-	const [accessories] = useState<Accessory[]>(mockAccessories)
+	useEffect(() => {
+		flybridgeAccessoriesStore.addAccessoryOption({
+			id: v4(),
+			title: 'Warranty, 12 month',
+			price: 50000,
+			selected: false,
+			image:
+				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			description: 'Free maintenance for 12 months for your vessel.'
+		})
+
+		flybridgeAccessoriesStore.addAccessoryOption({
+			id: v4(),
+			title: 'Warranty, 24 month',
+			price: 90000,
+			selected: false,
+			image:
+				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			description: 'Free maintenance for 24 months for your vessel.'
+		})
+
+		flybridgeAccessoriesStore.addAccessoryOption({
+			id: v4(),
+			title: 'Yacht Education',
+			price: 10000,
+			selected: false,
+			image:
+				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			description:
+				'The opportunity to be trained in one of the yacht schools in our country. You will receive tremendous experience of yacht management and international certificate of a shipmaster.'
+		})
+
+		flybridgeAccessoriesStore.addAccessoryOption({
+			id: v4(),
+			title: 'Harman-Kardon AS',
+			price: 7000,
+			selected: false,
+			image:
+				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			description:
+				'Premium audio sound system Harman-Kardon which will be installed on your yacht.'
+		})
+
+		flybridgeAccessoriesStore.addAccessoryOption({
+			id: v4(),
+			title: 'Сeremonial Launch',
+			price: 5000,
+			selected: false,
+			image:
+				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			description:
+				'Gala launch of your new yacht. The ceremony is held entirely at the expense of our company.'
+		})
+
+		flybridgeAccessoriesStore.addAccessoryOption({
+			id: v4(),
+			title: '«Silence» Packet',
+			price: 10000,
+			selected: false,
+			image:
+				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			description:
+				'All guest cabins have enlarged portholes (90 x 70 cm) with 18mm laminated glass in accordance with class rules and 42mm double-glazed inner air chamber. As a result, heat and noise transfer is greatly reduced.'
+		})
+
+		flybridgeAccessoriesStore.addAccessoryOption({
+			id: v4(),
+			title: 'Underwater Rover',
+			price: 10000,
+			selected: false,
+			image:
+				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			description:
+				'Underwater, remotely operated OpenROV v2.8 Kit Pro Bundle robot explorer. The kit includes an upgraded camera with crystal-clear images and browser data recording.'
+		})
+	}, [])
 
 	return (
 		<div className={styles.container}>
-			{accessories.map(accessory => (
+			{flybridgeAccessoriesStore.accessories.map(accessory => (
 				<AccessoriesItem key={accessory.id} accessory={accessory} />
 			))}
 		</div>
 	)
 }
 
-export default AccessoriesList
-
-const mockAccessories = [
-	{
-		id: 1,
-		name: 'Lorem Ipsum',
-		price: 2000,
-		image:
-			'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 2,
-		name: 'Dolor Santes',
-		price: 5000,
-		image:
-			'https://images.unsplash.com/photo-1520670255513-79161a36e39c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 3,
-		name: 'Qero Aueros',
-		price: 2000,
-		image:
-			'https://images.unsplash.com/photo-1616207133639-cd5e4db9859f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTF8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 4,
-		name: 'Santa Ferrala',
-		price: 1000,
-		image:
-			'https://images.unsplash.com/photo-1628336704853-9e8c932ac8f2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 5,
-		name: 'Lorem Dolor',
-		price: 2050,
-		image:
-			'https://images.unsplash.com/photo-1610306673750-b6dbfee4d301?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 6,
-		name: 'Dolor Ipsum',
-		price: 1000,
-		image:
-			'https://images.unsplash.com/photo-1570422774250-c951ec3ef74c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTJ8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 7,
-		name: 'Ipsum Santes',
-		price: 2000,
-		image:
-			'https://images.unsplash.com/photo-1569282066844-679ec34e3416?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDh8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 8,
-		name: 'Query Tualka',
-		price: 2000,
-		image:
-			'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	},
-	{
-		id: 9,
-		name: 'Amabera Santes',
-		price: 2000,
-		image:
-			'https://images.unsplash.com/photo-1599582297450-33ad41d26df8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTV8fHlhY2h0fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60',
-		description:
-			'Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid repellendus quia, sit quas libero nam.'
-	}
-]
+export default observer(AccessoriesList)

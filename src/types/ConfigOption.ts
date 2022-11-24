@@ -20,3 +20,7 @@ export interface ConfigEngineOption extends BaseOption {
 	onSelect: (optionId: string) => void
 	description: string
 }
+
+export interface ConfigAccessoryOption extends BaseOption {
+  description: string
+}
