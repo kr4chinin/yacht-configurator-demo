@@ -5,6 +5,7 @@ import { flybridgeEngineConfigStore } from '../../stores/YachtEngineConfigStore'
 import { flybridgeExteriorConfigStore } from '../../stores/YachtExteriorConfigStore'
 import { flybridgeInteriorConfigStore } from '../../stores/YachtInteriorConfigStore'
 import { ConfigOptionGroupType } from '../../types/ConfigOptionGroup'
+import styles from './FlybridgeSummary.module.scss'
 
 const FlybridgeSummary = () => {
 	// console.log('exterior', toJS(flybridgeExteriorConfigStore.exterior))
@@ -65,7 +66,7 @@ const FlybridgeSummary = () => {
 		.join(', ')
 
 	return (
-		<ul style={{ color: 'lightgray' }}>
+		<ul style={{ color: 'lightgray' }} className={styles.container}>
 			<h1>Exterior</h1>
 			<li>
 				<span>Siderails and Portlights - {siderailsAndPortlights}</span>
