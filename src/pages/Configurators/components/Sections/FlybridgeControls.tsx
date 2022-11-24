@@ -222,7 +222,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview0.matcap1,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[0] as Mesh).material = stainlessSteelMaterial0
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: true,
 					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
@@ -234,7 +234,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview0.matcap2,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[0] as Mesh).material = blackSteelMaterial0
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
@@ -246,7 +246,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview0.matcap3,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[0] as Mesh).material = goldenHorizonMaterial0
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
@@ -265,7 +265,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: Children2.basic1,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[2] as Mesh).material = andesiteMaterial2
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: true,
 					configOptionGroupType: ConfigOptionGroupType.FENDER
@@ -277,7 +277,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview2.matcap2,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[2] as Mesh).material = blueMarlineMaterial2
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.FENDER
@@ -296,7 +296,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview4.matcap4,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[4] as Mesh).material = andesiteMaterial2
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: true,
 					configOptionGroupType: ConfigOptionGroupType.SIDES
@@ -308,7 +308,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview4.matcap1,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[4] as Mesh).material = neonBlueMaterial4
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDES
@@ -320,7 +320,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview4.matcap2,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[4] as Mesh).material = acquanettaMaterial4
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDES
@@ -332,7 +332,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview4.matcap3,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[4] as Mesh).material = bloodyRedMaterial4
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDES
@@ -344,7 +344,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview4.matcap5,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[4] as Mesh).material = sunriseMaterial4
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDES
@@ -356,10 +356,108 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: Children4.basic6,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[4] as Mesh).material = pacificOceanMaterial4
-            handleSelectGroupOptionById(configOptionGroupType, optionId)
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDES
+				}
+			]
+		})
+
+		flybridgeExteriorConfigStore.addConfigOptionGroup({
+			id: v4(),
+			type: ConfigOptionGroupType.FLYBRIDGE_VISOR,
+			options: [
+				{
+					id: v4(),
+					title: 'Andesite',
+					price: 2600,
+					image: ChildrenPreview6.matcap3,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[6] as Mesh).material = andesiteMaterial6
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: true,
+					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
+				},
+				{
+					id: v4(),
+					title: 'Neon blue',
+					price: 3500,
+					image: ChildrenPreview6.matcap1,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[6] as Mesh).material = neonBlueMaterial6
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
+				},
+				{
+					id: v4(),
+					title: 'Bloody red',
+					price: 1500,
+					image: ChildrenPreview6.matcap2,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[6] as Mesh).material = bloodyRedMaterial4
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
+				},
+				{
+					id: v4(),
+					title: 'Stainless steel',
+					price: 1500,
+					image: ChildrenPreview6.matcap4,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[6] as Mesh).material = stainlessSteelMaterial6
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
+				},
+				{
+					id: v4(),
+					title: 'Red carbon',
+					price: 1500,
+					image: Children6.basic5,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[6] as Mesh).material = redCarbonMaterial6
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
+				}
+			]
+		})
+
+		flybridgeExteriorConfigStore.addConfigOptionGroup({
+			id: v4(),
+			type: ConfigOptionGroupType.WINDOWS,
+			options: [
+				{
+					id: v4(),
+					title: 'Clear glass',
+					price: 2600,
+					image: ChildrenPreview7.matcap1,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[7] as Mesh).material = clearGlassMaterial7
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: true,
+					configOptionGroupType: ConfigOptionGroupType.WINDOWS
+				},
+				{
+					id: v4(),
+					title: 'Toned glass',
+					price: 3500,
+					image: ChildrenPreview7.basic2,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[7] as Mesh).material = tonedGlassMaterial7
+						handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.WINDOWS
 				}
 			]
 		})
@@ -451,58 +549,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={[
-						{
-							id: 1,
-							title: 'Andesite',
-							price: 2600,
-							image: ChildrenPreview6.matcap3,
-							onClick: () => {
-								;(model.children[6] as Mesh).material = andesiteMaterial6
-							},
-							isDefault: true
-						},
-						{
-							id: 2,
-							title: 'Neon blue',
-							price: 3500,
-							image: ChildrenPreview6.matcap1,
-							onClick: () => {
-								;(model.children[6] as Mesh).material = neonBlueMaterial6
-							},
-							isDefault: false
-						},
-						{
-							id: 3,
-							title: 'Bloody red',
-							price: 1500,
-							image: ChildrenPreview6.matcap2,
-							onClick: () => {
-								;(model.children[6] as Mesh).material = bloodyRedMaterial4
-							},
-							isDefault: false
-						},
-						{
-							id: 4,
-							title: 'Stainless steel',
-							price: 1500,
-							image: ChildrenPreview6.matcap4,
-							onClick: () => {
-								;(model.children[6] as Mesh).material = stainlessSteelMaterial6
-							},
-							isDefault: false
-						},
-						{
-							id: 5,
-							title: 'Red carbon',
-							price: 1500,
-							image: Children6.basic5,
-							onClick: () => {
-								;(model.children[6] as Mesh).material = redCarbonMaterial6
-							},
-							isDefault: false
-						}
-					]}
+					variants={
+						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.FLYBRIDGE_VISOR
+						)?.options || []
+					}
 				/>
 			</Sidebar>
 
@@ -517,28 +568,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={[
-						{
-							id: 1,
-							title: 'Clear glass',
-							price: 2600,
-							image: ChildrenPreview7.matcap1,
-							onClick: () => {
-								;(model.children[7] as Mesh).material = clearGlassMaterial7
-							},
-							isDefault: true
-						},
-						{
-							id: 2,
-							title: 'Toned glass',
-							price: 3500,
-							image: ChildrenPreview7.basic2,
-							onClick: () => {
-								;(model.children[7] as Mesh).material = tonedGlassMaterial7
-							},
-							isDefault: false
-						}
-					]}
+					variants={
+						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.WINDOWS
+						)?.options || []
+					}
 				/>
 			</Sidebar>
 
