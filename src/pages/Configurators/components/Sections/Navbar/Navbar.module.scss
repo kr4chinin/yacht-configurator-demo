@@ -120,18 +120,19 @@
 		}
 
 		.option {
-			transition: 500ms;
+			transition: 300ms;
       white-space: nowrap;
 
 			&:hover {
 				cursor: pointer;
+        color: black;
 			}
 		}
 	}
 
 	@include optimizedBackdropFilter(blur(5px));
 
-	transition: 500ms;
+	transition: 300ms;
 }
 
 .container:after {
