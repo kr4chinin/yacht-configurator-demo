@@ -16,7 +16,8 @@ const FlybridgeConfigurator = () => {
 			<FlybridgeControlsWrapper model={yachtModel} />
 
 			<CustomCanvas>
-				<Suspense fallback={<ModelLoadingIndicator />}>
+        {/* TODO: new loading indicator */}
+				<Suspense fallback={<></>}>
 					<LazyFlybridgeModel model={yachtModel} />
 				</Suspense>
 			</CustomCanvas>
