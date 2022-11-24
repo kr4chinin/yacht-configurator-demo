@@ -1,11 +1,9 @@
+import { observer } from 'mobx-react-lite'
 import { FC, useId } from 'react'
 import LoadableImage from '../../../../../../components/LoadableImage/LoadableImage'
-import { Variant } from '../../../../../../types/Variant'
+import { ConfigOption } from '../../../../../../types/ConfigOption'
 import PrimaryRadioInput from '../../PrimaryRadioInput'
 import styles from './PrimaryVariantsItem.module.scss'
-import { observer } from 'mobx-react-lite'
-import { ConfigOption } from '../../../../../../types/ConfigOption'
-import { ConfigOptionGroupType } from '../../../../../../types/ConfigOptionGroup'
 
 interface PrimaryVariantsItemProps {
 	option: ConfigOption
@@ -14,12 +12,7 @@ interface PrimaryVariantsItemProps {
 const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ option }) => {
 	const id = useId()
 
-	if (!option) {
-		return null
-	}
-
-	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-		console.log(option.id)
+	function handleChange() {
 		option.onSelect(option.configOptionGroupType, option.id)
 	}
 

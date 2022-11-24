@@ -200,6 +200,16 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 		setIsEngineSidebarOpened(prev => !prev)
 	}
 
+	const handleSelectGroupOptionById = (
+		configOptionGroupType: ConfigOptionGroupType,
+		optionId: string
+	) => {
+		flybridgeExteriorConfigStore.selectGroupOptionById(
+			configOptionGroupType,
+			optionId
+		)
+	}
+
 	useEffect(() => {
 		flybridgeExteriorConfigStore.addConfigOptionGroup({
 			id: v4(),
@@ -212,10 +222,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview0.matcap1,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[0] as Mesh).material = stainlessSteelMaterial0
-						flybridgeExteriorConfigStore.selectGroupOptionById(
-							configOptionGroupType,
-							optionId
-						)
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: true,
 					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
@@ -227,10 +234,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview0.matcap2,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[0] as Mesh).material = blackSteelMaterial0
-						flybridgeExteriorConfigStore.selectGroupOptionById(
-							configOptionGroupType,
-							optionId
-						)
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
@@ -242,13 +246,120 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					image: ChildrenPreview0.matcap3,
 					onSelect: (configOptionGroupType, optionId) => {
 						;(model.children[0] as Mesh).material = goldenHorizonMaterial0
-						flybridgeExteriorConfigStore.selectGroupOptionById(
-							configOptionGroupType,
-							optionId
-						)
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
 					},
 					selected: false,
 					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
+				}
+			]
+		})
+
+		flybridgeExteriorConfigStore.addConfigOptionGroup({
+			id: v4(),
+			type: ConfigOptionGroupType.FENDER,
+			options: [
+				{
+					id: v4(),
+					title: 'Andesite',
+					price: 2600,
+					image: Children2.basic1,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[2] as Mesh).material = andesiteMaterial2
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: true,
+					configOptionGroupType: ConfigOptionGroupType.FENDER
+				},
+				{
+					id: v4(),
+					title: 'Blue marline',
+					price: 3500,
+					image: ChildrenPreview2.matcap2,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[2] as Mesh).material = blueMarlineMaterial2
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.FENDER
+				}
+			]
+		})
+
+		flybridgeExteriorConfigStore.addConfigOptionGroup({
+			id: v4(),
+			type: ConfigOptionGroupType.SIDES,
+			options: [
+				{
+					id: v4(),
+					title: 'Andesite',
+					price: 2600,
+					image: ChildrenPreview4.matcap4,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[4] as Mesh).material = andesiteMaterial2
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: true,
+					configOptionGroupType: ConfigOptionGroupType.SIDES
+				},
+				{
+					id: v4(),
+					title: 'Neon blue',
+					price: 3500,
+					image: ChildrenPreview4.matcap1,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[4] as Mesh).material = neonBlueMaterial4
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.SIDES
+				},
+				{
+					id: v4(),
+					title: 'Acquanetta',
+					price: 1500,
+					image: ChildrenPreview4.matcap2,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[4] as Mesh).material = acquanettaMaterial4
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.SIDES
+				},
+				{
+					id: v4(),
+					title: 'Bloody red',
+					price: 1500,
+					image: ChildrenPreview4.matcap3,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[4] as Mesh).material = bloodyRedMaterial4
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.SIDES
+				},
+				{
+					id: v4(),
+					title: 'Sunrise',
+					price: 1500,
+					image: ChildrenPreview4.matcap5,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[4] as Mesh).material = sunriseMaterial4
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.SIDES
+				},
+				{
+					id: v4(),
+					title: 'Pacific ocean',
+					price: 1500,
+					image: Children4.basic6,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[4] as Mesh).material = pacificOceanMaterial4
+            handleSelectGroupOptionById(configOptionGroupType, optionId)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.SIDES
 				}
 			]
 		})
@@ -302,28 +413,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={[
-						{
-							id: 1,
-							title: 'Andesite',
-							price: 2600,
-							image: Children2.basic1,
-							onClick: () => {
-								;(model.children[2] as Mesh).material = andesiteMaterial2
-							},
-							isDefault: true
-						},
-						{
-							id: 2,
-							title: 'Blue marline',
-							price: 3500,
-							image: ChildrenPreview2.matcap2,
-							onClick: () => {
-								;(model.children[2] as Mesh).material = blueMarlineMaterial2
-							},
-							isDefault: false
-						}
-					]}
+					variants={
+						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.FENDER
+						)?.options || []
+					}
 				/>
 			</Sidebar>
 
@@ -338,68 +432,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={[
-						{
-							id: 1,
-							title: 'Andesite',
-							price: 2600,
-							image: ChildrenPreview4.matcap4,
-							onClick: () => {
-								;(model.children[4] as Mesh).material = andesiteMaterial2
-							},
-							isDefault: true
-						},
-						{
-							id: 2,
-							title: 'Neon blue',
-							price: 3500,
-							image: ChildrenPreview4.matcap1,
-							onClick: () => {
-								;(model.children[4] as Mesh).material = neonBlueMaterial4
-							},
-							isDefault: false
-						},
-						{
-							id: 3,
-							title: 'Acquanetta',
-							price: 1500,
-							image: ChildrenPreview4.matcap2,
-							onClick: () => {
-								;(model.children[4] as Mesh).material = acquanettaMaterial4
-							},
-							isDefault: false
-						},
-						{
-							id: 4,
-							title: 'Bloody red',
-							price: 1500,
-							image: ChildrenPreview4.matcap3,
-							onClick: () => {
-								;(model.children[4] as Mesh).material = bloodyRedMaterial4
-							},
-							isDefault: false
-						},
-						{
-							id: 5,
-							title: 'Sunrise',
-							price: 1500,
-							image: ChildrenPreview4.matcap5,
-							onClick: () => {
-								;(model.children[4] as Mesh).material = sunriseMaterial4
-							},
-							isDefault: false
-						},
-						{
-							id: 6,
-							title: 'Pacific ocean',
-							price: 1500,
-							image: Children4.basic6,
-							onClick: () => {
-								;(model.children[4] as Mesh).material = pacificOceanMaterial4
-							},
-							isDefault: false
-						}
-					]}
+					variants={
+						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.SIDES
+						)?.options || []
+					}
 				/>
 			</Sidebar>
 

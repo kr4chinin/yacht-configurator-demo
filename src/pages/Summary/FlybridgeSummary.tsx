@@ -5,14 +5,33 @@ import FlybridgeConfigurator from '../Configurators/FlybridgeConfigurator'
 import styles from './FlybridgeSummary.module.scss'
 
 const FlybridgeSummary = () => {
+	const siderailsAndPortlights =
+		flybridgeExteriorConfigStore.getSelectedGroupOption(
+			ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
+		).title
+
+	const fender = flybridgeExteriorConfigStore.getSelectedGroupOption(
+		ConfigOptionGroupType.FENDER
+	).title
+
+  const sides = flybridgeExteriorConfigStore.getSelectedGroupOption(
+    ConfigOptionGroupType.SIDES
+  ).title
+
 	return (
-		<h1>
-			{
-				flybridgeExteriorConfigStore.getSelectedGroupOption(
-					ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
-				).title
-			}
-		</h1>
+		<ul style={{ color: 'lightgray' }}>
+			<li>
+				<span>Siderails and Portlights - {siderailsAndPortlights}</span>
+			</li>
+      
+      <li>
+        <span>Fender - {fender}</span>
+      </li>
+
+      <li>
+        <span>Sides - {sides}</span>
+      </li>
+		</ul>
 	)
 }
 
