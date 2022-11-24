@@ -30,13 +30,13 @@ export const tannedLeatherMaterial5 = new MeshBasicMaterial({
 })
 
 const blueMarlineTexture = new TextureLoader().load(Children5.basic5)
-setWrapAndRepeat(blueMarlineTexture, 0.1)
+setWrapAndRepeat(blueMarlineTexture, 0.4)
 export const blueMarlineMaterial5 = new MeshBasicMaterial({
 	map: blueMarlineTexture
 })
 
 const beigeLeatherTexture = new TextureLoader().load(Children5.basic6)
-setWrapAndRepeat(beigeLeatherTexture, 0.1)
+setWrapAndRepeat(beigeLeatherTexture, 0.8)
 export const beigeLeatherMaterial5 = new MeshBasicMaterial({
 	map: beigeLeatherTexture
 })
