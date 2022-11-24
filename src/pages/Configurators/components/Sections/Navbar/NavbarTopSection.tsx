@@ -16,7 +16,7 @@ const NavbarTopSection: FC<NavbarTopSectionProps> = ({ yachtName }) => {
 				Explore more
 			</Link>
 			<p className={styles.signature}>{yachtName}</p>
-			<Link className={styles.summary} to={AppRoutes.MAIN}>
+			<Link className={styles.summary} to={AppRoutes.FLYBRIDGE_SUMMARY}>
 				Summary
 			</Link>
 		</div>

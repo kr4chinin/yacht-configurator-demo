@@ -3,41 +3,42 @@ import LoadableImage from '../../../../../../components/LoadableImage/LoadableIm
 import { Variant } from '../../../../../../types/Variant'
 import PrimaryRadioInput from '../../PrimaryRadioInput'
 import styles from './PrimaryVariantsItem.module.scss'
+import { observer } from 'mobx-react-lite'
+import { ConfigOption } from '../../../../../../types/ConfigOption'
+import { ConfigOptionGroupType } from '../../../../../../types/ConfigOptionGroup'
 
 interface PrimaryVariantsItemProps {
-	variant: Variant
-	handleChange: (e: React.ChangeEvent<HTMLInputElement>) => void
-	selectedVariant: Variant
+	option: ConfigOption
 }
 
-const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({
-	variant,
-	handleChange: handleFormChange,
-	selectedVariant
-}) => {
+const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ option }) => {
 	const id = useId()
 
+	if (!option) {
+		return null
+	}
+
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
-		handleFormChange(e)
-		variant.onClick()
+		console.log(option.id)
+		option.onSelect(option.configOptionGroupType, option.id)
 	}
 
 	return (
 		<div className={styles.container}>
 			<PrimaryRadioInput
 				id={id}
-				value={JSON.stringify(variant)}
+				value={option.id}
 				onChange={handleChange}
-				checked={selectedVariant.title === variant.title}
+				checked={option.selected}
 			/>
 			<label htmlFor={id}>
 				<div className={styles['image-container']}>
-					<LoadableImage src={variant.image} alt={variant.title} />
+					<LoadableImage src={option.image} alt={option.title} />
 				</div>
-				{variant.title}
+				{option.title}
 			</label>
 		</div>
 	)
 }
 
-export default PrimaryVariantsItem
+export default observer(PrimaryVariantsItem)

@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom'
 import ProgressLoadingIndicator from './pages/Configurators/components/UI/Loaders/ProgressLoadingIndicator'
 import Main from './pages/Main'
 import { AppRoutes } from './utils/AppRoutes'
+import FlybridgeSummary from './pages/Summary/FlybridgeSummary'
 
 const LazyFlybridgeConfigurator = lazy(
 	() => import('./pages/Configurators/FlybridgeConfigurator')
@@ -30,6 +31,10 @@ const AppRouter = () => {
 						<LazySkydeckConfigurator />
 					</Suspense>
 				}
+			/>
+			<Route
+				path={AppRoutes.FLYBRIDGE_SUMMARY}
+				element={<FlybridgeSummary />}
 			/>
 		</Routes>
 	)

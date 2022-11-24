@@ -4,15 +4,18 @@ import PrimaryVariantsItem from '../VariantsItems/PrimaryVariantsItem'
 import SecondaryVariantsItem from '../VariantsItems/SecondaryVariantsItem'
 import TertiaryVariantsItem from '../VariantsItems/TertiaryVariantsItem'
 import styles from './VariantsList.module.scss'
+import { observer } from 'mobx-react-lite'
+import { ConfigOptionGroup } from '../../../../../types/ConfigOptionGroup'
+import { ConfigOption } from '../../../../../types/ConfigOption'
 
 interface VariantsListProps {
-	variants: Variant[]
+	variants: any[]
 	type: 'primary' | 'secondary' | 'tertiary'
 }
 
 const VariantsList: FC<VariantsListProps> = ({ variants, type }) => {
-	const [selectedVariant, setSelectedVariant] = useState<Variant>(
-		variants.filter(variant => variant.isDefault)[0]
+	const [selectedVariant, setSelectedVariant] = useState<ConfigOption>(
+		variants.filter(variant => variant.selected)[0]
 	)
 
 	function handleChange(e: React.ChangeEvent<HTMLInputElement>) {
@@ -26,25 +29,21 @@ const VariantsList: FC<VariantsListProps> = ({ variants, type }) => {
 					<React.Fragment key={variant.id}>
 						{type === 'primary' && (
 							<PrimaryVariantsItem
-								variant={variant}
-								handleChange={handleChange}
-								selectedVariant={selectedVariant}
+								option={variant}
 							/>
 						)}
-						{type === 'secondary' && (
+						{/* {type === 'secondary' && (
 							<SecondaryVariantsItem
 								variant={variant}
-								handleChange={handleChange}
 								selectedVariant={selectedVariant}
 							/>
 						)}
 						{type === 'tertiary' && (
 							<TertiaryVariantsItem
 								variant={variant}
-								handleChange={handleChange}
 								selectedVariant={selectedVariant}
 							/>
-						)}
+						)} */}
 					</React.Fragment>
 				)
 			})}
@@ -52,4 +51,4 @@ const VariantsList: FC<VariantsListProps> = ({ variants, type }) => {
 	)
 }
 
-export default VariantsList
+export default observer(VariantsList)

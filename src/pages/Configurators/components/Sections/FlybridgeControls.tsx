@@ -1,8 +1,9 @@
-import { FC, useMemo, useState } from 'react'
+import { FC, useEffect, useMemo, useState } from 'react'
 import { Group, Mesh } from 'three'
 import VariantsList from '../UI/VariantsList'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
+import { v4 } from 'uuid'
 // import FlybridgeAdminPanelSidebar from './AdminSections/FlybridgeAdminPanelSidebar'
 
 import { ChildrenPreview0 } from '../../../../utils/urls/flybridge/Children_0'
@@ -107,6 +108,9 @@ import {
 } from '../../../../utils/materials/flybridge/materials_10'
 
 import { Engines } from '../../../../utils/urls/Engines'
+import { flybridgeExteriorConfigStore } from '../../../../stores/FlybridgeExteriorConfigStore'
+import { ConfigOptionGroupType } from '../../../../types/ConfigOptionGroup'
+import { observer } from 'mobx-react-lite'
 
 interface FlybridgeControlsProps {
 	model: Group
@@ -196,6 +200,60 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 		setIsEngineSidebarOpened(prev => !prev)
 	}
 
+	useEffect(() => {
+		flybridgeExteriorConfigStore.addConfigOptionGroup({
+			id: v4(),
+			type: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS,
+			options: [
+				{
+					id: v4(),
+					title: 'Stainless steel',
+					price: 4100,
+					image: ChildrenPreview0.matcap1,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[0] as Mesh).material = stainlessSteelMaterial0
+						flybridgeExteriorConfigStore.selectGroupOptionById(
+							configOptionGroupType,
+							optionId
+						)
+					},
+					selected: true,
+					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
+				},
+				{
+					id: v4(),
+					title: 'Black steel',
+					price: 3200,
+					image: ChildrenPreview0.matcap2,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[0] as Mesh).material = blackSteelMaterial0
+						flybridgeExteriorConfigStore.selectGroupOptionById(
+							configOptionGroupType,
+							optionId
+						)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
+				},
+				{
+					id: v4(),
+					title: 'Golden horizon',
+					price: 5100,
+					image: ChildrenPreview0.matcap3,
+					onSelect: (configOptionGroupType, optionId) => {
+						;(model.children[0] as Mesh).material = goldenHorizonMaterial0
+						flybridgeExteriorConfigStore.selectGroupOptionById(
+							configOptionGroupType,
+							optionId
+						)
+					},
+					selected: false,
+					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
+				}
+			]
+		})
+	}, [])
+
 	return (
 		<>
 			<Navbar
@@ -225,38 +283,11 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={[
-						{
-							id: 1,
-							title: 'Stainless steel',
-							price: 4100,
-							image: ChildrenPreview0.matcap1,
-							onClick: () => {
-								;(model.children[0] as Mesh).material = stainlessSteelMaterial0
-							},
-							isDefault: true
-						},
-						{
-							id: 2,
-							title: 'Black steel',
-							price: 3200,
-							image: ChildrenPreview0.matcap2,
-							onClick: () => {
-								;(model.children[0] as Mesh).material = blackSteelMaterial0
-							},
-							isDefault: false
-						},
-						{
-							id: 3,
-							title: 'Golden horizon',
-							price: 5100,
-							image: ChildrenPreview0.matcap3,
-							onClick: () => {
-								;(model.children[0] as Mesh).material = goldenHorizonMaterial0
-							},
-							isDefault: false
-						}
-					]}
+					variants={
+						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
+							ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
+						)?.options || []
+					}
 				/>
 			</Sidebar>
 
@@ -863,4 +894,4 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	)
 }
 
-export default FlybridgeControls
+export default observer(FlybridgeControls)
