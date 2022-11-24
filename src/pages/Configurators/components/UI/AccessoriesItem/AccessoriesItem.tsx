@@ -6,6 +6,7 @@ import { convertPrice } from '../../../../../helpers/convertPrice'
 import { flybridgeAccessoriesStore } from '../../../../../stores/YachtAccessoriesStore'
 import { ConfigAccessoryOption } from '../../../../../types/ConfigOption'
 import styles from './AccessoriesItem.module.scss'
+import cn from 'classnames'
 
 interface AccessoriesItemProps {
 	accessory: ConfigAccessoryOption
@@ -28,7 +29,12 @@ const AccessoriesItem: FC<AccessoriesItemProps> = ({ accessory }) => {
 					<EuroSymbol />
 					<p>{convertPrice(accessory.price.toString())}</p>
 				</div>
-				<button className={styles['add-btn']} onClick={handleAdd}>
+				<button
+					className={cn(styles['add-btn'], {
+						[styles.active]: accessory.selected
+					})}
+					onClick={handleAdd}
+				>
 					{accessory.selected ? 'Remove' : 'Add'}
 				</button>
 			</div>

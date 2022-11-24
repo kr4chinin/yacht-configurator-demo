@@ -4,6 +4,7 @@ import { flybridgeAccessoriesStore } from '../../../../../stores/YachtAccessorie
 import AccessoriesItem from '../AccessoriesItem'
 import styles from './AccessoriesList.module.scss'
 import { observer } from 'mobx-react-lite'
+import { Accessories } from '../../../../../utils/urls/Accessories'
 
 export type Accessory = {
 	id: number
@@ -20,8 +21,7 @@ const AccessoriesList = () => {
 			title: 'Warranty, 12 month',
 			price: 50000,
 			selected: false,
-			image:
-				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			image: Accessories.WARRANTY_12_MONTH,
 			description: 'Free maintenance for 12 months for your vessel.'
 		})
 
@@ -30,8 +30,7 @@ const AccessoriesList = () => {
 			title: 'Warranty, 24 month',
 			price: 90000,
 			selected: false,
-			image:
-				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			image: Accessories.WARRANTY_24_MONTH,
 			description: 'Free maintenance for 24 months for your vessel.'
 		})
 
@@ -40,8 +39,7 @@ const AccessoriesList = () => {
 			title: 'Yacht Education',
 			price: 10000,
 			selected: false,
-			image:
-				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			image: Accessories.YACHT_EDUCATION,
 			description:
 				'The opportunity to be trained in one of the yacht schools in our country. You will receive tremendous experience of yacht management and international certificate of a shipmaster.'
 		})
@@ -51,8 +49,7 @@ const AccessoriesList = () => {
 			title: 'Harman-Kardon AS',
 			price: 7000,
 			selected: false,
-			image:
-				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			image: Accessories.HARMAN_KARDON_AS,
 			description:
 				'Premium audio sound system Harman-Kardon which will be installed on your yacht.'
 		})
@@ -62,8 +59,7 @@ const AccessoriesList = () => {
 			title: 'Сeremonial Launch',
 			price: 5000,
 			selected: false,
-			image:
-				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			image: Accessories.CEREMONIAL_LAUNCH,
 			description:
 				'Gala launch of your new yacht. The ceremony is held entirely at the expense of our company.'
 		})
@@ -73,8 +69,7 @@ const AccessoriesList = () => {
 			title: '«Silence» Packet',
 			price: 10000,
 			selected: false,
-			image:
-				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			image: Accessories.SILENCE_PACKET,
 			description:
 				'All guest cabins have enlarged portholes (90 x 70 cm) with 18mm laminated glass in accordance with class rules and 42mm double-glazed inner air chamber. As a result, heat and noise transfer is greatly reduced.'
 		})
@@ -84,8 +79,7 @@ const AccessoriesList = () => {
 			title: 'Underwater Rover',
 			price: 10000,
 			selected: false,
-			image:
-				'https://materialyinfo.ru/wp-content/uploads/2017/12/yahtnyiy-lak-40.jpg',
+			image: Accessories.UNDERWATER_ROVER,
 			description:
 				'Underwater, remotely operated OpenROV v2.8 Kit Pro Bundle robot explorer. The kit includes an upgraded camera with crystal-clear images and browser data recording.'
 		})
