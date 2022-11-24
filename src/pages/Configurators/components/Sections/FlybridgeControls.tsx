@@ -1,7 +1,6 @@
 import { FC, useEffect, useMemo, useState } from 'react'
 import { Group, Mesh } from 'three'
 import { v4 } from 'uuid'
-import VariantsList from '../UI/VariantsList'
 import Navbar from './Navbar'
 import Sidebar from './Sidebar'
 import { observer } from 'mobx-react-lite'
@@ -110,6 +109,7 @@ import {
 	ChildrenPreview10
 } from '../../../../utils/urls/flybridge/Children_10'
 import { Engines } from '../../../../utils/urls/Engines'
+import OptionsList from '../UI/OptionsList'
 
 interface FlybridgeControlsProps {
 	model: Group
@@ -868,7 +868,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isSiderailAndPortlightsOpened}
 				setIsShown={setIsSiderailAndPortlightsOpened}
 			>
-				<VariantsList
+				<OptionsList
 					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
@@ -883,7 +883,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isFenderOpened}
 				setIsShown={setIsFenderOpened}
 			>
-				<VariantsList
+				<OptionsList
 					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
@@ -898,7 +898,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isSidesOpened}
 				setIsShown={setIsSidesOpened}
 			>
-				<VariantsList
+				<OptionsList
 					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
@@ -913,7 +913,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isVisorOpened}
 				setIsShown={setIsVisorOpened}
 			>
-				<VariantsList
+				<OptionsList
 					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
@@ -928,7 +928,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isWindowsOpened}
 				setIsShown={setIsWindowsOpened}
 			>
-				<VariantsList
+				<OptionsList
 					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
@@ -943,7 +943,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isCounterOpened}
 				setIsShown={setIsCounterOpened}
 			>
-				<VariantsList
+				<OptionsList
 					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
@@ -958,7 +958,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				isShown={isIlluminatorsOpened}
 				setIsShown={setIsIlluminatorsOpened}
 			>
-				<VariantsList
+				<OptionsList
 					type="exterior"
 					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
@@ -978,7 +978,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				title="Throttle & Steering Wheel"
 				width="450px"
 			>
-				<VariantsList
+				<OptionsList
 					type="interior"
 					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
@@ -993,7 +993,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsCockpitFloorOpened}
 				title="Cockpit Floor"
 			>
-				<VariantsList
+				<OptionsList
 					type="interior"
 					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
@@ -1008,7 +1008,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsCouchOpened}
 				title="Couch"
 			>
-				<VariantsList
+				<OptionsList
 					type="interior"
 					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
@@ -1023,7 +1023,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsCockpitSteeringWheelOpened}
 				title="Cockpit Steering Wheel"
 			>
-				<VariantsList
+				<OptionsList
 					type="interior"
 					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
@@ -1043,7 +1043,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				title="Engines"
 				isEngineFlag={true}
 			>
-				<VariantsList
+				<OptionsList
 					type="engine"
 					options={flybridgeEngineConfigStore.engines}
 				/>

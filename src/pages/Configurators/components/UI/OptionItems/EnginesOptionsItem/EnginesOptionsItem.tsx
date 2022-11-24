@@ -3,13 +3,13 @@ import { FC, useId } from 'react'
 import { ReactComponent as Cog } from '../../../../../../assets/icons/cog.svg'
 import { ConfigEngineOption } from '../../../../../../types/ConfigOption'
 import PrimaryRadioInput from '../../PrimaryRadioInput'
-import styles from './SecondaryVariantsItem.module.scss'
+import styles from './EnginesOptionsItem.module.scss'
 
-interface SecondaryVariantsItemProps {
+interface EnginesOptionsItemProps {
 	option: ConfigEngineOption
 }
 
-const SecondaryVariantsItem: FC<SecondaryVariantsItemProps> = ({
+const EnginesOptionsItem: FC<EnginesOptionsItemProps> = ({
 	option,
 }) => {
 	const id = useId()
@@ -45,4 +45,4 @@ const SecondaryVariantsItem: FC<SecondaryVariantsItemProps> = ({
 	)
 }
 
-export default observer(SecondaryVariantsItem)
+export default observer(EnginesOptionsItem)

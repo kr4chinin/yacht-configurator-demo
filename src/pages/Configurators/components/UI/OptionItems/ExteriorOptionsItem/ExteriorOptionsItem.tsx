@@ -3,13 +3,13 @@ import { FC, useId } from 'react'
 import LoadableImage from '../../../../../../components/LoadableImage/LoadableImage'
 import { ConfigOption } from '../../../../../../types/ConfigOption'
 import PrimaryRadioInput from '../../PrimaryRadioInput'
-import styles from './PrimaryVariantsItem.module.scss'
+import styles from './ExteriorOptionsItem.module.scss'
 
-interface PrimaryVariantsItemProps {
+interface ExteriorOptionsItemProps {
 	option: ConfigOption
 }
 
-const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ option }) => {
+const ExteriorOptionsItem: FC<ExteriorOptionsItemProps> = ({ option }) => {
 	const id = useId()
 
 	function handleChange() {
@@ -34,4 +34,4 @@ const PrimaryVariantsItem: FC<PrimaryVariantsItemProps> = ({ option }) => {
 	)
 }
 
-export default observer(PrimaryVariantsItem)
+export default observer(ExteriorOptionsItem)

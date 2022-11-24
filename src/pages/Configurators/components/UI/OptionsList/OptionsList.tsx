@@ -4,17 +4,17 @@ import {
 	ConfigEngineOption,
 	ConfigOption
 } from '../../../../../types/ConfigOption'
-import PrimaryVariantsItem from '../VariantsItems/PrimaryVariantsItem'
-import SecondaryVariantsItem from '../VariantsItems/SecondaryVariantsItem'
-import TertiaryVariantsItem from '../VariantsItems/TertiaryVariantsItem'
-import styles from './VariantsList.module.scss'
+import PrimaryVariantsItem from '../OptionItems/ExteriorOptionsItem'
+import SecondaryVariantsItem from '../OptionItems/EnginesOptionsItem'
+import TertiaryVariantsItem from '../OptionItems/InteriorOptionsItem'
+import styles from './OptionsList.module.scss'
 
-interface VariantsListProps {
+interface OptionsListProps {
 	options: ConfigOption[] | ConfigEngineOption[]
 	type: 'exterior' | 'engine' | 'interior'
 }
 
-const VariantsList: FC<VariantsListProps> = ({ options, type }) => {
+const OptionsList: FC<OptionsListProps> = ({ options, type }) => {
 	return (
 		<form className={styles.container}>
 			{options.map(option => {
@@ -41,4 +41,4 @@ const VariantsList: FC<VariantsListProps> = ({ options, type }) => {
 	)
 }
 
-export default observer(VariantsList)
+export default observer(OptionsList)
