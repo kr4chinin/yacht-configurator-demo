@@ -10,14 +10,14 @@ class YachtInteriorConfigStore {
 		makeAutoObservable(this)
 	}
 
-	exterior: ConfigOptionGroup[] = []
+	interior: ConfigOptionGroup[] = []
 
 	addConfigOptionGroup(group: ConfigOptionGroup) {
-		this.exterior.push(group)
+		this.interior.push(group)
 	}
 
 	getConfigOptionGroupByType(type: ConfigOptionGroupType): ConfigOptionGroup {
-		return this.exterior.find(group => group.type === type) as ConfigOptionGroup
+		return this.interior.find(group => group.type === type) as ConfigOptionGroup
 	}
 
 	selectGroupOptionById(groupType: ConfigOptionGroupType, optionId: string) {
@@ -31,7 +31,7 @@ class YachtInteriorConfigStore {
 	}
 
 	getSelectedGroupOption(groupType: ConfigOptionGroupType): ConfigOption {
-		const group = this.exterior.find(group => group.type === groupType)
+		const group = this.interior.find(group => group.type === groupType)
 
 		if (group) {
 			const option = group.options.find(option => option.selected)

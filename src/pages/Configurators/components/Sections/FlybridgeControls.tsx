@@ -834,7 +834,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={
+					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
 						)?.options || []
@@ -849,7 +849,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={
+					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.FENDER
 						)?.options || []
@@ -864,7 +864,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={
+					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.SIDES
 						)?.options || []
@@ -879,7 +879,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={
+					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.FLYBRIDGE_VISOR
 						)?.options || []
@@ -894,7 +894,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={
+					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.WINDOWS
 						)?.options || []
@@ -909,7 +909,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={
+					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.COUNTER
 						)?.options || []
@@ -924,7 +924,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="primary"
-					variants={
+					options={
 						flybridgeExteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.ILLUMINATORS
 						)?.options || []
@@ -935,7 +935,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			{/* EXTERIOR END */}
 
 			{/* INTERIOR START */}
-      
+
 			<Sidebar
 				isShown={isThrottleAndSteeringWheelOpened}
 				setIsShown={setIsThrottleAndSteeringWheelOpened}
@@ -944,7 +944,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="tertiary"
-					variants={
+					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
 						)?.options || []
@@ -959,7 +959,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="tertiary"
-					variants={
+					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.COCKPIT_FLOOR
 						)?.options || []
@@ -974,7 +974,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="tertiary"
-					variants={
+					options={
 						flybridgeInteriorConfigStore.getConfigOptionGroupByType(
 							ConfigOptionGroupType.COUCH
 						)?.options || []
@@ -987,7 +987,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 				setIsShown={setIsCockpitSteeringWheelOpened}
 				title="Cockpit Steering Wheel"
 			>
-				<VariantsList type="tertiary" variants={
+				<VariantsList type="tertiary" options={
           flybridgeInteriorConfigStore.getConfigOptionGroupByType(
             ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
           )?.options || []
@@ -998,7 +998,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 
 			{/* Engine Sidebar START */}
 
-			<Sidebar
+			{/* <Sidebar
 				isShown={isEngineSidebarOpened}
 				setIsShown={setIsEngineSidebarOpened}
 				title="Engines"
@@ -1006,7 +1006,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			>
 				<VariantsList
 					type="secondary"
-					variants={[
+					options={[
 						{
 							id: 1,
 							title: 'Volvo Penta D3-200',
@@ -1039,7 +1039,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 						}
 					]}
 				/>
-			</Sidebar>
+			</Sidebar> */}
 
 			{/* Engine Sidebar END */}
 		</>
