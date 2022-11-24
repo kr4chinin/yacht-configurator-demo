@@ -220,629 +220,776 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 	}
 
 	useEffect(() => {
-		flybridgeExteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS,
-			options: [
-				{
-					id: v4(),
-					title: 'Stainless steel',
-					price: 4100,
-					image: ChildrenPreview0.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[0] as Mesh).material = stainlessSteelMaterial0
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+		function initExterior() {
+			flybridgeExteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS,
+				options: [
+					{
+						id: v4(),
+						title: 'Stainless steel',
+						price: 4100,
+						image: ChildrenPreview0.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[0] as Mesh).material = stainlessSteelMaterial0
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType:
+							ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
-				},
-				{
-					id: v4(),
-					title: 'Black steel',
-					price: 3200,
-					image: ChildrenPreview0.matcap2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[0] as Mesh).material = blackSteelMaterial0
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Black steel',
+						price: 3200,
+						image: ChildrenPreview0.matcap2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[0] as Mesh).material = blackSteelMaterial0
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType:
+							ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
-				},
-				{
-					id: v4(),
-					title: 'Golden horizon',
-					price: 5100,
-					image: ChildrenPreview0.matcap3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[0] as Mesh).material = goldenHorizonMaterial0
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Golden horizon',
+						price: 5100,
+						image: ChildrenPreview0.matcap3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[0] as Mesh).material = goldenHorizonMaterial0
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType:
+							ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS
+					}
+				]
+			})
 
-		flybridgeExteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.FENDER,
-			options: [
-				{
-					id: v4(),
-					title: 'Andesite',
-					price: 2600,
-					image: Children2.basic1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[2] as Mesh).material = andesiteMaterial2
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeExteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.FENDER,
+				options: [
+					{
+						id: v4(),
+						title: 'Andesite',
+						price: 2600,
+						image: Children2.basic1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[2] as Mesh).material = andesiteMaterial2
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.FENDER
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.FENDER
-				},
-				{
-					id: v4(),
-					title: 'Blue marline',
-					price: 3500,
-					image: ChildrenPreview2.matcap2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[2] as Mesh).material = blueMarlineMaterial2
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.FENDER
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Blue marline',
+						price: 3500,
+						image: ChildrenPreview2.matcap2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[2] as Mesh).material = blueMarlineMaterial2
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.FENDER
+					}
+				]
+			})
 
-		flybridgeExteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.SIDES,
-			options: [
-				{
-					id: v4(),
-					title: 'Andesite',
-					price: 2600,
-					image: ChildrenPreview4.matcap4,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[4] as Mesh).material = andesiteMaterial2
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeExteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.SIDES,
+				options: [
+					{
+						id: v4(),
+						title: 'Andesite',
+						price: 2600,
+						image: ChildrenPreview4.matcap4,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[4] as Mesh).material = andesiteMaterial2
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.SIDES
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.SIDES
-				},
-				{
-					id: v4(),
-					title: 'Neon blue',
-					price: 3500,
-					image: ChildrenPreview4.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[4] as Mesh).material = neonBlueMaterial4
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Neon blue',
+						price: 3500,
+						image: ChildrenPreview4.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[4] as Mesh).material = neonBlueMaterial4
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.SIDES
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.SIDES
-				},
-				{
-					id: v4(),
-					title: 'Acquanetta',
-					price: 1500,
-					image: ChildrenPreview4.matcap2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[4] as Mesh).material = acquanettaMaterial4
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Acquanetta',
+						price: 1500,
+						image: ChildrenPreview4.matcap2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[4] as Mesh).material = acquanettaMaterial4
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.SIDES
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.SIDES
-				},
-				{
-					id: v4(),
-					title: 'Bloody red',
-					price: 1500,
-					image: ChildrenPreview4.matcap3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[4] as Mesh).material = bloodyRedMaterial4
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Bloody red',
+						price: 1500,
+						image: ChildrenPreview4.matcap3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[4] as Mesh).material = bloodyRedMaterial4
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.SIDES
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.SIDES
-				},
-				{
-					id: v4(),
-					title: 'Sunrise',
-					price: 1500,
-					image: ChildrenPreview4.matcap5,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[4] as Mesh).material = sunriseMaterial4
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Sunrise',
+						price: 1500,
+						image: ChildrenPreview4.matcap5,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[4] as Mesh).material = sunriseMaterial4
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.SIDES
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.SIDES
-				},
-				{
-					id: v4(),
-					title: 'Pacific ocean',
-					price: 1500,
-					image: Children4.basic6,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[4] as Mesh).material = pacificOceanMaterial4
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.SIDES
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Pacific ocean',
+						price: 1500,
+						image: Children4.basic6,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[4] as Mesh).material = pacificOceanMaterial4
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.SIDES
+					}
+				]
+			})
 
-		flybridgeExteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.FLYBRIDGE_VISOR,
-			options: [
-				{
-					id: v4(),
-					title: 'Andesite',
-					price: 2600,
-					image: ChildrenPreview6.matcap3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[6] as Mesh).material = andesiteMaterial6
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeExteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.FLYBRIDGE_VISOR,
+				options: [
+					{
+						id: v4(),
+						title: 'Andesite',
+						price: 2600,
+						image: ChildrenPreview6.matcap3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[6] as Mesh).material = andesiteMaterial6
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
-				},
-				{
-					id: v4(),
-					title: 'Neon blue',
-					price: 3500,
-					image: ChildrenPreview6.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[6] as Mesh).material = neonBlueMaterial6
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Neon blue',
+						price: 3500,
+						image: ChildrenPreview6.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[6] as Mesh).material = neonBlueMaterial6
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
-				},
-				{
-					id: v4(),
-					title: 'Bloody red',
-					price: 1500,
-					image: ChildrenPreview6.matcap2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[6] as Mesh).material = bloodyRedMaterial4
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Bloody red',
+						price: 1500,
+						image: ChildrenPreview6.matcap2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[6] as Mesh).material = bloodyRedMaterial4
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
-				},
-				{
-					id: v4(),
-					title: 'Stainless steel',
-					price: 1500,
-					image: ChildrenPreview6.matcap4,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[6] as Mesh).material = stainlessSteelMaterial6
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Stainless steel',
+						price: 1500,
+						image: ChildrenPreview6.matcap4,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[6] as Mesh).material = stainlessSteelMaterial6
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
-				},
-				{
-					id: v4(),
-					title: 'Red carbon',
-					price: 1500,
-					image: Children6.basic5,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[6] as Mesh).material = redCarbonMaterial6
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Red carbon',
+						price: 1500,
+						image: Children6.basic5,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[6] as Mesh).material = redCarbonMaterial6
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.FLYBRIDGE_VISOR
+					}
+				]
+			})
 
-		flybridgeExteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.WINDOWS,
-			options: [
-				{
-					id: v4(),
-					title: 'Clear glass',
-					price: 2600,
-					image: ChildrenPreview7.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[7] as Mesh).material = clearGlassMaterial7
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeExteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.WINDOWS,
+				options: [
+					{
+						id: v4(),
+						title: 'Clear glass',
+						price: 2600,
+						image: ChildrenPreview7.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[7] as Mesh).material = clearGlassMaterial7
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.WINDOWS
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.WINDOWS
-				},
-				{
-					id: v4(),
-					title: 'Toned glass',
-					price: 3500,
-					image: ChildrenPreview7.basic2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[7] as Mesh).material = tonedGlassMaterial7
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.WINDOWS
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Toned glass',
+						price: 3500,
+						image: ChildrenPreview7.basic2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[7] as Mesh).material = tonedGlassMaterial7
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.WINDOWS
+					}
+				]
+			})
 
-		flybridgeExteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.COUNTER,
-			options: [
-				{
-					id: v4(),
-					title: 'Stainless steel',
-					price: 2600,
-					image: ChildrenPreview8.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[8] as Mesh).material = stainlessSteelMaterial8
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeExteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.COUNTER,
+				options: [
+					{
+						id: v4(),
+						title: 'Stainless steel',
+						price: 2600,
+						image: ChildrenPreview8.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[8] as Mesh).material = stainlessSteelMaterial8
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.COUNTER
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.COUNTER
-				},
-				{
-					id: v4(),
-					title: 'Black steel',
-					price: 3500,
-					image: ChildrenPreview8.matcap2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[8] as Mesh).material = blackSteelMaterial8
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Black steel',
+						price: 3500,
+						image: ChildrenPreview8.matcap2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[8] as Mesh).material = blackSteelMaterial8
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COUNTER
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COUNTER
-				},
-				{
-					id: v4(),
-					title: 'Golden horizon',
-					price: 1500,
-					image: ChildrenPreview8.matcap3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[8] as Mesh).material = goldenHorizonMaterial8
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COUNTER
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Golden horizon',
+						price: 1500,
+						image: ChildrenPreview8.matcap3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[8] as Mesh).material = goldenHorizonMaterial8
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COUNTER
+					}
+				]
+			})
 
-		flybridgeExteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.ILLUMINATORS,
-			options: [
-				{
-					id: v4(),
-					title: 'Clear glass',
-					price: 2600,
-					image: ChildrenPreview9.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[9] as Mesh).material = clearGlassMaterial9
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeExteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.ILLUMINATORS,
+				options: [
+					{
+						id: v4(),
+						title: 'Clear glass',
+						price: 2600,
+						image: ChildrenPreview9.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[9] as Mesh).material = clearGlassMaterial9
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.ILLUMINATORS
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.ILLUMINATORS
-				},
-				{
-					id: v4(),
-					title: 'Toned glass',
-					price: 3500,
-					image: ChildrenPreview9.basic2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[9] as Mesh).material = tonedGlassMaterial9
-						handleSelectExteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.ILLUMINATORS
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Toned glass',
+						price: 3500,
+						image: ChildrenPreview9.basic2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[9] as Mesh).material = tonedGlassMaterial9
+							handleSelectExteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.ILLUMINATORS
+					}
+				]
+			})
+		}
 
-		flybridgeInteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL,
-			options: [
-				{
-					id: v4(),
-					title: 'Andesite',
-					price: 2600,
-					image: ChildrenPreview1.matcap3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[1] as Mesh).material = andesiteMaterial1
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+		function initInterior() {
+			flybridgeInteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL,
+				options: [
+					{
+						id: v4(),
+						title: 'Andesite',
+						price: 2600,
+						image: ChildrenPreview1.matcap3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[1] as Mesh).material = andesiteMaterial1
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType:
+							ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
 					},
-					selected: true,
-					configOptionGroupType:
-						ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
-				},
-				{
-					id: v4(),
-					title: 'Black sapphire',
-					price: 3500,
-					image: ChildrenPreview1.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[1] as Mesh).material = blackSapphireMaterial1
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Black sapphire',
+						price: 3500,
+						image: ChildrenPreview1.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[1] as Mesh).material = blackSapphireMaterial1
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType:
+							ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
 					},
-					selected: false,
-					configOptionGroupType:
-						ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
-				},
-				{
-					id: v4(),
-					title: 'Acquanetta',
-					price: 3500,
-					image: ChildrenPreview1.matcap2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[1] as Mesh).material = acquanettaMaterial1
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Acquanetta',
+						price: 3500,
+						image: ChildrenPreview1.matcap2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[1] as Mesh).material = acquanettaMaterial1
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType:
+							ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
 					},
-					selected: false,
-					configOptionGroupType:
-						ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
-				},
-				{
-					id: v4(),
-					title: 'Red carbon',
-					price: 3500,
-					image: Children1.basic4,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[1] as Mesh).material = redCarbonMaterial1
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType:
-						ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Red carbon',
+						price: 3500,
+						image: Children1.basic4,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[1] as Mesh).material = redCarbonMaterial1
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType:
+							ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL
+					}
+				]
+			})
 
-		flybridgeInteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.COCKPIT_FLOOR,
-			options: [
-				{
-					id: v4(),
-					title: 'Oak planks',
-					price: 2400,
-					image: Children3.basic1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[3] as Mesh).material = oakPlanksMaterial3
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeInteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.COCKPIT_FLOOR,
+				options: [
+					{
+						id: v4(),
+						title: 'Oak planks',
+						price: 2400,
+						image: Children3.basic1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[3] as Mesh).material = oakPlanksMaterial3
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
-				},
-				{
-					id: v4(),
-					title: 'Demi season teak',
-					price: 3110,
-					image: Children3.basic2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[3] as Mesh).material = demiSeasonTeakMaterial3
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Demi season teak',
+						price: 3110,
+						image: Children3.basic2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[3] as Mesh).material = demiSeasonTeakMaterial3
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
-				},
-				{
-					id: v4(),
-					title: 'Burned teak',
-					price: 2300,
-					image: Children3.basic3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[3] as Mesh).material = burnedTeakMaterial3
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Burned teak',
+						price: 2300,
+						image: Children3.basic3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[3] as Mesh).material = burnedTeakMaterial3
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
-				},
-				{
-					id: v4(),
-					title: 'Red wood',
-					price: 2670,
-					image: Children3.basic4,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[3] as Mesh).material = redWoodMaterial3
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Red wood',
+						price: 2670,
+						image: Children3.basic4,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[3] as Mesh).material = redWoodMaterial3
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
-				},
-				{
-					id: v4(),
-					title: 'Dark oak',
-					price: 4200,
-					image: Children3.basic5,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[3] as Mesh).material = darkOakMaterial3
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Dark oak',
+						price: 4200,
+						image: Children3.basic5,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[3] as Mesh).material = darkOakMaterial3
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_FLOOR
+					}
+				]
+			})
 
-		flybridgeInteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.COUCH,
-			options: [
-				{
-					id: v4(),
-					title: 'Bourbon leather',
-					price: 2400,
-					image: Children5.basic1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[5] as Mesh).material = bourbonLeatherMaterial5
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeInteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.COUCH,
+				options: [
+					{
+						id: v4(),
+						title: 'Bourbon leather',
+						price: 2400,
+						image: Children5.basic1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[5] as Mesh).material = bourbonLeatherMaterial5
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.COUCH
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.COUCH
-				},
-				{
-					id: v4(),
-					title: 'Dark cashmere',
-					price: 2400,
-					image: Children5.basic2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[5] as Mesh).material = darkCashemereMaterial5
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Dark cashmere',
+						price: 2400,
+						image: Children5.basic2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[5] as Mesh).material = darkCashemereMaterial5
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COUCH
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COUCH
-				},
-				{
-					id: v4(),
-					title: 'Brown leather',
-					price: 2400,
-					image: Children5.basic3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[5] as Mesh).material = brownLeatherMaterial5
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Brown leather',
+						price: 2400,
+						image: Children5.basic3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[5] as Mesh).material = brownLeatherMaterial5
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COUCH
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COUCH
-				},
-				{
-					id: v4(),
-					title: 'Tanned leather',
-					price: 2400,
-					image: Children5.basic4,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[5] as Mesh).material = tannedLeatherMaterial5
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Tanned leather',
+						price: 2400,
+						image: Children5.basic4,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[5] as Mesh).material = tannedLeatherMaterial5
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COUCH
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COUCH
-				},
-				{
-					id: v4(),
-					title: 'Blue marline',
-					price: 2400,
-					image: Children5.basic5,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[5] as Mesh).material = blueMarlineMaterial2
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Blue marline',
+						price: 2400,
+						image: Children5.basic5,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[5] as Mesh).material = blueMarlineMaterial2
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COUCH
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COUCH
-				},
-				{
-					id: v4(),
-					title: 'Beige leather',
-					price: 2400,
-					image: Children5.basic6,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[5] as Mesh).material = beigeLeatherMaterial5
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COUCH
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Beige leather',
+						price: 2400,
+						image: Children5.basic6,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[5] as Mesh).material = beigeLeatherMaterial5
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COUCH
+					}
+				]
+			})
 
-		flybridgeInteriorConfigStore.addConfigOptionGroup({
-			id: v4(),
-			type: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL,
-			options: [
-				{
-					id: v4(),
-					title: 'Black saphire',
-					price: 2400,
-					image: ChildrenPreview10.matcap1,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[10] as Mesh).material = blackSapphireMaterial10
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+			flybridgeInteriorConfigStore.addConfigOptionGroup({
+				id: v4(),
+				type: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL,
+				options: [
+					{
+						id: v4(),
+						title: 'Black saphire',
+						price: 2400,
+						image: ChildrenPreview10.matcap1,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[10] as Mesh).material = blackSapphireMaterial10
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: true,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
 					},
-					selected: true,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
-				},
-				{
-					id: v4(),
-					title: 'Acquanetta',
-					price: 2400,
-					image: ChildrenPreview10.matcap2,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[10] as Mesh).material = acquanettaMaterial10
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Acquanetta',
+						price: 2400,
+						image: ChildrenPreview10.matcap2,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[10] as Mesh).material = acquanettaMaterial10
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
-				},
-				{
-					id: v4(),
-					title: 'Andesite',
-					price: 2400,
-					image: ChildrenPreview10.matcap3,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[10] as Mesh).material = andesiteMaterial10
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
+					{
+						id: v4(),
+						title: 'Andesite',
+						price: 2400,
+						image: ChildrenPreview10.matcap3,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[10] as Mesh).material = andesiteMaterial10
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
 					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
-				},
-				{
-					id: v4(),
-					title: 'Red carbon',
-					price: 2400,
-					image: Children10.basic4,
-					onSelect: (configOptionGroupType, optionId) => {
-						;(model.children[10] as Mesh).material = redCarbonMaterial10
-						handleSelectInteriorGroupOptionById(configOptionGroupType, optionId)
-					},
-					selected: false,
-					configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
-				}
-			]
-		})
+					{
+						id: v4(),
+						title: 'Red carbon',
+						price: 2400,
+						image: Children10.basic4,
+						onSelect: (configOptionGroupType, optionId) => {
+							;(model.children[10] as Mesh).material = redCarbonMaterial10
+							handleSelectInteriorGroupOptionById(
+								configOptionGroupType,
+								optionId
+							)
+						},
+						selected: false,
+						configOptionGroupType: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL
+					}
+				]
+			})
+		}
 
-		flybridgeEngineConfigStore.addConfigOption({
-			id: v4(),
-			title: 'Volvo Penta D3-200',
-			price: 12200,
-			image: Engines.variant1,
-			onSelect: optionId => {
-				flybridgeEngineConfigStore.selectOptionById(optionId)
-			},
-			selected: true,
-			description:
-				'Modern, high-tech motor with high torque and increased power on both shafts, providing fast boat acceleration and subsequent high maneuverability of any vessel.'
-		})
+		function initEngines() {
+			flybridgeEngineConfigStore.addConfigOption({
+				id: v4(),
+				title: 'Volvo Penta D3-200',
+				price: 12200,
+				image: Engines.variant1,
+				onSelect: optionId => {
+					flybridgeEngineConfigStore.selectOptionById(optionId)
+				},
+				selected: true,
+				description:
+					'Modern, high-tech motor with high torque and increased power on both shafts, providing fast boat acceleration and subsequent high maneuverability of any vessel.'
+			})
 
-		flybridgeEngineConfigStore.addConfigOption({
-			id: v4(),
-			title: 'Volvo Penta D6-300',
-			price: 14500,
-			image: Engines.variant2,
-			onSelect: optionId => {
-				flybridgeEngineConfigStore.selectOptionById(optionId)
-			},
-			selected: false,
-			description:
-				'5.5-liter diesel engine for recreational and commercial watercraft with direct fuel injection via the Common-Rail system. The technology is double camshaft and turbocharged, which ensures high reliability in various modes.'
-		})
+			flybridgeEngineConfigStore.addConfigOption({
+				id: v4(),
+				title: 'Volvo Penta D6-300',
+				price: 14500,
+				image: Engines.variant2,
+				onSelect: optionId => {
+					flybridgeEngineConfigStore.selectOptionById(optionId)
+				},
+				selected: false,
+				description:
+					'5.5-liter diesel engine for recreational and commercial watercraft with direct fuel injection via the Common-Rail system. The technology is double camshaft and turbocharged, which ensures high reliability in various modes.'
+			})
 
-		flybridgeEngineConfigStore.addConfigOption({
-			id: v4(),
-			title: 'Volvo Penta D11-670 ',
-			price: 22300,
-			image: Engines.variant3,
-			onSelect: optionId => {
-				flybridgeEngineConfigStore.selectOptionById(optionId)
-			},
-			selected: false,
-			description:
-				'Built with the latest systems and electronic controls. The engine design uses a large amount of high-precision equipment to remove maximum power at the lowest possible weight.'
-		})
+			flybridgeEngineConfigStore.addConfigOption({
+				id: v4(),
+				title: 'Volvo Penta D11-670 ',
+				price: 22300,
+				image: Engines.variant3,
+				onSelect: optionId => {
+					flybridgeEngineConfigStore.selectOptionById(optionId)
+				},
+				selected: false,
+				description:
+					'Built with the latest systems and electronic controls. The engine design uses a large amount of high-precision equipment to remove maximum power at the lowest possible weight.'
+			})
+		}
+
+    if (flybridgeExteriorConfigStore.exterior.length === 0) {
+      initExterior()
+    }
+
+    if (flybridgeInteriorConfigStore.interior.length === 0) {
+      initInterior()
+    }
+
+    if (flybridgeEngineConfigStore.engines.length === 0) {
+      initEngines()
+    }
 	}, [])
 
 	return (
