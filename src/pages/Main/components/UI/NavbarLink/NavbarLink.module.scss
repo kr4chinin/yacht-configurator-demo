@@ -9,10 +9,10 @@
 
 	color: $primary-font-color;
 
-  transition: 300ms;
+	transition: 300ms;
 
-  &:hover {
-    filter: brightness(0.8);
-    transform: translateY(-3px);
-  }
+	&:hover {
+		filter: brightness(0.8);
+		transform: translateY(-3px);
+	}
 }

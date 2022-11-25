@@ -36,7 +36,7 @@
 		position: relative;
 		overflow: hidden;
 
-    filter: brightness(0.85);
+		filter: brightness(0.85);
 
 		img {
 			width: 100%;
@@ -101,33 +101,36 @@
 		.add-btn {
 			min-width: 66px;
 			height: 40px;
-      padding: 0 1em;
+			padding: 0 1em;
 
-			background: linear-gradient(135.31deg, #131d2883 1.38%, #050c1189 100.55%);
+			background: linear-gradient(
+				135.31deg,
+				#131d2883 1.38%,
+				#050c1189 100.55%
+			);
 			border-radius: 20px;
-      border: none;
+			border: none;
 			color: white;
 
 			transition: 300ms;
 
 			&:hover {
 				cursor: pointer;
-        transform: translateY(2px);
-        scale: 1.025;
+				transform: translateY(2px);
+				scale: 1.025;
 			}
 
 			&.active {
-        background: linear-gradient(135.31deg, #131d28 1.38%, #050c11 100.55%);
+				background: linear-gradient(135.31deg, #131d28 1.38%, #050c11 100.55%);
 			}
 		}
 	}
 }
 
 @media (max-width: 768px) {
-  .container {  
-    h5 {
-      font-size: 1.2rem;
-    }
-  }
+	.container {
+		h5 {
+			font-size: 1.2rem;
+		}
+	}
 }
-  

@@ -9,13 +9,11 @@ interface EnginesOptionsItemProps {
 	option: ConfigEngineOption
 }
 
-const EnginesOptionsItem: FC<EnginesOptionsItemProps> = ({
-	option,
-}) => {
+const EnginesOptionsItem: FC<EnginesOptionsItemProps> = ({ option }) => {
 	const id = useId()
 
 	function handleChange() {
-    option.onSelect(option.id)
+		option.onSelect(option.id)
 	}
 
 	return (

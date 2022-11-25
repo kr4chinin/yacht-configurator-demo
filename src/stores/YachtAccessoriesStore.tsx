@@ -13,16 +13,16 @@ class YachtAccessoriesStore {
 	}
 
 	selectAccessoryOptionById(optionId: string) {
-    const option = this.accessories.find(option => option.id === optionId)
+		const option = this.accessories.find(option => option.id === optionId)
 
-    if (option) {
-      option.selected = !option.selected
-    }
+		if (option) {
+			option.selected = !option.selected
+		}
 	}
 
-  getSelectedAccessoryOptions(): ConfigAccessoryOption[] {
-    return this.accessories.filter(option => option.selected)
-  }
+	getSelectedAccessoryOptions(): ConfigAccessoryOption[] {
+		return this.accessories.filter(option => option.selected)
+	}
 }
 
 export const flybridgeAccessoriesStore = new YachtAccessoriesStore()

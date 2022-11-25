@@ -7,7 +7,7 @@
 	height: 100vh;
 	min-height: 720px;
 
-  overflow-x: hidden;
+	overflow-x: hidden;
 
 	display: flex;
 	flex-direction: column;
@@ -61,7 +61,7 @@
 			margin-top: 50px;
 
 			// remove last child
-      
+
 			// & > *:last-child {
 			// 	display: none;
 			// }

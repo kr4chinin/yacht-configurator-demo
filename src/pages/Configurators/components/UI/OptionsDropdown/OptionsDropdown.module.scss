@@ -97,13 +97,13 @@
 	.trigger {
 		.dropdown-adaptive {
 			position: absolute;
-      top: 0;
+			top: 0;
 			right: 0;
 
 			width: 250px;
-      max-height: 250px;
+			max-height: 250px;
 
-      display: flex;
+			display: flex;
 			justify-content: flex-end;
 
 			overflow: hidden;
@@ -113,24 +113,24 @@
 			transform: translateY(130px);
 
 			.menu-adaptive {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
+				display: flex;
+				flex-direction: column;
+				gap: 10px;
 
-        padding: 10px;
-        transition: 500ms;
-        transform: translateX(105%);
-        background-color: $primary-background;
+				padding: 10px;
+				transition: 500ms;
+				transform: translateX(105%);
+				background-color: $primary-background;
 
-        svg {
-          display: none;
-        }
+				svg {
+					display: none;
+				}
 			}
 
-      .menu-adaptive.active {
-        transform: translateX(0%);
-        pointer-events: all;
-      }
+			.menu-adaptive.active {
+				transform: translateX(0%);
+				pointer-events: all;
+			}
 		}
 	}
 }

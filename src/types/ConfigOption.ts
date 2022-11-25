@@ -22,5 +22,5 @@ export interface ConfigEngineOption extends BaseOption {
 }
 
 export interface ConfigAccessoryOption extends BaseOption {
-  description: string
+	description: string
 }

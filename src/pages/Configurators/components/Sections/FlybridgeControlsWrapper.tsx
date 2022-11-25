@@ -16,10 +16,10 @@ const FlybridgeControlsWrapper: FC<FlybridgeControlsWrapperProps> = ({
 		<>
 			<FlybridgeControls model={model} isFullscreenShown={isFullscreenShown} />
 
-				<ShowFullscreenButton
-					isFullscreenShown={isFullscreenShown}
-					toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
-				/>
+			<ShowFullscreenButton
+				isFullscreenShown={isFullscreenShown}
+				toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
+			/>
 		</>
 	)
 }

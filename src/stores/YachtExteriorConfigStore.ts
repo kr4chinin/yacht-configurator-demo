@@ -47,4 +47,3 @@ class YachtExteriorConfigStore {
 
 export const flybridgeExteriorConfigStore = new YachtExteriorConfigStore()
 export const skydeckExteriorConfigStore = new YachtExteriorConfigStore()
-

@@ -1,13 +1,13 @@
 .container {
 	display: grid;
 	grid-template-columns: repeat(3, 350px);
-  justify-content: center;
+	justify-content: center;
 
 	gap: 15px;
 }
 
 @media (max-width: 1000px) {
-  .container {
-    grid-template-columns: repeat(1, 300px);
-  }
+	.container {
+		grid-template-columns: repeat(1, 300px);
+	}
 }
