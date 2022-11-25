@@ -87,6 +87,12 @@
 
 @media (max-width: 1000px) {
 	.container {
+    pointer-events: none;
+
+    * {
+      pointer-events: all;
+    }
+
 		top: 120px;
     height: calc(100vh - 120px);
     width: 300px !important;
