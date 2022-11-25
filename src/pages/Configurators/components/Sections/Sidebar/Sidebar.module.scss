@@ -20,6 +20,7 @@
 
 	.content {
 		overflow: scroll;
+
 		.title {
 			width: 100%;
 			height: fit-content;
@@ -87,42 +88,39 @@
 @media (max-width: 1000px) {
 	.container {
 		top: 120px;
-    height: calc(100vh - 120px);
-    font-size: 0.85rem;
+		height: calc(100vh - 120px);
+		font-size: 0.85rem;
 
-    .content {
-      .title {
-        h3 {
-          font-size: 1rem;
-        }
-      }
-    }
+		.content {
+			.title {
+				h3 {
+					font-size: 1rem;
+				}
+			}
+			width: fit-content;
+		}
 
-    .control {
-      button {
-        width: 44px;
-        height: 44px;
-        border-radius: 50%;
-  
-        background-color: $primary-background;
-        border: 2px solid rgba(0, 0, 0, 0.2);
-  
-        display: flex;
-        align-items: center;
-        justify-content: center;
-  
-        margin-left: 11px;
-        margin-top: 11px;
-  
-        svg {
-          width: 24px;
-          height: 24px;
-        }
-      }
-    }
+		.control {
+			button {
+				width: 44px;
+				height: 44px;
+				border-radius: 50%;
+
+				background-color: $primary-background;
+				border: 2px solid rgba(0, 0, 0, 0.2);
+
+				display: flex;
+				align-items: center;
+				justify-content: center;
+
+				margin-left: 11px;
+				margin-top: 11px;
+
+				svg {
+					width: 24px;
+					height: 24px;
+				}
+			}
+		}
 	}
-
-  .container.active {
-    transform: translateX(-3%);
-  }
 }
