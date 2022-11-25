@@ -29,3 +29,13 @@
 		cursor: pointer;
 	}
 }
+
+@media (max-width: 1000px) {
+  .show-fullscreen-btn {
+    width: 44px;
+    height: 44px;
+    
+    bottom: 11px;
+    right: 11px;
+  }
+}

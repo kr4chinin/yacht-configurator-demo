@@ -1,5 +1,5 @@
 .container {
-  width: 100vw;
+  min-width: 100vw;
   height: 100vh;
 
   display: flex;
@@ -7,4 +7,11 @@
   align-items: center;
   justify-content: center;
   gap: 16px;
+
+  a {
+    font-size: 2rem;
+    color: gray;
+
+    margin-top: 10px;
+  }
 }

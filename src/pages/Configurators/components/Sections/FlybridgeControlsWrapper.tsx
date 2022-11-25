@@ -1,6 +1,5 @@
 import { FC, useState } from 'react'
 import { Group } from 'three'
-import HomeButton from '../UI/HomeButton'
 import ShowFullscreenButton from '../UI/ShowFullscreenButton'
 import FlybridgeControls from './FlybridgeControls'
 
@@ -17,12 +16,10 @@ const FlybridgeControlsWrapper: FC<FlybridgeControlsWrapperProps> = ({
 		<>
 			<FlybridgeControls model={model} isFullscreenShown={isFullscreenShown} />
 
-			<ShowFullscreenButton
-				isFullscreenShown={isFullscreenShown}
-				toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
-			/>
-
-      <HomeButton />
+				<ShowFullscreenButton
+					isFullscreenShown={isFullscreenShown}
+					toggleFullscreen={() => setIsFullscreenShown(prev => !prev)}
+				/>
 		</>
 	)
 }

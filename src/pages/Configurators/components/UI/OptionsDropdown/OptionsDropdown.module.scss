@@ -110,22 +110,25 @@
 			pointer-events: none;
 			// border-radius: 15px;
 
-			transform: translateY(120px);
+			transform: translateY(130px);
 
 			.menu-adaptive {
         display: flex;
         flex-direction: column;
-        gap: 5px;
-
+        gap: 10px;
 
         padding: 10px;
         transition: 500ms;
-        transform: translateY(-105%);
+        transform: translateX(105%);
         background-color: $primary-background;
+
+        svg {
+          display: none;
+        }
 			}
 
       .menu-adaptive.active {
-        transform: translateY(0%);
+        transform: translateX(0%);
         pointer-events: all;
       }
 		}
