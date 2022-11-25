@@ -53,6 +53,27 @@ const OptionsDropdown: FC<OptionsDropdownProps> = ({
 					))}
 				</div>
 			</div>
+
+			{/* For mobiles */}
+			<div
+				className={cn(styles['dropdown-adaptive'], {
+					[styles.active]: isShown
+				})}
+				ref={dropdownRef}
+			>
+				<div
+					className={cn(styles['menu-adaptive'], { [styles.active]: isShown })}
+				>
+					{options.map((option, index) => (
+						<React.Fragment key={option.title}>
+							<p onClick={option.onClick} className={styles['item-adaptive']}>
+								{option.title}
+							</p>
+							{index !== options.length - 1 && <MemoDots />}
+						</React.Fragment>
+					))}
+				</div>
+			</div>
 		</div>
 	)
 }

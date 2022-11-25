@@ -12,16 +12,18 @@ const FlybridgeConfigurator = () => {
 	const yachtModel = useFBX('../models/flybridge.fbx')
 
 	return (
-		<>
+		<div
+			style={{ width: '100vw', height: '100vh', overflow: 'hidden !important' }}
+		>
 			<FlybridgeControlsWrapper model={yachtModel} />
 
 			<CustomCanvas>
-        {/* TODO: new loading indicator */}
+				{/* TODO: new loading indicator */}
 				<Suspense fallback={<></>}>
 					<LazyFlybridgeModel model={yachtModel} />
 				</Suspense>
 			</CustomCanvas>
-		</>
+		</div>
 	)
 }
 
