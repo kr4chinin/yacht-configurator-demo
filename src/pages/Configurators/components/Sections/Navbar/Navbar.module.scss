@@ -31,9 +31,6 @@
 		.finish-icon-wrapper {
 			width: 32px;
 			height: 32px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 
 			border: 1px solid lightgray;
 			border-radius: 50%;
@@ -58,9 +55,6 @@
 
 			width: 32px;
 			height: 32px;
-			display: flex;
-			align-items: center;
-			justify-content: center;
 
 			border: 1px solid lightgray;
 			border-radius: 50%;
@@ -89,8 +83,6 @@
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-
-			margin-left: 55px;
 
 			mask-image: linear-gradient(
 				-75deg,
@@ -223,7 +215,8 @@
 			}
 
 			.signature {
-				font-size: 2.5rem;
+        font-size: 2.5rem;
+        padding: 0em 0.2em 0em 25px;
 			}
 		}
 
