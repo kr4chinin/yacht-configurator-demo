@@ -1,10 +1,12 @@
 // import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
+import { Link } from 'react-router-dom'
 import { flybridgeAccessoriesStore } from '../../stores/YachtAccessoriesStore'
 import { flybridgeEngineConfigStore } from '../../stores/YachtEngineConfigStore'
 import { flybridgeExteriorConfigStore } from '../../stores/YachtExteriorConfigStore'
 import { flybridgeInteriorConfigStore } from '../../stores/YachtInteriorConfigStore'
 import { ConfigOptionGroupType } from '../../types/ConfigOptionGroup'
+import { AppRoutes } from '../../utils/AppRoutes'
 import styles from './FlybridgeSummary.module.scss'
 
 const FlybridgeSummary = () => {
@@ -109,10 +111,12 @@ const FlybridgeSummary = () => {
 				<span>Engine - {engine}</span>
 			</li>
 
-      <h1>Accessories</h1>
-      <li>
-        <span>Accessories - {accessories}</span>
-      </li>
+			<h1>Accessories</h1>
+			<li>
+				<span>Accessories - {accessories}</span>
+			</li>
+
+			<Link to={AppRoutes.MAIN}>Home</Link>
 		</ul>
 	)
 }

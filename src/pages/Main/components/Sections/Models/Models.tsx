@@ -19,28 +19,27 @@ const Models = () => {
 		}
 	}
 
-  useEffect(() => {
+	useEffect(() => {
+		if (window.innerWidth < 900) {
+			setShownModel('flybridge')
+		}
 
-    if (window.innerWidth < 900) {
-      setShownModel('flybridge')
-    }
+		const onResize = () => {
+			if (window.innerWidth < 900) {
+				setShownModel('flybridge')
+			}
+		}
 
-    const onResize = () => {
-      if (window.innerWidth < 900) {
-        setShownModel('flybridge')
-      }
-    }
+		window.addEventListener('resize', () => {
+			onResize()
+		})
 
-    window.addEventListener('resize', () => {
-      onResize()
-    })
-
-    return () => {
-      window.removeEventListener('resize', () => {
-        onResize()
-      })
-    } 
-  }, [])
+		return () => {
+			window.removeEventListener('resize', () => {
+				onResize()
+			})
+		}
+	}, [])
 
 	return (
 		<div className={styles.container}>

@@ -979,17 +979,17 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			})
 		}
 
-    if (flybridgeExteriorConfigStore.exterior.length === 0) {
-      initExterior()
-    }
+		if (flybridgeExteriorConfigStore.exterior.length === 0) {
+			initExterior()
+		}
 
-    if (flybridgeInteriorConfigStore.interior.length === 0) {
-      initInterior()
-    }
+		if (flybridgeInteriorConfigStore.interior.length === 0) {
+			initInterior()
+		}
 
-    if (flybridgeEngineConfigStore.engines.length === 0) {
-      initEngines()
-    }
+		if (flybridgeEngineConfigStore.engines.length === 0) {
+			initEngines()
+		}
 	}, [])
 
 	return (

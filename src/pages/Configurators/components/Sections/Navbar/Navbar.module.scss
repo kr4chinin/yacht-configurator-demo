@@ -28,6 +28,45 @@
 		align-items: center;
 		height: 50%;
 
+		.finish-icon-wrapper {
+			width: 32px;
+			height: 32px;
+
+			border: 1px solid lightgray;
+			border-radius: 50%;
+
+			display: none;
+
+			svg {
+				width: 16px;
+				height: 16px;
+
+				path {
+					fill: lightgray;
+				}
+
+				margin-left: 7px;
+				margin-top: 5px;
+			}
+		}
+
+		.home-icon-wrapper {
+			display: none;
+
+			width: 32px;
+			height: 32px;
+
+			border: 1px solid lightgray;
+			border-radius: 50%;
+
+			svg {
+				width: 20px;
+				height: 20px;
+				margin-left: 5px;
+				stroke: lightgray;
+			}
+		}
+
 		.signature {
 			font-family: 'Snell Roundhad';
 			font-size: 3.5rem;
@@ -44,8 +83,6 @@
 			background-clip: text;
 			-webkit-background-clip: text;
 			-webkit-text-fill-color: transparent;
-
-			margin-left: 55px;
 
 			mask-image: linear-gradient(
 				-75deg,
@@ -121,7 +158,7 @@
 
 		.option {
 			transition: 300ms;
-      white-space: nowrap;
+			white-space: nowrap;
 
 			&:hover {
 				cursor: pointer;
@@ -134,15 +171,15 @@
 	transition: 300ms;
 }
 
-.container:after {
-	content: '';
-	position: absolute;
-	width: 100%;
-	bottom: 2px;
-	left: 0;
-	z-index: -1;
-	@include primary-box-shadow;
-}
+// .container:after {
+// 	content: '';
+// 	position: absolute;
+// 	width: 100%;
+// 	bottom: 2px;
+// 	left: 0;
+// 	z-index: -1;
+// 	@include primary-box-shadow;
+// }
 
 .container.hidden {
 	transform: translateY(-110%);
@@ -158,6 +195,39 @@
 			.more,
 			.summary {
 				display: none;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.container {
+		height: 120px;
+		gap: 17px;
+
+		.top-section {
+			.finish-icon-wrapper {
+				display: block;
+			}
+
+			.home-icon-wrapper {
+				display: block;
+			}
+
+			.signature {
+        font-size: 2.5rem;
+        padding: 0em 0.2em 0em 25px;
+			}
+		}
+
+		.bottom-section {
+			height: fit-content;
+			font-size: 0.8rem;
+			gap: 5px;
+
+			svg {
+				width: 16px;
+				height: 16px;
 			}
 		}
 	}
