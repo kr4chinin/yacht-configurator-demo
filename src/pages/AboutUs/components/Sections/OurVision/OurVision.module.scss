@@ -62,55 +62,128 @@
 		}
 	}
 
-	.circle {
+	.decoration {
 		position: absolute;
-		border-radius: 50%;
+		width: 1000px;
+		height: 900px;
+		top: -18%;
+		left: 32%;
+
+		.circle {
+			position: absolute;
+			border-radius: 50%;
+		}
+
+		.big {
+			width: 790px;
+			height: 790px;
+
+			right: -20%;
+			bottom: -15%;
+
+			border: 20px solid #b79f71;
+			opacity: 0.1;
+		}
+
+		.medium {
+			width: 608px;
+			height: 608px;
+
+			right: -11.5%;
+			bottom: -5%;
+
+			border: 20px solid #b79f71;
+			opacity: 0.25;
+		}
+
+		.small {
+			width: 423px;
+			height: 423px;
+
+			right: -2.5%;
+			bottom: 5%;
+
+			border: 20px solid #837252;
+			opacity: 0.4;
+		}
+
+		.clients-widget {
+			position: absolute;
+			left: 40%;
+			top: 35%;
+
+			width: 208px;
+			height: 208px;
+
+			font-family: 'Montserrat Bold', sans-serif;
+			font-size: 1.1rem;
+			color: $primary-font-color;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			background-image: linear-gradient(180deg, #b79f71bc 0%, #837252cb 100%);
+
+			border-radius: 20px;
+
+			.clients-icon-wrapper {
+				margin-bottom: 26px;
+			}
+		}
+
+		.cities-widget,
+		.customers-widget {
+			position: absolute;
+			left: 80%;
+			top: 23%;
+
+			width: 160px;
+			height: 160px;
+
+			border-radius: 20px;
+			background: #1c1c1c;
+
+			font-family: 'Montserrat Bold', sans-serif;
+			font-size: 1.1rem;
+
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+
+			span {
+				@include backgroundClip(
+					linear-gradient(180deg, #b79f71 0%, #837252 100%)
+				);
+			}
+
+			.cities-icon-wrapper,
+			.customers-icon-wrapper {
+				margin-bottom: 10px;
+			}
+		}
+
+		.customers-widget {
+			width: 195px;
+
+			top: 80%;
+			left: 50%;
+		}
 	}
 
-	.big {
-		width: 790px;
-		height: 790px;
+	.delimiter-icon-wrapper {
+		margin: auto auto 20px auto;
 
-		right: -20%;
-		bottom: -15%;
+		svg {
+			path {
+				stroke-width: 1px;
+				stroke: #b79f71;
+			}
 
-		border: 20px solid #b79f71;
-		opacity: 0.1;
+			width: 130px;
+			height: 40px;
+		}
 	}
-
-	.medium {
-		width: 608px;
-		height: 608px;
-
-		right: -15%;
-		bottom: -5%;
-
-		border: 20px solid #b79f71;
-		opacity: 0.25;
-	}
-
-	.small {
-		width: 423px;
-		height: 423px;
-
-		right: -10%;
-		bottom: 5%;
-
-		border: 20px solid #837252;
-    opacity: 0.4;
-	}
-
-  .delimiter-icon-wrapper {
-    margin: auto auto 20px auto;
-
-    svg {
-      path {
-        stroke-width: 2px;
-        stroke: #b79f71;
-      }
-
-      width: 130px;
-      height: 40px;
-    }
-  }
 }

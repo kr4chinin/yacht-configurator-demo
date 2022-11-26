@@ -6,7 +6,7 @@ import OurVision from './components/Sections/OurVision'
 const AboutUs = () => {
   return (
     <div className={styles.container}>
-      {/* <Introduction /> */}
+      <Introduction />
       <OurVision />
     </div>
   )
