@@ -4,6 +4,7 @@ import ProgressLoadingIndicator from './pages/Configurators/components/UI/Loader
 import Main from './pages/Main'
 import { AppRoutes } from './utils/AppRoutes'
 import FlybridgeSummary from './pages/Summary/FlybridgeSummary'
+import AboutUs from './pages/AboutUs'
 
 const LazyFlybridgeConfigurator = lazy(
 	() => import('./pages/Configurators/FlybridgeConfigurator')
@@ -16,6 +17,7 @@ const AppRouter = () => {
 	return (
 		<Routes>
 			<Route path={AppRoutes.MAIN} element={<Main />} />
+      <Route path={AppRoutes.ABOUT_US} element={<AboutUs />} />
 			<Route
 				path={AppRoutes.FLYBRIDGE_CONFIGURATOR}
 				element={
