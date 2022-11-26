@@ -1,10 +1,18 @@
 import styles from './Introduction.module.scss'
 import { ReactComponent as ArrowInCircleIcon } from '../../../../../assets/icons/arrow-in-circle.svg'
 import Navbar from '../../../../Common/Navbar'
+import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 
 const Introduction = () => {
 	return (
 		<div className={styles.container}>
+			<div className={styles['image-wrapper']}>
+				<LoadableImage
+					src="../../../../../../images/AboutUsPage/background-1.png"
+					alt="Introduction"
+				/>
+			</div>
+
 			<Navbar />
 			<h1 className={styles.title}>
 				About <br />
