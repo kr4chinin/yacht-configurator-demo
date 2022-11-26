@@ -1,9 +1,13 @@
 @import '../../../../../assets/fonts/Montserrat';
 @import '../../../../../styles/utils/backgroundClip';
+@import '../../../../../styles/palettes/configuratorPallete';
+@import '../../../../../assets/fonts/Inter';
 
 .container {
 	width: 100%;
 	height: 100vh;
+
+  position: relative;
 
 	display: flex;
 	flex-direction: column;
@@ -27,5 +31,30 @@
 		}
 
 		margin-bottom: 16px;
+	}
+
+	.location {
+		font-size: 1.25rem;
+		font-family: 'Inter';
+
+		display: flex;
+		gap: 8px;
+		align-items: center;
+
+		span {
+			color: rgba(255, 255, 255, 0.7);
+		}
+
+		span.active {
+			color: $primary-font-color;
+		}
+
+		svg {
+			margin-top: 2px;
+
+			path {
+				fill: rgba(255, 255, 255, 0.7);
+			}
+		}
 	}
 }

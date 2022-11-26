@@ -1,0 +1,116 @@
+@import '../../../../../styles/utils/backgroundClip';
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../styles/palettes/configuratorPallete';
+
+.container {
+	position: relative;
+
+	width: 100%;
+	height: 100vh;
+	overflow: hidden;
+
+	scroll-snap-align: start;
+	background-color: black;
+
+	display: flex;
+	flex-direction: column;
+
+	padding: 0 100px;
+
+	.title {
+		font-family: 'Montserrat Bold', sans-serif;
+		font-size: 2rem;
+
+		align-self: center;
+		margin-top: 30px;
+		margin-bottom: 250px;
+
+		@include backgroundClip(linear-gradient(180deg, #b79f71 0%, #837252 100%));
+	}
+
+	.content {
+		font-family: 'Montserrat Light', sans-serif;
+		color: $primary-font-color;
+
+		margin-top: 20px;
+
+		width: 700px;
+	}
+
+	.read-more-btn {
+		width: 161px;
+
+		font-family: 'Montserrat', sans-serif;
+		color: $primary-font-color;
+		font-size: 1rem;
+
+		border: none;
+		border-radius: 20px;
+		background-color: black;
+		padding: 1em 0.5em;
+
+		margin-top: 20px;
+
+		box-shadow: inset 0 1px 0 0 #b79f71;
+
+		transition: 300ms;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: inset 0 0 0 1px #b79f71;
+			scale: 1.025;
+		}
+	}
+
+	.circle {
+		position: absolute;
+		border-radius: 50%;
+	}
+
+	.big {
+		width: 790px;
+		height: 790px;
+
+		right: -20%;
+		bottom: -15%;
+
+		border: 20px solid #b79f71;
+		opacity: 0.1;
+	}
+
+	.medium {
+		width: 608px;
+		height: 608px;
+
+		right: -15%;
+		bottom: -5%;
+
+		border: 20px solid #b79f71;
+		opacity: 0.25;
+	}
+
+	.small {
+		width: 423px;
+		height: 423px;
+
+		right: -10%;
+		bottom: 5%;
+
+		border: 20px solid #837252;
+    opacity: 0.4;
+	}
+
+  .delimiter-icon-wrapper {
+    margin: auto auto 20px auto;
+
+    svg {
+      path {
+        stroke-width: 2px;
+        stroke: #b79f71;
+      }
+
+      width: 130px;
+      height: 40px;
+    }
+  }
+}

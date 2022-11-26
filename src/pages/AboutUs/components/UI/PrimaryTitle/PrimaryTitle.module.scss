@@ -1,0 +1,14 @@
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../styles/utils/backgroundClip';
+
+.title {
+	font-size: 3.5rem;
+	line-height: 115%;
+	font-family: 'Montserrat Bold', sans-serif;
+
+	@include backgroundClip(linear-gradient(180deg, #b79f71 0%, #837252 100%));
+
+	border: none;
+	border-left: 3px solid #b79f71;
+	padding-left: 16px;
+}
