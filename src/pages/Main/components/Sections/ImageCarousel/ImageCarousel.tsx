@@ -3,7 +3,7 @@ import LoadableImage from '../../../../../components/LoadableImage/LoadableImage
 import styles from './ImageCarousel.module.scss'
 import cn from 'classnames'
 import ArrowDown from '../../UI/ArrowDown'
-import Navbar from '../Navbar'
+import Navbar from '../../../../Common/Navbar'
 
 const images = [
 	'../../../../../../images/MainPage/carousel-1.png',

@@ -1,7 +1,7 @@
 import styles from './Navbar.module.scss'
-import NavbarLink from '../../UI/NavbarLink'
-import NavbarLogo from '../../UI/NavbarLogo'
-import LanguageSwitch from '../../UI/LanguageSwitch'
+import NavbarLink from '../NavbarLink'
+import NavbarLogo from '../NavbarLogo'
+import LanguageSwitch from '../LanguageSwitch'
 
 const Navbar = () => {
 	return (
