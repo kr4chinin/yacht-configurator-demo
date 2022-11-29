@@ -1,10 +1,10 @@
 import cn from 'classnames'
 import PrimaryTitle from '../../UI/PrimaryTitle'
 import styles from './OurVision.module.scss'
-import { ReactComponent as DoodleDelimiterIcon } from '../../../../../assets/icons/doodle-delimiter.svg'
 import { ReactComponent as ClientsIcon } from '../../../../../assets/icons/clients.svg'
 import { ReactComponent as CitiesIcon } from '../../../../../assets/icons/cities.svg'
 import { ReactComponent as CaseIcon } from '../../../../../assets/icons/case.svg'
+import DelimiterIcon from '../../UI/DelimiterIcon'
 
 const OurVision = () => {
 	return (
@@ -55,9 +55,7 @@ const OurVision = () => {
 				</div>
 			</div>
 
-			<div className={styles['delimiter-icon-wrapper']}>
-				<DoodleDelimiterIcon />
-			</div>
+      <DelimiterIcon />
 		</div>
 	)
 }

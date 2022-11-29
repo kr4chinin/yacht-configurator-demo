@@ -15,7 +15,7 @@
 	display: flex;
 	flex-direction: column;
 
-	padding: 0 100px;
+	padding: 0 130px;
 
 	.title {
 		font-family: 'Montserrat Bold', sans-serif;
@@ -170,20 +170,6 @@
 
 			top: 80%;
 			left: 50%;
-		}
-	}
-
-	.delimiter-icon-wrapper {
-		margin: auto auto 20px auto;
-
-		svg {
-			path {
-				stroke-width: 1px;
-				stroke: #b79f71;
-			}
-
-			width: 130px;
-			height: 40px;
 		}
 	}
 }

@@ -1,0 +1,15 @@
+.delimiter-icon-wrapper {
+	position: absolute;
+	bottom: 15px;
+	left: calc(50% - 130px / 2);
+
+	svg {
+		path {
+			stroke-width: 1px;
+			stroke: #b79f71;
+		}
+
+		width: 130px;
+		height: 40px;
+	}
+}
