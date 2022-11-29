@@ -1,7 +1,7 @@
 import styles from './OptionsDropdown.module.scss'
 import { useClickOutside } from '../../../../../hooks/useClickOutside'
 import cn from 'classnames'
-import React, { FC, memo, useRef } from 'react'
+import React, { FC, memo, useEffect, useRef, useState } from 'react'
 import { ReactComponent as Dots } from '../../../../../assets/icons/dots.svg'
 import { Option } from '../../../../../types/Option'
 
@@ -30,6 +30,24 @@ const OptionsDropdown: FC<OptionsDropdownProps> = ({
 
 	useClickOutside(dropdownRef, triggerRef, () => setIsShown(false))
 
+	const [isMobile, setIsMobile] = useState(window.innerWidth < 1000)
+
+	useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 1000)
+    }
+
+		window.addEventListener('resize', () => {
+      checkMobile()
+		})
+
+		return () => {
+			window.removeEventListener('resize', () => {
+        checkMobile()
+			})
+		}
+	}, [])
+
 	return (
 		<div
 			onClick={toggleDropdown}
@@ -55,25 +73,30 @@ const OptionsDropdown: FC<OptionsDropdownProps> = ({
 			</div>
 
 			{/* For mobiles */}
-			<div
-				className={cn(styles['dropdown-adaptive'], {
-					[styles.active]: isShown
-				})}
-				ref={dropdownRef}
-			>
+
+			{isMobile && (
 				<div
-					className={cn(styles['menu-adaptive'], { [styles.active]: isShown })}
+					className={cn(styles['dropdown-adaptive'], {
+						[styles.active]: isShown
+					})}
+					ref={dropdownRef}
 				>
-					{options.map((option, index) => (
-						<React.Fragment key={option.title}>
-							<p onClick={option.onClick} className={styles['item-adaptive']}>
-								{option.title}
-							</p>
-							{index !== options.length - 1 && <MemoDots />}
-						</React.Fragment>
-					))}
+					<div
+						className={cn(styles['menu-adaptive'], {
+							[styles.active]: isShown
+						})}
+					>
+						{options.map((option, index) => (
+							<React.Fragment key={option.title}>
+								<p onClick={option.onClick} className={styles['item-adaptive']}>
+									{option.title}
+								</p>
+								{index !== options.length - 1 && <MemoDots />}
+							</React.Fragment>
+						))}
+					</div>
 				</div>
-			</div>
+			)}
 		</div>
 	)
 }
