@@ -1,0 +1,82 @@
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../styles/palettes/configuratorPallete';
+@import '../../../../../styles/utils/backgroundClip';
+
+.container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+
+	scroll-snap-align: start;
+
+	background-color: black;
+
+	padding: 30px 100px 0 100px;
+
+	.join {
+		font-family: 'Montserrat Bold', sans-serif;
+		color: $primary-font-color;
+
+		opacity: 0.2;
+
+		font-size: 1.5rem;
+	}
+
+	.title {
+		font-family: 'Montserrat Bold', sans-serif;
+		font-size: 2rem;
+
+		@include backgroundClip(linear-gradient(180deg, #b79f71 0%, #837252 100%));
+
+		text-align: center;
+		margin-top: 30px;
+	}
+
+	hr {
+		width: 74px;
+		height: 3px;
+		border: none;
+		background-color: #b79f71bc;
+
+		margin-top: 30px;
+	}
+
+	.options-block {
+		display: flex;
+		gap: 20px;
+
+		margin-top: 80px;
+
+		.option {
+			position: relative;
+			width: 420px;
+			height: 320px;
+
+			p {
+				position: absolute;
+				top: 50%;
+				left: 30px;
+
+				white-space: nowrap;
+
+				font-family: 'Montserrat', sans-serif;
+				color: $primary-font-color;
+				font-size: 1.5rem;
+			}
+
+			transition: 500ms;
+
+			&:hover {
+				cursor: pointer;
+				transform: translateY(10px);
+				scale: 1.025;
+
+				margin: 0 5px;
+			}
+		}
+	}
+}
