@@ -129,8 +129,16 @@
 
 @media (max-width: 768px) {
 	.container {
+    margin: 0 auto;
+    width: 250px;
+    height: 200px;
+
 		h5 {
 			font-size: 1.2rem;
 		}
+
+    .controls {
+      height: 95px;
+    }
 	}
 }
