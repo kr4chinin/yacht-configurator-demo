@@ -1,0 +1,60 @@
+@import '../../../../../styles/palettes/configuratorPallete';
+@import '../../../../../assets/fonts/Montserrat';
+
+.container {
+	width: 100%;
+	height: 100vh;
+	position: relative;
+
+	display: flex;
+	gap: 200px;
+
+	scroll-snap-align: start;
+
+	padding: 0 100px;
+
+	background-color: black;
+
+	.left-block {
+    margin-top: 170px;
+
+		.position {
+			display: flex;
+			gap: 15px;
+
+			margin-top: 50px;
+
+			.content {
+				display: flex;
+				flex-direction: column;
+
+				h4 {
+					font-family: 'Montserrat Bold', sans-serif;
+					font-size: 1.6rem;
+					color: $primary-font-color;
+
+          margin-bottom: 15px;
+				}
+
+				p {
+					font-family: 'Montserrat', sans-serif;
+					font-size: 1.2rem;
+					color: $primary-font-color;
+				}
+			}
+		}
+	}
+
+  .image {
+    position: absolute;
+
+    z-index: 2;
+
+    right: -100px;
+    top: -250px;
+
+    margin-top: 320px;
+    width: 850px;
+    height: 650px;
+  }
+}

@@ -41,7 +41,7 @@ const LoadableImage: FC<LoadableImageProps> = ({
 			className={cn(styles.container, {
 				[styles.containerLoaded]: isLoaded
 			})}
-			style={{ borderRadius }}
+			style={{ borderRadius, background: isLoaded ? 'transparent' : '' }}
 		>
 			{(inView || isLoaded) && (
 				<img
