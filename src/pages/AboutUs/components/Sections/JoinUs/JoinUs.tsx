@@ -12,21 +12,30 @@ const JoinUs = () => {
 				different opportunities
 			</h2>
 
-      <hr />
+			<hr />
 
 			<div className={styles['options-block']}>
 				<div className={styles.option}>
-					<LoadableImage src="../../../../../../images/AboutUsPage/detailed-control.png" />
+					<LoadableImage
+						src="../../../../../../images/AboutUsPage/detailed-control.png"
+						alt="Detailed control"
+					/>
 					<p>DETAILED CONTROL</p>
 				</div>
 
 				<div className={styles.option}>
-					<LoadableImage src="../../../../../../images/AboutUsPage/become-an-investor.png" />
+					<LoadableImage
+						src="../../../../../../images/AboutUsPage/become-an-investor.png"
+						alt="Become an investor"
+					/>
 					<p>BECOME AN INVESTOR</p>
 				</div>
 
 				<div className={styles.option}>
-					<LoadableImage src="../../../../../../images/AboutUsPage/good-benefit.png" />
+					<LoadableImage
+						src="../../../../../../images/AboutUsPage/good-benefit.png"
+						alt="Good benefit"
+					/>
 					<p>GOOD BENEFIT</p>
 				</div>
 			</div>

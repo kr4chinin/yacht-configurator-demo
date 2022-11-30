@@ -4,6 +4,9 @@
 .title {
 	font-size: 3.5rem;
 	line-height: 115%;
+  
+  height: fit-content;
+
 	font-family: 'Montserrat Bold', sans-serif;
 
 	@include backgroundClip(linear-gradient(180deg, #b79f71 0%, #837252 100%));

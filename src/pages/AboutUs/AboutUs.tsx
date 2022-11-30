@@ -8,10 +8,10 @@ import Idea from './components/Sections/Idea'
 const AboutUs = () => {
 	return (
 		<div className={styles.container}>
-			<Introduction />
-			<OurVision />
-			<OurMission />
-      <JoinUs />
+			{/* <Introduction /> */}
+			{/* <OurVision /> */}
+			{/* <OurMission /> */}
+      {/* <JoinUs /> */}
       <Idea />
 		</div>
 	)

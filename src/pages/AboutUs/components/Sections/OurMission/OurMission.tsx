@@ -33,7 +33,7 @@ const OurMission = () => {
 					<div className={styles['avatar-block']}>
 						<div className={styles.avatar}>
 							<LoadableImage
-								src="../../../../../../images/AboutUsPage/owner.svg"
+								src="../../../../../../images/AboutUsPage/owner-miniature.svg"
 								alt="Kingdom Marine founder"
 							/>
 						</div>
