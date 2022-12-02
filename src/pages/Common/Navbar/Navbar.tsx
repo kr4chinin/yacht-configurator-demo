@@ -34,9 +34,9 @@ const Navbar = () => {
 					<NavbarItem title="Yachts" />
 				</NavbarDropdown>
 
-				<NavbarLink to="/" title="News" />
-				<NavbarLink to="/" title="Events" />
-				<NavbarLink to="/" title="Contact" />
+				<NavbarLink to="/news" title="News" />
+				<NavbarLink to="/events" title="Events" />
+				<NavbarLink to="/contact" title="Contact" />
 			</div>
 
 			<LanguageSwitch />
