@@ -1,0 +1,68 @@
+@import '../../../styles/palettes/configuratorPallete';
+
+.trigger {
+  position: relative;
+	z-index: 2;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	transition: 500ms;
+
+	.dropdown {
+		position: absolute;
+		height: 150px;
+		top: 0;
+		left: 0;
+		display: flex;
+		justify-content: center;
+
+		// overflow: hidden;
+		pointer-events: none;
+
+		transform: translateY(30px);
+
+		.menu {
+      padding: 15px;
+			border-radius: 10px;
+
+			transform: translateX(-50%);
+			transition: 500ms ease-out;
+
+			color: $primary-font-color;
+
+			overflow-y: scroll;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+      opacity: 0;
+
+			-ms-overflow-style: none; /* IE and Edge */
+			scrollbar-width: none; /* Firefox */
+		}
+
+		.menu.active {
+			transform: translateY(0%);
+      opacity: 1;
+			pointer-events: all;
+		}
+
+		.item {
+			transition: 500ms;
+
+			&:hover {
+				cursor: pointer;
+				transform: translateY(1px);
+				filter: brightness(0.75);
+			}
+		}
+	}
+
+	.dropdown.active {
+		z-index: 1;
+		pointer-events: all;
+	}
+}

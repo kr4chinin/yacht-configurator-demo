@@ -3,16 +3,36 @@ import NavbarLink from '../NavbarLink'
 import NavbarLogo from '../NavbarLogo'
 import LanguageSwitch from '../LanguageSwitch'
 import { AppRoutes } from '../../../utils/AppRoutes'
+import NavbarDropdown from '../NavbarDropdown'
+import NavbarItem from '../NavbarItem'
+import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {
+	const navigate = useNavigate()
+
 	return (
 		<div className={styles.container}>
 			<NavbarLogo />
 
 			<div className={styles.links}>
 				<NavbarLink to={AppRoutes.ABOUT_US} title="About us" />
+
+				<NavbarDropdown
+					options={[
+						{
+							title: 'Flybridge',
+							onClick: () => navigate(AppRoutes.YACHTS_FLYBRIDGE)
+						},
+						{
+							title: 'Skydeck',
+							onClick: () => navigate(AppRoutes.YACHTS_SKYDECK)
+						}
+					]}
+				>
+					<NavbarItem title="Yachts" />
+				</NavbarDropdown>
+
 				<NavbarLink to="/" title="News" />
-				<NavbarLink to="/" title="Yachts" />
 				<NavbarLink to="/" title="Events" />
 				<NavbarLink to="/" title="Contact" />
 			</div>

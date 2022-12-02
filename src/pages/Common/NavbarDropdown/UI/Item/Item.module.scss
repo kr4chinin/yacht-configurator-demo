@@ -1,0 +1,19 @@
+@import '../../../../../assets/fonts/Inter';
+@import '../../../../../styles/palettes/configuratorPallete';
+
+.container {
+	font-size: 1.125rem;
+	font-family: 'Inter ExtraBold', sans-serif;
+	text-decoration: none;
+	text-transform: uppercase;
+
+	color: $primary-font-color;
+
+	transition: 300ms;
+
+	&:hover {
+    cursor: pointer;
+		filter: brightness(0.8);
+		transform: translateX(3px);
+	}
+}
