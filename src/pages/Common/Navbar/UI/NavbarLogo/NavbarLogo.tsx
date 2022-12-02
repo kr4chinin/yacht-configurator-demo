@@ -1,6 +1,6 @@
 import { memo } from 'react'
 import { Link } from 'react-router-dom'
-import { AppRoutes } from '../../../utils/AppRoutes'
+import { AppRoutes } from '../../../../../utils/AppRoutes'
 import styles from './NavbarLogo.module.scss'
 
 const NavbarLogo = () => {

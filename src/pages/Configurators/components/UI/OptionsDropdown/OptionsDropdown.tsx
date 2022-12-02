@@ -33,17 +33,17 @@ const OptionsDropdown: FC<OptionsDropdownProps> = ({
 	const [isMobile, setIsMobile] = useState(window.innerWidth < 1000)
 
 	useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 1000)
-    }
+		const checkMobile = () => {
+			setIsMobile(window.innerWidth < 1000)
+		}
 
 		window.addEventListener('resize', () => {
-      checkMobile()
+			checkMobile()
 		})
 
 		return () => {
 			window.removeEventListener('resize', () => {
-        checkMobile()
+				checkMobile()
 			})
 		}
 	}, [])

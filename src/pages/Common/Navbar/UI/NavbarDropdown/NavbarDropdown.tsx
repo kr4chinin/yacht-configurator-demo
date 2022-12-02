@@ -2,8 +2,8 @@ import { FC, useRef, useState } from 'react'
 import styles from './NavbarDropdown.module.scss'
 import cn from 'classnames'
 import List from './UI/List'
-import { Option } from '../../../types/Option'
-import { useClickOutside } from '../../../hooks/useClickOutside'
+import { Option } from '../../../../../types/Option'
+import { useClickOutside } from '../../../../../hooks/useClickOutside'
 
 interface NavbarDropdownProps {
 	children: React.ReactNode

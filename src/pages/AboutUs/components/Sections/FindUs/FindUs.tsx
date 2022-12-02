@@ -40,7 +40,7 @@ const FindUs = () => {
 				/>
 			</div>
 
-      <Footer />
+			<Footer />
 		</div>
 	)
 }

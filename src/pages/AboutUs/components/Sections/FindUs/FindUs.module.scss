@@ -16,7 +16,7 @@
 	background-color: black;
 
 	.left-block {
-    margin-top: 170px;
+		margin-top: 170px;
 
 		.position {
 			display: flex;
@@ -33,7 +33,7 @@
 					font-size: 1.6rem;
 					color: $primary-font-color;
 
-          margin-bottom: 15px;
+					margin-bottom: 15px;
 				}
 
 				p {
@@ -45,16 +45,16 @@
 		}
 	}
 
-  .image {
-    position: absolute;
+	.image {
+		position: absolute;
 
-    z-index: 2;
+		z-index: 2;
 
-    right: -100px;
-    top: -250px;
+		right: -100px;
+		top: -250px;
 
-    margin-top: 320px;
-    width: 850px;
-    height: 650px;
-  }
+		margin-top: 320px;
+		width: 850px;
+		height: 650px;
+	}
 }

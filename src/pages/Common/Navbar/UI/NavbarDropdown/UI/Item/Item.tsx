@@ -1,5 +1,5 @@
 import styles from './Item.module.scss'
-import { Option } from '../../../../../types/Option'
+import { Option } from '../../../../../../../types/Option'
 import { FC } from 'react'
 
 interface ItemProps {

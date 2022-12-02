@@ -1,5 +1,5 @@
-@import '../../../assets/fonts/Inter';
-@import '../../../styles/palettes/configuratorPallete';
+@import '../../../../../../../assets/fonts/Inter';
+@import '../../../../../../../styles/palettes/configuratorPallete';
 
 .container {
 	font-size: 1.125rem;
@@ -12,7 +12,8 @@
 	transition: 300ms;
 
 	&:hover {
+		cursor: pointer;
 		filter: brightness(0.8);
-		transform: translateY(-3px);
+		transform: translateX(3px);
 	}
 }

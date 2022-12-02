@@ -1,1 +1,1 @@
-export {default} from './Idea'
+export { default } from './Idea'

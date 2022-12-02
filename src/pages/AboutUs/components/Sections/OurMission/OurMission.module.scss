@@ -5,20 +5,20 @@
 .container {
 	width: 100%;
 	height: 100vh;
-  position: relative;
+	position: relative;
 
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 
 	scroll-snap-align: start;
 
-  padding: 200px 100px 0 100px;
+	padding: 200px 100px 0 100px;
 
 	background-color: black;
 
 	.column {
-    display: flex;
-    flex-direction: column;
+		display: flex;
+		flex-direction: column;
 
 		.quote-block {
 			position: relative;
@@ -124,22 +124,22 @@
 		}
 	}
 
-  .video-block {
-    margin-top: 35px;
+	.video-block {
+		margin-top: 35px;
 
-    width: 370px;
-    height: 330px;
+		width: 370px;
+		height: 330px;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-    background: #0B0B0B;
-    border-radius: 15px;
+		background: #0b0b0b;
+		border-radius: 15px;
 
-    svg {
-      width: 80px;
-      height: 80px;
-    }
-  }
+		svg {
+			width: 80px;
+			height: 80px;
+		}
+	}
 }

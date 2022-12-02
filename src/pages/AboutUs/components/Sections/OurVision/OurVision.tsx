@@ -55,7 +55,7 @@ const OurVision = () => {
 				</div>
 			</div>
 
-      <DelimiterIcon />
+			<DelimiterIcon />
 		</div>
 	)
 }

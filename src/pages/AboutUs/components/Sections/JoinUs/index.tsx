@@ -1,1 +1,1 @@
-export {default} from './JoinUs'
+export { default } from './JoinUs'

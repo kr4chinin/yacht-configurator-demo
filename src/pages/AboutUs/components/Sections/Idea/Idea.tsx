@@ -25,16 +25,16 @@ const Idea = () => {
 					over the years by our specialists will allow us to be at the forefront
 					of innovative shipbuilders, constantly introducing new and bold
 					designs. With each new generation of Kingdom Marine yachts, we will
-					push the boundaries even further. 
-          <br /> 
-          <br/>
-          Our ambitious plans for continuous
-					growth would require a fairly large production facility. For the
-					development and manufacture of models of Kingdom Marine was converted
-					hangar area of more than 1500 m2 near the town of Istra, which has a
-					convenient location and the ability to transport yachts on specially
-					equipped trailers to any body of water in Moscow, St. Petersburg, as
-					well as other cities in Russia within 1000 km.
+					push the boundaries even further.
+					<br />
+					<br />
+					Our ambitious plans for continuous growth would require a fairly large
+					production facility. For the development and manufacture of models of
+					Kingdom Marine was converted hangar area of more than 1500 m2 near the
+					town of Istra, which has a convenient location and the ability to
+					transport yachts on specially equipped trailers to any body of water
+					in Moscow, St. Petersburg, as well as other cities in Russia within
+					1000 km.
 				</p>
 			</div>
 			<DelimiterIcon />

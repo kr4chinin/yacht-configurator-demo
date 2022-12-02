@@ -12,8 +12,7 @@
 	transition: 300ms;
 
 	&:hover {
-    cursor: pointer;
 		filter: brightness(0.8);
-		transform: translateX(3px);
+		transform: translateY(-3px);
 	}
 }

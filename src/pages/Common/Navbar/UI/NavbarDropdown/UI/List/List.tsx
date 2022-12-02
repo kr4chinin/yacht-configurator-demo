@@ -1,5 +1,5 @@
 import { FC } from 'react'
-import { Option } from '../../../../../types/Option'
+import { Option } from '../../../../../../../types/Option'
 import Item from '../Item'
 import styles from './List.module.scss'
 

@@ -1,1 +1,1 @@
-export {default} from './FindUs'
+export { default } from './FindUs'

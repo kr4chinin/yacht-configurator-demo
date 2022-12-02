@@ -7,7 +7,7 @@
 	position: relative;
 
 	display: flex;
-  gap: 200px;
+	gap: 200px;
 
 	scroll-snap-align: start;
 
@@ -15,56 +15,56 @@
 
 	background-color: black;
 
-  .photo-block {
-    position: relative;
+	.photo-block {
+		position: relative;
 
-    margin-top: 100px;
-    margin-left: 50px;
+		margin-top: 100px;
+		margin-left: 50px;
 
-    height: 600px;
-    width: 450px;
+		height: 600px;
+		width: 450px;
 
-    .image {
-      height: 520px;
-      width: 420px;
+		.image {
+			height: 520px;
+			width: 420px;
 
-      position: absolute;
-      z-index: 1;
+			position: absolute;
+			z-index: 1;
 
-      border-radius: 5px;
-      overflow: hidden;
-    }
+			border-radius: 5px;
+			overflow: hidden;
+		}
 
-    .frame {
-      height: 520px;
-      width: 420px;
+		.frame {
+			height: 520px;
+			width: 420px;
 
-      position: absolute;
-      top: 0;
-      left: 0;
+			position: absolute;
+			top: 0;
+			left: 0;
 
-      transform: rotate(-10deg);
+			transform: rotate(-10deg);
 
-      background: transparent;
-      border-radius: 20px;
-      border: 2px solid white;
-    }
-  }
+			background: transparent;
+			border-radius: 20px;
+			border: 2px solid white;
+		}
+	}
 
-  .right-block {
-    margin-top: 100px;
+	.right-block {
+		margin-top: 100px;
 
-    .content {
-      margin-top: 20px;
+		.content {
+			margin-top: 20px;
 
-      width: 500px;
+			width: 500px;
 
-      font-family: 'Montserrat Light', sans-serif;
-      font-size: 1.1rem;
-      line-height: 150%;
+			font-family: 'Montserrat Light', sans-serif;
+			font-size: 1.1rem;
+			line-height: 150%;
 
-      color: $primary-font-color;
-      opacity: 0.8;
-    }
-  }
+			color: $primary-font-color;
+			opacity: 0.8;
+		}
+	}
 }

@@ -1,10 +1,10 @@
 import styles from './Navbar.module.scss'
-import NavbarLink from '../NavbarLink'
-import NavbarLogo from '../NavbarLogo'
+import NavbarLink from './UI/NavbarLink'
+import NavbarLogo from './UI/NavbarLogo'
 import LanguageSwitch from '../LanguageSwitch'
 import { AppRoutes } from '../../../utils/AppRoutes'
-import NavbarDropdown from '../NavbarDropdown'
-import NavbarItem from '../NavbarItem'
+import NavbarDropdown from './UI/NavbarDropdown'
+import NavbarItem from './UI/NavbarItem'
 import { useNavigate } from 'react-router-dom'
 
 const Navbar = () => {

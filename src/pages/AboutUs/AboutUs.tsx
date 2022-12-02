@@ -12,9 +12,9 @@ const AboutUs = () => {
 			<Introduction />
 			<OurVision />
 			<OurMission />
-      <JoinUs />
-      <Idea />
-      <FindUs />
+			<JoinUs />
+			<Idea />
+			<FindUs />
 		</div>
 	)
 }

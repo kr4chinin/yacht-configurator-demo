@@ -3,7 +3,7 @@ import PrimaryTitle from '../../UI/PrimaryTitle'
 import styles from './OurMission.module.scss'
 import { ReactComponent as QuoteIcon } from '../../../../../assets/icons/quotes.svg'
 import { ReactComponent as HorizontalArrowIcon } from '../../../../../assets/icons/small-horizontal-arrow.svg'
-import {ReactComponent as VideoPlayIcon} from '../../../../../assets/icons/video-play.svg'
+import { ReactComponent as VideoPlayIcon } from '../../../../../assets/icons/video-play.svg'
 import cn from 'classnames'
 import DelimiterIcon from '../../UI/DelimiterIcon'
 
@@ -56,12 +56,12 @@ const OurMission = () => {
 					Profile
 				</PrimaryTitle>
 
-        <div className={styles['video-block']}>
-          <VideoPlayIcon />
-        </div>
+				<div className={styles['video-block']}>
+					<VideoPlayIcon />
+				</div>
 			</div>
 
-      <DelimiterIcon />
+			<DelimiterIcon />
 		</div>
 	)
 }

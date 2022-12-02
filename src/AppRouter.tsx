@@ -17,7 +17,7 @@ const AppRouter = () => {
 	return (
 		<Routes>
 			<Route path={AppRoutes.MAIN} element={<Main />} />
-      <Route path={AppRoutes.ABOUT_US} element={<AboutUs />} />
+			<Route path={AppRoutes.ABOUT_US} element={<AboutUs />} />
 			<Route
 				path={AppRoutes.FLYBRIDGE_CONFIGURATOR}
 				element={
