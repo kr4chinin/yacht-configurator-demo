@@ -1,6 +1,7 @@
 import { FC } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import styles from './NavbarLink.module.scss'
+import cn from 'classnames'
 
 interface NavbarLinkProps {
 	to: string
@@ -8,8 +9,17 @@ interface NavbarLinkProps {
 }
 
 const NavbarLink: FC<NavbarLinkProps> = ({ to, title }) => {
+	const location = useLocation()
+
+  console.log(location.pathname === to)
+
 	return (
-		<Link className={styles.container} to={to}>
+		<Link
+			className={cn(styles.container, {
+				[styles.active]: location.pathname === to
+			})}
+			to={to}
+		>
 			{title}
 		</Link>
 	)

@@ -16,4 +16,8 @@
 		filter: brightness(0.8);
 		transform: translateX(3px);
 	}
+
+  &.active {
+    filter: brightness(0.5);
+  }
 }

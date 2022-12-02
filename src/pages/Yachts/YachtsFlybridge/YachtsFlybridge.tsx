@@ -1,7 +1,6 @@
-import Introduction from '../components/Common/Sections/Introduction'
-import Navbar from '../../Common/Navbar'
-import styles from './YachtsFlybridge.module.scss'
 import { AppRoutes } from '../../../utils/AppRoutes'
+import Introduction from '../components/Common/Sections/Introduction'
+import styles from './YachtsFlybridge.module.scss'
 
 const YachtsFlybridge = () => {
 	return (

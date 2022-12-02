@@ -21,11 +21,13 @@ const Navbar = () => {
 					options={[
 						{
 							title: 'Flybridge',
-							onClick: () => navigate(AppRoutes.YACHTS_FLYBRIDGE)
+							onClick: () => navigate(AppRoutes.YACHTS_FLYBRIDGE),
+              payload: AppRoutes.YACHTS_FLYBRIDGE
 						},
 						{
 							title: 'Skydeck',
-							onClick: () => navigate(AppRoutes.YACHTS_SKYDECK)
+							onClick: () => navigate(AppRoutes.YACHTS_SKYDECK),
+              payload: AppRoutes.YACHTS_SKYDECK
 						}
 					]}
 				>
