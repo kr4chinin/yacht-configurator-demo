@@ -51,7 +51,7 @@ const Models = () => {
 							title="Flybirdge"
 							description="The flybridge is currently considered to be the smallest of the small boats manufactured by KINGDOM MARINE. This model offers an innovative beach mode."
 							linkToConfigurator={AppRoutes.FLYBRIDGE_CONFIGURATOR}
-							linkToReadMore="/"
+							linkToReadMore={AppRoutes.YACHTS_FLYBRIDGE}
 							img="../../../../../../images/MainPage/flybridge.png"
 						/>
 					)}
@@ -60,8 +60,7 @@ const Models = () => {
 						<ModelItem
 							title="Skydeck"
 							description="Skydeck is the second largest small boat manufactured by KINGDOM MARINE. This model has an innovative upper deck design"
-							linkToConfigurator={AppRoutes.SKYDECK_CONFIGURATOR}
-							linkToReadMore="/"
+							linkToReadMore={AppRoutes.YACHTS_SKYDECK}
 							img="../../../../../../images/MainPage/skydeck.png"
 						/>
 					)}

@@ -4,13 +4,14 @@ import LoadableImage from '../../../../../components/LoadableImage/LoadableImage
 import styles from './ModelItem.module.scss'
 import { ReactComponent as PlusIcon } from '../../../../../assets/icons/plus.svg'
 import { ReactComponent as ReadMoreIcon } from '../../../../../assets/icons/read-more.svg'
+import cn from 'classnames'
 
 interface ModelItemProps {
 	title: string
 	description: string
 	img: string
 	linkToReadMore: string
-	linkToConfigurator: string
+	linkToConfigurator?: string
 }
 
 const ModelItem: FC<ModelItemProps> = ({
@@ -33,21 +34,31 @@ const ModelItem: FC<ModelItemProps> = ({
 
 			<div className={styles['link-block']}>
 				<div className={styles['link-wrapper']}>
-					<Link to={linkToConfigurator} className={styles['configurator-link']}>
-						<PlusIcon />
-					</Link>
-					<Link className={styles['link-label']} to={linkToConfigurator}>
+					{linkToConfigurator ? (
+						<Link
+							to={linkToConfigurator}
+							className={styles['configurator-link']}
+						>
+							<PlusIcon />
+						</Link>
+					) : (
+						<div className={cn(styles['configurator-link'], styles.disabled)}>
+							<PlusIcon />
+						</div>
+					)}
+
+					<p className={styles['link-label']}>
 						Configurator
-					</Link>
+					</p>
 				</div>
 
 				<div className={styles['link-wrapper']}>
-					<Link to="/" className={styles['read-more-link']}>
+					<Link to={linkToReadMore} className={styles['read-more-link']}>
 						<ReadMoreIcon />
 					</Link>
-					<Link className={styles['link-label']} to="/">
+					<p className={styles['link-label']}>
 						Read more
-					</Link>
+					</p>
 				</div>
 			</div>
 		</div>

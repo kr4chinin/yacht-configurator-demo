@@ -60,6 +60,16 @@
 					transform: rotate(180deg);
 					scale: 1.05;
 				}
+
+        &.disabled {
+          cursor: not-allowed;
+          opacity: 0.5;
+
+          &:hover {
+            transform: none;
+            scale: 1;
+          }
+        }
 			}
 
 			.read-more-link {
@@ -82,20 +92,10 @@
 			}
 
 			.link-label {
-				display: block;
-
 				font-family: 'Montserrat Light', sans-serif;
 				font-size: 0.9rem;
 				color: rgba(255, 255, 255, 0.8);
 				margin-top: 15px;
-				text-decoration: none;
-
-				transition: 300ms;
-
-				&:hover {
-					cursor: pointer;
-					color: rgba(183, 183, 183, 0.8);
-				}
 			}
 		}
 

@@ -5,6 +5,8 @@ import Main from './pages/Main'
 import { AppRoutes } from './utils/AppRoutes'
 import FlybridgeSummary from './pages/Summary/FlybridgeSummary'
 import AboutUs from './pages/AboutUs'
+import YachtsFlybridge from './pages/Yachts/YachtsFlybridge'
+import YachtsSkydeck from './pages/Yachts/YachtsSkydeck'
 
 const LazyFlybridgeConfigurator = lazy(
 	() => import('./pages/Configurators/FlybridgeConfigurator')
@@ -38,6 +40,14 @@ const AppRouter = () => {
 				path={AppRoutes.FLYBRIDGE_SUMMARY}
 				element={<FlybridgeSummary />}
 			/>
+      <Route
+        path={AppRoutes.YACHTS_FLYBRIDGE}
+        element={<YachtsFlybridge />}
+      />
+      <Route
+        path={AppRoutes.YACHTS_SKYDECK}
+        element={<YachtsSkydeck />}
+      />
 		</Routes>
 	)
 }

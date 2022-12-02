@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
 import styles from './ImageCarousel.module.scss'
 import cn from 'classnames'
-import ArrowDown from '../../UI/ArrowDown'
+import ArrowDown from '../../../../Common/ArrowDown'
 import Navbar from '../../../../Common/Navbar'
 
 const images = [

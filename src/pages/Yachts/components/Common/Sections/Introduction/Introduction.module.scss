@@ -1,0 +1,98 @@
+@import '../../../../../../styles/utils/backgroundClip';
+@import '../../../../../../styles/palettes/configuratorPallete';
+@import '../../../../../../assets/fonts/Montserrat';
+
+.container {
+	width: 100%;
+	height: 100vh;
+
+	position: relative;
+
+	display: flex;
+	flex-direction: column;
+
+	scroll-snap-align: start;
+
+	padding-left: 200px;
+
+	.title {
+		display: flex;
+		flex-direction: column;
+		width: fit-content;
+
+		margin-top: 300px;
+
+		font-family: 'Montserrat Bold', sans-serif;
+
+		h1 {
+			@include backgroundClip(
+				linear-gradient(180deg, #b79f71 0%, #837252 100%)
+			);
+			font-size: 3.75rem;
+
+			line-height: 110%;
+		}
+
+		span {
+			align-self: flex-end;
+			margin-right: 50px;
+
+			@include backgroundClip(
+				linear-gradient(180deg, #b79f71 0%, #837252 100%)
+			);
+			opacity: 0.5;
+			font-size: 1.25rem;
+		}
+	}
+
+	.annotation {
+		margin-top: 20px;
+
+		font-family: 'Montserrat Light', sans-serif;
+		color: $primary-font-color;
+
+		font-size: 1.35rem;
+		letter-spacing: 0.05em;
+	}
+
+	.configurator-link {
+		margin-top: 40px;
+
+		font-family: 'Montserrat', sans-serif;
+		color: #b79f71;
+		text-decoration: none;
+		font-size: 1.5rem;
+
+		padding: 0.75em 3em;
+
+		width: fit-content;
+
+		background: linear-gradient(
+			155.98deg,
+			#0b0b0b 36.17%,
+			rgba(11, 11, 11, 0) 109.74%
+		);
+		box-shadow: inset 10px 10px 20px rgba(0, 0, 0, 0.8);
+		filter: drop-shadow(5px 4px 10px rgba(255, 255, 255, 0.03));
+		border-radius: 50px;
+
+		transition: 300ms;
+
+		&:hover {
+			background-color: #0b0b0b;
+		}
+	}
+
+	.development {
+    margin-top: 40px;
+		font-size: 1.75rem;
+
+		font-family: 'Montserrat', sans-serif;
+		color: $primary-font-color;
+		opacity: 0.5;
+
+    span {
+      margin-left: 35px;
+    }
+	}
+}
