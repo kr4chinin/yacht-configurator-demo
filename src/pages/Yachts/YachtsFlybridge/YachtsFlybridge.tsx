@@ -9,7 +9,7 @@ import styles from './YachtsFlybridge.module.scss'
 const YachtsFlybridge = () => {
 	return (
 		<div className={styles.container}>
-			{/* <Introduction
+			<Introduction
 				src="../../../../../images/YachtsPage/YachtsFlybridgePage/introduction.png"
 				alt="Introduction"
 				annotation="12.50m/41' | 3,95м/13' | 0,80м/3'"
@@ -38,7 +38,7 @@ const YachtsFlybridge = () => {
 				secondarySrc="../../../../../images/YachtsPage/YachtsFlybridgePage/exterior-3.png"
 				secondaryAlt="Exterior another variant"
 				description="The aft cockpit provides a functional and well-planned space, and the sofa and table turn into a sundeck. The forward cockpit is a lounge area with a large sun mattress."
-			/> */}
+			/>
 			<Engines
 				bgSrc="../../../../../images/YachtsPage/YachtsFlybridgePage/engine.png"
 				bgAlt="Engines"
