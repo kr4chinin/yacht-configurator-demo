@@ -1,5 +1,4 @@
-import { useEffect } from 'react'
-import { useActionData } from 'react-router-dom'
+import { useScrollToTop } from '../../../hooks/useScrollToTop'
 import { AppRoutes } from '../../../utils/AppRoutes'
 import Description from '../components/Common/Sections/Description'
 import Engines from '../components/Common/Sections/Engines'
@@ -9,6 +8,8 @@ import Introduction from '../components/Common/Sections/Introduction'
 import styles from './YachtsFlybridge.module.scss'
 
 const YachtsFlybridge = () => {
+	useScrollToTop()
+
 	return (
 		<div className={styles.container}>
 			<Introduction

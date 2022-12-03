@@ -4,8 +4,11 @@ import Description from '../components/Common/Sections/Description'
 import Interiors from '../components/Common/Sections/Interiors'
 import Exteriors from '../components/Common/Sections/Exteriors'
 import Engines from '../components/Common/Sections/Engines'
+import { useScrollToTop } from '../../../hooks/useScrollToTop'
 
 const YachtsSkydeck = () => {
+  useScrollToTop()
+
 	return (
 		<div className={styles.container}>
 			<Introduction
