@@ -3,6 +3,7 @@ import styles from './YachtsSkydeck.module.scss'
 import Description from '../components/Common/Sections/Description'
 import Interiors from '../components/Common/Sections/Interiors'
 import Exteriors from '../components/Common/Sections/Exteriors'
+import Engines from '../components/Common/Sections/Engines'
 
 const YachtsSkydeck = () => {
 	return (
@@ -41,6 +42,18 @@ const YachtsSkydeck = () => {
 				description="The forward seating area with convertible seating can be quickly turned into real
         sun deck. There is a choice of optional padded awning for extra protection. With two different garage options and powerful hydraulic bath platform, you can choose between
         a variety of attractive water features."
+			/>
+			<Engines
+				bgSrc="../../../../../images/YachtsPage/YachtsSkydeckPage/engine.png"
+				bgAlt="Engine"
+				description="This model is powered by a column of two Volvo
+        Penta D11-670 engines, which have 1,340 horsepower."
+				engineInfo={{
+					title: 'column 2 x',
+					builder: 'Volvo',
+					model: 'Penta D11-670',
+					amount: 1
+				}}
 			/>
 		</div>
 	)
