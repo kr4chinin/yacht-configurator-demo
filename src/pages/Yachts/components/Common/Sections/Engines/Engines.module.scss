@@ -11,8 +11,19 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-    gap: 100px;
+		gap: 100px;
 
-    padding-top: 80px;
+		padding-top: 80px;
+	}
+}
+
+@media (max-width: 1000px) {
+	.container {
+		padding-top: 110px;
+
+		.content {
+			padding: 0 15px;
+      gap: 50px;
+		}
 	}
 }

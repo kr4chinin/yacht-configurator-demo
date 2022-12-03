@@ -39,18 +39,43 @@
 			}
 
 			.primary-image-wrapper {
-        position: relative;
+				position: relative;
 
-        width: 400px;
+				width: 400px;
 				height: 200px;
 			}
 
 			.secondary-image-wrapper {
-        position: relative;
+				position: relative;
 
-        width: 400px;
+				width: 400px;
 				height: 230px;
 				margin-left: 150px;
+			}
+		}
+	}
+}
+
+@media (max-width: 1000px) {
+	.container {
+		.content {
+			flex-direction: column;
+
+			padding-top: 80px;
+			padding: 0 15px;
+
+			.images {
+				gap: 5%;
+
+				.primary-image-wrapper {
+					width: calc(100% - 30px);
+          margin: auto;
+					height: auto;
+				}
+
+				.secondary-image-wrapper {
+					display: none;
+				}
 			}
 		}
 	}

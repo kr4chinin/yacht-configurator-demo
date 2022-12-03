@@ -4,6 +4,7 @@ import cn from 'classnames'
 import React, { FC, memo, useEffect, useRef, useState } from 'react'
 import { ReactComponent as Dots } from '../../../../../assets/icons/dots.svg'
 import { Option } from '../../../../../types/Option'
+import { useIsLessThanWindowWidth } from '../../../../../hooks/useIsMobile'
 
 // Memoising svg component to prevent unnecessary rerendering
 const MemoDots = memo(Dots)
@@ -30,23 +31,7 @@ const OptionsDropdown: FC<OptionsDropdownProps> = ({
 
 	useClickOutside(dropdownRef, triggerRef, () => setIsShown(false))
 
-	const [isMobile, setIsMobile] = useState(window.innerWidth < 1000)
-
-	useEffect(() => {
-		const checkMobile = () => {
-			setIsMobile(window.innerWidth < 1000)
-		}
-
-		window.addEventListener('resize', () => {
-			checkMobile()
-		})
-
-		return () => {
-			window.removeEventListener('resize', () => {
-				checkMobile()
-			})
-		}
-	}, [])
+	const isMobile = useIsLessThanWindowWidth(1000)
 
 	return (
 		<div

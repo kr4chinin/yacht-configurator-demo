@@ -1,4 +1,5 @@
 import { FC } from 'react'
+import { useIsLessThanWindowWidth } from '../../../../../../hooks/useIsMobile'
 import FullscreenImageWrapper from '../../../../../Common/FullscreenImageWrapper'
 import Footer from '../../../../../Main/components/Sections/Footer'
 import SecondaryHeader from '../../UI/SecondaryHeader'
@@ -25,8 +26,14 @@ const Engines: FC<EnginesProps> = ({
 	description,
 	engineInfo
 }) => {
+	const isMobile = useIsLessThanWindowWidth(1000)
+
 	const generateEngines = (engineInfo: EngineInfo) => {
 		const engines: EngineInfo[] = []
+
+		if (isMobile) {
+			return [engineInfo]
+		}
 
 		for (let i = 0; i < engineInfo.amount; i++) {
 			engines.push(engineInfo)
@@ -46,7 +53,7 @@ const Engines: FC<EnginesProps> = ({
 				/>
 
 				<EnginesList engines={generateEngines(engineInfo)} />
-        <Footer />
+				<Footer />
 			</div>
 		</div>
 	)

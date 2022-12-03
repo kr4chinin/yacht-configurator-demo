@@ -40,3 +40,19 @@
 		}
 	}
 }
+
+@media (max-width: 1000px) {
+  .container {
+    .content {
+      padding-top: 80px;
+      padding: 0 15px;
+      flex-direction: column;
+      gap: 5%;
+
+      .image-wrapper {
+        width: 200px;
+        height: 300px;
+      }
+    }
+  }
+}

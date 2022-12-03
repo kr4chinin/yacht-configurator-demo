@@ -96,3 +96,43 @@
     }
 	}
 }
+
+@media (max-width: 1000px) {
+  .container {
+    padding-left: 0px;
+    padding-top: 40%;
+    align-items: center;
+
+    .title {
+      margin-top: 100px;
+
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      span {
+        margin-right: 0px;
+      }
+    }
+
+    .annotation {
+      margin-top: 10px;
+      font-size: 1.15rem;
+    }
+
+    .configurator-link {
+      margin-top: 20px;
+      font-size: 1.25rem;
+    }
+
+    .development {
+      margin-top: 20px;
+      font-size: 1.25rem;
+
+  
+      span {
+        margin-left: 15px;
+      }
+    }
+  }
+}

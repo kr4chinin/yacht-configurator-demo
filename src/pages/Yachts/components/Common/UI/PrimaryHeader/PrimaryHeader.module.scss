@@ -46,3 +46,25 @@
     width: 600px;
   }
 }
+
+@media (max-width: 1000px) {
+  .container {
+
+    h1 {
+      font-size: 2.5rem;
+    }
+  
+    span {
+      font-size: 6rem;
+    }
+  
+    hr {
+      width: 100px;
+    }
+  
+    .annotation {
+      width: 100%;
+      font-size: 1.15rem;
+    }
+  }
+}
