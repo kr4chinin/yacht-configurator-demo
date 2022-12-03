@@ -9,11 +9,11 @@ import FindUs from './components/Sections/FindUs'
 const AboutUs = () => {
 	return (
 		<div className={styles.container}>
-			{/* <Introduction />
+			<Introduction />
 			<OurVision />
 			<OurMission />
 			<JoinUs />
-			<Idea /> */}
+			<Idea />
 			<FindUs />
 		</div>
 	)
