@@ -2,6 +2,7 @@ import Introduction from '../components/Common/Sections/Introduction'
 import styles from './YachtsSkydeck.module.scss'
 import Description from '../components/Common/Sections/Description'
 import Interiors from '../components/Common/Sections/Interiors'
+import Exteriors from '../components/Common/Sections/Exteriors'
 
 const YachtsSkydeck = () => {
 	return (
@@ -29,6 +30,17 @@ const YachtsSkydeck = () => {
         the middle of the ship and features a double bed,large walk-in closet and private bathroom.
         A forward VIP stateroom can be offered for guests, where they will find a spectacular night
         view thanks to a series of skylights."
+			/>
+			<Exteriors
+				bgSrc="../../../../../images/YachtsPage/YachtsSkydeckPage/exterior-1.png"
+				bgAlt="Exterior"
+				primarySrc="../../../../../images/YachtsPage/YachtsSkydeckPage/exterior-2.png"
+				primaryAlt="Exterior variation"
+				secondarySrc="../../../../../images/YachtsPage/YachtsSkydeckPage/exterior-3.png"
+				secondaryAlt="Exterior another variation"
+				description="The forward seating area with convertible seating can be quickly turned into real
+        sun deck. There is a choice of optional padded awning for extra protection. With two different garage options and powerful hydraulic bath platform, you can choose between
+        a variety of attractive water features."
 			/>
 		</div>
 	)

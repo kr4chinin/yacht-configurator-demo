@@ -1,5 +1,6 @@
 import { AppRoutes } from '../../../utils/AppRoutes'
 import Description from '../components/Common/Sections/Description'
+import Exteriors from '../components/Common/Sections/Exteriors'
 import Interiors from '../components/Common/Sections/Interiors'
 import Introduction from '../components/Common/Sections/Introduction'
 import styles from './YachtsFlybridge.module.scss'
@@ -27,6 +28,15 @@ const YachtsFlybridge = () => {
 				bgAlt="Interior"
 				landscapeAlt="Interior variation"
 				description="The interior is presented in several possible modern options, with additional options available on request, as well as in our web configurator. Below deck, guests will find two spacious and full-sized staterooms. The master stateroom is located aft. Two separate rooms provide additional comfort for guests."
+			/>
+			<Exteriors
+				bgSrc="../../../../../images/YachtsPage/YachtsFlybridgePage/exterior-1.png"
+				bgAlt="Exterior"
+				primarySrc="../../../../../images/YachtsPage/YachtsFlybridgePage/exterior-2.png"
+				primaryAlt="Exterior variant"
+				secondarySrc="../../../../../images/YachtsPage/YachtsFlybridgePage/exterior-3.png"
+				secondaryAlt="Exterior another variant"
+				description="The aft cockpit provides a functional and well-planned space, and the sofa and table turn into a sundeck. The forward cockpit is a lounge area with a large sun mattress."
 			/>
 		</div>
 	)
