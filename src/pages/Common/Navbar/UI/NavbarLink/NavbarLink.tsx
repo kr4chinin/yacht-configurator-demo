@@ -10,9 +10,7 @@ interface NavbarLinkProps {
 
 const NavbarLink: FC<NavbarLinkProps> = ({ to, title }) => {
 	const location = useLocation()
-
-  console.log(location.pathname === to)
-
+  
 	return (
 		<Link
 			className={cn(styles.container, {
