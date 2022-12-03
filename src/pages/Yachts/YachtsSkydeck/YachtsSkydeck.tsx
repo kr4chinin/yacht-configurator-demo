@@ -19,7 +19,17 @@ const YachtsSkydeck = () => {
 				smallAlt="Anfas 16.20 Skydeck"
 				description="The forward seating area with convertible seating can be quickly turned into real sun deck. There is a choice of optional padded awning for extra protection. With two different garage options and powerful hydraulic bath platform, you can choose between a variety of attractive water features."
 			/>
-			<Interiors />
+			<Interiors
+				bgSrc="../../../../../images/YachtsPage/YachtsSkydeckPage/interior-1.png"
+				landscapeSrc="../../../../../images/YachtsPage/YachtsSkydeckPage/interior-2.png"
+				bgAlt="Interior"
+				landscapeAlt="Interior variation"
+				description="Below deck, guests will find three full-size staterooms and two
+        bathrooms, for a total of six sleeping accommodations. The master stateroom is located in
+        the middle of the ship and features a double bed,large walk-in closet and private bathroom.
+        A forward VIP stateroom can be offered for guests, where they will find a spectacular night
+        view thanks to a series of skylights."
+			/>
 		</div>
 	)
 }

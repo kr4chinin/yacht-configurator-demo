@@ -21,7 +21,13 @@ const YachtsFlybridge = () => {
 				smallAlt="Anfas 12.50 Flybridge"
 				description="The aft cockpit provides a functional and well-planned space, and the sofa and table turn into a sundeck. The forward cockpit is a lounge area with a large sun mattress."
 			/>
-			<Interiors />
+			<Interiors
+				bgSrc="../../../../../images/YachtsPage/YachtsFlybridgePage/interior-1.png"
+				landscapeSrc="../../../../../images/YachtsPage/YachtsFlybridgePage/interior-2.png"
+				bgAlt="Interior"
+				landscapeAlt="Interior variation"
+				description="The interior is presented in several possible modern options, with additional options available on request, as well as in our web configurator. Below deck, guests will find two spacious and full-sized staterooms. The master stateroom is located aft. Two separate rooms provide additional comfort for guests."
+			/>
 		</div>
 	)
 }
