@@ -1,0 +1,20 @@
+@import '../../UI/Input/Input.module.scss';
+
+.container {
+	width: 410px;
+	min-height: 210px;
+	@include baseInputStyles;
+
+	resize: vertical;
+}
+
+::-webkit-resizer {
+	border-width: 4px;
+	border-style: solid;
+	border-color: transparent #b79f71e7 #b79f71a0 transparent;
+}
+
+::placeholder {
+	color: #b79f71;
+	opacity: 0.3;
+}
