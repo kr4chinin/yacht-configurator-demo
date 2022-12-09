@@ -1,43 +1,35 @@
 import { observer, useLocalObservable } from 'mobx-react-lite'
+import { InputModel } from '../../../../../models/InputModel'
 import Input from '../../UI/Input'
 import SectionHeader from '../../UI/SectionHeader'
 import Textarea from '../../UI/Textarea'
 import styles from './Form.module.scss'
-import { toJS } from 'mobx'
-
-interface Form {
-	firstName: string
-	lastName: string
-	city: string
-	address: string
-	phone: string
-	email: string
-	comment: string
-}
-
-const initialForm: Form = {
-	firstName: '',
-	lastName: '',
-	city: '',
-	address: '',
-	phone: '',
-	email: '',
-	comment: ''
-}
 
 const Form = () => {
+	const initialForm = {
+		firstName: InputModel.create('').required(),
+		lastName: InputModel.create(''),
+		city: InputModel.create(''),
+		address: InputModel.create(''),
+		phone: InputModel.create('').required(),
+		email: InputModel.create('').required(),
+		comment: InputModel.create('')
+	}
+
 	const form = useLocalObservable(() => initialForm)
 
 	const onSubmit = (e: React.FormEvent<HTMLButtonElement>) => {
-    e.preventDefault()
-    
-		for (const key in form) {
-			if (form[key as keyof Form] === '') {
-				return
-			}
-		}
+		e.preventDefault()
 
-		console.log('Submitted form', toJS(form))
+		let isFormValid = true
+
+		Object.keys(form).forEach(key => {
+			if (form[key as keyof typeof form].validate()) {
+				isFormValid = false
+			}
+		})
+
+		if (!isFormValid) return
 
 		Object.assign(form, initialForm)
 	}
@@ -46,55 +38,13 @@ const Form = () => {
 		<div className={styles.container}>
 			<SectionHeader>Submit an application</SectionHeader>
 			<form className={styles.form}>
-				<Input
-					placeholder="Your name:"
-					value={form.firstName}
-					setValue={value => {
-						form.firstName = value
-					}}
-				/>
-				<Input
-					placeholder="Your last name:"
-					value={form.lastName}
-					setValue={value => {
-						form.lastName = value
-					}}
-				/>
-				<Input
-					placeholder="Your city/region:"
-					value={form.city}
-					setValue={value => {
-						form.city = value
-					}}
-				/>
-				<Input
-					placeholder="Address:"
-					value={form.address}
-					setValue={value => {
-						form.address = value
-					}}
-				/>
-				<Input
-					placeholder="+7 (---) --- -- --"
-					value={form.phone}
-					setValue={value => {
-						form.phone = value
-					}}
-				/>
-				<Input
-					placeholder="Email:"
-					value={form.email}
-					setValue={value => {
-						form.email = value
-					}}
-				/>
-				<Textarea
-					placeholder="Comment:"
-					value={form.comment}
-					setValue={value => {
-						form.comment = value
-					}}
-				/>
+				<Input placeholder="Your name:" model={form.firstName} />
+				<Input placeholder="Your last name:" model={form.lastName} />
+				<Input placeholder="Your city/region:" model={form.city} />
+				<Input placeholder="Address:" model={form.address} />
+				<Input placeholder="+7 (---) --- -- --" model={form.phone} />
+				<Input placeholder="Email:" model={form.email} />
+				<Textarea placeholder="Comment:" model={form.comment} />
 
 				<button
 					type="submit"

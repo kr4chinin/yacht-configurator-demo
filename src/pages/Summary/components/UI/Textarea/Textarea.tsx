@@ -1,23 +1,23 @@
 import { FC } from 'react'
 import styles from './Textarea.module.scss'
 import { observer } from 'mobx-react-lite'
+import { InputModel } from '../../../../../models/InputModel'
 
 interface TextareaProps {
 	placeholder: string
-	value: string
-	setValue: (value: string) => void
+	model: InputModel
 }
 
-const Textarea: FC<TextareaProps> = ({ placeholder, value, setValue }) => {
+const Textarea: FC<TextareaProps> = ({ placeholder, model }) => {
 	const onChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-		setValue(e.target.value)
+		model.setValue(e.target.value)
 	}
 
 	return (
 		<textarea
 			className={styles.container}
 			placeholder={placeholder}
-			value={value}
+			value={model.value}
 			onChange={onChange}
 		/>
 	)

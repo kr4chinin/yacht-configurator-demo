@@ -25,7 +25,11 @@
 
 .container {
 	width: 350px;
-  @include baseInputStyles;
+	@include baseInputStyles;
+
+	&.invalid {
+		box-shadow: inset 8px 8px 16px rgba(73, 14, 14, 0.8);
+	}
 }
 
 ::placeholder {
