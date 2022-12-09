@@ -1,6 +1,7 @@
 // import { toJS } from 'mobx'
 import { observer } from 'mobx-react-lite'
 import Navbar from '../Common/Navbar'
+import Cart from './components/Sections/Cart'
 import Form from './components/Sections/Form'
 // import { Link } from 'react-router-dom'
 // import { flybridgeAccessoriesStore } from '../../stores/YachtAccessoriesStore'
@@ -16,6 +17,7 @@ const FlybridgeSummary = () => {
 		<div className={styles.container}>
 			<Navbar />
 			<Form />
+      <Cart />
 		</div>
 	)
 }

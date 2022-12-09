@@ -1,0 +1,9 @@
+@import '../../../../../styles/utils/backgroundClip';
+@import '../../../../../assets/fonts/Montserrat';
+
+.container {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.5rem;
+
+	@include backgroundClip(linear-gradient(180deg, #b79f71 0%, #837252 100%));
+}
