@@ -47,18 +47,14 @@ const ModelItem: FC<ModelItemProps> = ({
 						</div>
 					)}
 
-					<p className={styles['link-label']}>
-						Configurator
-					</p>
+					<p className={styles['link-label']}>Configurator</p>
 				</div>
 
 				<div className={styles['link-wrapper']}>
 					<Link to={linkToReadMore} className={styles['read-more-link']}>
 						<ReadMoreIcon />
 					</Link>
-					<p className={styles['link-label']}>
-						Read more
-					</p>
+					<p className={styles['link-label']}>Read more</p>
 				</div>
 			</div>
 		</div>

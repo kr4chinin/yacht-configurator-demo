@@ -42,7 +42,7 @@ const Introduction: FC<IntroductionProps> = ({
 				</p>
 			)}
 
-      <ArrowDown />
+			<ArrowDown />
 		</div>
 	)
 }

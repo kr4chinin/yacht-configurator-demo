@@ -1,1 +1,1 @@
-export {default} from './FullscreenImageWrapper'
+export { default } from './FullscreenImageWrapper'

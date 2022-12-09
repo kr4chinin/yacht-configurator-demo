@@ -84,55 +84,54 @@
 	}
 
 	.development {
-    margin-top: 40px;
+		margin-top: 40px;
 		font-size: 1.75rem;
 
 		font-family: 'Montserrat', sans-serif;
 		color: $primary-font-color;
 		opacity: 0.5;
 
-    span {
-      margin-left: 35px;
-    }
+		span {
+			margin-left: 35px;
+		}
 	}
 }
 
 @media (max-width: 1000px) {
-  .container {
-    padding-left: 0px;
-    padding-top: 40%;
-    align-items: center;
+	.container {
+		padding-left: 0px;
+		padding-top: 40%;
+		align-items: center;
 
-    .title {
-      margin-top: 100px;
+		.title {
+			margin-top: 100px;
 
-      h1 {
-        font-size: 2.5rem;
-      }
+			h1 {
+				font-size: 2.5rem;
+			}
 
-      span {
-        margin-right: 0px;
-      }
-    }
+			span {
+				margin-right: 0px;
+			}
+		}
 
-    .annotation {
-      margin-top: 10px;
-      font-size: 1.15rem;
-    }
+		.annotation {
+			margin-top: 10px;
+			font-size: 1.15rem;
+		}
 
-    .configurator-link {
-      margin-top: 20px;
-      font-size: 1.25rem;
-    }
+		.configurator-link {
+			margin-top: 20px;
+			font-size: 1.25rem;
+		}
 
-    .development {
-      margin-top: 20px;
-      font-size: 1.25rem;
+		.development {
+			margin-top: 20px;
+			font-size: 1.25rem;
 
-  
-      span {
-        margin-left: 15px;
-      }
-    }
-  }
+			span {
+				margin-left: 15px;
+			}
+		}
+	}
 }

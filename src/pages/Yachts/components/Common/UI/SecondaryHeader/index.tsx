@@ -1,1 +1,1 @@
-export {default} from './SecondaryHeader'
+export { default } from './SecondaryHeader'

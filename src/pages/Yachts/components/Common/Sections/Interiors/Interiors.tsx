@@ -28,9 +28,9 @@ const Interiors: FC<InteriorsProps> = ({
 					bgLetters="iS"
 					annotation={description}
 				/>
-        <div className={styles['image-wrapper']}>
-          <LoadableImage src={landscapeSrc} alt={landscapeAlt} />
-        </div>
+				<div className={styles['image-wrapper']}>
+					<LoadableImage src={landscapeSrc} alt={landscapeAlt} />
+				</div>
 			</div>
 		</div>
 	)

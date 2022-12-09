@@ -1,1 +1,1 @@
-export {default} from './Exteriors'
+export { default } from './Exteriors'

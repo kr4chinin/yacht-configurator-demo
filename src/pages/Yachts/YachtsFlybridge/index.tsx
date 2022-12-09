@@ -1,1 +1,1 @@
-export {default} from './YachtsFlybridge'
+export { default } from './YachtsFlybridge'

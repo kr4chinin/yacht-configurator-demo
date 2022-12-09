@@ -4,11 +4,11 @@
 
 .container {
 	position: relative;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
-  width: fit-content;
+	width: fit-content;
 
 	h1 {
 		font-family: 'Montserrat', sans-serif;
@@ -24,7 +24,7 @@
 
 		position: absolute;
 		top: -70px;
-    margin: 0 auto;
+		margin: 0 auto;
 	}
 
 	hr {
@@ -40,7 +40,7 @@
 	.annotation {
 		font-family: 'Montserrat Light', sans-serif;
 		font-size: 1.5rem;
-    text-align: center;
+		text-align: center;
 		color: $primary-font-color;
 
 		opacity: 0.7;
@@ -52,23 +52,22 @@
 }
 
 @media (max-width: 1000px) {
-  .container {
+	.container {
+		h1 {
+			font-size: 2.5rem;
+		}
 
-    h1 {
-      font-size: 2.5rem;
-    }
-  
-    span {
-      font-size: 6rem;
-    }
-  
-    hr {
-      width: 100px;
-    }
-  
-    .annotation {
-      width: 100%;
-      font-size: 1.15rem;
-    }
-  }
+		span {
+			font-size: 6rem;
+		}
+
+		hr {
+			width: 100px;
+		}
+
+		.annotation {
+			width: 100%;
+			font-size: 1.15rem;
+		}
+	}
 }

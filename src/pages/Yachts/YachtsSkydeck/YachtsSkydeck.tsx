@@ -7,7 +7,7 @@ import Engines from '../components/Common/Sections/Engines'
 import { useScrollToTop } from '../../../hooks/useScrollToTop'
 
 const YachtsSkydeck = () => {
-  useScrollToTop()
+	useScrollToTop()
 
 	return (
 		<div className={styles.container}>

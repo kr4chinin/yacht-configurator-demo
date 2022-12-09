@@ -1,1 +1,1 @@
-export {default} from './YachtsSkydeck'
+export { default } from './YachtsSkydeck'

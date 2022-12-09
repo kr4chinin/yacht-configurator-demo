@@ -14,8 +14,8 @@ const Cart = () => {
 					alt="Flybridge yacht"
 					src="../../../../../../images/YachtsPage/YachtsFlybridgePage/introduction.png"
 				/>
-        <OptionListHeader>Interior</OptionListHeader>
-        <OptionListHeader>Exterior</OptionListHeader>
+				<OptionListHeader>Interior</OptionListHeader>
+				<OptionListHeader>Exterior</OptionListHeader>
 			</div>
 		</div>
 	)

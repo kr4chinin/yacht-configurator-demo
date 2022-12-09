@@ -40,14 +40,8 @@ const AppRouter = () => {
 				path={AppRoutes.FLYBRIDGE_SUMMARY}
 				element={<FlybridgeSummary />}
 			/>
-      <Route
-        path={AppRoutes.YACHTS_FLYBRIDGE}
-        element={<YachtsFlybridge />}
-      />
-      <Route
-        path={AppRoutes.YACHTS_SKYDECK}
-        element={<YachtsSkydeck />}
-      />
+			<Route path={AppRoutes.YACHTS_FLYBRIDGE} element={<YachtsFlybridge />} />
+			<Route path={AppRoutes.YACHTS_SKYDECK} element={<YachtsSkydeck />} />
 		</Routes>
 	)
 }

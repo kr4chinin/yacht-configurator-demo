@@ -1,1 +1,1 @@
-export {default} from './PrimaryHeader'
+export { default } from './PrimaryHeader'

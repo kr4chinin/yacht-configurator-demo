@@ -1,1 +1,1 @@
-export {default} from './OptionListHeader'
+export { default } from './OptionListHeader'

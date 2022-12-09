@@ -61,15 +61,15 @@
 					scale: 1.05;
 				}
 
-        &.disabled {
-          cursor: not-allowed;
-          opacity: 0.5;
+				&.disabled {
+					cursor: not-allowed;
+					opacity: 0.5;
 
-          &:hover {
-            transform: none;
-            scale: 1;
-          }
-        }
+					&:hover {
+						transform: none;
+						scale: 1;
+					}
+				}
 			}
 
 			.read-more-link {

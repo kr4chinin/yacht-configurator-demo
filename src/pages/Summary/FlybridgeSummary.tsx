@@ -17,7 +17,7 @@ const FlybridgeSummary = () => {
 		<div className={styles.container}>
 			<Navbar />
 			<Form />
-      <Cart />
+			<Cart />
 		</div>
 	)
 }
