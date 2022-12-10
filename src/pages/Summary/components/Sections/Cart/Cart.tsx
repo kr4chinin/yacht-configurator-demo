@@ -1,5 +1,6 @@
 import OptionListHeader from '../../UI/OptionListHeader'
 import SectionHeader from '../../UI/SectionHeader'
+import EngineOption from '../EngineOption'
 import ExteriorOptions from '../ExteriorOptions/ExteriorOptions'
 import InteriorOptions from '../InteriorOptions'
 import ModelOption from '../ModelOption'
@@ -17,10 +18,16 @@ const Cart = () => {
 					src="../../../../../../images/YachtsPage/YachtsFlybridgePage/introduction.png"
 				/>
 				<OptionListHeader>Exterior</OptionListHeader>
-        <ExteriorOptions />
+				<ExteriorOptions />
 
 				<OptionListHeader>Interior</OptionListHeader>
-        <InteriorOptions />
+				<InteriorOptions />
+
+				<OptionListHeader>Engine</OptionListHeader>
+				<EngineOption />
+
+				<OptionListHeader>Optional accessories</OptionListHeader>
+				<OptionListHeader>Your total</OptionListHeader>
 			</div>
 		</div>
 	)

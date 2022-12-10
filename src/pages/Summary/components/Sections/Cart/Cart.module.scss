@@ -4,6 +4,9 @@
 	gap: 60px;
 
 	.content {
+    max-height: 870px;
+    overflow: scroll;
+    
 		padding: 40px 60px;
 
 		background: linear-gradient(
