@@ -1,12 +1,11 @@
+import cn from 'classnames'
 import { observer } from 'mobx-react-lite'
 import { FC } from 'react'
-import { ReactComponent as EuroSymbol } from '../../../../../assets/icons/euro-symbol.svg'
 import LoadableImage from '../../../../../components/LoadableImage/LoadableImage'
-import { convertPrice } from '../../../../../helpers/convertPrice'
+import { currencyFormatter } from '../../../../../models/CurrencyFormatter'
 import { flybridgeAccessoriesStore } from '../../../../../stores/YachtAccessoriesStore'
 import { ConfigAccessoryOption } from '../../../../../types/ConfigOption'
 import styles from './AccessoriesItem.module.scss'
-import cn from 'classnames'
 
 interface AccessoriesItemProps {
 	accessory: ConfigAccessoryOption
@@ -26,8 +25,7 @@ const AccessoriesItem: FC<AccessoriesItemProps> = ({ accessory }) => {
 			</div>
 			<div className={styles.controls}>
 				<div className={styles.price}>
-					<EuroSymbol />
-					<p>{convertPrice(accessory.price.toString())}</p>
+					<p>{currencyFormatter.format(accessory.price)}</p>
 				</div>
 				<button
 					className={cn(styles['add-btn'], {

@@ -1,5 +1,7 @@
 import OptionListHeader from '../../UI/OptionListHeader'
 import SectionHeader from '../../UI/SectionHeader'
+import ExteriorOptions from '../ExteriorOptions/ExteriorOptions'
+import InteriorOptions from '../InteriorOptions'
 import ModelOption from '../ModelOption'
 import styles from './Cart.module.scss'
 
@@ -14,8 +16,11 @@ const Cart = () => {
 					alt="Flybridge yacht"
 					src="../../../../../../images/YachtsPage/YachtsFlybridgePage/introduction.png"
 				/>
-				<OptionListHeader>Interior</OptionListHeader>
 				<OptionListHeader>Exterior</OptionListHeader>
+        <ExteriorOptions />
+
+				<OptionListHeader>Interior</OptionListHeader>
+        <InteriorOptions />
 			</div>
 		</div>
 	)

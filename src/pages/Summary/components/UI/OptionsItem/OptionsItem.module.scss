@@ -1,0 +1,45 @@
+@import '../../../../../styles/utils/backgroundClip';
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../Configurators/components/UI/OptionItems/ExteriorOptionsItem/ExteriorOptionsItem.module.scss';
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.info-block {
+		display: flex;
+		flex-direction: column;
+		gap: 5px;
+
+		.name {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 1.15rem;
+
+			@include backgroundClip(
+				linear-gradient(180deg, #b79f71 0%, #837252 100%)
+			);
+		}
+
+		.price {
+			font-family: 'Montserrat Light', sans-serif;
+			font-size: 0.85rem;
+
+			@include backgroundClip(
+				linear-gradient(180deg, #b79f71 0%, #837252 100%)
+			);
+		}
+	}
+
+	.image-wrapper {
+		position: relative;
+
+		width: 110px;
+		height: 110px;
+		border-radius: 10px;
+
+		overflow: hidden;
+
+		@include shadow;
+	}
+}
