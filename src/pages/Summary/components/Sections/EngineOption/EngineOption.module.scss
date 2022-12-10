@@ -6,12 +6,15 @@
 	justify-content: space-between;
 
 	margin-top: 25px;
+  gap: 20px;
 
 	.info-section {
 		display: flex;
 		flex-direction: column;
 
 		.description {
+      font-family: 'Montserrat', sans-serif;
+      
 			font-size: 1.15rem;
 			line-height: 150%;
 			opacity: 0.7;
