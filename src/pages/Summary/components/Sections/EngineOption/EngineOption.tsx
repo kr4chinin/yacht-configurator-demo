@@ -6,8 +6,6 @@ import LoadableImage from '../../../../../components/LoadableImage/LoadableImage
 import { currencyFormatter } from '../../../../../models/CurrencyFormatter'
 
 const EngineOption = () => {
-	const { engines } = flybridgeEngineConfigStore
-
 	const engine = flybridgeEngineConfigStore.getSelectedOption()
 
 	return (
