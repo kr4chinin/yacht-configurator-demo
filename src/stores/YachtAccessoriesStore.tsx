@@ -23,6 +23,16 @@ class YachtAccessoriesStore {
 	getSelectedAccessoryOptions(): ConfigAccessoryOption[] {
 		return this.accessories.filter(option => option.selected)
 	}
+
+	getTotalPrice(): number {
+		return this.accessories.reduce((total, option) => {
+			if (option.selected) {
+				return total + option.price
+			}
+
+			return total
+		}, 0)
+	}
 }
 
 export const flybridgeAccessoriesStore = new YachtAccessoriesStore()

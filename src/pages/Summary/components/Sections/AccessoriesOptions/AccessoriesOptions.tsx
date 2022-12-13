@@ -8,6 +8,10 @@ const AccessoriesOptions = () => {
 
 	return (
 		<div className={styles.container}>
+			{accessories.length === 0 && (
+				<p className={styles['no-accessories']}>No accessories selected</p>
+			)}
+
 			{accessories.map(accessory => (
 				<AccessoriesOptionsItem
 					key={accessory.id}
@@ -15,7 +19,7 @@ const AccessoriesOptions = () => {
 					alt={accessory.title}
 					name={accessory.title}
 					description={accessory.description}
-          price={accessory.price}
+					price={accessory.price}
 				/>
 			))}
 		</div>

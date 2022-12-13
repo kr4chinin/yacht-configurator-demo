@@ -229,7 +229,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Stainless steel',
-						price: 4100,
+						price: 0,
 						image: ChildrenPreview0.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[0] as Mesh).material = stainlessSteelMaterial0
@@ -245,7 +245,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Black steel',
-						price: 3200,
+						price: 2000,
 						image: ChildrenPreview0.matcap2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[0] as Mesh).material = blackSteelMaterial0
@@ -261,7 +261,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Golden horizon',
-						price: 5100,
+						price: 6000,
 						image: ChildrenPreview0.matcap3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[0] as Mesh).material = goldenHorizonMaterial0
@@ -285,7 +285,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Andesite',
-						price: 2600,
+						price: 0,
 						image: Children2.basic1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[2] as Mesh).material = andesiteMaterial2
@@ -300,7 +300,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Blue marline',
-						price: 3500,
+						price: 4000,
 						image: ChildrenPreview2.matcap2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[2] as Mesh).material = blueMarlineMaterial2
@@ -323,7 +323,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Andesite',
-						price: 2600,
+						price: 0,
 						image: ChildrenPreview4.matcap4,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[4] as Mesh).material = andesiteMaterial2
@@ -338,7 +338,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Neon blue',
-						price: 3500,
+						price: 8000,
 						image: ChildrenPreview4.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[4] as Mesh).material = neonBlueMaterial4
@@ -353,7 +353,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Acquanetta',
-						price: 1500,
+						price: 7000,
 						image: ChildrenPreview4.matcap2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[4] as Mesh).material = acquanettaMaterial4
@@ -368,7 +368,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Bloody red',
-						price: 1500,
+						price: 7000,
 						image: ChildrenPreview4.matcap3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[4] as Mesh).material = bloodyRedMaterial4
@@ -383,7 +383,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Sunrise',
-						price: 1500,
+						price: 7000,
 						image: ChildrenPreview4.matcap5,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[4] as Mesh).material = sunriseMaterial4
@@ -398,7 +398,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Pacific ocean',
-						price: 1500,
+						price: 10000,
 						image: Children4.basic6,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[4] as Mesh).material = pacificOceanMaterial4
@@ -421,7 +421,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Andesite',
-						price: 2600,
+						price: 0,
 						image: ChildrenPreview6.matcap3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[6] as Mesh).material = andesiteMaterial6
@@ -436,7 +436,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Neon blue',
-						price: 3500,
+						price: 6000,
 						image: ChildrenPreview6.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[6] as Mesh).material = neonBlueMaterial6
@@ -451,7 +451,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Bloody red',
-						price: 1500,
+						price: 5000,
 						image: ChildrenPreview6.matcap2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[6] as Mesh).material = bloodyRedMaterial4
@@ -481,7 +481,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Red carbon',
-						price: 1500,
+						price: 5000,
 						image: Children6.basic5,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[6] as Mesh).material = redCarbonMaterial6
@@ -504,7 +504,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Clear glass',
-						price: 2600,
+						price: 0,
 						image: ChildrenPreview7.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[7] as Mesh).material = clearGlassMaterial7
@@ -519,7 +519,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Toned glass',
-						price: 3500,
+						price: 4500,
 						image: ChildrenPreview7.basic2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[7] as Mesh).material = tonedGlassMaterial7
@@ -542,7 +542,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Stainless steel',
-						price: 2600,
+						price: 0,
 						image: ChildrenPreview8.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[8] as Mesh).material = stainlessSteelMaterial8
@@ -557,7 +557,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Black steel',
-						price: 3500,
+						price: 2000,
 						image: ChildrenPreview8.matcap2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[8] as Mesh).material = blackSteelMaterial8
@@ -572,7 +572,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Golden horizon',
-						price: 1500,
+						price: 6000,
 						image: ChildrenPreview8.matcap3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[8] as Mesh).material = goldenHorizonMaterial8
@@ -595,7 +595,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Clear glass',
-						price: 2600,
+						price: 0,
 						image: ChildrenPreview9.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[9] as Mesh).material = clearGlassMaterial9
@@ -610,7 +610,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Toned glass',
-						price: 3500,
+						price: 2500,
 						image: ChildrenPreview9.basic2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[9] as Mesh).material = tonedGlassMaterial9
@@ -635,7 +635,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Andesite',
-						price: 2600,
+						price: 0,
 						image: ChildrenPreview1.matcap3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[1] as Mesh).material = andesiteMaterial1
@@ -651,7 +651,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Black sapphire',
-						price: 3500,
+						price: 2000,
 						image: ChildrenPreview1.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[1] as Mesh).material = blackSapphireMaterial1
@@ -667,7 +667,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Acquanetta',
-						price: 3500,
+						price: 4000,
 						image: ChildrenPreview1.matcap2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[1] as Mesh).material = acquanettaMaterial1
@@ -683,7 +683,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Red carbon',
-						price: 3500,
+						price: 5000,
 						image: Children1.basic4,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[1] as Mesh).material = redCarbonMaterial1
@@ -707,7 +707,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Oak planks',
-						price: 2400,
+						price: 0,
 						image: Children3.basic1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[3] as Mesh).material = oakPlanksMaterial3
@@ -722,7 +722,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Demi season teak',
-						price: 3110,
+						price: 1500,
 						image: Children3.basic2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[3] as Mesh).material = demiSeasonTeakMaterial3
@@ -737,7 +737,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Burned teak',
-						price: 2300,
+						price: 3000,
 						image: Children3.basic3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[3] as Mesh).material = burnedTeakMaterial3
@@ -752,7 +752,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Red wood',
-						price: 2670,
+						price: 5000,
 						image: Children3.basic4,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[3] as Mesh).material = redWoodMaterial3
@@ -767,7 +767,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Dark oak',
-						price: 4200,
+						price: 2000,
 						image: Children3.basic5,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[3] as Mesh).material = darkOakMaterial3
@@ -790,7 +790,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Bourbon leather',
-						price: 2400,
+						price: 0,
 						image: Children5.basic1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[5] as Mesh).material = bourbonLeatherMaterial5
@@ -805,7 +805,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Dark cashmere',
-						price: 2400,
+						price: 6000,
 						image: Children5.basic2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[5] as Mesh).material = darkCashemereMaterial5
@@ -820,7 +820,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Brown leather',
-						price: 2400,
+						price: 5000,
 						image: Children5.basic3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[5] as Mesh).material = brownLeatherMaterial5
@@ -835,7 +835,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Tanned leather',
-						price: 2400,
+						price: 5000,
 						image: Children5.basic4,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[5] as Mesh).material = tannedLeatherMaterial5
@@ -850,7 +850,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Blue marline',
-						price: 2400,
+						price: 7000,
 						image: Children5.basic5,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[5] as Mesh).material = blueMarlineMaterial2
@@ -865,7 +865,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Beige leather',
-						price: 2400,
+						price: 7000,
 						image: Children5.basic6,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[5] as Mesh).material = beigeLeatherMaterial5
@@ -888,7 +888,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Black saphire',
-						price: 2400,
+						price: 0,
 						image: ChildrenPreview10.matcap1,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[10] as Mesh).material = blackSapphireMaterial10
@@ -903,7 +903,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Acquanetta',
-						price: 2400,
+						price: 4000,
 						image: ChildrenPreview10.matcap2,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[10] as Mesh).material = acquanettaMaterial10
@@ -918,7 +918,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Andesite',
-						price: 2400,
+						price: 4000,
 						image: ChildrenPreview10.matcap3,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[10] as Mesh).material = andesiteMaterial10
@@ -933,7 +933,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 					{
 						id: v4(),
 						title: 'Red carbon',
-						price: 2400,
+						price: 7000,
 						image: Children10.basic4,
 						onSelect: (configOptionGroupType, optionId) => {
 							;(model.children[10] as Mesh).material = redCarbonMaterial10
@@ -953,7 +953,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeEngineConfigStore.addConfigOption({
 				id: v4(),
 				title: 'Volvo Penta D3-200',
-				price: 12200,
+				price: 15000,
 				image: Engines.variant1,
 				onSelect: optionId => {
 					flybridgeEngineConfigStore.selectOptionById(optionId)
@@ -966,7 +966,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeEngineConfigStore.addConfigOption({
 				id: v4(),
 				title: 'Volvo Penta D6-300',
-				price: 14500,
+				price: 20000,
 				image: Engines.variant2,
 				onSelect: optionId => {
 					flybridgeEngineConfigStore.selectOptionById(optionId)
@@ -979,7 +979,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeEngineConfigStore.addConfigOption({
 				id: v4(),
 				title: 'Volvo Penta D11-670 ',
-				price: 22300,
+				price: 25000,
 				image: Engines.variant3,
 				onSelect: optionId => {
 					flybridgeEngineConfigStore.selectOptionById(optionId)

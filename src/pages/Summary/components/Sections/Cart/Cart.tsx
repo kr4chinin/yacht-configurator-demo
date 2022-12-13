@@ -5,6 +5,7 @@ import EngineOption from '../EngineOption'
 import ExteriorOptions from '../ExteriorOptions/ExteriorOptions'
 import InteriorOptions from '../InteriorOptions'
 import ModelOption from '../ModelOption'
+import Total from '../Total'
 import styles from './Cart.module.scss'
 
 const Cart = () => {
@@ -31,6 +32,7 @@ const Cart = () => {
 				<AccessoriesOptions />
 
 				<OptionListHeader>Your total</OptionListHeader>
+        <Total />
 			</div>
 		</div>
 	)

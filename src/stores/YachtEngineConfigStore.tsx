@@ -27,6 +27,16 @@ class YachtEngineConfigStore {
 
 		throw new Error('Selected option was not found')
 	}
+
+	getTotalPrice(): number {
+		return this.engines.reduce((total, option) => {
+			if (option.selected) {
+				return total + option.price
+			}
+
+			return total
+		}, 0)
+	}
 }
 
 export const flybridgeEngineConfigStore = new YachtEngineConfigStore()

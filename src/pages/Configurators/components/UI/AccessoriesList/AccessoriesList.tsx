@@ -30,7 +30,7 @@ const AccessoriesList = () => {
 				id: v4(),
 				title: 'Warranty, 24 month',
 				price: 90000,
-				selected: true,
+				selected: false,
 				image: Accessories.WARRANTY_24_MONTH,
 				description: 'Free maintenance for 24 months for your vessel.'
 			})
@@ -39,7 +39,7 @@ const AccessoriesList = () => {
 				id: v4(),
 				title: 'Yacht Education',
 				price: 10000,
-				selected: true,
+				selected: false,
 				image: Accessories.YACHT_EDUCATION,
 				description:
 					'The opportunity to be trained in one of the yacht schools in our country. You will receive tremendous experience of yacht management and international certificate of a shipmaster.'
@@ -49,7 +49,7 @@ const AccessoriesList = () => {
 				id: v4(),
 				title: 'Harman-Kardon AS',
 				price: 7000,
-				selected: true,
+				selected: false,
 				image: Accessories.HARMAN_KARDON_AS,
 				description:
 					'Premium audio sound system Harman-Kardon which will be installed on your yacht.'
@@ -59,7 +59,7 @@ const AccessoriesList = () => {
 				id: v4(),
 				title: 'Сeremonial Launch',
 				price: 5000,
-				selected: true,
+				selected: false,
 				image: Accessories.CEREMONIAL_LAUNCH,
 				description:
 					'Gala launch of your new yacht. The ceremony is held entirely at the expense of our company.'
@@ -69,7 +69,7 @@ const AccessoriesList = () => {
 				id: v4(),
 				title: '«Silence» Packet',
 				price: 10000,
-				selected: true,
+				selected: false,
 				image: Accessories.SILENCE_PACKET,
 				description:
 					'All guest cabins have enlarged portholes (90 x 70 cm) with 18mm laminated glass in accordance with class rules and 42mm double-glazed inner air chamber. As a result, heat and noise transfer is greatly reduced.'

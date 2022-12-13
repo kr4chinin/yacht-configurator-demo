@@ -1,0 +1,48 @@
+@import '../../../../../assets/fonts/Montserrat';
+@import '../../../../../styles/utils/backgroundClip';
+@import '../../../../../styles/palettes/configuratorPallete';
+
+.container {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	margin-top: 25px;
+
+	.title {
+		font-family: 'Montserrat', sans-serif;
+		font-size: 1.5rem;
+
+		@include backgroundClip(linear-gradient(180deg, #b79f71 0%, #837252 100%));
+
+		span {
+			font-family: 'Montserrat Light', sans-serif;
+			font-size: 1.5rem;
+
+			margin-left: 25px;
+		}
+	}
+
+	.contact-btn {
+		width: 161px;
+
+		font-family: 'Montserrat', sans-serif;
+		color: $primary-font-color;
+		font-size: 1rem;
+
+		border: none;
+		border-radius: 20px;
+		background-color: black;
+		padding: 1em 0.5em;
+
+		box-shadow: inset 0 1px 0 0 #b79f71;
+
+		transition: 300ms;
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: inset 0 0 0 1px #b79f71;
+			scale: 1.025;
+		}
+	}
+}
