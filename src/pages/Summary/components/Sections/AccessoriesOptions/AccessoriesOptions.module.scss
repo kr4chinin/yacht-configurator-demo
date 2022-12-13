@@ -1,3 +1,7 @@
 .container {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 220px);
+  gap: 10px;
+
+  margin-top: 25px;
 }

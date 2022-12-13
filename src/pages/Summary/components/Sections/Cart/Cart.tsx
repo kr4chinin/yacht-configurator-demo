@@ -1,5 +1,6 @@
 import OptionListHeader from '../../UI/OptionListHeader'
 import SectionHeader from '../../UI/SectionHeader'
+import AccessoriesOptions from '../AccessoriesOptions'
 import EngineOption from '../EngineOption'
 import ExteriorOptions from '../ExteriorOptions/ExteriorOptions'
 import InteriorOptions from '../InteriorOptions'
@@ -27,6 +28,8 @@ const Cart = () => {
 				<EngineOption />
 
 				<OptionListHeader>Optional accessories</OptionListHeader>
+				<AccessoriesOptions />
+
 				<OptionListHeader>Your total</OptionListHeader>
 			</div>
 		</div>

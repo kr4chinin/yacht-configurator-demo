@@ -9,7 +9,14 @@ const AccessoriesOptions = () => {
 	return (
 		<div className={styles.container}>
 			{accessories.map(accessory => (
-				<AccessoriesOptionsItem img={accessory.image} alt={accessory.title} />
+				<AccessoriesOptionsItem
+					key={accessory.id}
+					img={accessory.image}
+					alt={accessory.title}
+					name={accessory.title}
+					description={accessory.description}
+          price={accessory.price}
+				/>
 			))}
 		</div>
 	)
