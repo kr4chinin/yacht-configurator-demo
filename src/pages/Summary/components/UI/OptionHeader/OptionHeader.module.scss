@@ -7,3 +7,9 @@
 
 	@include backgroundClip(linear-gradient(180deg, #b79f71 0%, #837252 100%));
 }
+
+@media (max-width: 850px) {
+	.container {
+		font-size: 1.25rem;
+	}
+}

@@ -45,3 +45,20 @@
 		}
 	}
 }
+
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+
+    .image-block {
+      align-items: flex-start;
+
+      .image-wrapper {
+        width: 100%;
+        height: 200px;
+      }
+    }
+  }
+}

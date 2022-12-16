@@ -5,9 +5,21 @@
 	min-height: 100vh;
 
 	display: flex;
-  gap: 100px;
+  gap: 50px;
 
-	padding: 250px 100px 0 100px;
+	padding: 250px 50px 0 50px;
 
 	background-color: #000b15;
+}
+
+@media (max-width: 1400px) {
+  .container {
+    flex-direction: column-reverse;
+  }
+}
+
+@media (max-width: 850px) {
+  .container {
+    padding: 140px 15px 0 15px;
+  }
 }

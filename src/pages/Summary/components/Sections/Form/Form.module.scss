@@ -46,3 +46,16 @@
 		}
 	}
 }
+
+@media (max-width: 850px) {
+  .container {
+    gap: 40px;
+
+    .form {
+      .submit-btn {
+        margin-top: 20px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

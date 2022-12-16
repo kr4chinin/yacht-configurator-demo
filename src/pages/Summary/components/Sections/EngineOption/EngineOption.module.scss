@@ -46,3 +46,20 @@
 		height: 220px;
 	}
 }
+
+
+@media (max-width: 850px) {
+  .container {
+    flex-direction: column;
+    gap: 20px;
+
+    .info-section {
+      align-items: flex-start;
+    }
+
+    .image-wrapper {
+      width: 100%;
+      height: 200px;
+    }
+  }
+}

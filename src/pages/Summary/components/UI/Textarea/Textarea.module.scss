@@ -18,3 +18,9 @@
 	color: #b79f71;
 	opacity: 0.3;
 }
+
+@media (max-width: 850px) {
+	.container {
+		width: 100%;
+	}
+}

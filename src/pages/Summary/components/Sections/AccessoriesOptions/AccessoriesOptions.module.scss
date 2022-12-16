@@ -18,3 +18,11 @@
 		opacity: 0.6;
 	}
 }
+
+@media (max-width: 850px) {
+  .container {
+    width: 100%;
+    justify-content: center;
+    grid-template-columns: 220px;
+  }
+}
