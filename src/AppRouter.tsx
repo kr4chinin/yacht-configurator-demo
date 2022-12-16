@@ -1,12 +1,15 @@
 import { lazy, Suspense } from 'react'
-import { Routes, Route } from 'react-router-dom'
-import ProgressLoadingIndicator from './pages/Configurators/components/UI/Loaders/ProgressLoadingIndicator'
-import Main from './pages/Main'
-import { AppRoutes } from './utils/AppRoutes'
-import FlybridgeSummary from './pages/Summary/FlybridgeSummary'
+import { Route, Routes } from 'react-router-dom'
 import AboutUs from './pages/AboutUs'
+import ProgressLoadingIndicator from './pages/Configurators/components/UI/Loaders/ProgressLoadingIndicator'
+import Contact from './pages/Contact'
+import Events from './pages/Events'
+import Main from './pages/Main'
+import News from './pages/News'
+import FlybridgeSummary from './pages/Summary/FlybridgeSummary'
 import YachtsFlybridge from './pages/Yachts/YachtsFlybridge'
 import YachtsSkydeck from './pages/Yachts/YachtsSkydeck'
+import { AppRoutes } from './utils/AppRoutes'
 
 const LazyFlybridgeConfigurator = lazy(
 	() => import('./pages/Configurators/FlybridgeConfigurator')
@@ -42,6 +45,9 @@ const AppRouter = () => {
 			/>
 			<Route path={AppRoutes.YACHTS_FLYBRIDGE} element={<YachtsFlybridge />} />
 			<Route path={AppRoutes.YACHTS_SKYDECK} element={<YachtsSkydeck />} />
+			<Route path={AppRoutes.EVENTS} element={<Events />} />
+			<Route path={AppRoutes.CONTACT} element={<Contact />} />
+			<Route path={AppRoutes.NEWS} element={<News />} />
 		</Routes>
 	)
 }
