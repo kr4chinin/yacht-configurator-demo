@@ -9,6 +9,8 @@ body {
 	overflow-y: auto;
 	scroll-snap-type: y mandatory;
 	scroll-behavior: smooth;
+
+	text-rendering: optimizeLegibility;
 }
 
 #nprogress .bar {

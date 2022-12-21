@@ -1,10 +1,11 @@
-import styles from './Total.module.scss'
 import { observer } from 'mobx-react-lite'
-import { flybridgeInteriorConfigStore } from '../../../../../stores/YachtInteriorConfigStore'
-import { flybridgeExteriorConfigStore } from '../../../../../stores/YachtExteriorConfigStore'
+import { useIsLessThanWindowWidth } from '../../../../../hooks/useIsMobile'
+import { currencyFormatter } from '../../../../../models/CurrencyFormatter'
 import { flybridgeAccessoriesStore } from '../../../../../stores/YachtAccessoriesStore'
 import { flybridgeEngineConfigStore } from '../../../../../stores/YachtEngineConfigStore'
-import { currencyFormatter } from '../../../../../models/CurrencyFormatter'
+import { flybridgeExteriorConfigStore } from '../../../../../stores/YachtExteriorConfigStore'
+import { flybridgeInteriorConfigStore } from '../../../../../stores/YachtInteriorConfigStore'
+import styles from './Total.module.scss'
 
 const Total = () => {
 	const modelPrice = 400000
@@ -12,6 +13,17 @@ const Total = () => {
 	const exteriorPrice = flybridgeExteriorConfigStore.getTotalPrice()
 	const enginePrice = flybridgeEngineConfigStore.getTotalPrice()
 	const accessoriesPrice = flybridgeAccessoriesStore.getTotalPrice()
+
+	const isMobile = useIsLessThanWindowWidth(1200)
+
+	const handleScrollToTop = () => {
+		if (!isMobile) {
+			window.scrollTo({
+				top: 200,
+				behavior: 'smooth'
+			})
+		}
+	}
 
 	return (
 		<div className={styles.container}>
@@ -27,7 +39,9 @@ const Total = () => {
 					)}
 				</span>
 			</p>
-			<button className={styles['contact-btn']}>Contact Dealer</button>
+			<button className={styles['contact-btn']} onClick={handleScrollToTop}>
+				Contact Dealer
+			</button>
 		</div>
 	)
 }
