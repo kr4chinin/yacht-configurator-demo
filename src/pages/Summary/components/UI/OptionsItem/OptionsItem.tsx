@@ -28,7 +28,7 @@ const OptionsItem: FC<OptionsItemProps> = ({
 				<p className={styles.price}>{currencyFormatter.format(price)}</p>
 			</div>
 
-      <DelimiterIcon />
+			<DelimiterIcon />
 
 			<div className={styles['image-wrapper']}>
 				<LoadableImage src={img} alt={alt} />
