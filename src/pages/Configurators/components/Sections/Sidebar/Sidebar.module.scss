@@ -19,7 +19,7 @@
 	display: flex;
 
 	.content {
-		overflow: scroll;
+		overflow: auto;
 
 		.title {
 			width: 100%;
@@ -69,15 +69,6 @@
 				transform: scale(1.05);
 			}
 		}
-	}
-
-	.content::-webkit-scrollbar {
-		display: none;
-	}
-
-	.content {
-		-ms-overflow-style: none; /* IE and Edge */
-		scrollbar-width: none; /* Firefox */
 	}
 }
 
