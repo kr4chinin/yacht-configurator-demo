@@ -5,7 +5,9 @@ import Total from '../Total'
 import styles from './Cart.module.scss'
 
 const LazyModelOption = lazy(() => import('../ModelOption'))
-const LazyExteriorOptions = lazy(() => import('../ExteriorOptions/ExteriorOptions'))
+const LazyExteriorOptions = lazy(
+	() => import('../ExteriorOptions/ExteriorOptions')
+)
 const LazyInteriorOptions = lazy(() => import('../InteriorOptions'))
 const LazyEngineOption = lazy(() => import('../EngineOption'))
 const LazyAccessoriesOptions = lazy(() => import('../AccessoriesOptions'))
@@ -25,24 +27,24 @@ const Cart = () => {
 				</Suspense>
 
 				<OptionListHeader>Exterior</OptionListHeader>
-        <Suspense>
-          <LazyExteriorOptions />
-        </Suspense>
+				<Suspense>
+					<LazyExteriorOptions />
+				</Suspense>
 
 				<OptionListHeader>Interior</OptionListHeader>
-        <Suspense>
-          <LazyInteriorOptions />
-        </Suspense>
+				<Suspense>
+					<LazyInteriorOptions />
+				</Suspense>
 
 				<OptionListHeader>Engine</OptionListHeader>
-        <Suspense>
-          <LazyEngineOption />
-        </Suspense>
+				<Suspense>
+					<LazyEngineOption />
+				</Suspense>
 
 				<OptionListHeader>Optional accessories</OptionListHeader>
-        <Suspense>
-          <LazyAccessoriesOptions />
-        </Suspense>
+				<Suspense>
+					<LazyAccessoriesOptions />
+				</Suspense>
 
 				<OptionListHeader>Your total</OptionListHeader>
 				<Total />

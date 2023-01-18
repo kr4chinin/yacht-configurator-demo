@@ -10,7 +10,7 @@ interface AccessoriesOptionsItemProps {
 	alt: string
 	name: string
 	description: string
-  price: number
+	price: number
 }
 
 const AccessoriesOptionsItem: FC<AccessoriesOptionsItemProps> = ({
@@ -18,7 +18,7 @@ const AccessoriesOptionsItem: FC<AccessoriesOptionsItemProps> = ({
 	img,
 	name,
 	description,
-  price
+	price
 }) => {
 	const id = useId()
 
@@ -34,10 +34,10 @@ const AccessoriesOptionsItem: FC<AccessoriesOptionsItemProps> = ({
 
 			<Tooltip anchorId={id} place="top">
 				<div className={styles.description}>
-          {description}
+					{description}
 
-          <div className={styles.price}>{currencyFormatter.format(price)}</div>
-        </div>
+					<div className={styles.price}>{currencyFormatter.format(price)}</div>
+				</div>
 			</Tooltip>
 		</div>
 	)

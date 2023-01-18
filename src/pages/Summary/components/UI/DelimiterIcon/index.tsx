@@ -1,1 +1,1 @@
-export {default} from './DelimiterIcon'
+export { default } from './DelimiterIcon'

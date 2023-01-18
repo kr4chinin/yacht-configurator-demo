@@ -224,7 +224,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeExteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.SIDERAILS_AND_PORTLIGHTS,
-        name: 'Siderails & Portlights',
+				name: 'Siderails & Portlights',
 				options: [
 					{
 						id: v4(),
@@ -280,7 +280,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeExteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.FENDER,
-        name: 'Fender',
+				name: 'Fender',
 				options: [
 					{
 						id: v4(),
@@ -318,7 +318,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeExteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.SIDES,
-        name: 'Sides',
+				name: 'Sides',
 				options: [
 					{
 						id: v4(),
@@ -416,7 +416,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeExteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.FLYBRIDGE_VISOR,
-        name: 'Flybridge Visor',
+				name: 'Flybridge Visor',
 				options: [
 					{
 						id: v4(),
@@ -499,7 +499,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeExteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.WINDOWS,
-        name: 'Windows',
+				name: 'Windows',
 				options: [
 					{
 						id: v4(),
@@ -537,7 +537,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeExteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.COUNTER,
-        name: 'Counter',
+				name: 'Counter',
 				options: [
 					{
 						id: v4(),
@@ -590,7 +590,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeExteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.ILLUMINATORS,
-        name: 'Illuminators',
+				name: 'Illuminators',
 				options: [
 					{
 						id: v4(),
@@ -630,7 +630,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeInteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.THROTTLE_AND_STEERING_WHEEL,
-        name: 'Throttle & Steering Wheel',
+				name: 'Throttle & Steering Wheel',
 				options: [
 					{
 						id: v4(),
@@ -702,7 +702,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeInteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.COCKPIT_FLOOR,
-        name: 'Cockpit Floor',  
+				name: 'Cockpit Floor',
 				options: [
 					{
 						id: v4(),
@@ -785,7 +785,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeInteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.COUCH,
-        name: 'Couch',
+				name: 'Couch',
 				options: [
 					{
 						id: v4(),
@@ -883,7 +883,7 @@ const FlybridgeControls: FC<FlybridgeControlsProps> = ({
 			flybridgeInteriorConfigStore.addConfigOptionGroup({
 				id: v4(),
 				type: ConfigOptionGroupType.COCKPIT_STEERING_WHEEL,
-        name: 'Cockpit Steering Wheel',
+				name: 'Cockpit Steering Wheel',
 				options: [
 					{
 						id: v4(),

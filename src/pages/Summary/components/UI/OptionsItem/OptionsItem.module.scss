@@ -45,19 +45,19 @@
 }
 
 @media (max-width: 850px) {
-  .container {
-    gap: 10px;
+	.container {
+		gap: 10px;
 
-    .info-block {
-      align-items: flex-start;
-    }
+		.info-block {
+			align-items: flex-start;
+		}
 
-    .image-wrapper {
-      display: flex;
-      flex-shrink: 0;
-      
-      width: 100px;
-      height: 100px;
-    }
-  }
+		.image-wrapper {
+			display: flex;
+			flex-shrink: 0;
+
+			width: 100px;
+			height: 100px;
+		}
+	}
 }

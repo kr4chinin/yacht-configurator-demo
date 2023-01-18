@@ -1,1 +1,1 @@
-export {default} from './ExteriorOptions'
+export { default } from './ExteriorOptions'

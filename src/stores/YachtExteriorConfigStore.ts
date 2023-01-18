@@ -44,17 +44,17 @@ class YachtExteriorConfigStore {
 		throw new Error(`No selected option in group with this type: ${groupType}`)
 	}
 
-  getTotalPrice(): number {
-    return this.exterior.reduce((total, group) => {
-      const selectedOption = group.options.find(option => option.selected)
+	getTotalPrice(): number {
+		return this.exterior.reduce((total, group) => {
+			const selectedOption = group.options.find(option => option.selected)
 
-      if (selectedOption) {
-        return total + selectedOption.price
-      }
+			if (selectedOption) {
+				return total + selectedOption.price
+			}
 
-      return total
-    }, 0)
-  }
+			return total
+		}, 0)
+	}
 }
 
 export const flybridgeExteriorConfigStore = new YachtExteriorConfigStore()

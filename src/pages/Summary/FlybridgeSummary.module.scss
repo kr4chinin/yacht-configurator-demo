@@ -4,7 +4,7 @@
 	min-height: 100vh;
 
 	display: flex;
-  gap: 50px;
+	gap: 50px;
 
 	padding: 250px 50px 0 50px;
 
@@ -12,13 +12,13 @@
 }
 
 @media (max-width: 1400px) {
-  .container {
-    flex-direction: column-reverse;
-  }
+	.container {
+		flex-direction: column-reverse;
+	}
 }
 
 @media (max-width: 850px) {
-  .container {
-    padding: 140px 15px 0 15px;
-  }
+	.container {
+		padding: 140px 15px 0 15px;
+	}
 }

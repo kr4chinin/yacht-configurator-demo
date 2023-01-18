@@ -20,6 +20,6 @@ export const enum ConfigOptionGroupType {
 export interface ConfigOptionGroup {
 	id: string
 	type: ConfigOptionGroupType
-  name: string
+	name: string
 	options: ConfigOption[]
 }
